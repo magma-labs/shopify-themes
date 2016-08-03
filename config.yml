@@ -1,0 +1,14 @@
+---
+:api_key: f730f0fd56375f5872f0f879a6a822b3
+:password: fda693072f0f6bc4ce8c273b6ac34e59
+:store: templates-store-2.myshopify.com
+:theme_id: 
+:whitelist_files:
+- layout/
+- assets/
+- config/
+- snippets/
+- templates/
+- locales/
+:ignore_files:
+- config/settings_json.js
