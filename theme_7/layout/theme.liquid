@@ -26,7 +26,9 @@
   <link rel="canonical" href="{{ canonical_url }}">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <meta name="theme-color" content="{{ settings.color_primary }}">
-
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300&subset=latin,latin-ext' 
+      rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
 
@@ -181,7 +183,7 @@
             {% endcomment %}
             <div>
               <a href="/cart" class="site-header__cart-toggle js-drawer-open-right" aria-controls="CartDrawer" aria-expanded="false">
-                <span class="icon icon-cart" aria-hidden="true"></span>
+                <span class="icon icon-cart-voltio" aria-hidden="true"></span>
                 {{ 'layout.cart.title' | t }}
                 (<span id="CartCount">{{ cart.item_count }}</span>
                 {{ 'layout.cart.items_count' | t: count: cart.item_count }}
@@ -292,9 +294,9 @@
             <div class="grid__item one-third text-right">
               <div class="site-nav--mobile">
                 <a href="/cart" class="js-drawer-open-right site-nav__link" aria-controls="CartDrawer" aria-expanded="false">
-                  <span class="icon-fallback-text">
-                    <span class="icon icon-cart" aria-hidden="true"></span>
-                    <span class="fallback-text">{{ 'layout.cart.title' | t }}</span>
+                  <span class="icon-fallback-text cart-item-count">
+                    (<span id="CartCount">{{ cart.item_count }}</span>)
+                    <span class="icon icon-cart-voltio" aria-hidden="true"></span>
                   </span>
                 </a>
               </div>
@@ -306,11 +308,12 @@
     <div class="site-header__search">
       {% include 'search-bar' %}
     </div>
+    {% if template == 'index' %}
+      {% include 'homepage-banner' %}
+    {% endif %}
 
     <main class="wrapper main-content" role="main">
-
       {{ content_for_layout }}
-
     </main>
 
     <!-- begin site-footer -->
