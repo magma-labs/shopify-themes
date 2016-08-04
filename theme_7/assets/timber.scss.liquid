@@ -146,10 +146,10 @@ $zindexDrawer: 10;
 
 /*================ Typography ================*/
 
-$headerFontStack: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headerFontStack: 'Oswald', sans-serif;
 $headerFontWeight: 700;
 
-$bodyFontStack: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$bodyFontStack: 'Asap', sans-serif;
 $baseFontSize: 14px; // Henceforth known as 1em
 
 @font-face {
@@ -218,6 +218,15 @@ $socialIconFontStack: 'icons';
       @warn "Unrecognized prefix: #{$prefix}";
     }
   }
+}
+
+/*
+Mixin for sprites
+*/
+@mixin sprite-icon($name, $x, $y, $height, $width, $ext: 'svg') {
+  background: url("sprite_#{$name}.#{$ext}") no-repeat #{$x}px #{$y}px;
+  height: #{$height}px;
+  width: #{$width}px;
 }
 
 @mixin transform($transform) {
@@ -806,6 +815,55 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-weight: inherit;
   }
+}
+
+.h1-text {
+  font-family: $headerFontStack;
+  font-size: 28px;
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+}
+
+.h1-text-black {
+  font-family: $headerFontStack;
+  font-size: 28px;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+
+.h1-margin-left {
+  width: 50%;
+  margin-left: 10%;
+}
+
+.h2-subtext {
+  font-family: $bodyFontStack;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.banner-container {
+  position: relative;
+}
+
+.banner-text-container {
+  color: white;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  width: 100%;
+}
+
+.banner-black-text-container {
+  color: black;
+  position: absolute;
+  width: 100%;
+}
+
+.banner-text {
+  margin: 0 auto;
+  display: inline-block;
 }
 
 /*================ Use em() Sass function to declare font-size ================*/
@@ -1635,6 +1693,12 @@ label.error {
   }
 }
 
+.icon-cart-voltio {
+  @include sprite-icon("icons", -75, -247, 31, 25, "png");
+  position: relative;
+  top: 10px;
+}
+
 /*============================================================================
   A generic way to visually hide content while
   remaining accessible to screen readers (h5bp.com)
@@ -1810,6 +1874,18 @@ label.error {
   }
 }
 
+.banner-img-logo {
+  @include at-query($extra-small, $medium) {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  @include at-query($min, $large) {
+    display: none;
+  }
+}
+
 .site-header__logo-link {
   max-width: $logoMaxWidth;
   margin: 0 auto;
@@ -1826,6 +1902,10 @@ label.error {
 
   @include at-query($min, $large) {
     display: none;
+  }
+
+  @include at-query($extra-small, $medium) {
+    margin-top: 0;
   }
 }
 
@@ -1850,6 +1930,9 @@ label.error {
     background-color: black;
   }
 
+  &:hover {
+    background-color: black;
+  }
 }
 
 /*============================================================================
@@ -2620,6 +2703,10 @@ label.error {
 .icon-cart {
   color: #000;
   font-size: 36px;
+}
+
+.cart-item-count {
+  color: #FA5064;
 }
 
 //Custom styles
