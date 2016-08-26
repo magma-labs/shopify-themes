@@ -59,10 +59,12 @@ $extra-small: 320px;
 $small: 480px;
 $medium: 768px;
 $large: 769px;
+$desktop: 1024px;
 
 $postSmall: $small + $viewportIncrement;
 $preMedium: $medium - $viewportIncrement;
 $preLarge: $large - $viewportIncrement;
+
 
 /*================ The following are dependencies of csswizardry grid ================*/
 $breakpoints: (
@@ -138,11 +140,20 @@ $drawerTransition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
 $siteWidth: 1180px;
 $gutter: 30px;
 $gridGutter: 30px; // can be a %, but nested grids will have smaller margins because of it
-$radius: 3px;
+$radius: 0;
 
 // Z-index
 $zindexNavDropdowns: 5;
 $zindexDrawer: 10;
+
+//Custom classes
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
 
 /*================ Typography ================*/
 
@@ -291,6 +302,123 @@ $max: max-width;
     }
   }
 }
+
+//Hide - Show in different resolutions
+.hide-mobile {
+  @include at-query($max, $preMedium) {
+    display: none !important;
+  }
+}
+
+.show-mobile {
+  @include at-query($max, $preMedium) {
+    display: block !important;
+  }
+}
+
+.hide-tablet {
+  @include at-query($medium, $desktop) {
+    display: none !important;
+  }
+}
+
+.show-tablet {
+  @include at-query($medium, $desktop) {
+    display: block !important;
+  }
+}
+
+.hide-desktop {
+  @include at-query($min, $desktop) {
+    display: none !important;
+  }
+}
+
+.show-desktop {
+  @include at-query($min, $desktop) {
+    display: block !important;
+  }
+}
+// 10 * 10 == Margin limit set to 100
+$margin-limit: 16;
+
+// MARGIN
+.m5 { margin: 5px; }
+.mx5 { margin-left: 5px; margin-right: 5px; }
+.my5 { margin-top: 5px; margin-bottom: 5px; }
+.mt5 { margin-top: 5px; }
+.mr5 { margin-right: 5px; }
+.mb5 { margin-bottom: 5px; }
+.ml5 { margin-left: 5px; }
+@for $i from 0 through $margin-limit {
+  .m#{$i*10} { margin: $i*10px; }
+  .mx#{$i*10} { margin-left: $i*10px; margin-right: $i*10px; }
+  .my#{$i*10} { margin-top: $i*10px; margin-bottom: $i*10px; }
+  .mt#{$i*10} { margin-top: $i*10px; }
+  .mr#{$i*10} { margin-right: $i*10px; }
+  .mb#{$i*10} { margin-bottom: $i*10px; }
+  .ml#{$i*10} { margin-left: $i*10px; }
+}
+
+// MARGIN FOR BIG SCREENS
+@include at-query($min, $large) {
+  .m5-bg { margin: 5px; }
+  .mx5-bg { margin-left: 5px;  margin-right: 5px; }
+  .my5-bg { margin-top: 5px; margin-bottom: 5px; }
+  .mt5-bg { margin-top: 5px; }
+  .mr5-bg { margin-right: 5px; }
+  .mb5-bg { margin-bottom: 5px; }
+  .ml5-bg { margin-left: 5px; }
+  @for $i from 0 through $margin-limit {
+    .m#{$i*10}-bg { margin: $i*10px; }
+    .mx#{$i*10}-bg { margin-left: $i*10px; margin-right: $i*10px; }
+    .my#{$i*10}-bg { margin-top: $i*10px; margin-bottom: $i*10px; }
+    .mt#{$i*10}-bg { margin-top: $i*10px; }
+    .mr#{$i*10}-bg { margin-right: $i*10px; }
+    .mb#{$i*10}-bg { margin-bottom: $i*10px; }
+    .ml#{$i*10}-bg { margin-left: $i*10px; }
+  }
+}
+
+@include at-query($extra-small, $medium) {
+  .m5-tb { margin: 5px; }
+  .mx5-tb { margin-left: 5px;  margin-right: 5px; }
+  .my5-tb { margin-top: 5px; margin-bottom: 5px; }
+  .mt5-tb { margin-top: 5px; }
+  .mr5-tb { margin-right: 5px; }
+  .mb5-tb { margin-bottom: 5px; }
+  .ml5-tb { margin-left: 5px; }
+  @for $i from 0 through $margin-limit {
+    .m#{$i*10}-tb { margin: $i*10px; }
+    .mx#{$i*10}-tb { margin-left: $i*10px; margin-right: $i*10px; }
+    .my#{$i*10}-tb { margin-top: $i*10px; margin-bottom: $i*10px; }
+    .mt#{$i*10}-tb { margin-top: $i*10px; }
+    .mr#{$i*10}-tb { margin-right: $i*10px; }
+    .mb#{$i*10}-tb { margin-bottom: $i*10px; }
+    .ml#{$i*10}-tb { margin-left: $i*10px; }
+  }
+}
+
+// MARGIN FOR SMALL SCREENS
+@include at-query($max, $medium) {
+  .m5-sm { margin: 5px; }
+  .mx5-sm { margin-left: 5px;  margin-right: 5px; }
+  .my5-sm { margin-top: 5px; margin-bottom: 5px; }
+  .mt5-sm { margin-top: 5px; }
+  .mr5-sm { margin-right: 5px; }
+  .mb5-sm { margin-bottom: 5px; }
+  .ml5-sm { margin-left: 5px; }
+  @for $i from 0 through $margin-limit {
+    .m#{$i*10}-sm { margin: $i*10px; }
+    .mx#{$i*10}-sm { margin-left: $i*10px; margin-right: $i*10px; }
+    .my#{$i*10}-sm { margin-top: $i*10px; margin-bottom: $i*10px; }
+    .mt#{$i*10}-sm { margin-top: $i*10px; }
+    .mr#{$i*10}-sm { margin-right: $i*10px; }
+    .mb#{$i*10}-sm { margin-bottom: $i*10px; }
+    .ml#{$i*10}-sm { margin-left: $i*10px; }
+  }
+}
+
 
 /*============================================================================
   #Normalize
@@ -818,17 +946,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .h1-text {
+  border-bottom: 1px white solid;
+  border-top: 1px white solid;
   font-family: $headerFontStack;
   font-size: 28px;
-  border-top: 1px white solid;
-  border-bottom: 1px white solid;
+  margin-bottom: 5px;
+
+  @include at-query($preMedium, $desktop) {
+    font-size: 33px;
+  }
 }
 
 .h1-text-black {
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
+  color: #262626;
   font-family: $headerFontStack;
   font-size: 28px;
-  border-top: 1px black solid;
-  border-bottom: 1px black solid;
+
+  @include at-query($preMedium, $desktop) {
+    font-size: 38px;
+  }
 }
 
 .h1-margin-left {
@@ -837,9 +975,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .h2-subtext {
+  color: #262626; 
   font-family: $bodyFontStack;
   font-size: 14px;
   font-weight: 300;
+
+  @include at-query($preMedium, $desktop) {
+    font-size: 18px;
+  }
+
+  &.c-white {
+    color: white;
+  }
+}
+
+.banners-mobile {
+  @include at-query ($min, $large) {
+    display: none;
+  }
+}
+
+.banner-img-tablet {
+  @include at-query ($preMedium, $desktop) {
+    display: block;
+  }
 }
 
 .banner-container {
@@ -851,7 +1010,24 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   position: absolute;
   text-align: center;
-  top: 15px;
+  top: 20px;
+  width: 100%;
+
+  @include at-query($preMedium, $desktop) {
+    text-align: right;
+    top: 50%;
+    padding-right: 12%;
+    transform: translateY(-50%);
+  }
+}
+
+.banner-text-container-middle {
+  color: white;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
 }
 
@@ -864,6 +1040,61 @@ h1, h2, h3, h4, h5, h6 {
 .banner-text {
   margin: 0 auto;
   display: inline-block;
+}
+
+.banner-text-tablet {
+  @include at-query($min, $preLarge) {
+    display: none;
+  }
+
+  @include at-query($max, $preLarge) {
+    display: none;
+  }
+
+}
+
+.banner-left {
+  padding-left: 50px;
+  text-align: left;
+
+  h1 {
+    border-bottom: 1px white solid;
+    border-top: 1px white solid;
+    font-family: $headerFontStack;
+    font-size: 28px;
+    margin-bottom: 0;
+    width: 80%;
+  }
+
+  h2 {
+    font-family: $bodyFontStack;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 0;
+    text-align: left;
+  }
+}
+
+.banner-left-right {
+  float: right;
+  padding-right: 20px;
+  text-align: left;
+
+  h1 {
+    border-bottom: 1px white solid;
+    border-top: 1px white solid;
+    font-family: $headerFontStack;
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-family: $bodyFontStack;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 0;
+    text-align: left;
+  }
 }
 
 /*================ Use em() Sass function to declare font-size ================*/
@@ -2301,6 +2532,11 @@ label.error {
 
   @include at-query ($min, $large) {
     padding: ($gutter * 2) 0;
+  }
+
+  .footer-h3 {
+    font-size: em(14px);
+    font-weight: 300;
   }
 }
 
