@@ -98,6 +98,7 @@ $colorBtnSecondaryText: #fff;
 
 // Text link colors
 $colorLink: $colorPrimary;
+$colorNavigation: #9b9b9b;
 $colorLinkHover: lighten($colorPrimary, 15%);
 
 // Text colors
@@ -2564,13 +2565,22 @@ label.error {
   #Breadcrumbs
 ==============================================================================*/
 .breadcrumb {
+  font-style: italic;
   margin-bottom: $gutter;
+  text-transform: lowercase;
+
+  a {
+    color: $colorNavigation; 
+    font-family: $headerFontStack;
+    font-size: 15px;
+    font-weight: 300;
+  }
 
   a,
   span {
     display: inline-block;
-    padding: 0 7px 0 0;
-    margin-right: 7px;
+    padding: 0;
+    margin-right: 0;
 
     &:first-child {
       padding-left: 0;
