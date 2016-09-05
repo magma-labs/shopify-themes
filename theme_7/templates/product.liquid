@@ -77,8 +77,6 @@
     </div>
 
     <div class="grid__item large--one-half">
-
-
       <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
         <meta itemprop="priceCurrency" content="{{ shop.currency }}">
 
@@ -88,10 +86,10 @@
         Create thumbnails if we have more than one product image
         {% endcomment %}
         {% if product.images.size > 1 %}
-          <ul class="product-single__thumbnails grid-uniform" id="ProductThumbs">
+          <ul class="product-single__thumbnails grid-uniform one-half" id="ProductThumbs">
 
             {% for image in product.images %}
-              <li class="grid__item one-quarter">
+              <li class="grid__item one-whole">
                 <a href="{{ image.src | img_url: 'large' }}" class="product-single__thumbnail">
                   <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
                 </a>
@@ -100,10 +98,6 @@
 
           </ul>
         {% endif %}
-      </div>
-
-      <div class="product-description rte" itemprop="description">
-        {{ product.description }}
       </div>
 
       {% comment %}
@@ -127,6 +121,11 @@
         {% endif %}
       {% endif %}
 
+    </div>
+    <div class="grid__item one-whole">
+      <div class="product-description rte" itemprop="description">
+        {{ product.description }}
+      </div>
     </div>
   </div>
 
