@@ -145,6 +145,39 @@ nav ul {
   object-fit: none;
 }
 
+.facebook-icon {
+	background: url("Sprite.png") no-repeat -50px -158px;
+	width: 43px;
+	height: 43px;
+  &:hover {
+    background: url("Sprite.png") no-repeat -50px -235px;
+  	width: 43px;
+  	height: 43px;
+  }
+}
+
+.pinterest-icon {
+  background: url("Sprite.png") no-repeat -141px -158px;
+	width: 43px;
+	height: 43px;
+  &:hover {
+    background: url("Sprite.png") no-repeat -141px -235px;
+  	width: 43px;
+  	height: 43px;
+  }
+}
+
+.googleplus-icon {
+  background: url("Sprite.png") no-repeat -231px -158px;
+	width: 43px;
+	height: 43px;
+  &:hover {
+    background: url("Sprite.png") no-repeat -231px -235px;
+  	width: 43px;
+  	height: 43px;
+  }
+}
+
 .search-input {
     border: none;
 }
@@ -158,6 +191,35 @@ nav ul {
     color: $colorWhiteSolid;
     font-family: $playfairDisplay;
     font-weight: bold;
+  }
+}
+
+.container-footer {
+  border: 1px solid $colorCeriseRed;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footer-section {
+  h3 {
+    color: $colorCeriseRed;
+    font-family: $playfairDisplay;
+    font-style: normal;
+    text-align: center;
+  }
+  .nav-footer {
+    text-align: center;
+    .footer-menu {
+      list-style: none;
+      li {
+        display: block;
+        a {
+          border: none;
+          font-family: $merriWeatherFont;
+          font-style: normal;
+        }
+      }
+    }
   }
 }
 
