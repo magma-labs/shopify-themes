@@ -50,8 +50,39 @@
   Add the page template as a class for easy page or template specific styling.
 {% endcomment %}
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+  <main>
+    <header class="fiorella-header">
+      <div class="grid">
+        <div class="grid__item">
+          <form>
+            <div class="input-field-header">
+              <img class="search-icon" />
+              <input class="search-input" type="text" name="search" value="Search">
+            </div>
+          </form>
+        </div>
+        <div class="grid__item">
+          <div class="text-center">
+            <img src="{{ 'logo_fiorella.png' | asset_url }}" alt="Fiorella logo">
+          </div>
+        </div>
+        <div class="grid__item text-center">
+          <nav>
+            <ul class="categories">
+              <li><a href="#"> BOUQUETS </a></li>
+              <li><a href="#"> CENTERPIECES </a></li>
+              <li><a href="#"> BOUTONNIERES </a></li>
+              <li><a href="#"> CEREMONY </a></li>
+            </ul>
+          </nav>
+        </div>
 
-  <h1> Hello shopify theme! ! !</h1>
+      </div>
+    </header>
+    <h1> Hello shopify theme! ! !</h1>
+    <a href="#" class="fiorella-btn"> CLICK </a>
+    <a href="#" class="fiorella-categories-btn"> SHOP NOW </a>
+  </main>
 
   <div id="NavDrawer" class="drawer drawer--left">
     <div class="drawer__header">

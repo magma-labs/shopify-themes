@@ -89,6 +89,77 @@ $colorBlackSolid: #000000;
 $berkshireFont: 'Berkshire Swash', cursive;
 $merriWeatherFont: 'Merriweather Sans', sans-serif;
 $playfairDisplay: 'Playfair Display', serif;
+// Fiorella Header
+.fiorella-header {
+  background: $colorWhiteSolid;
+  opacity: .9;
+  width: 100%;
+  height: 200px;
+}
+// Fiorella buttons
+.fiorella-btn {
+  border: 3px solid $colorCeriseRed;
+  background-color: $colorWhiteSolid;
+  color: $colorCeriseRed;
+  font-family: $playfairDisplay;
+  font-weight: bold;
+  padding: 10px 43px;
+  width: 325px;
+  height: 83px;
+  &:hover {
+    color: $colorWhiteSolid;
+    background-color: $colorCeriseRed;
+  }
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: center;
+  li {
+    display: inline;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-family: $merriWeatherFont;
+      border-right: 1px solid $colorCeriseRed;
+      color: $colorBlackSolid;
+      font-weight: 700;
+      padding: 5px;
+      &:hover {
+        color: $colorCeriseRed;
+      }
+    }
+  }
+}
+
+.search-icon {
+	background: url("Sprite.png") no-repeat -48px -55px;
+	width: 20px;
+	height: 20px;
+  object-fit: none;
+}
+
+.search-input {
+    border: none;
+}
+
+.fiorella-categories-btn {
+  background-image: url("boutonnieres_home_1024.jpg");
+  width: 353px;
+  height: 80px;
+  &:hover {
+    border: 3px solid $colorWhiteSolid;
+    color: $colorWhiteSolid;
+    font-family: $playfairDisplay;
+    font-weight: bold;
+  }
+}
 
 // Timber Colors
 $colorPrimary: {{ settings.color_primary }};
