@@ -44,92 +44,118 @@
     {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
   {% endif %}
 
+  <!-- Responsive Slides ==================================== -->
+  {{ 'responsiveslides.css'         | asset_url | stylesheet_tag }}
+  {{ 'responsiveslides.min.js'     | asset_url | script_tag }}
+
+  <script>
+      $(function() {
+        $(".rslides").responsiveSlides();
+      });
+  </script>
+
 </head>
 
 {% comment %}
   Add the page template as a class for easy page or template specific styling.
 {% endcomment %}
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+  <header class="fiorella-header">
+    <div class="grid">
+      <div class="grid__item">
+        <form>
+          <div class="input-field-header">
+            <div class="search-icon"></div>
+            <input class="search-input" type="text" name="search" value="Search">
+          </div>
+        </form>
+      </div>
+      <div class="grid__item">
+        <div class="text-center">
+          <img src="{{ 'logo_fiorella.png' | asset_url }}" alt="Fiorella logo">
+        </div>
+      </div>
+      <div class="grid__item text-center">
+        <nav>
+          <ul class="categories">
+            <li><a href="#"> BOUQUETS </a></li>
+            <li><a href="#"> CENTERPIECES </a></li>
+            <li><a href="#"> BOUTONNIERES </a></li>
+            <li><a href="#"> CEREMONY </a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </header>
   <main>
-    <header class="fiorella-header">
-      <div class="grid">
-        <div class="grid__item">
-          <form>
-            <div class="input-field-header">
-              <div class="search-icon"></div>
-              <input class="search-input" type="text" name="search" value="Search">
-            </div>
-          </form>
-        </div>
-        <div class="grid__item">
-          <div class="text-center">
-            <img src="{{ 'logo_fiorella.png' | asset_url }}" alt="Fiorella logo">
-          </div>
-        </div>
-        <div class="grid__item text-center">
-          <nav>
-            <ul class="categories">
-              <li><a href="#"> BOUQUETS </a></li>
-              <li><a href="#"> CENTERPIECES </a></li>
-              <li><a href="#"> BOUTONNIERES </a></li>
-              <li><a href="#"> CEREMONY </a></li>
-            </ul>
-          </nav>
-        </div>
-
-      </div>
-    </header>
-
-    <footer class="fiorella-footer">
-      <div class="container-footer">
-        <div class="grid">
-          <div class="grid__item large--one-quarter footer-section" >
-            <h3> FIORELLA </h3>
-            <nav class="nav-footer">
-              <ul class="footer-menu">
-                <li><a href="#"> ABOUT US </a></li>
-                <li><a href="#"> CONTACT US </a></li>
-                <li><a href="#"> STORE LOCATIONS </a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="grid__item large--one-quarter footer-section" >
-            <h3 class="text-center"> INFORMATION </h3>
-            <nav class="nav-footer">
-              <ul class="footer-menu">
-                <li><a href="#"> FAQ's </a></li>
-                <li><a href="#"> PAYMENT METHODS </a></li>
-                <li><a href="#"> DELIVERY </a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="grid__item large--one-quarter footer-section" >
-            <h3 class="text-center"> MY ACCOUNT </h3>
-            <nav class="nav-footer">
-              <ul class="footer-menu">
-                <li><a href="#"> ORDER HISTORY </a></li>
-                <li><a href="#"> WISH LIST </a></li>
-                <li><a href="#"> NEWSLETTER </a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="grid__item large--one-quarter footer-section" >
-            <h3 class="text-center"> FOLLOW US </h3>
-            <div class="text-center">
-              <div class="facebook-icon" />
-              <div class="pinterest-icon" />
-              <div class="googleplus-icon" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-
+    <div class="grid">
+    	<section>
+    		<ul class="rslides">
+    			<li><img src="{{ 'hero1_home_1024.jpg' | asset_url }}"></li>
+    			<li><img src="{{ 'hero2_home_1024.jpg' | asset_url }}"></li>
+    		</ul>
+    	</section>
+      <a href="#" class="fiorella-btn"> SHOP NOW </a>
+    </div>
     <h1> Hello shopify theme! ! !</h1>
     <a href="#" class="fiorella-btn"> CLICK </a>
     <a href="#" class="fiorella-categories-btn"> SHOP NOW </a>
   </main>
+  <footer class="fiorella-footer">
+    <div class="container-footer">
+      <div class="grid">
+        <div class="grid__item large--one-quarter footer-section" >
+          <h3> FIORELLA </h3>
+          <nav class="nav-footer">
+            <ul class="footer-menu">
+              <li><a href="#"> ABOUT US </a></li>
+              <li><a href="#"> CONTACT US </a></li>
+              <li><a href="#"> STORE LOCATIONS </a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid__item large--one-quarter footer-section" >
+          <h3 class="text-center"> INFORMATION </h3>
+          <nav class="nav-footer">
+            <ul class="footer-menu">
+              <li><a href="#"> FAQ's </a></li>
+              <li><a href="#"> PAYMENT METHODS </a></li>
+              <li><a href="#"> DELIVERY </a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid__item large--one-quarter footer-section" >
+          <h3 class="text-center"> MY ACCOUNT </h3>
+          <nav class="nav-footer">
+            <ul class="footer-menu">
+              <li><a href="#"> ORDER HISTORY </a></li>
+              <li><a href="#"> WISH LIST </a></li>
+              <li><a href="#"> NEWSLETTER </a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid__item large--one-quarter footer-section" >
+          <h3 class="text-center"> FOLLOW US </h3>
+          <div class="socials text-center">
+            <div class="grid">
+              <div class="grid__item large--one-third">
+                <a href="#"><div class="facebook-icon"></div></a>
+
+              </div>
+              <div class="grid__item large--one-third">
+                <a href="#"><div class="pinterest-icon"></div></a>
+              </div>
+              <div class="grid__item large--one-third">
+                <a href="#"><div class="googleplus-icon"></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center">Copyright Lorem ipsum dolor sit amet consectetur.</p>
+  </footer>
 
   <div id="NavDrawer" class="drawer drawer--left">
     <div class="drawer__header">
