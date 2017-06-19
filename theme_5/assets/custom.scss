@@ -43,10 +43,10 @@ nav ul {
     }
     a {
       text-decoration: none;
+      text-align: center;
       font-family: $merriWeatherFont;
       color: $colorBlackSolid;
       font-weight: 700;
-      padding: 5px;
       &:hover {
         color: $colorCeriseRed;
       }
@@ -144,8 +144,8 @@ nav ul {
 }
 
 .fiorella-info {
-
 }
+
 // Fiorella Footer
 .container-footer {
   border: 1px solid $colorCeriseRed;
@@ -178,4 +178,38 @@ nav ul {
 
 .socials {
   margin-top: 40px;
+}
+
+// Helpers
+.container-carousel {
+  margin:0;
+  padding:0;
+  width:100%;
+}
+.item img {
+  width:100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  height:100%;
+}
+
+.carousel, .item, .active {
+  height:100%;
+}
+
+.carousel-inner {
+  height:100%;
+}
+
+.carousel-indicators li {
+  background-color: $colorWhiteSolid;
+}
+.carousel-indicators .active {
+  background-color: $colorCeriseRed;
 }
