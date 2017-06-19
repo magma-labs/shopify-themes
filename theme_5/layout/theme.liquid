@@ -29,6 +29,7 @@
 
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'custom.scss.css' | asset_url | stylesheet_tag }}
 
   <!-- Header hook for plugins ================================================== -->
   {{ content_for_header }}
@@ -60,7 +61,7 @@
   Add the page template as a class for easy page or template specific styling.
 {% endcomment %}
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
-  <header class="fiorella-header">
+  <header class="layout-header">
     <div class="grid">
       <div class="grid__item">
         <form>
@@ -95,8 +96,12 @@
     			<li><img src="{{ 'hero1_home_1024.jpg' | asset_url }}"></li>
     			<li><img src="{{ 'hero2_home_1024.jpg' | asset_url }}"></li>
     		</ul>
+        <div class="fiorella-info">
+          <h6>Check out the new arrangements</h6>
+          <a href="#" class="slider-btn"> SHOP NOW </a>
+        </div>
+
     	</section>
-      <a href="#" class="fiorella-btn"> SHOP NOW </a>
     </div>
     <h1> Hello shopify theme! ! !</h1>
     <a href="#" class="fiorella-btn"> CLICK </a>
