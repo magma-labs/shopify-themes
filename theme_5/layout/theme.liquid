@@ -28,6 +28,7 @@
   <meta name="theme-color" content="{{ settings.color_primary }}">
 
   <!-- CSS ================================================== -->
+  {{ 'normalize.css' | asset_url | stylesheet_tag }}
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
   {{ 'custom.scss.css' | asset_url | stylesheet_tag }}
 
