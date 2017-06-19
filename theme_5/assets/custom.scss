@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Merriweather+Sans:400,700|Playfair+Display:400,400i,700,900');
 
+body {
+  box-sizing: border-box;
+}
+
 // Fiorella Colors
 $colorCeriseRed: #e83671;
 $colorEmperor: #555555;
@@ -33,11 +37,13 @@ nav ul {
   text-align: center;
   li {
     display: inline;
+    border-right: 1px solid $colorCeriseRed;
+    &:last-child {
+      border-right: none;
+    }
     a {
-      display: inline-block;
       text-decoration: none;
       font-family: $merriWeatherFont;
-      border-right: 1px solid $colorCeriseRed;
       color: $colorBlackSolid;
       font-weight: 700;
       padding: 5px;
