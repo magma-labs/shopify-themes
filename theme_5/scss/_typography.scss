@@ -1,0 +1,9 @@
+@import "mixins";
+
+@include font-face("Playfair Display", "../assets/fonts/Playfair Display", bold, regular);
+@include font-face("Playfair Display", "../assets/fonts/Playfair Display", black, italic);
+@include font-face("Merriweather Sans", "../assets/fonts/Merriweather Sans", bold, regular);
+
+$berkshire-font: 'Berkshire Swash', sans-serif;
+$playfair-font: 'Playfair Display', sans-serif;
+$merriweather-font: 'Merriweather Sans', sans-serif;
