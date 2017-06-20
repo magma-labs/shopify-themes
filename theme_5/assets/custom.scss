@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Merriweather+Sans:400,700|Playfair+Display:400,400i,700,900');
+
+body {
+  box-sizing: border-box;
+}
+
+// Fiorella Colors
+$colorCeriseRed: #e83671;
+$colorEmperor: #555555;
+$colorWhiteSolid: #ffffff;
+$colorPeppermint: #f3f9ef;
+$colorBlackSolid: #000000;
+
+// Fiorella Fonts
+$berkshireFont: 'Berkshire Swash', cursive;
+$merriWeatherFont: 'Merriweather Sans', sans-serif;
+$playfairDisplay: 'Playfair Display', serif;
+
+// Fiorella Header
+.layout-header {
+  background: $colorWhiteSolid;
+  opacity: .9;
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  z-index: 9;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: center;
+  li {
+    display: inline;
+    border-right: 1px solid $colorCeriseRed;
+    &:last-child {
+      border-right: none;
+    }
+    a {
+      text-decoration: none;
+      text-align: center;
+      font-family: $merriWeatherFont;
+      color: $colorBlackSolid;
+      font-weight: 700;
+      &:hover {
+        color: $colorCeriseRed;
+      }
+    }
+  }
+}
+
+.search-input {
+}
+
+.input-field-header {
+  float: left;
+  display: inline;
+}
+// Fiorella Buttons
+.fiorella-btn {
+  border: 3px solid $colorCeriseRed;
+  color: $colorCeriseRed;
+  font-family: $playfairDisplay;
+  font-style: normal;
+  text-align: center;
+  width: 325px;
+  height: 83px;
+  &:hover {
+    color: $colorWhiteSolid;
+    background-color: $colorCeriseRed;
+  }
+}
+
+.fiorella-categories-btn {
+  background-image: url("boutonnieres_home_1024.jpg");
+  width: 353px;
+  height: 80px;
+  &:hover {
+    border: 3px solid $colorWhiteSolid;
+    color: $colorWhiteSolid;
+    font-family: $playfairDisplay;
+    font-weight: bold;
+  }
+}
+
+// Fiorella's Icons
+.search-icon {
+	background: url("Sprite.png") no-repeat -48px -55px;
+	width: 20px;
+	height: 20px;
+}
+
+.facebook-icon {
+	background: url("Sprite.png") no-repeat -50px -158px;
+	width: 43px;
+	height: 43px;
+  border: none;
+  outline: none;
+  &:hover {
+    background: url("Sprite.png") no-repeat -50px -235px;
+  	width: 43px;
+  	height: 43px;
+  }
+}
+
+.pinterest-icon {
+  background: url("Sprite.png") no-repeat -141px -158px;
+	width: 43px;
+	height: 43px;
+  &:hover {
+    background: url("Sprite.png") no-repeat -141px -235px;
+  	width: 43px;
+  	height: 43px;
+  }
+}
+
+.googleplus-icon {
+  background: url("Sprite.png") no-repeat -231px -158px;
+	width: 43px;
+	height: 43px;
+  &:hover {
+    background: url("Sprite.png") no-repeat -231px -235px;
+  	width: 43px;
+  	height: 43px;
+  }
+}
+
+// Fiorella Slider
+.slider-btn {
+  @extend .fiorella-btn;
+  position: absolute;
+  z-index: 8;
+  top: 90%;
+  font-weight: bold;
+  width: 325px;
+  height: 83px;
+  left: 70%;
+  font-size: 43px;
+}
+
+.fiorella-info {
+}
+
+// Fiorella Footer
+.container-footer {
+  border: 1px solid $colorCeriseRed;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footer-section {
+  h3 {
+    color: $colorCeriseRed;
+    font-family: $playfairDisplay;
+    font-style: normal;
+    text-align: center;
+  }
+  .nav-footer {
+    text-align: center;
+    .footer-menu {
+      list-style: none;
+      li {
+        display: block;
+        a {
+          border: none;
+          font-family: $merriWeatherFont;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+
+.socials {
+  margin-top: 40px;
+}
+
+// Helpers
+.container-carousel {
+  margin:0;
+  padding:0;
+  width:100%;
+}
+.item img {
+  width:100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  height:100%;
+}
+
+.carousel, .item, .active {
+  height:100%;
+}
+
+.carousel-inner {
+  height:100%;
+}
+
+.carousel-indicators li {
+  background-color: $colorWhiteSolid;
+}
+.carousel-indicators .active {
+  background-color: $colorCeriseRed;
+}
