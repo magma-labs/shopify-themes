@@ -1,0 +1,28 @@
+.container {
+  background-color: indigo;
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: tomato;
+  flex: 1 100%;
+}
+
+.carousel {
+  background-color: gold;
+  flex: 1 100%;
+}
+
+.content {
+  background-color: skyblue;
+  flex: 1 100%;
+}
+
+.footer {
+  background-color: silver;
+  flex: 1 100%;
+}
