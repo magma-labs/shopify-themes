@@ -1,9 +1,10 @@
-@import "mixins";
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Merriweather+Sans:400,700|Playfair+Display:400,400i,700,900');
 
-@include font-face("Playfair Display", "../assets/fonts/Playfair Display", bold, regular);
-@include font-face("Playfair Display", "../assets/fonts/Playfair Display", black, italic);
-@include font-face("Merriweather Sans", "../assets/fonts/Merriweather Sans", bold, regular);
+// only regular 400
+$berkshire-font: 'Berkshire Swash', cursive;
 
-$berkshire-font: 'Berkshire Swash', sans-serif;
-$playfair-font: 'Playfair Display', sans-serif;
+// regular 400 and bold 700
 $merriweather-font: 'Merriweather Sans', sans-serif;
+
+// regular 400, bold 700, black 900, italic 400
+$playfair-font: 'Playfair Display', serif;
