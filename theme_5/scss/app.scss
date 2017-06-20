@@ -1,8 +1,7 @@
 @import "settings";
 @import "foundation";
+
 @import "colors";
 @import "typography";
 
-body {
-  font-family: $berkshire-font;
-}
+@import "base";
