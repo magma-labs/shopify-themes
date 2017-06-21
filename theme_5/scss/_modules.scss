@@ -1,0 +1,35 @@
+@import "burger";
+
+.menu-button {
+	background-color: $cerise-red;
+	border: 1px solid $cerise-red;
+	display: inline-block;
+	padding: .5em;
+}
+
+.burger-icon {
+	@include burger(25px, 3px, 5px, $white-solid);
+}
+
+.menu-button.is-active .burger-icon {
+	@include burger-to-cross;
+}
+
+.badge-conf{
+	color: $white-solid;
+	display: inline-block;
+	line-height: 50px;
+}
+
+.logo {
+  background: url(../assets/logos_png/logo1_fiorella_mobil.png) no-repeat center;
+  height: 50px;
+}
+
+.cart-icon {
+	background: url(../assets/Sprite.png) no-repeat -171px -383px;
+  display: inline-block;
+	height: 19px;
+	line-height: 50px;
+	width: 20px;
+}
