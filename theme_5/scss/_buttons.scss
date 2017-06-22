@@ -1,0 +1,22 @@
+.button-base {
+
+}
+
+.button-cta {
+  background-color: transparent;
+  border: 3px solid $cerise-red;
+  color: $cerise-red;
+  font-family: $playfair-font;
+  font-weight: 900;
+  font-size: 16px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  width: 175px;
+
+  &:hover {
+    background-color: $white-solid;
+    color: $cerise-red;
+  }
+}

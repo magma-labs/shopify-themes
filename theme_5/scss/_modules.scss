@@ -35,14 +35,6 @@
 	line-height: 50px;
 	width: 20px;
 }
-.search-icon {
-	background: url(../assets/Sprite.png) no-repeat -48px -55px;
-	display: inline-block;
-	height: 20px;
-	line-height: 50px;
-	width: 20px;
-
-}
 
 .container-text {
 	padding: 7px 7px;
@@ -62,4 +54,36 @@
 		padding: 1px 0px 5px 0px;
 		text-transform: uppercase;
 	}
+
+	// @media (min-width: $mobile-portrait) {
+	// 	background: url(../assets/Sprite.png) no-repeat 550px -50px;
+	// }
+}
+
+.carousel {
+	background-image: url(../assets/home/mobile/hero1_home_mobil.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 50%;
+	margin-top: 51px;
+	position: relative;
+}
+
+.carousel-content {
+	position: absolute;
+	right: 10px;
+	top: 235px;
+}
+
+.carousel-content-title {
+	text-align: right;
+}
+
+// Helpers
+.ft-right {
+	float: right;
+}
+
+.mt-15 {
+	margin-top: 15px;
 }
