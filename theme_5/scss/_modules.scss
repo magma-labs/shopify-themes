@@ -43,7 +43,7 @@
 	padding: 7px 7px;
 	margin: 0;
 	.text-box {
-		background: url(../assets/Sprite.png) no-repeat 292px -50px;
+		background: url(../assets/Sprite.png) no-repeat 230px -50px;
 		box-shadow: none;
 		display: inline-block;
 		border: none;
@@ -91,9 +91,9 @@
 }
 
 .article-title {
+	font-family: $playfair-font;
 	overflow: hidden;
 	text-align: center;
-	font-family: $playfair-font;
 }
 
 .h-style {
