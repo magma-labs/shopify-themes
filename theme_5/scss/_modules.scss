@@ -68,7 +68,7 @@
 	background-position: center;
 	height: 50%;
 	position: relative;
-	width: 100%;
+	// width: 100%;
 }
 
 .carousel-content {
@@ -89,6 +89,42 @@
 	text-align: center;
 	width: 100%;
 }
+
+.article-title {
+	overflow: hidden;
+	text-align: center;
+	font-family: $playfair-font;
+}
+
+.h-style {
+	display: inline-block;
+	font-style: normal;
+	padding: 0 15px;
+	position: relative;
+	text-transform: uppercase;
+	&:before {
+		background: $cerise-red;
+	  content: "";
+	  display: block;
+	  height: 1px;
+	  position: absolute;
+    top: 50%;
+	  width: 400%;
+		right: 100%;
+	}
+	&:after {
+		background: $cerise-red;
+	  content: "";
+	  display: block;
+	  height: 1px;
+	  position: absolute;
+    top: 50%;
+	  width: 400%;
+		left: 100%;
+	}
+}
+
+
 
 // Helpers
 .ft-right {
