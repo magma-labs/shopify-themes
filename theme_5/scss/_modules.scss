@@ -18,8 +18,9 @@
 
 .badge-conf{
 	color: $white-solid;
-	display: inline-block;
 	line-height: 50px;
+	position: absolute;
+	right: 50px;
 }
 
 .logo {
@@ -30,16 +31,17 @@
 // Sprites
 .cart-icon {
 	background: url(../assets/Sprite.png) no-repeat -171px -383px;
-  display: inline-block;
 	height: 19px;
 	line-height: 50px;
+	position: absolute;
+	top: 15px;
 	width: 20px;
+
 }
 
 .container-text {
 	padding: 7px 7px;
 	margin: 0;
-	// width: 90%;
 	.text-box {
 		background: url(../assets/Sprite.png) no-repeat 292px -50px;
 		box-shadow: none;
@@ -65,7 +67,6 @@
 	background-size: cover;
 	background-position: center;
 	height: 50%;
-	// margin-top: 51px;
 	position: relative;
 }
 
