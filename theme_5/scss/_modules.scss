@@ -84,10 +84,7 @@
 .article {
 	background-color: $peppermint;
 	height: 450px;
-	position: absolute;
-	top: 284px;
 	text-align: center;
-	width: 100%;
 }
 
 .article-title {
@@ -142,4 +139,8 @@
 
 .mt-15 {
 	margin-top: 15px;
+}
+
+.no-padding {
+	padding: 0;
 }
