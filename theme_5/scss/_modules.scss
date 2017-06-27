@@ -39,6 +39,7 @@
 
 }
 
+// Input
 .container-text {
 	padding: 7px 7px;
 	margin: 0;
@@ -62,6 +63,7 @@
 	// }
 }
 
+// Carousel
 .carousel {
 	background-image: url(../assets/home/mobile/hero1_home_mobil.jpg);
 	background-size: cover;
@@ -101,6 +103,29 @@
 	}
 }
 
+// Collection
+.collection-item {
+	position: relative;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.collection-link {
+	color: $white-solid;
+	font-family: $playfair-font;
+	font-size: 25px;
+	font-weight: 700;
+	position: absolute;
+	text-transform: uppercase;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	&:hover {
+		color: $white-solid;
+	}
+	&:active {
+		color: $white-solid;
+	}
+}
 
 // Headings
 .h-style {
@@ -142,4 +167,8 @@
 
 .no-padding {
 	padding: 0;
+}
+
+.pg-20-10 {
+	padding: 20px 10px;
 }
