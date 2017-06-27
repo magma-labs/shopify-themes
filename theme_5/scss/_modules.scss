@@ -39,6 +39,12 @@
 
 }
 
+.bus-icon {
+	background: url(../assets/Sprite.png) no-repeat -224px -48px;
+	width: 68px;
+	height: 52px;
+	transform: scale(.7);
+}
 // Input
 .container-text {
 	padding: 7px 7px;
@@ -86,7 +92,7 @@
 .article {
 	background-color: $peppermint;
 	height: 495px;
-	text-align: center;
+	text-align: center
 }
 
 .article-title {
@@ -127,6 +133,17 @@
 	}
 }
 
+// Promo
+.promo {
+	background-image: url(../assets/home/mobile/banner_image_home_mobil.jpg);
+	background-size: cover;
+}
+
+.promo-title {
+	overflow: hidden;
+	text-align: left;
+}
+
 // Headings
 .h-style {
 	display: inline-block;
@@ -156,6 +173,33 @@
 	}
 }
 
+.s-style {
+	display: inline-block;
+	// font-style: normal;
+	// padding: 25px 15px;
+	// position: relative;
+	// text-transform: uppercase;
+	&:before {
+		background: $cerise-red;
+	  content: "";
+	  display: block;
+	  height: 1px;
+	  position: absolute;
+    top: 50%;
+	  width: 50%;
+		right: 100%;
+	}
+	&:after {
+		background: $cerise-red;
+	  content: "";
+	  display: block;
+	  height: 1px;
+	  position: absolute;
+    top: 50%;
+	  width: 50%;
+		left: 100%;
+	}
+}
 // Helpers
 .ft-right {
 	float: right;
