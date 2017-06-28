@@ -16,7 +16,7 @@
 	}
 }
 
-.badge-conf{
+.badge-conf {
 	color: $white-solid;
 	line-height: 50px;
 	position: absolute;
@@ -43,7 +43,7 @@
 	background: url(../assets/Sprite.png) no-repeat -224px -48px;
 	width: 68px;
 	height: 52px;
-	transform: scale(.7);
+	transform: scale(.7) translate(36%, 30%);
 }
 // Input
 .container-text {
