@@ -137,7 +137,7 @@
 	}
 }
 
-// Promo
+// Shipping
 .shipping {
 	background-image: url(../assets/home/mobile/banner_image_home_mobil.jpg);
 	background-size: cover;
@@ -167,6 +167,9 @@
 	font-family: $playfair-font;
 	font-weight: 900;
 	text-transform: uppercase;
+	&:hover {
+		color: $black-solid;
+	}
 	&:active {
 		color: $black-solid;
 	}
