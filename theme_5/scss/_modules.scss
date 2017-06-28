@@ -138,15 +138,38 @@
 }
 
 // Promo
-.promo {
+.shipping {
 	background-image: url(../assets/home/mobile/banner_image_home_mobil.jpg);
 	background-size: cover;
 	height: 257px;
 }
 
-.promo-title {
+.shipping-title {
 	overflow: hidden;
 	text-align: left;
+}
+
+.shipping-content {
+	letter-spacing: 2px;
+	margin: 73px 0 0 7px;
+	width: 40%;
+	p {
+		color: $cerise-red;
+		font-family: $playfair-font;
+		font-weight: 900;
+		text-align: left;
+		text-transform: uppercase;
+	}
+}
+
+.shipping-link {
+	color: $black-solid;
+	font-family: $playfair-font;
+	font-weight: 900;
+	text-transform: uppercase;
+	&:active {
+		color: $black-solid;
+	}
 }
 
 // Headings
