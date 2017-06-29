@@ -72,7 +72,7 @@
 	padding: 7px 7px;
 	margin: 0;
 	.text-box {
-		background: url(../assets/Sprite.png) no-repeat 230px -50px;
+		background: url(../assets/Sprite.png) no-repeat 207px -50px;
 		box-shadow: none;
 		display: inline-block;
 		border: none;
@@ -204,13 +204,30 @@
 }
 
 // Footer
+.follow-header {
+	margin: 15px;
+}
+
 .follow-title {
 	color: $cerise-red;
 	font-family: $playfair-font;
 	font-weight: bold;
+	text-align: center;
 	text-transform: uppercase;
 }
 
+.follow-social {
+	margin-left: 25px;
+}
+
+.copyright-text {
+	p {
+		font-family: $playfair-font;
+		font-size: 12px;
+		padding: 0 9%;
+		text-align: center;
+	}
+}
 
 // Headings
 .h-style {
