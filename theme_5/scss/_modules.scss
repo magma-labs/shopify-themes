@@ -48,10 +48,21 @@
 
 .facebook-icon {
 	background: url('imgs/Sprite.png') no-repeat -50px -158px;
-	width: 43px;
 	height: 43px;
+	width: 43px;
 }
 
+.pinterest-icon {
+	background: url('imgs/Sprite.png') no-repeat -141px -158px;
+	height: 43px;
+	width: 43px;
+}
+
+.googleplus-icon {
+	background: url('imgs/Sprite.png') no-repeat -231px -158px;
+	height: 43px;
+	width: 43px;
+}
 
 // Input
 .container-text {
