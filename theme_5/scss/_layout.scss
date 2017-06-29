@@ -6,7 +6,15 @@
 }
 
 .header {
-  width: 100%;
   background-color: $cerise-red;
   height: 50px;
+  width: 100%;
+}
+
+.footer {
+  background-color: $peppermint;
+  border: solid 1px $cerise-red;
+  height: 100px;
+  margin: 15px;
+  text-align: center;
 }
