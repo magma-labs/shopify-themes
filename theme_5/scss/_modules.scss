@@ -41,25 +41,25 @@
 
 .bus-icon {
 	background: url(../assets/Sprite.png) no-repeat -224px -48px;
-	width: 68px;
 	height: 52px;
 	transform: scale(.5) translate(5%, 43%);
+	width: 68px;
 }
 
 .facebook-icon {
-	background: url('imgs/Sprite.png') no-repeat -50px -158px;
+	background: url(../assets/Sprite.png) no-repeat -50px -158px;
 	height: 43px;
 	width: 43px;
 }
 
 .pinterest-icon {
-	background: url('imgs/Sprite.png') no-repeat -141px -158px;
+	background: url(../assets/Sprite.png) no-repeat -141px -158px;
 	height: 43px;
 	width: 43px;
 }
 
 .googleplus-icon {
-	background: url('imgs/Sprite.png') no-repeat -231px -158px;
+	background: url(../assets/Sprite.png) no-repeat -231px -158px;
 	height: 43px;
 	width: 43px;
 }
@@ -199,6 +199,15 @@
 		color: $black-solid;
 	}
 }
+
+// Footer
+.follow-title {
+	color: $cerise-red;
+	font-family: $playfair-font;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 
 // Headings
 .h-style {
