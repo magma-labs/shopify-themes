@@ -43,7 +43,7 @@
 	background: url(../assets/Sprite.png) no-repeat -224px -48px;
 	width: 68px;
 	height: 52px;
-	transform: scale(.5) translate(36%, 43%);
+	transform: scale(.5) translate(5%, 43%);
 }
 
 // Input
@@ -152,12 +152,12 @@
 
 .shipping-content {
 	letter-spacing: 2px;
-	margin: 73px 0 0 7px;
+	margin: 121px 0 0 5%;
 	width: 40%;
 	p {
 		color: $cerise-red;
 		font-family: $playfair-font;
-		font-weight: 900;
+		font-weight: 700;
 		text-align: left;
 		text-transform: uppercase;
 	}
@@ -166,8 +166,14 @@
 .shipping-link {
 	color: $black-solid;
 	font-family: $playfair-font;
-	font-weight: 900;
+	font-weight: 700;
 	text-transform: uppercase;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	padding: 130px 160px 0 5%;
+	letter-spacing: 2px;
 	&:hover {
 		color: $black-solid;
 	}
