@@ -28,6 +28,17 @@
   height: 50px;
 }
 
+// Mobile Nav
+.mm-nav {
+	background-color: white;
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	z-index: 7;
+}
+
 // Sprites
 .cart-icon {
 	background: url(../assets/Sprite.png) no-repeat -171px -383px;
