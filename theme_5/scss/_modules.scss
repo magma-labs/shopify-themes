@@ -363,6 +363,16 @@
 	}
 }
 
+// Hero
+.hero-image {
+	background-image: url(../assets/categories/mobile/hero_image_mobile.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 120px;
+	position: relative;
+}
+
 // Helpers
 .ft-right {
 	float: right;
