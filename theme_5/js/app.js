@@ -10,5 +10,11 @@ $(window).on('load', function() {
   });
 
   console.log("Hola vato!");
-  
+
+  var menu_button = $('.menu-button');
+
+  menu_button.click(function() {
+    console.log('Hello click');  
+  });
+
 });
