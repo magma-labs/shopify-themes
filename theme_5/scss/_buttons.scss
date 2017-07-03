@@ -22,7 +22,8 @@
 }
 
 .back-btn {
-  float: right;
+  position: absolute;
+  right: 0;
   font-family: $merriweather-font;
   font-size: 13px;
   font-weight: 400;
