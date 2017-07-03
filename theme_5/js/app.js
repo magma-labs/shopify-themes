@@ -3,14 +3,16 @@
 // $(document).foundation();
 $(window).on('load', function() {
 
-  var mm_nav = $('.mm-nav');
-  var body_tag = $('body');
+  var mobileNav = $('.mm-nav');
+  var bodyTag = $('body');
+  var header = $('.header');
 
   var menuButton = document.getElementById('menuButton');
   menuButton.addEventListener('click', function (e) {
       menuButton.classList.toggle('is-active');
-      mm_nav.toggleClass('show');
-      body_tag.toggleClass('no-scroll');
+      mobileNav.toggleClass('show');
+      bodyTag.toggleClass('no-scroll');
+      header.toggleClass('bg-white');
       e.preventDefault();
   });
 

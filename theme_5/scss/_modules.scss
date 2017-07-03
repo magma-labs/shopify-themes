@@ -12,6 +12,7 @@
 	// padding: .5em;
 	&.is-active {
 		background-color: $white-solid;
+		border: none;
 		.burger-icon {
 			@include burger-to-cross;
 			&::before {
@@ -357,4 +358,8 @@
 
 .no-scroll {
 	overflow: hidden;
+}
+
+.bg-white {
+	background-color: $white-solid;
 }
