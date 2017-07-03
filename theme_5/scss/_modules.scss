@@ -8,7 +8,8 @@
 	background-color: $cerise-red;
 	border: 1px solid $cerise-red;
 	display: inline-block;
-	padding: .5em;
+	margin-top: 15px;
+	// padding: .5em;
 	&.is-active {
 		.burger-icon {
 			@include burger-to-cross;
