@@ -11,8 +11,15 @@
 	margin-top: 15px;
 	// padding: .5em;
 	&.is-active {
+		background-color: $white-solid;
 		.burger-icon {
 			@include burger-to-cross;
+			&::before {
+				background-color: $cerise-red;
+			}
+			&::after {
+				background-color: $cerise-red;
+			}
 		}
 	}
 }
@@ -39,6 +46,7 @@
 	top: 101px;
 	width: 100vw;
 	z-index: 7;
+	transition: all 3s;
 }
 
 .menu-top {
