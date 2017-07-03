@@ -30,6 +30,7 @@
 
 // Mobile Nav
 .mm-nav {
+	display: none;
 	background-color: white;
 	height: 100vh;
 	left: 0;
@@ -339,4 +340,8 @@
 
 .pg-20-15 {
 	padding: 20px 15px;
+}
+
+.show {
+	display: block;
 }
