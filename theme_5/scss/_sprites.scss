@@ -38,7 +38,12 @@
 }
 
 .back-icon {
-	background: url('imgs/Sprite.png') no-repeat -512px -60px;
-	width: 13px;
+	background: url('../assets/Sprite.png') no-repeat -512px -60px;
+	display: block;
+	float: left;
 	height: 17px;
+	margin-right: 2px;
+	margin-top: 1px;
+	transform: scale(.8);
+	width: 13px;
 }
