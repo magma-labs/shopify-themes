@@ -47,3 +47,21 @@
 	transform: scale(.8);
 	width: 13px;
 }
+
+.prev-icon {
+	background: url('../assets/Sprite.png') no-repeat -353px -61px;
+	float: left;
+	height: 21px;
+	position: relative;
+	right: 7px;
+	width: 13px;
+}
+
+.next-icon {
+	background: url('../assets/Sprite.png') no-repeat -411px -61px;
+	float: right;
+	height: 21px;
+	left: 7px;
+	position: relative;
+	width: 14px;
+}
