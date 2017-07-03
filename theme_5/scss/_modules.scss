@@ -111,8 +111,9 @@
 
 // Input
 .container-text {
-	margin: 0;
-	padding: 7px 7px;
+	margin: 7px 7px;
+	border-bottom: 1px solid $cerise-red;
+	// padding: 7px 7px;
 	.text-box {
 		background: url(../assets/Sprite.png) no-repeat 207px -50px;
 		border: none;
