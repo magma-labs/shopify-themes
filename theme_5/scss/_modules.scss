@@ -69,6 +69,12 @@
 	text-transform: uppercase;
 }
 
+.menu-top-item {
+	&:hover {
+		color: $cerise-red;
+	}
+}
+
 .menu-mid {
 	color: $cerise-red;
 	font-family: $merriweather-font;
@@ -79,6 +85,14 @@
 	text-transform: uppercase;
 }
 
+.menu-mid-item {
+	&:hover {
+		background-color: $cerise-red;
+		color: $white-solid;
+	}
+}
+
+
 .menu-bot {
 	font-family: $merriweather-font;
 	font-size: 20px;
@@ -87,6 +101,12 @@
 	list-style: none;
 	margin: 0 20px;
 	text-transform: uppercase;
+}
+
+.menu-bot-item {
+	&:hover {
+		color: $cerise-red;
+	}
 }
 
 // Sprites
