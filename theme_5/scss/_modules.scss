@@ -115,7 +115,6 @@
 	padding: 7px 7px;
 	.text-box {
 		background: url(../assets/Sprite.png) no-repeat 207px -50px;
-		border-bottom: 1px solid $cerise-red;
 		border: none;
 		box-shadow: none;
 		display: inline-block;
@@ -128,25 +127,6 @@
 		text-transform: uppercase;
 	}
 }
-
-.container-text-nav {
-		border-bottom: solid 1px $cerise-red;
-		margin: 0 20px;
-		// padding: 7px 7px;
-		.text-box-nav {
-			background: url(../assets/Sprite.png) no-repeat 212px -50px;
-			border: none;
-			box-shadow: none;
-			display: inline-block;
-			font-family: $merriweather-font;
-			font-size: 13px;
-			font-style: normal;
-			margin: 0 auto;
-			outline: none;
-			padding: 1px 0px 5px 0px;
-			text-transform: uppercase;
-		}
-	}
 
 // @media (min-width: $mobile-portrait) {
 // 	background: url(../assets/Sprite.png) no-repeat 550px -50px;
