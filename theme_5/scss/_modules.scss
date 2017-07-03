@@ -33,8 +33,16 @@
 }
 
 .logo {
-  background: url(../assets/logos_png/logo1_fiorella_mobil.png) no-repeat center;
+  // background: url(../assets/logos_png/logo1_fiorella_mobil.png) no-repeat center;
   height: 50px;
+}
+
+.mobile-logo-one {
+	background: url(../assets/logos_png/logo1_fiorella_mobil.png) no-repeat center;
+}
+
+.mobile-logo-two {
+	background: url(../assets/logos_png/logo2_fiorella_mobil.png) no-repeat center;
 }
 
 // Mobile Nav
