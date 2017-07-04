@@ -334,14 +334,19 @@
 	position: relative;
 }
 
-// Pagination
-.pagination-container {
-	// position: relative;
-	// top: 12px;
-	// padding: 8px 0;
+// Product
+.product-link {
+	color: $black-solid;
+
+	&:hover {
+		color: $black-solid;
+	}
+
+	&:active {
+		color: $black-solid;
+	}
 }
 
-// Product
 .product-item {
 	border: 1px solid $cerise-red;
 	margin: 20px;
