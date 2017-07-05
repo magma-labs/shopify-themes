@@ -1,36 +1,35 @@
 // Sprites
 .cart-icon {
-	background: url(../assets/Sprite.png) no-repeat -171px -383px;
+	background: url('../assets/Sprite.png') no-repeat -171px -383px;
 	height: 19px;
 	position: absolute;
 	top: 0;
 	width: 20px;
-
 }
 
 .bus-icon {
-	background: url(../assets/Sprite.png) no-repeat -224px -48px;
+	background: url('../assets/Sprite.png') no-repeat -224px -48px;
 	height: 52px;
 	transform: scale(.5) translate(5%, 43%);
 	width: 68px;
 }
 
 .facebook-icon {
-	background: url(../assets/Sprite.png) no-repeat -50px -158px;
+	background: url('../assets/Sprite.png') no-repeat -50px -158px;
 	height: 43px;
 	width: 43px;
 	position: absolute;
 }
 
 .pinterest-icon {
-	background: url(../assets/Sprite.png) no-repeat -141px -158px;
+	background: url('../assets/Sprite.png') no-repeat -141px -158px;
 	height: 43px;
 	width: 43px;
 	position: absolute;
 }
 
 .googleplus-icon {
-	background: url(../assets/Sprite.png) no-repeat -231px -158px;
+	background: url('../assets/Sprite.png') no-repeat -231px -158px;
 	height: 43px;
 	width: 43px;
 	position: absolute;
@@ -62,5 +61,12 @@
 	height: 21px;
 	left: 7px;
 	position: relative;
+	width: 14px;
+}
+
+.cross-icon-mob {
+	background: url('../assets/Sprite.png') no-repeat -176px -329px;
+	height: 14px;
+	position: absolute;
 	width: 14px;
 }
