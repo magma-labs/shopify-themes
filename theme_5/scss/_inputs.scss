@@ -1,0 +1,17 @@
+// Input
+.text-container {
+	border-bottom: 1px solid $cerise-red;
+	margin: 0 15px 10px;
+	.text-box {
+		// background: url(../assets/Sprite.png) no-repeat 207px -50px;
+		border: none;
+		box-shadow: none;
+		font-family: $merriweather-font;
+		font-size: 13px;
+		font-style: normal;
+		margin: 0 auto;
+		outline: none;
+		padding-left: 0;
+		text-transform: uppercase;
+	}
+}

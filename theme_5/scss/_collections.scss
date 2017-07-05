@@ -1,0 +1,31 @@
+.collections-container {
+  padding: 30px 15px;
+  position: relative;
+  text-align: center;
+}
+
+.collection-link {
+	color: $white-solid;
+	&:hover {
+		color: $white-solid;
+	}
+	&:active {
+		color: $white-solid;
+	}
+}
+
+.collection-item {
+	position: relative;
+	text-align: center;
+  height: 190px;
+}
+
+.collection-name {
+	bottom: 105px;
+	font-family: $playfair-font;
+	font-size: 28px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	position: relative;
+	text-transform: uppercase;
+}

@@ -3,9 +3,11 @@
 // $(document).foundation();
 $(window).on('load', function() {
 
+  $('.carousel').carousel();
+
   var mobileNav = $('.mm-nav');
   var bodyTag = $('body');
-  var header = $('.header');
+  var header = $('.main-header');
   var logo = $('.logo');
 
   var menuButton = document.getElementById('menuButton');

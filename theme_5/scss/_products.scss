@@ -1,0 +1,39 @@
+// Product
+
+.products-container {
+  padding: 0 15px;
+}
+
+.product-link {
+	color: $black-solid;
+  position: relative;
+  top: 25px;
+
+	&:hover {
+		color: $black-solid;
+	}
+
+	&:active {
+		color: $black-solid;
+	}
+}
+
+.product-item {
+	border: 1px solid $cerise-red;
+	text-align: center;
+}
+
+.product-name {
+	font-family: $playfair-font;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 0;
+	text-transform: capitalize;
+}
+
+.product-price {
+	color: $cerise-red;
+	font-family: $merriweather-font;
+	font-size: 20px;
+	font-weight: 900;
+}

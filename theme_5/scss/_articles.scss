@@ -1,0 +1,52 @@
+// Articles
+.article {
+	background-color: $peppermint;
+	height: 495px;
+	padding: 0 15px;
+	text-align: center
+}
+
+.title {
+	font-family: $playfair-font;
+	overflow: hidden;
+	text-align: center;
+}
+
+.article-content {
+	color: $emperor;
+	p {
+		font-size: 15px;
+		line-height: 30px;
+	}
+}
+
+.h-style {
+	display: inline-block;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 100;
+	letter-spacing: 3px;
+	padding: 25px 15px;
+	position: relative;
+	text-transform: uppercase;
+	&:before {
+		background: $cerise-red;
+		right: 95%;
+	  content: "";
+	  display: block;
+	  height: 1px;
+	  position: absolute;
+	  width: 100%;
+    top: 50%;
+	}
+	&:after {
+		background: $cerise-red;
+		left: 95%;
+	  content: "";
+	  display: block;
+	  height: 1px;
+	  position: absolute;
+	  width: 100%;
+    top: 50%;
+	}
+}

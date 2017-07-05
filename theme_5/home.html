@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Categories</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
+
     <!-- header -->
     <header class="main-header">
       <a href="#" class="menu-button" id="menuButton">
@@ -25,52 +26,77 @@
       <input class="text-box" type="text" name="" value="search">
     </div>
 
-    <!-- hero -->
-    <div class="hero-image"></div>
+    <!-- carousel -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      </ol>
 
-    <!-- back -->
-    <div class="back-btn">
-      <span class="back-icon"></span>back
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="img-responsive" src="assets/home/mobile/hero1_home_mobil.jpg" alt="Hero 1">
+        </div>
+        <div class="item">
+          <img class="img-responsive" src="assets/home/mobile/hero2_home_mobil.jpg" alt="Hero 2">
+        </div>
+      </div>
+
+      <div class="carousel-content rpa">
+        <h6 class="carousel-content-title">Check out the new arrangements</h6>
+        <button class="button-cta ft-right mt-15">shop now</button>
+      </div>
     </div>
 
-    <!-- products -->
-    <div class="products-container">
+    <!-- article -->
+    <div class="article">
       <div class="title">
-        <h6 class="h-style">bouquets</h6>
+        <h6 class="h-style"> always fresh </h6>
       </div>
-      <div class="pagination-container">
-        <a href="#" class="prev-btn">
-          <span class="prev-icon"></span>prev
-        </a>
-        <a href="#" class="next-btn">
-          next<span class="next-icon"></span>
-        </a>
+      <img src="assets/home/mobile/complementary_image_home_mobil.jpg" alt="">
+      <div class="article-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo labore vel accusantium vero nobis reiciendis officiis corrupti ducimus, officia quaerat debitis quidem, libero pariatur, perspiciatis distinctio delectus esse, ut illum.</p>
       </div>
+      <button class="button-cta" type="button" name="button">readme more</button>
+    </div>
 
-      <a class="product-link" href="#">
-        <div class="product-item">
-          <img src="assets/categories/mobile/bouquet1_image_mobile.jpg">
-          <p class="product-name">flower bouquet victoria</p>
-          <p class="product-price">$84.50</p>
+    <!-- collections -->
+    <div class="collections-container">
+      <a href="#" class="collection-link">
+        <div class="collection-item">
+          <img src="assets/home/mobile/bouquets_home_mobil.jpg" alt="">
+          <p class="collection-name">bouquets</p>
         </div>
       </a>
 
-      <a class="product-link" href="#">
-        <div class="product-item">
-          <img src="assets/categories/mobile/bouquet1_image_mobile.jpg">
-          <p class="product-name">flower bouquet victoria</p>
-          <p class="product-price">$84.50</p>
+      <a href="#" class="collection-link">
+        <div class="collection-item">
+          <img src="assets/home/mobile/boutonniere_home_mobil.jpg" alt="">
+          <p class="collection-name">boutonnieres</p>
         </div>
       </a>
 
-      <a class="product-link" href="#">
-        <div class="product-item">
-          <img src="assets/categories/mobile/bouquet1_image_mobile.jpg">
-          <p class="product-name">flower bouquet victoria</p>
-          <p class="product-price">$84.50</p>
+      <a href="#" class="collection-link">
+        <div class="collection-item">
+          <img src="assets/home/mobile/centerpieces_home_mobil.jpg" alt="">
+          <p class="collection-name">centerpieces</p>
         </div>
       </a>
+    </div>
 
+    <!-- shipping -->
+    <div class="shipping-container">
+      <div class="shipping">
+        <div class="shipping-title">
+          <span class="s-style bus-icon"></span>
+        </div>
+        <a href="#" class="shipping-link">free shipping</a>
+        <div class="shipping-content">
+          <p>on orders  over $200</p>
+        </div>
+      </div>
     </div>
 
     <!-- footer -->

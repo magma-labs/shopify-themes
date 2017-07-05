@@ -1,0 +1,70 @@
+@import "burger";
+
+.main-header {
+  background-color: $cerise-red;
+  height: 50px;
+  padding: 15px;
+
+  &.bg-white {
+    background-color: $white-solid;
+  }
+}
+
+.burger-icon {
+	@include burger(25px, 3px, 5px, $white-solid);
+}
+
+.menu-button {
+	background-color: $cerise-red;
+	border: 1px solid $cerise-red;
+	float: left;
+	&.is-active {
+		background-color: $white-solid;
+		border: none;
+		.burger-icon {
+			@include burger-to-cross;
+			&::before {
+				background-color: $cerise-red;
+			}
+			&::after {
+				background-color: $cerise-red;
+			}
+		}
+	}
+}
+
+.badge-conf {
+	color: $white-solid;
+	line-height: 50px;
+	position: absolute;
+	right: 50px;
+}
+
+.logo {
+  height: 18px;
+}
+
+.mobile-logo-one {
+	background: url(../assets/logos_png/logo1_fiorella_mobil.png) no-repeat center;
+}
+
+.mobile-logo-two {
+	background: url(../assets/logos_png/logo2_fiorella_mobil.png) no-repeat center;
+}
+
+.cart-button {
+  bottom: 16px;
+  color: white;
+  float: right;
+  font-size: 15px;
+  height: 19px;
+  letter-spacing: 12px;
+  position: relative;
+  right: 20px;
+  &:hover {
+		color: $white-solid;
+	}
+	&:active {
+		color: $white-solid;
+	}
+}
