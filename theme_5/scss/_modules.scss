@@ -45,7 +45,6 @@
 	}
 }
 
-
 .menu-bot {
 	font-family: $merriweather-font;
 	font-size: 20px;
@@ -60,6 +59,20 @@
 	&:hover {
 		color: $cerise-red;
 	}
+}
+
+// Content
+.content {
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 0 15px;
+}
+
+// Pagination
+.pagination-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 // @media (min-width: $mobile-portrait) {
@@ -116,7 +129,6 @@
 }
 
 // Headings
-
 .s-style {
 	display: inline-block;
 	&:before {
