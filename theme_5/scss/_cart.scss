@@ -35,12 +35,23 @@
   justify-content: space-between;
 }
 
+.item-plus {
+  color: $emperor;
+  font-size: 13px;
+  &:hover {
+    color: $emperor;
+  }
+  &:active {
+    color: $emperor;
+  }
+}
 .triangle {
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	border-top: 15px solid $emperor;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 12px solid $emperor;
 	height: 0;
   display: inline-block;
+  margin-left: 9px;
   width: 0;
 }
 
@@ -49,4 +60,24 @@
 	font-family: $merriweather-font;
 	font-size: 15px;
 	font-weight: 100;
+}
+
+.item-delete {
+  margin-top: 2px;
+}
+
+.total-container {
+  text-align: center;
+  color: $emperor;
+  font-family: $merriweather-font;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.total {
+  font-size: 23px;
+}
+
+.price {
+  margin-left: 20px;
 }
