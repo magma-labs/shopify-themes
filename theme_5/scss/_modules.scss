@@ -153,12 +153,21 @@
 	}
 }
 
-// Hero
-.hero-image {
+// Hero's
+.hero-image-categories {
 	background-image: url(../assets/categories/mobile/hero_image_mobile.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 120px;
+	position: relative;
+}
+
+.hero-image-contact {
+	background-image: url('../assets/contact us/mobile/hero_mobile.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 150px;
 	position: relative;
 }
