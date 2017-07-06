@@ -1,0 +1,40 @@
+.store-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+
+.store-info {
+  width: 80%;
+  padding-bottom: 15px;
+
+  &:first-child {
+    border-bottom: 1px solid $cerise-red;
+    margin-bottom: 10px;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $cerise-red;
+  }
+}
+.store-location {
+  color: $cerise-red;
+  font-family: $merriweather-font;
+
+  p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+}
+
+.address-location {
+  color: $emperor;
+  font-family: $merriweather-font;
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

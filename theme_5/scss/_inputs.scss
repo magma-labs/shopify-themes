@@ -15,3 +15,19 @@
 		text-transform: uppercase;
 	}
 }
+
+.input-container {
+	border-bottom: 1px solid $cerise-red;
+	margin-bottom: 25px;
+	.input-cu {
+		border: none;
+		box-shadow: none;
+		font-family: $merriweather-font;
+		font-size: 13px;
+		font-style: normal;
+		margin: 0 auto;
+		outline: none;
+		padding-left: 0;
+		text-transform: capitalize;
+	}
+}

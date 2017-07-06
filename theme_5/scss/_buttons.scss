@@ -90,6 +90,10 @@
   font-weight: bold;
   height: 45px;
   width: 199px;
+
+  &:hover {
+    color: $cerise-red;
+  }
 }
 
 .mobile-btn-4 {

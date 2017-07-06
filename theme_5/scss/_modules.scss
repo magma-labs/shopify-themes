@@ -68,6 +68,17 @@
 	padding: 0 15px;
 }
 
+// Button Container
+.btn-container {
+	display: flex;
+	justify-content: center;
+}
+
+// Contact Form
+.contact-form {
+	height: 340px;
+}
+
 // Pagination
 .pagination-container {
 	display: flex;
@@ -170,4 +181,13 @@
 	background-size: cover;
 	height: 150px;
 	position: relative;
+}
+
+.contact-intro {
+	color: $emperor;
+	font-family: $merriweather-font;
+	font-size: 13px;
+	line-height: 18px;
+	margin-bottom: 19px;
+	word-wrap: normal;
 }
