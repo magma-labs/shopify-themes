@@ -47,6 +47,7 @@
     color: $emperor;
   }
 }
+
 .triangle {
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
@@ -69,11 +70,11 @@
 }
 
 .total-container {
-  text-align: center;
   color: $emperor;
   font-family: $merriweather-font;
-  text-transform: capitalize;
   margin-top: 10px;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .total {
@@ -82,4 +83,12 @@
 
 .price {
   margin-left: 20px;
+}
+
+.cart-btn-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 0 15px;
 }

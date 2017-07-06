@@ -1,5 +1,11 @@
 .button-base {
-
+  align-items: center;
+  color: $cerise-red;
+  display: flex;
+  font-family: $playfair-font;
+  justify-content: center;
+  margin: 5px 0;
+  text-transform: uppercase;
 }
 
 .button-cta {
@@ -7,8 +13,8 @@
   border: 3px solid $cerise-red;
   color: $cerise-red;
   font-family: $playfair-font;
-  font-weight: 900;
   font-size: 16px;
+  font-weight: 900;
   height: 40px;
   margin: 0;
   padding: 0;
@@ -40,8 +46,8 @@
   text-transform: uppercase;
 
   &:hover {
-    font-weight: 400;
     color: $black-solid;
+    font-weight: 400;
   }
 }
 
@@ -56,7 +62,45 @@
   text-transform: uppercase;
 
   &:hover {
-    font-weight: 400;
     color: $black-solid;
+    font-weight: 400;
+  }
+}
+
+
+// Mobile
+.mobile-btn-2 {
+  @extend .button-base;
+  background-color: $cerise-red;
+  color: $white-solid;
+  font-size: 24px;
+  font-weight: bold;
+  height: 60px;
+  width: 250px;
+
+  &:hover {
+    color: $white-solid;
+  }
+}
+
+.mobile-btn-3 {
+  @extend .button-base;
+  border: 2px solid $cerise-red;
+  font-size: 18px;
+  font-weight: bold;
+  height: 45px;
+  width: 199px;
+}
+
+.mobile-btn-4 {
+  @extend .button-base;
+  border: 2px solid $cerise-red;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  width: 250px;
+
+  &:hover {
+    color: $cerise-red;
   }
 }
