@@ -11,6 +11,7 @@ $(window).on('load', function() {
   var logo = $('.logo');
   var itemDelete = $('.item-delete');
   var itemPlus = $('.item-plus');
+  var emptyCartBtn = $('#emptyCartBtn');
 
   var menuButton = document.getElementById('menuButton');
   menuButton.addEventListener('click', function (e) {
@@ -35,6 +36,13 @@ $(window).on('load', function() {
     $(this).append('<span class="triangle"></span>');
     console.log('Add action');
     console.log(count);
+  });
+
+  emptyCartBtn.click(function() {
+    console.log('delete');
+    $('.cart-list').empty();
+    $('.cart-list').append('<p class="total"> Empty cart </p>');
+    $('.price').text('$0.00');
   });
 
   console.log("Hola vato!");
