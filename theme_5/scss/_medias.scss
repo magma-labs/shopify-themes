@@ -1,18 +1,20 @@
 // Medias
-@media only screen and (min-width: 768px) {
+
+@media #{$mobile} {
+  .main-header{
+    display: none;
+  }
+}
+
+// tablet
+@media #{$tablet} {
 
   .mobile-header {
     display: none;
   }
 
-	// .container-text {
-	// 	.text-box {
-	// 		background: url(../assets/Sprite.png) no-repeat 550px -50px;
-	// 	}
-	// }
+  .text-container {
+    display: none;
+  }
 
-
-	// body {
-	// 	background-color: indigo;
-	// }
 }

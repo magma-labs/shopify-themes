@@ -68,3 +68,29 @@
 		color: $white-solid;
 	}
 }
+
+// main header
+.main-header {
+  background: $white-solid;
+  height: 200px;
+  opacity: .9;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.header-mid {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-img {
+  background-image: url('../assets/logos_png/logo_fiorella.png');
+  height: 82px;
+  transform: scale(.8);
+  width: 250px;
+}
+
+.header-bot {
+  display: flex;
+  justify-content: center;
+}

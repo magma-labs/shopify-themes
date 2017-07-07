@@ -7,7 +7,7 @@ $(window).on('load', function() {
 
   var mobileNav = $('.mm-nav');
   var bodyTag = $('body');
-  var header = $('.main-header');
+  var header = $('.mobile-header');
   var logo = $('.logo');
   var itemDelete = $('.item-delete');
   var itemPlus = $('.item-plus');
