@@ -79,6 +79,15 @@
 	height: 340px;
 }
 
+.contact-intro {
+	color: $emperor;
+	font-family: $merriweather-font;
+	font-size: 13px;
+	line-height: 18px;
+	margin-bottom: 19px;
+	word-wrap: normal;
+}
+
 // Pagination
 .pagination-container {
 	display: flex;
@@ -89,6 +98,19 @@
 // @media (min-width: $mobile-portrait) {
 // 	background: url(../assets/Sprite.png) no-repeat 550px -50px;
 // }
+
+// About text
+.about-text {
+	text-align: center;
+	p {
+		font-size: 14px;
+		margin-bottom: 16px;
+		color: $emperor;
+		line-height: 19px;
+		font-weight: 100;
+		font-family: $merriweather-font;
+	}
+}
 
 // Shipping
 .shipping-container {
@@ -183,11 +205,11 @@
 	position: relative;
 }
 
-.contact-intro {
-	color: $emperor;
-	font-family: $merriweather-font;
-	font-size: 13px;
-	line-height: 18px;
-	margin-bottom: 19px;
-	word-wrap: normal;
+.hero-image-about {
+	background-image: url('../assets/About us/hero_mobile.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 150px;
+	position: relative;
 }
