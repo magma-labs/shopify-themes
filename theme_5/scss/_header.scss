@@ -1,5 +1,6 @@
 @import "burger";
 
+// mobile header
 .mobile-header {
   background-color: $cerise-red;
   height: 50px;
@@ -72,10 +73,63 @@
 // main header
 .main-header {
   background: $white-solid;
+  display: flex;
+  flex-direction: column;
   height: 200px;
+  justify-content: space-around;
   opacity: .9;
-  width: 100%;
   padding: 0 10px;
+  width: 100%;
+}
+
+.header-top {
+  border-bottom: 1px solid $cerise-red;
+  display: flex;
+}
+
+.search-container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+
+  .search-input {
+    border: none;
+    box-shadow: none;
+    color: $black-solid;
+    font-family: $merriweather-font;
+    font-size: 17px;
+    margin-left: 10px;
+    outline: none;
+    padding-left: 0;
+    text-transform: uppercase;
+  }
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.secondary-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.option-list {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+
+  .option-item {
+    margin: 0 10px;
+
+    a {
+      color: $black-solid;
+    }
+  }
 }
 
 .header-mid {
@@ -93,4 +147,39 @@
 .header-bot {
   display: flex;
   justify-content: center;
+}
+
+.collection-list {
+  display: flex;
+  height: 30px;
+  list-style: none;
+
+  .collection-item {
+    text-transform: uppercase;
+    padding: 0 26px;
+    display: flex;
+    font-family: $playfair-font;
+    border-right: 2px solid $cerise-red;
+    flex-direction: row;
+    height: 25px;
+
+    a {
+      color: $black-solid;
+
+      &:hover {
+        color: $cerise-red;
+        font-weight: 900;
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.cart-count {
+  background-color: $cerise-red;
+  color: $white-solid;
+  border-radius: 50%;
 }
