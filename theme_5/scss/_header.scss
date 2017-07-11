@@ -1,0 +1,185 @@
+@import "burger";
+
+// mobile header
+.mobile-header {
+  background-color: $cerise-red;
+  height: 50px;
+  padding: 15px;
+
+  &.bg-white {
+    background-color: $white-solid;
+  }
+}
+
+.burger-icon {
+	@include burger(25px, 3px, 5px, $white-solid);
+}
+
+.menu-button {
+	background-color: $cerise-red;
+	border: 1px solid $cerise-red;
+	float: left;
+	&.is-active {
+		background-color: $white-solid;
+		border: none;
+		.burger-icon {
+			@include burger-to-cross;
+			&::before {
+				background-color: $cerise-red;
+			}
+			&::after {
+				background-color: $cerise-red;
+			}
+		}
+	}
+}
+
+.badge-conf {
+	color: $white-solid;
+	line-height: 50px;
+	position: absolute;
+	right: 50px;
+}
+
+.logo {
+  height: 18px;
+}
+
+.mobile-logo-one {
+	background: url(../assets/logos_png/logo1_fiorella_mobil.png) no-repeat center;
+}
+
+.mobile-logo-two {
+	background: url(../assets/logos_png/logo2_fiorella_mobil.png) no-repeat center;
+}
+
+.cart-button {
+  bottom: 16px;
+  color: white;
+  float: right;
+  font-size: 15px;
+  height: 19px;
+  letter-spacing: 12px;
+  position: relative;
+  right: 20px;
+  &:hover {
+		color: $white-solid;
+	}
+	&:active {
+		color: $white-solid;
+	}
+}
+
+// main header
+.main-header {
+  background: $white-solid;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-around;
+  opacity: .9;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.header-top {
+  border-bottom: 1px solid $cerise-red;
+  display: flex;
+}
+
+.search-container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+
+  .search-input {
+    border: none;
+    box-shadow: none;
+    color: $black-solid;
+    font-family: $merriweather-font;
+    font-size: 17px;
+    margin-left: 10px;
+    outline: none;
+    padding-left: 0;
+    text-transform: uppercase;
+  }
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.secondary-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.option-list {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+
+  .option-item {
+    margin: 0 10px;
+
+    a {
+      color: $black-solid;
+    }
+  }
+}
+
+.header-mid {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-img {
+  background-image: url('../assets/logos_png/logo_fiorella.png');
+  height: 82px;
+  transform: scale(.8);
+  width: 250px;
+}
+
+.header-bot {
+  display: flex;
+  justify-content: center;
+}
+
+.collection-list {
+  display: flex;
+  height: 30px;
+  list-style: none;
+
+  .collection-item {
+    text-transform: uppercase;
+    padding: 0 26px;
+    display: flex;
+    font-family: $playfair-font;
+    border-right: 2px solid $cerise-red;
+    flex-direction: row;
+    height: 25px;
+
+    a {
+      color: $black-solid;
+
+      &:hover {
+        color: $cerise-red;
+        font-weight: 900;
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.cart-count {
+  background-color: $cerise-red;
+  color: $white-solid;
+  border-radius: 50%;
+}

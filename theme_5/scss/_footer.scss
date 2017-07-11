@@ -1,0 +1,40 @@
+// Footer
+.main-footer {
+  border: 1px solid $cerise-red;
+  height: 125px;
+  margin: 20px 15px;
+}
+
+.section-header {
+	margin: 15px;
+}
+
+.section-title {
+	color: $cerise-red;
+	font-family: $playfair-font;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.section-content {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  height: 43px;
+  margin: 0 20px;
+  width: 43px;
+}
+
+.copyright-text {
+  position: relative;
+  top: 40px;
+	p {
+		font-family: $playfair-font;
+		font-size: 12px;
+		padding: 0 4%;
+		text-align: center;
+	}
+}

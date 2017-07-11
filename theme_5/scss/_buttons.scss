@@ -1,0 +1,110 @@
+.button-base {
+  align-items: center;
+  color: $cerise-red;
+  display: flex;
+  font-family: $playfair-font;
+  justify-content: center;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+.button-cta {
+  background-color: transparent;
+  border: 3px solid $cerise-red;
+  color: $cerise-red;
+  font-family: $playfair-font;
+  font-size: 16px;
+  font-weight: 900;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  width: 175px;
+
+  &:hover {
+    background-color: $cerise-red;
+    color: $white-solid;
+  }
+}
+
+.back-btn {
+  font-family: $merriweather-font;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+
+.prev-btn {
+  bottom: 15px;
+  color: $black-solid;
+  float: left;
+  font-size: 15px;
+  font-weight: 300;
+  left: 30px;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $black-solid;
+    font-weight: 400;
+  }
+}
+
+.next-btn {
+  bottom: 15px;
+  color: $black-solid;
+  float: right;
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+  right: 30px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $black-solid;
+    font-weight: 400;
+  }
+}
+
+
+// Mobile
+.mobile-btn-2 {
+  @extend .button-base;
+  background-color: $cerise-red;
+  color: $white-solid;
+  font-size: 24px;
+  font-weight: bold;
+  height: 60px;
+  width: 250px;
+
+  &:hover {
+    color: $white-solid;
+  }
+}
+
+.mobile-btn-3 {
+  @extend .button-base;
+  border: 2px solid $cerise-red;
+  font-size: 18px;
+  font-weight: bold;
+  height: 45px;
+  width: 199px;
+
+  &:hover {
+    color: $cerise-red;
+  }
+}
+
+.mobile-btn-4 {
+  @extend .button-base;
+  border: 2px solid $cerise-red;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  width: 250px;
+
+  &:hover {
+    color: $cerise-red;
+  }
+}

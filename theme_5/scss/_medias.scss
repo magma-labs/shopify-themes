@@ -1,0 +1,32 @@
+// Medias
+
+@media #{$mobile} {
+  .main-header{
+    display: none;
+  }
+}
+
+@media #{$tablet} {
+
+  .mobile-header {
+    display: none;
+  }
+
+  .text-container {
+    display: none;
+  }
+
+  .h-style {
+    font-size: 26px;
+  }
+
+  .article-content {
+  	p {
+      margin: 10px 0 50px;
+  	}
+  }
+
+  .collections-container {
+    display: none;
+  }
+}

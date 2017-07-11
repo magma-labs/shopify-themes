@@ -1,0 +1,28 @@
+// Carousel
+
+.carousel {
+	background-image: none;
+	position: relative;
+}
+.carousel-indicators {
+	top: 5px;
+}
+
+.carousel-indicators li {
+	background-color: $white-solid;
+	border: none;
+}
+
+.carousel-indicators .active {
+	background-color: $cerise-red;
+}
+
+.carousel-content {
+	position: absolute;
+	right: 10px;
+	top: 145px;
+}
+
+.carousel-content-title {
+	text-align: right;
+}
