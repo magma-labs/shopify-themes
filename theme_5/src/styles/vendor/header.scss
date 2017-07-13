@@ -37,29 +37,29 @@
 }
 
 .nav-container {
-  display: flex;
   align-items: center;
+  display: flex;
   width: 40%;
 }
 
 .secondary-nav {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .option-list {
-  list-style: none;
   display: flex;
+  list-style: none;
   text-transform: uppercase;
 
   .option-item {
     margin: 0 10px;
-
     a {
       color: $black-solid;
     }
   }
+
 }
 
 .header-mid {
@@ -92,16 +92,13 @@
     height: 25px;
     padding: 0 26px;
     text-transform: uppercase;
-
     a {
       color: $black-solid;
-
       &:hover {
         color: $cerise-red;
         font-weight: 900;
       }
     }
-
     &:last-child {
       border-right: none;
     }
