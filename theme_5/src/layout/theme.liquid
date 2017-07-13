@@ -65,36 +65,7 @@
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
-  <!-- Main Header -->
-  <header class="main-header">
-      <div class="header-top">
-        <div class="search-container">
-          <span class="search-icon"></span>
-          <input class="search-input" type="text" value=search>
-        </div>
-        <div class="nav-container">
-          <nav class="secondary-nav">
-            <ul class="option-list">
-                {% for link in linklists.user-menu.links %}
-                <li class="option-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
-                {% endfor %}
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="header-mid">
-        <a href="#"><span class="logo-img"></span></a>
-      </div>
-      <div class="header-bot">
-        <nav class="collection-nav">
-          <ul class="collection-list">
-            {% for link in linklists.collections-menu.links %}
-            <li class="option-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
-      </div>
-    </header>
+  {% section 'main-header' %}
 
   <main role="main" id="MainContent">
     {{ content_for_layout }}
