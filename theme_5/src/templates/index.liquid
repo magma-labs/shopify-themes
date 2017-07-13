@@ -20,7 +20,7 @@
             {% if collection.image %}
             <img class="categorie-picture" src="{{ collection | img_url: 'large' }}" alt="{{ collection.img.alt }}">
             <div class="inner-box">
-              <a href="#" class="categorie-btn">shop now</a>
+              <a href="{{ collection.url }}" class="categorie-btn">shop now</a>
             </div>
             {% else %}
             <p>Image not found</p>

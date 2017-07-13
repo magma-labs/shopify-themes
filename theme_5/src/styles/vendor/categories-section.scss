@@ -1,0 +1,99 @@
+
+/*================ CATEGORIES STYLES ================*/
+
+.categories-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.categorie-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 7px;
+}
+
+.categorie-title {
+  h3 {
+    font-family: $playfair-font;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.categorie-description {
+  color: $emperor;
+  font-family: $merriweather-font;
+  margin-top: 25px;
+  text-align: center;
+  width: 200px;
+
+  p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+  }
+
+}
+
+.outer-box {
+  display: block;
+  height: 270px;
+  position: relative;
+  width: 200px;
+
+  .categorie-picture {
+    height: auto;
+    width: 200px;
+  }
+
+  .inner-box {
+    align-items: center;
+    background: $cerise-red;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    width: 100%;
+
+    p {
+      color: #fff;
+      line-height: 150px;
+      text-align: center;
+    }
+  }
+
+  &:hover {
+    .inner-box {
+      opacity: .7;
+      transition: opacity .5s;
+    }
+  }
+}
+
+.rectangle-decorator {
+  border: 1px solid $cerise-red;
+  float: left;
+  height: 220px;
+  position: absolute;
+  top: 50%;
+  width: 96%;
+  z-index: -1;
+}
