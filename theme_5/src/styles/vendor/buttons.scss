@@ -1,0 +1,32 @@
+@mixin button-base() {
+  align-items: center;
+  color: $cerise-red;
+  display: flex;
+  font-family: $playfair-font;
+  justify-content: center;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+.categorie-btn {
+  @include button-base();
+  border: 1px solid $white-solid;
+  color: $white-solid;
+  font-size: 16px;
+  font-weight: bold;
+  height: 48px;
+  text-decoration: none;
+  width: 166px;
+
+  &:hover {
+    color: $white-solid;
+  }
+
+  &:active {
+    color: $white-solid;
+  }
+
+  &:visited {
+    color: $white-solid;
+  }
+}
