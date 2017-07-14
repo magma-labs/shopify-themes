@@ -1,0 +1,28 @@
+
+// PRODUCT STYLES
+
+.product-section {
+  padding: 0 15px;
+}
+
+.product-box {
+  border: 1px solid $cerise-red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.product-views {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    margin-bottom: 30px;
+  }
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}

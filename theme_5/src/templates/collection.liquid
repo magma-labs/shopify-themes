@@ -24,21 +24,27 @@
         </a>
       </div>
 
-      <div class="products-list">
+      <div class="products-list container">
 
-        {% if collection.all_products_count > 0 %}
-        {% for product in collection.products %}
-        <a class="product-link" href="{{ product.url }}">
-          <div class="product-item">
-            <img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title | escape }}">
-            <p class="product-name">{{ product.title }}</p>
-            <p class="product-price">{{ product.price | money }}</p>
+        <div class="row">
+
+          {% if collection.all_products_count > 0 %}
+          {% for product in collection.products %}
+          <div class="col-xs-12 col-md-4 col-lg-4">
+            <a class="product-link" href="{{ product.url }}">
+              <div class="product-item">
+                <img class="product-image" src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title | escape }}">
+                <p class="product-name">{{ product.title }}</p>
+                <p class="product-price">{{ product.price | money }}</p>
+              </div>
+            </a>
           </div>
-        </a>
-        {% endfor %}
-        {% else %}
-        <p>Sorry, there are no products in this collection</p>
-        {% endif %}
+          {% endfor %}
+          {% else %}
+          <p>Sorry, there are no products in this collection</p>
+          {% endif %}
+
+        </div>
 
       </div>
 
