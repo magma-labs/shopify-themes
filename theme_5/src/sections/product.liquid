@@ -8,13 +8,16 @@
 
     <div class="product-views">
       {% for image in product.images offset:1 %}
-      <img src="{{ image | product_img_url: '86x86' }}">
+      <div class="view-box">
+        <img src="{{ image | product_img_url: '86x86' }}" class="view-box-image">
+        <div class="after"></div>
+      </div>
       {% endfor %}
     </div>
 
     <div class="product-info">
-      <h2>{{ product.title }}</h2>
-      <p>{{ product.description }}</p>
+      <h2 class="product-title">{{ product.title }}</h2>
+      <p class="product-description"><b>Description:&nbsp;</b>{{ product.description }}</p>
       <form action="/cart/add" method="post" enctype="multipart/form-data">
 
         <div class="variants-box">

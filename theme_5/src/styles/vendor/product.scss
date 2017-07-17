@@ -23,6 +23,40 @@
 }
 
 .product-info {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
+}
+
+.product-title {
+  color: $black-solid;
+  font-family: $playfair-font;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.product-description {
+  color: $emperor;
+}
+
+.view-box {
+  width: 86px;
+  height: 86px;
+  position: relative;
+
+  .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: rgb(232, 54, 113);
+  }
+
+  &:hover .after {
+    display: block;
+    background: rgba(232, 54, 113, 0.6);
+  }
 }
