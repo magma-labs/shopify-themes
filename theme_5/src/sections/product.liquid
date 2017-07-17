@@ -20,22 +20,25 @@
       <p class="product-description"><b>Description:&nbsp;</b>{{ product.description }}</p>
       <form action="/cart/add" method="post" enctype="multipart/form-data">
 
+        {% if product.variants.size > 1 %}
         <div class="variants-box">
 
           <label class="label-for-color">Color bouquet:&nbsp;</label>
           {% for variant in product.variants %}
-          {% if variant.available == true %}
           {% if forloop.first == true %}
           <input type="radio" name="id" value="{{variant.id}}" class="input-radio" id="{{variant.id}}" checked>
-          <label for="{{variant.id}}" class="label-color {{variant.title}}"></label>
           {% else %}
           <input type="radio" name="id" value="{{variant.id}}" class="input-radio" id="{{variant.id}}">
+          {% endif %}
           <label for="{{variant.id}}" class="label-color {{variant.title}}"></label>
-          {% endif %}
-          {% else %}
-          {% endif %}
           {% endfor %}
+
         </div>
+        {% else %}
+        <b>No variants</b>
+        {% endif %}
+
+
 
         <div class="quantity-box">
           <label for="Quantity">{{ 'Qty:' }}</label>
@@ -44,7 +47,7 @@
 
         <p class="product-price">{{ product.price | money }}</p>
 
-        <input type="submit" name="add" id="add" value="Add to Cart" class="button">
+        <input type="submit" name="add" id="add" value="Add to Cart" class="btn-3">
 
         <div class="share-buttons">
           <label for="Socials">Share:</label>

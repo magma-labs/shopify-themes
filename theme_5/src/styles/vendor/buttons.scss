@@ -33,3 +33,19 @@
     color: $white-solid;
   }
 }
+
+.btn-3 {
+  @include button-base();
+  width: 231px;
+  height: 57px;
+  font-size: 22px;
+  font-weight: bold;
+  color: $white-solid;
+  background-color: $cerise-red;
+
+  &:hover {
+    // background-color: $white-solid;
+    // color: $cerise-red;
+    // border: 3px solid $cerise-red;
+  }
+}
