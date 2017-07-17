@@ -41,22 +41,23 @@
 }
 
 .view-box {
-  width: 86px;
   height: 86px;
+  margin: 25px 0;
   position: relative;
+  width: 86px;
 
   .after {
+    color: rgb(232, 54, 113);
+    display: none;
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    display: none;
-    color: rgb(232, 54, 113);
   }
 
   &:hover .after {
-    display: block;
     background: rgba(232, 54, 113, 0.6);
+    display: block;
   }
 }
