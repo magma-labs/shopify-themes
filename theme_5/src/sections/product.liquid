@@ -38,8 +38,6 @@
         <p><b>No variants</b></p>
         {% endif %}
 
-
-
         <div class="quantity-box">
           <label for="Quantity">{{ 'Qty:' }}</label>
           <input type="number" id="Quantity" name="quantity" value="1" min="1">
@@ -48,11 +46,17 @@
         <p class="product-price">{{ product.price | money }}</p>
 
         <input type="submit" name="add" id="add" value="Add to Cart" class="btn-3">
-
-        <div class="share-buttons">
-          <label for="Socials">Share:</label>
-        </div>
       </form>
+
+      <div class="share-box">
+        <label for="Socials">Share:</label>
+        <div class="socials-buttons">
+          <a href="#" class="social-anchord"><span class="fb-icon-flat"></span></a>
+          <a href="#" class="social-anchord"><span class="pint-icon-flat"></span></a>
+          <a href="#" class="social-anchord"><span class="gplus-icon-flat"></span></a>
+        </div>
+      </div>
+
     </div>
 
   </div>
