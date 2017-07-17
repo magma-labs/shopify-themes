@@ -21,15 +21,20 @@
       <form action="/cart/add" method="post" enctype="multipart/form-data">
 
         <div class="variants-box">
-          <select name="id">
-              {% for variant in product.variants %}
-              {% if variant.available == true %}
-              <option value="{{variant.id}}"> {{ variant.title }}</option>
-              {% else %}
-              <option disabled="disabled"> {{ variant.title }} - sold out!</option>
-              {% endif %}
-              {% endfor %}
-          </select>
+
+          <label class="label-for-color">Color bouquet:&nbsp;</label>
+          {% for variant in product.variants %}
+          {% if variant.available == true %}
+          {% if forloop.first == true %}
+          <input type="radio" name="id" value="{{variant.id}}" class="input-radio" id="{{variant.id}}" checked>
+          <label for="{{variant.id}}" class="label-color {{variant.title}}"></label>
+          {% else %}
+          <input type="radio" name="id" value="{{variant.id}}" class="input-radio" id="{{variant.id}}">
+          <label for="{{variant.id}}" class="label-color {{variant.title}}"></label>
+          {% endif %}
+          {% else %}
+          {% endif %}
+          {% endfor %}
         </div>
 
         <div class="quantity-box">

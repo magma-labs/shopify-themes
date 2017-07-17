@@ -37,4 +37,6 @@ $(document).ready(function() {
   if (slate.cart.cookiesEnabled()) {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
+
+  $('input:radio[name=groupName][disabled=false]:first').attr('checked', true);
 });
