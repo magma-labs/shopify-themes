@@ -1,0 +1,28 @@
+.heading-with-lines {
+  font-family: $playfair-font;
+  letter-spacing: 5px;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:before, &:after {
+    background-color: $cerise-red;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  &:before {
+    margin-left: -50%;
+    right: 0.5em;
+  }
+
+  &:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+}
