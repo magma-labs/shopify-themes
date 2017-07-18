@@ -35,7 +35,13 @@
 
         </div>
         {% else %}
-        <p><b>No variants</b></p>
+        <!-- <p><b>No variants</b></p> -->
+        <div class="variants-box hide">
+          {% for variant in product.variants %}
+          <input type="radio" name="id" value="{{variant.id}}" class="input-radio" id="{{variant.id}}" checked>
+          <label for="{{variant.id}}" class="label-color {{variant.title}}"></label>
+          {% endfor %}
+        </div>
         {% endif %}
 
         <div class="quantity-box">
