@@ -1,0 +1,44 @@
+.main-content {
+  padding: 0 15px;
+}
+
+.table {
+  border: 1px solid $cerise-red;
+}
+
+.row-heads {
+  background: $cerise-red;
+  display: flex;
+  flex-direction: row;
+}
+
+.title-head {
+  color: $white-solid;
+  font-family: $playfair-font;
+  font-weight: bold;
+  letter-spacing: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 20%;
+}
+
+.row-cart {
+  border-bottom: 1px solid $cerise-red;
+  display: flex;
+  flex-direction: row;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.cart-item-picture,
+.cart-item-name,
+.cart-item-price,
+.cart-item-qty,
+.cart-item-subtotal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}

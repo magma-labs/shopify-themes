@@ -55,6 +55,7 @@
 
   .option-item {
     margin: 0 10px;
+
     a {
       color: $black-solid;
     }
@@ -70,7 +71,7 @@
 .logo-img {
   background-image: url('../assets/logos_png/logo_fiorella.png');
   height: 82px;
-  transform: scale(.8);
+  transform: scale(0.8);
   width: 250px;
 }
 
@@ -92,13 +93,16 @@
     height: 25px;
     padding: 0 26px;
     text-transform: uppercase;
+
     a {
       color: $black-solid;
+
       &:hover {
         color: $cerise-red;
         font-weight: 900;
       }
     }
+
     &:last-child {
       border-right: none;
     }

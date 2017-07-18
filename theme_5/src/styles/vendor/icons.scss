@@ -32,20 +32,20 @@
 .facebook-icon {
 	background: url($url-to-sprite) no-repeat -50px -158px;
 	height: 43px;
-	width: 43px;
 	position: absolute;
+	width: 43px;
 }
 
 .fb-icon-flat {
+	background: url($url-to-sprite) no-repeat -364px -164px;
 	height: 32px;
+	position: absolute;
 	width: 15px;
-  background: url($url-to-sprite) no-repeat -364px -164px;
-  position: absolute;
 
 	&:hover {
 		background: url($url-to-sprite) no-repeat -364px -244px;
-		width: 15px;
 		height: 32px;
+		width: 15px;
 	}
 
 }
@@ -53,8 +53,8 @@
 .pinterest-icon {
 	background: url($url-to-sprite) no-repeat -141px -158px;
 	height: 43px;
-	width: 43px;
 	position: absolute;
+	width: 43px;
 }
 
 .pint-icon-flat {
@@ -65,8 +65,8 @@
 
 	&:hover {
 		background: url($url-to-sprite) no-repeat -451px -243px;
-		width: 25px;
 		height: 32px;
+		width: 25px;
 	}
 
 }
@@ -86,10 +86,17 @@
 
 	&:hover {
 		background: url($url-to-sprite) no-repeat -540px -245px;
-		width: 31px;
 		height: 28px;
+		width: 31px;
 	}
 
+}
+
+.delete-icon {
+	background: url($url-to-sprite) no-repeat -50px -318px;
+	height: 29px;
+	position: absolute;
+	width: 32px;
 }
 
 .back-icon {
