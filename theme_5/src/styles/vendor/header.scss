@@ -69,10 +69,15 @@
 }
 
 .logo-img {
-  background-image: url('../assets/logos_png/logo_fiorella.png');
+  background-image: url($url-to-logo);
   height: 82px;
-  transform: scale(0.8);
+  position: absolute;
   width: 250px;
+}
+
+.anchord-logo {
+  width: 250px;
+  height: 82px;
 }
 
 .header-bot {
