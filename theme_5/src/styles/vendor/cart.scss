@@ -39,6 +39,28 @@
 .cart-item-subtotal {
   align-items: center;
   display: flex;
+  font-family: $merriweather-font;
   justify-content: center;
+  text-transform: capitalize;
   width: 20%;
+}
+
+.delete-anchord {
+  bottom: 5px;
+  height: 22px;
+  left: 35px;
+  position: relative;
+  width: 24px;
+}
+
+.line-price {
+  position: relative;
+  right: 30px;
+}
+
+.message-empty-cart {
+  color: $emperor;
+  font-family: $merriweather-font;
+  font-size: 16px;
+  text-align: center;
 }

@@ -37,8 +37,8 @@
         </div>
 
         <div class="cart-item-subtotal">
-          <p>{{ item.line_price | money }}</p>
-          <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0"><span class="delete-icon"></span></a>
+          <p class="line-price">{{ item.line_price | money }}</p>
+          <a class="delete-anchord" href="/cart/change?line={{ forloop.index }}&amp;quantity=0"><i class="delete-icon"></i></a>
         </div>
 
       </div>
@@ -53,7 +53,7 @@
 
   {% else %}
 
-  <p>You cart is currently empty!</p>
+  <p class="message-empty-cart">You cart is currently empty!</p>
 
   {% endif %}
 
