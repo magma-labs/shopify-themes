@@ -31,8 +31,8 @@
 
 .social-link {
   height: 43px;
+  margin: 0 22px;
   width: 43px;
-  margin: 0 12px;
 }
 
 .social-networks {
@@ -55,9 +55,9 @@
 
 .site-link {
   color: $black-solid;
-  text-transform: uppercase;
   font-family: $merriweather-font;
   font-weight: lighter;
+  text-transform: uppercase;
 
   &:hover {
     color: $cerise-red;

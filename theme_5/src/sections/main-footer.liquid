@@ -8,25 +8,25 @@
     <div class="footer-content-section">
       <h3 class="section-title">fiorella</h3>
       <ul class="site-list">
-        <li class="site-item"><a href="#" class="site-link">about us</a></li>
-        <li class="site-item"><a href="#" class="site-link">contact us</a></li>
-        <li class="site-item"><a href="#" class="site-link">store locations</a></li>
+        {% for link in linklists.fiorella-menu.links %}
+        <li class="site-item"><a href="{{link.url}}" class="site-link">{{link.title}}</a></li>
+        {% endfor %}
       </ul>
     </div>
     <div class="footer-content-section">
       <h3 class="section-title">information</h3>
       <ul class="site-list">
-        <li class="site-item"><a href="#" class="site-link">about us</a></li>
-        <li class="site-item" ><a href="#" class="site-link">contact us</a></li>
-        <li class="site-item"><a href="#" class="site-link">store locations</a></li>
+        <li class="site-item"><a href="#" class="site-link">faq'<sub>s</sub></a></li>
+        <li class="site-item" ><a href="#" class="site-link">payment methods</a></li>
+        <li class="site-item"><a href="#" class="site-link">delivery</a></li>
       </ul>
     </div>
     <div class="footer-content-section">
       <h3 class="section-title">my account</h3>
       <ul class="site-list">
-        <li class="site-item"><a href="#" class="site-link">about us</a></li>
-        <li class="site-item"><a href="#" class="site-link">contact us</a></li>
-        <li class="site-item"><a href="#" class="site-link">store locations</a></li>
+        <li class="site-item"><a href="#" class="site-link">order history</a></li>
+        <li class="site-item"><a href="#" class="site-link">wish list</a></li>
+        <li class="site-item"><a href="#" class="site-link">newsletter</a></li>
       </ul>
     </div>
     <div class="footer-content-section">
