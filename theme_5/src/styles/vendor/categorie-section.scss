@@ -13,6 +13,7 @@
   flex-direction: row;
   justify-content: center;
   padding: 0 15px;
+  z-index: 1;
 }
 
 .categorie-item {
@@ -91,9 +92,8 @@
 .rectangle-decorator {
   border: 1px solid $cerise-red;
   float: left;
-  height: 220px;
+  height: 300px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: 96%;
-  z-index: -1;
 }

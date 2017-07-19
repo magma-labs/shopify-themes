@@ -34,6 +34,12 @@
 	height: 43px;
 	position: absolute;
 	width: 43px;
+
+	&:hover {
+		background: url($url-to-sprite) no-repeat -50px -235px;
+		height: 43px;
+		width: 43px;
+	}
 }
 
 .fb-icon-flat {
@@ -55,6 +61,12 @@
 	height: 43px;
 	position: absolute;
 	width: 43px;
+
+	&:hover {
+		background: url($url-to-sprite) no-repeat -141px -235px;
+		height: 43px;
+		width: 43px;
+	}
 }
 
 .pint-icon-flat {
@@ -76,6 +88,12 @@
 	height: 43px;
 	width: 43px;
 	position: absolute;
+
+	&:hover {
+		background: url($url-to-sprite) no-repeat -231px -235px;
+		height: 43px;
+		width: 43px;
+	}
 }
 
 .gplus-icon-flat {

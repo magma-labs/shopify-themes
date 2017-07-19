@@ -1,0 +1,65 @@
+
+// HEADER STYLES
+
+.main-footer {
+  height: 200px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.footer-content {
+  border: 1px solid $cerise-red;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-content-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.section-title {
+  color: $cerise-red;
+  font-family: $playfair-font;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.social-link {
+  height: 43px;
+  width: 43px;
+  margin: 0 12px;
+}
+
+.social-networks {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 33px;
+}
+
+.site-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.site-item {
+  margin: 10px;
+}
+
+.site-link {
+  color: $black-solid;
+  text-transform: uppercase;
+  font-family: $merriweather-font;
+  font-weight: lighter;
+
+  &:hover {
+    color: $cerise-red;
+  }
+}
