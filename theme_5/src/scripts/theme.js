@@ -37,4 +37,25 @@ $(document).ready(function() {
   if (slate.cart.cookiesEnabled()) {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
+
+  console.log('Hi app!!');
+
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:0,
+      nav:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+  });
+
+
 });
