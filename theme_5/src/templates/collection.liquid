@@ -12,7 +12,7 @@
     <div class="products-container">
 
       <div class="title">
-        <h6 class="h-style">{{ collection.title }}</h6>
+        <h1 class="heading-with-lines">{{ collection.title }}</h1>
       </div>
 
       <div class="pagination-container">
@@ -24,27 +24,28 @@
         </a>
       </div>
 
-      <div class="products-list container">
 
+      <div class="products-list">
+
+        {% if collection.all_products_count > 0 %}
         <div class="row">
+        {% for product in collection.products %}
 
-          {% if collection.all_products_count > 0 %}
-          {% for product in collection.products %}
-          <div class="col-xs-12 col-md-4 col-lg-4">
-            <a class="product-link" href="{{ product.url }}">
-              <div class="product-item">
-                <img class="product-image" src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title | escape }}">
+          <a href="{{ product.url }}" class="product-link col-lg-4">
+            <div class="product-item">
+              <img class="product-image" src="{{ product.featured_image | product_img_url: '240x360' }}" alt="{{ product.title | escape }}">
+              <div class="product-text">
                 <p class="product-name">{{ product.title }}</p>
                 <p class="product-price">{{ product.price | money }}</p>
               </div>
-            </a>
-          </div>
-          {% endfor %}
-          {% else %}
-          <p>Sorry, there are no products in this collection</p>
-          {% endif %}
+            </div>
+          </a>
 
+        {% endfor %}
         </div>
+        {% else %}
+        <p>Sorry, there are no products in this collection</p>
+        {% endif %}
 
       </div>
 

@@ -27,7 +27,7 @@
 .categorie-title {
   h3 {
     font-family: $playfair-font;
-    font-size: 16px;
+    font-size: 26px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -39,10 +39,10 @@
   font-family: $merriweather-font;
   margin-top: 25px;
   text-align: center;
-  width: 200px;
+  width: 323px;
 
   p {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 100;
     line-height: 20px;
   }
@@ -51,13 +51,13 @@
 
 .outer-box {
   display: block;
-  height: 270px;
+  height: 436px;
   position: relative;
-  width: 200px;
+  width: 323px;
 
   .categorie-picture {
     height: auto;
-    width: 200px;
+    width: 100%;
   }
 
   .inner-box {
@@ -92,8 +92,8 @@
 .rectangle-decorator {
   border: 1px solid $cerise-red;
   float: left;
-  height: 300px;
+  height: 395px;
   position: absolute;
   top: 40%;
-  width: 96%;
+  width: 98%;
 }

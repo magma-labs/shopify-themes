@@ -4,14 +4,17 @@
 .products-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
   padding: 0 15px;
 }
 
 .products-list {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .product-link {
@@ -30,26 +33,35 @@
 .product-item {
 	border: 1px solid $cerise-red;
 	text-align: center;
-  margin-bottom: 15px;
-  width: 240px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  min-height: 544px;
+  width: 605px;
 }
 
 .product-image {
-  // width: 240px;
-  // height: 360px;
+  margin-bottom: 90px;
 }
 
 .product-name {
 	font-family: $playfair-font;
+  font-size: 26px;
 	font-weight: bold;
 	letter-spacing: 1px;
-	margin: 0;
 	text-transform: capitalize;
 }
 
 .product-price {
 	color: $cerise-red;
 	font-family: $merriweather-font;
-	font-size: 20px;
+	font-size: 27px;
 	font-weight: 900;
+}
+
+.product-text {
+  bottom: 30px;
+  position: absolute;
 }

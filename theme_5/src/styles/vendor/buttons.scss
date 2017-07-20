@@ -13,7 +13,7 @@
 
 .categorie-btn {
   @include button-base();
-  border: 1px solid $white-solid;
+  border: 2px solid $white-solid;
   color: $white-solid;
   font-size: 16px;
   font-weight: bold;

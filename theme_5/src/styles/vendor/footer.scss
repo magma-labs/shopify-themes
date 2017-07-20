@@ -2,7 +2,7 @@
 // HEADER STYLES
 
 .main-footer {
-  height: 200px;
+  height: 250px;
   padding: 0 15px;
   width: 100%;
 }
@@ -62,4 +62,11 @@
   &:hover {
     color: $cerise-red;
   }
+}
+
+.copyright-text {
+  font-family: $playfair-font;
+  font-size: 16px;
+  margin-top: 15px;
+  text-align: center;
 }
