@@ -1,0 +1,18 @@
+
+<!-- Hero -->
+
+<div class="hero-box">
+
+  {% if template == 'collection' or template == 'product' %}
+    <img class="hero-img" src="{{ 'hero_image_1280.jpg' | asset_url }}">
+  {% elsif template == 'page' %}
+    <img class="hero-img" src="{{ 'hero_about_1280.jpg' | asset_url }}">
+  {% else %}
+    <img class="hero-img" src="{{ 'hero_contact_1280.jpg' | asset_url }}">
+  {% endif %}
+
+  <!-- <h1> {{template}} </h1> -->
+
+</div>
+
+{% include 'breadcrumbs' %}
