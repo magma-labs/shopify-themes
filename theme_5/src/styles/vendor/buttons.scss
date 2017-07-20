@@ -34,11 +34,11 @@
   }
 }
 
-.btn-3 {
+.btn-2 {
   @include button-base();
-  width: 231px;
-  height: 57px;
-  font-size: 22px;
+  width: 291px;
+  height: 72px;
+  font-size: 28px;
   font-weight: bold;
   color: $white-solid;
   background-color: $cerise-red;
@@ -48,4 +48,42 @@
     // color: $cerise-red;
     // border: 3px solid $cerise-red;
   }
+}
+
+.btn-3 {
+  @include button-base();
+  border: 2px solid $cerise-red;
+  color: $cerise-red;
+  font-size: 23px;
+  font-weight: bold;
+  height: 68px;
+  width: 251px;
+
+  &:hover {
+    color: $cerise-red;
+  }
+
+  &:visited {
+    color: $cerise-red;
+  }
+
+}
+
+.btn-4 {
+  @include button-base();
+  border: 2px solid $cerise-red;
+  color: $cerise-red;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50;
+  width: 187px;
+
+  &:hover {
+    color: $cerise-red;
+  }
+
+  &:visited {
+    color: $cerise-red;
+  }
+
 }

@@ -47,11 +47,20 @@
 
       {% endfor %}
 
+    </div>
 
+    <div class="cart-actions-box">
+      <div class="buttons-box">
+        <a href="/cart/clear" class="btn-3">empty cart</a>
+        <a href="/" class="btn-3">keep shopping</a>
+      </div>
+      <div class="total-box">
+        <p class="total-price-text">Total: {{ cart.total_price | money}}</p>
+        <input class="btn-2" type="submit" name="checkout" value="Checkout" />
+      </div>
     </div>
 
   </form>
-
 
   {% else %}
 

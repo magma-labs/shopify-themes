@@ -7,6 +7,7 @@
 
 .table {
   border: 1px solid $cerise-red;
+  margin-top: 60px;
 }
 
 .row-heads {
@@ -43,6 +44,7 @@
   align-items: center;
   display: flex;
   font-family: $merriweather-font;
+  font-size: 18px;
   justify-content: center;
   text-transform: capitalize;
   width: 20%;
@@ -66,4 +68,27 @@
   font-family: $merriweather-font;
   font-size: 16px;
   text-align: center;
+}
+
+.cart-actions-box {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.buttons-box {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.total-box {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.total-price-text {
+  color: $emperor;
+  font-family: $merriweather-font;
+  font-size: 39px;
 }
