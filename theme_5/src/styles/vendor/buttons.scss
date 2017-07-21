@@ -52,6 +52,7 @@
 
 .btn-3 {
   @include button-base();
+  background-color: $white-solid;
   border: 2px solid $cerise-red;
   color: $cerise-red;
   font-size: 23px;

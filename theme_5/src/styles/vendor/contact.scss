@@ -1,0 +1,53 @@
+.contact-box {
+  display: flex;
+}
+
+.column-box {
+  width: 50%;
+}
+
+.input-box {
+  width: 60%;
+  margin-bottom: 40px;
+}
+
+.contact-input {
+  width: 100%;
+  border-bottom: 1px solid $cerise-red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  font-family: $merriweather-font;
+  font-size: 13px;
+  font-style: normal;
+  margin: 0 auto;
+  outline: none;
+  padding-left: 0;
+  padding-bottom: 15px;
+}
+
+//
+// .input-container {
+//   border-bottom: 1px solid $cerise-red;
+//   margin-bottom: 45px;
+//   width: 500px;
+//   .input-cu {
+    // width: 100%;
+    // border: none;
+    // box-shadow: none;
+    // font-family: $merriweather-font;
+    // font-size: 13px;
+    // font-style: normal;
+    // margin: 0 auto;
+    // outline: none;
+    // padding-left: 0;
+    // padding-bottom: 15px;
+//   }
+// }
+//
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
