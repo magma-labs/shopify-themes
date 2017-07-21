@@ -23,10 +23,11 @@
 }
 
 .bus-icon {
-	background: url('../assets/Sprite.png') no-repeat -224px -48px;
+	background: url($url-to-sprite) no-repeat -224px -48px;
 	height: 52px;
-	transform: scale(.5) translate(5%, 43%);
+	transform: translate(-430%, 35%);
 	width: 68px;
+  position: absolute;
 }
 
 .facebook-icon {

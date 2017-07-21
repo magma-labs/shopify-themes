@@ -1,4 +1,4 @@
-.news-section {
+.news-section-one {
   background-color: $peppermint;
   height: 700px;
   padding: 0 15px;
@@ -38,4 +38,18 @@
   display: flex;
   justify-content: center;
   margin-top: 60px;
+}
+
+.news-section-two {
+
+  background-color: $peppermint;
+  background-image: url($banner_home_1280);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 941px 559px;
+  height: 559px;
+  margin: 80px 0;
+  padding: 0 15px;
+  width: 100%;
+
 }
