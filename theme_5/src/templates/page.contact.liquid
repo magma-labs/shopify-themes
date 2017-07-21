@@ -8,6 +8,11 @@
 
     <div class="column-box">
 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</p>
+
       {% form 'contact' %}
 
         {% if form.posted_successfully? %}
@@ -62,26 +67,40 @@
             value="{% if form.body %}{{ form.body }}{% endif %}">
         </div>
 
+        <div class="input-box">
+          <input type="submit" class="btn-3" value="{{ 'contact.form.send' | t }}">
+        </div>
 
-        <!-- <textarea rows="10"
-          name="contact[body]"
-          id="ContactFormMessage"
-          placeholder="{{ 'contact.form.message' | t }}">
-          {% if form.body %}
-            {{ form.body }}
-          {% endif %}
-        </textarea> -->
-
-        <input type="submit" class="btn-3" value="{{ 'contact.form.send' | t }}">
 
       {% endform %}
 
     </div>
 
 
-    <div class="column-box"></div>
+    <div class="column-box">
+      <div class="store-container">
 
-  </div>
+          <div class="store-info">
+            <div class="store-location">
+              <p>Email</p>
+            </div>
+            <div class="address-location">
+              <p>{{ shop.email }}</p>
+            </div>
+          </div>
 
+          <div class="store-info">
+            <div class="store-location">
+              <p>{{ shop.name }}</p>
+            </div>
+            <div class="address-location">
+              <p>{{ shop.address.street }},</p>
+              <p>{{ shop.address.city | join: " " }} {{ shop.address.zip | join: " " }}. {{ shop.address.country }}</p>
+              <p>{{ shop.phone }}</p>
+            </div>
+          </div>
+
+      </div>
+    </div>
 
 </div>
