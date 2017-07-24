@@ -4,72 +4,69 @@
 
   <h1 class="heading-with-lines">{{ 'customer.register.title' | t }}</h1>
 
-  <div class="center-box">
-    {% form 'create_customer', class: 'register-form' %}
-      {{ form.errors | default_errors }}
+  {% form 'create_customer', class: 'register-form' %}
+    {{ form.errors | default_errors }}
 
-      <label for="FirstName" class="label-hidden">
-        {{ 'customer.register.first_name' | t }}
-      </label>
-      <div class="input-box">
-        <input type="text"
-          class="contact-input"
-          name="customer[first_name]"
-          id="FirstName"
-          placeholder="{{ 'customer.register.first_name' | t }}"
-          autofocus
-          {% if form.first_name %}value="{{ form.first_name }}"{% endif %}>
-      </div>
+    <label for="FirstName" class="label-hidden">
+      {{ 'customer.register.first_name' | t }}
+    </label>
+    <div class="input-box">
+      <input type="text"
+        class="contact-input"
+        name="customer[first_name]"
+        id="FirstName"
+        placeholder="{{ 'customer.register.first_name' | t }}"
+        autofocus
+        {% if form.first_name %}value="{{ form.first_name }}"{% endif %}>
+    </div>
 
-      <label for="LastName" class="label-hidden">
-        {{ 'customer.register.last_name' | t }}
-      </label>
-      <div class="input-box">
-        <input type="text"
-          class="contact-input"
-          name="customer[last_name]"
-          id="LastName"
-          placeholder="{{ 'customer.register.last_name' | t }}"
-          {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
-      </div>
-
-
-      <label for="Email" class="label-hidden">
-        {{ 'customer.register.email' | t }}
-      </label>
-      <div class="input-box">
-        <input type="email"
-          class="contact-input"
-          name="customer[email]"
-          id="Email"
-          class="{% if form.errors contains 'email' %}input-error{% endif %}"
-          placeholder="{{ 'customer.register.email' | t }}"
-          value="{% if form.email %}{{ form.email }}{% endif %}"
-          spellcheck="false"
-          autocomplete="off"
-          autocapitalize="off">
-      </div>
+    <label for="LastName" class="label-hidden">
+      {{ 'customer.register.last_name' | t }}
+    </label>
+    <div class="input-box">
+      <input type="text"
+        class="contact-input"
+        name="customer[last_name]"
+        id="LastName"
+        placeholder="{{ 'customer.register.last_name' | t }}"
+        {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
+    </div>
 
 
-      <label for="CreatePassword" class="label-hidden">
-        {{ 'customer.register.password' | t }}
-      </label>
-      <div class="input-box">
-        <input type="password"
-          class="contact-input"
-          name="customer[password]"
-          id="CreatePassword"
-          class="{% if form.errors contains 'password' %}input-error{% endif %}"
-          placeholder="{{ 'customer.register.password' | t }}">
-      </div>
+    <label for="Email" class="label-hidden">
+      {{ 'customer.register.email' | t }}
+    </label>
+    <div class="input-box">
+      <input type="email"
+        class="contact-input"
+        name="customer[email]"
+        id="Email"
+        class="{% if form.errors contains 'email' %}input-error{% endif %}"
+        placeholder="{{ 'customer.register.email' | t }}"
+        value="{% if form.email %}{{ form.email }}{% endif %}"
+        spellcheck="false"
+        autocomplete="off"
+        autocapitalize="off">
+    </div>
 
 
-      <p>
-        <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn-3">
-      </p>
-      <a href="{{ shop.url }}">{{ 'customer.register.cancel' | t }}</a>
-    {% endform %}
-  </div>
+    <label for="CreatePassword" class="label-hidden">
+      {{ 'customer.register.password' | t }}
+    </label>
+    <div class="input-box">
+      <input type="password"
+        class="contact-input"
+        name="customer[password]"
+        id="CreatePassword"
+        class="{% if form.errors contains 'password' %}input-error{% endif %}"
+        placeholder="{{ 'customer.register.password' | t }}">
+    </div>
 
+
+    <p>
+      <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn-3">
+    </p>
+    <a href="{{ shop.url }}">{{ 'customer.register.cancel' | t }}</a>
+  {% endform %}
 
 </div>
