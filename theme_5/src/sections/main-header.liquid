@@ -5,7 +5,9 @@
   <div class="header-top">
     <div class="search-container">
       <span class="search-icon"></span>
-      <input class="search-input" type="text" value=search>
+      <form class="search" action="/search">
+          <input type="text" placeholder="Search" name="q" value="{{ search.terms | escape }}" class="search-input" autocomplete="off"/>
+      </form>
     </div>
     <div class="nav-container">
       <nav class="secondary-nav">
