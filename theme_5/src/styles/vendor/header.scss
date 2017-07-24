@@ -2,14 +2,18 @@
 // HEADER STYLES
 
 .main-header {
-  background: $white-solid;
+  background: rgba($white-solid, 0.8);
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 300px;
   justify-content: space-around;
-  opacity: .9;
   padding: 0 15px;
   width: 100%;
+  z-index: 2;
+}
+
+.add-pa {
+  position: absolute;
 }
 
 .header-top {
@@ -24,6 +28,7 @@
   width: 60%;
 
   .search-input {
+    background-color: transparent;
     border: none;
     box-shadow: none;
     color: $black-solid;

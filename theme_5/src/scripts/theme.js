@@ -43,6 +43,8 @@ $(document).ready(function() {
   $('.owl-carousel').owlCarousel({
       loop:true,
       margin:0,
+      autoplay:true,
+      autoplayTimeout:5000,
       nav:false,
       responsive:{
           0:{
