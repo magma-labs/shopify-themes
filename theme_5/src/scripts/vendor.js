@@ -22,4 +22,5 @@
 
 
 // =require vendor/carousel.js
-// =require vendor/input-quantity.js
+// =require vendor/product.js
+// =require vendor/cart.js
