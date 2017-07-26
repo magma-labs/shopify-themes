@@ -99,6 +99,7 @@
 }
 
 .quantity-box {
+  display: inline;
   margin-bottom: 10px;
 }
 
@@ -134,4 +135,24 @@
 
 .hide {
   display: none;
+}
+
+.input-qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-qty {
+  border: none;
+  text-align: right;
+  width: 22px;
+}
+
+.triangle {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid $emperor;
+  height: 0;
+  display: inline-block;
+  margin-left: 9px;
+  width: 0;
 }
