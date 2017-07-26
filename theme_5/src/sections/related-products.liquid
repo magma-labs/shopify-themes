@@ -1,0 +1,39 @@
+{% assign set_collection = product.type %}
+{% assign set_product = product.id %}
+
+<div class="related-box">
+  <div class="main-content">
+    <h1 class="heading-with-lines">related products</h1>
+
+    <div class="carousel-related-box">
+
+      <div class="carousel-related owl-carousel">
+        {% for product in collections[set_collection].products %}
+          {% unless product.id == set_product %}
+            <!-- ## Display ## -->
+            <div class="item">
+
+              <div class="item-box">
+                <div class="img-related">
+                  <img src="{{ product.featured_image | product_img_url: '240x360' }}" alt="{{ product.title | escape }}">
+                </div>
+
+                <div class="helper-related">
+                  <a href="{{ product.url }}" class="btn-2">more details</a>
+                </div>
+                <div class="related-text">
+                  <p class="related-name">{{ product.title }}</p>
+                  <p class="related-price">{{ product.price | money }}</p>
+                </div>
+
+              </div>
+            </div>
+            {% endunless %}
+          {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <img class="product-image" src="{{ product.featured_image | product_img_url: '240x360' }}" alt="{{ product.title | escape }}"> -->

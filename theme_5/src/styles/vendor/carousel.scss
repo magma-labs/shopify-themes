@@ -1,3 +1,59 @@
 .box-carousel-header {
   position: relative;
 }
+
+.item-box {
+  border-right: 1px solid $cerise-red;
+  display: flex;
+  flex-direction: row;
+  height: 460px;
+  justify-content: center;
+  position: relative;
+  width: 310px;
+
+  &:hover {
+    .helper-related {
+      display: block;
+    }
+  }
+}
+
+.helper-related {
+  display: none;
+  left: 9px;
+  position: absolute;
+  top: 155px;
+}
+
+.related-box {
+  margin-bottom: 80px;
+}
+
+.img-related {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  justify-content: center;
+  width: 240px;
+}
+
+.related-name {
+	font-family: $playfair-font;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+  font-size: 19px;
+}
+
+.related-price {
+	color: $cerise-red;
+	font-family: $merriweather-font;
+	font-size: 19px;
+	font-weight: 900;
+}
+
+.related-text {
+  bottom: 30px;
+  position: absolute;
+  text-align: center;
+}

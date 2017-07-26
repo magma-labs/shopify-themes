@@ -36,17 +36,19 @@
 
 .btn-2 {
   @include button-base();
-  width: 291px;
-  height: 72px;
+  background-color: $cerise-red;
+  color: $white-solid;
   font-size: 28px;
   font-weight: bold;
-  color: $white-solid;
-  background-color: $cerise-red;
+  height: 72px;
+  width: 291px;
 
   &:hover {
-    // background-color: $white-solid;
-    // color: $cerise-red;
-    // border: 3px solid $cerise-red;
+    color: $white-solid;
+  }
+
+  &:visited {
+    color: $white-solid;
   }
 }
 

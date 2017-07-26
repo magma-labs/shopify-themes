@@ -40,7 +40,7 @@ $(document).ready(function() {
 
   console.log('Hi app!!');
 
-  $('.owl-carousel').owlCarousel({
+  $('.carousel-home').owlCarousel({
       loop:true,
       margin:0,
       autoplay:true,
@@ -59,5 +59,24 @@ $(document).ready(function() {
       }
   });
 
+  $('.carousel-related').owlCarousel({
+      loop:true,
+      center: true,
+      margin:0,
+      autoWidth:true,
+      autoHeight:true,
+      nav:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:4
+          }
+      }
+  });
 
 });
