@@ -17,11 +17,12 @@
               {% if customer %}
                   <li class="option-item"><a href="/account">{{ customer.name }}</a></li>
                   <li class="option-item">{{ 'log out' | customer_logout_link }}</li>
-                  <li class="option-item"><a href="/cart">{{ 'cart' }}</a></li>
+                  <li class="option-item"><a href="/cart"><span class="cart-count">{{ cart.item_count }}</span><span class="cart-icon-tablet"></span></a></li>
                 {% else %}
                   {% for link in linklists.user-menu.links %}
                     <li class="option-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
                   {% endfor %}
+                  <li class="option-item"><a href="/cart"><span class="cart-count">{{ cart.item_count }}</span><span class="cart-icon-tablet"></span></a></li>
               {% endif %}
           </ul>
         </nav>

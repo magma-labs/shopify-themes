@@ -58,8 +58,10 @@
 }
 
 .option-list {
+  align-items: center;
   display: flex;
   list-style: none;
+  margin-right: 25px;
   text-transform: uppercase;
 
   .option-item {
@@ -127,4 +129,12 @@
   background-color: $cerise-red;
   border-radius: 50%;
   color: $white-solid;
+  display: block;
+  font-family: $playfair-font;
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;
+  padding: 2px;
+  text-align: center;
+  width: 30px;
 }
