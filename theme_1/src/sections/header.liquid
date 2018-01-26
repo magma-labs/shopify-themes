@@ -4,37 +4,11 @@
       max-width: {{ section.settings.logo_max_width }}px;
     }
   {% endif %}
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  li {
-      float: left;
-  }
-
-  .header {
-      float: left;
-  }
-
-  li a {
-      display: block;
-      color: black;
-      text-align: center;
-      padding: 16px;
-      text-decoration: none;
-  }
-
-  li a:hover {
-      
-  }
 </style>
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
   <header role="banner">
     {% if template.name == 'index' %}
-      <h1 itemscope itemtype="http://schema.org/Organization">
+      <h1 class="headerImage" itemscope itemtype="http://schema.org/Organization">
     {% else %}
       <div class="h1" itemscope itemtype="http://schema.org/Organization">
     {% endif %}
@@ -46,7 +20,7 @@
                  alt="{{ section.settings.logo.alt | default: shop.name }}"
                  itemprop="logo">
           {% else %}
-            {{ shop.name }}
+            {{ shop.name }} - Diego 
           {% endif %}
         </a>
     {% if template.name == 'index' %}
