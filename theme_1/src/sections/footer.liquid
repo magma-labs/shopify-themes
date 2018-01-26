@@ -1,5 +1,14 @@
 <footer>
 
+{%- assign footer_linklist = section.settings.footer_linklist -%}
+  {% if linklists[footer_linklist].links.size > 0 %}
+    <ul>
+      {% for link in linklists[footer_linklist].links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
   {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
   <ul>
     {% for social in social_accounts %}
@@ -36,15 +45,6 @@
         {% endfor %}
       </ul>
     {% endunless %}
-  {% endif %}
-
-  {%- assign footer_linklist = section.settings.footer_linklist -%}
-  {% if linklists[footer_linklist].links.size > 0 %}
-    <ul>
-      {% for link in linklists[footer_linklist].links %}
-        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-      {% endfor %}
-    </ul>
   {% endif %}
 
   <div>

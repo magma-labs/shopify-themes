@@ -23,8 +23,11 @@
 @import url('global/forms.scss');
 @import url('global/fonts.scss');
 @import url('global/blank-states.scss');
+@import url('global/collection-list.scss');
 
 /*================ MODULES ================*/
 @import url('modules/site-header.scss');
 @import url('modules/gift-card-template.scss');
 @import url('modules/cart.scss');
+@import url('modules/product.scss');
+@import url('modules/collection.scss');

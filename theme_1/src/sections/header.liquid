@@ -20,7 +20,7 @@
                  alt="{{ section.settings.logo.alt | default: shop.name }}"
                  itemprop="logo">
           {% else %}
-            {{ shop.name }} - Diego 
+            {{ shop.name }}
           {% endif %}
         </a>
     {% if template.name == 'index' %}
@@ -81,7 +81,7 @@
     {% comment %}
       Cart link.
     {% endcomment %}
-    <a href="/cart"> {{ cart.item_count }} {% include 'icon-cart' %} </a>
+    <a href="/cart" class="cart-icon"> {{ cart.item_count }} {% include 'icon-cart' %} </a>
 
     {% if shop.customer_accounts_enabled %}
       <ul>

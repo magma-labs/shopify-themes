@@ -6,9 +6,9 @@
   <div {{ block.shopify_attributes }}>
     {%- assign collection = collections[block.settings.collection] -%}
 
-    <a href="{% if collection == empty %}#{% else %}{{ collection.url }}{% endif %}">
+    <a href="{% if collection == empty %}#{% else %}{{ collection.url }}{% endif %}" class="collection-block">
       {% if collection.image != blank %}
-        {{ collection | img_url: '480x480' | img_tag: collection.title }}
+        {{ collection | img_url: '900x480' | img_tag: collection.title }}
       {% elsif collection.products.first != blank %}
         {{ collection.products.first | img_url: '480x480' | img_tag: collection.title }}
       {% elsif collection == empty %}
@@ -19,8 +19,6 @@
       <p>
         {% if collection == empty %}
           {{ 'homepage.onboarding.collection_title' | t }}
-        {% else %}
-          {{ collection.title }}
         {% endif %}
       </p>
     </a>
