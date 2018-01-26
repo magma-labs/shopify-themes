@@ -10,3 +10,41 @@
   white-space: nowrap;
   border: 0;
 }
+
+.pink-button {
+  font-family: 'robotobold';
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 19px;
+  background: #FF0052;
+  height: 40px;
+}
+
+.pink-button:hover {
+  font-family: 'robotobold';
+  font-size: 16px;
+  background: #FFFFFF;
+  line-height: 19px;
+  color: #FF0052;
+  height: 40px;
+}
+
+.gray-button {
+  font-family: 'robotobold';
+  font-size: 16px;
+  color: #9B9B9B;
+  line-height: 19px;
+  background: white;
+  height: 40px;
+  border-color: #9B9B9B;
+  width: 160px;
+}
+
+.gray-button:hover {
+  font-family: 'robotobold';
+  font-size: 16px;
+  background: #9b9b9b;
+  line-height: 19px;
+  color: white;
+  height: 40px;
+}
