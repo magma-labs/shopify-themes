@@ -1,9 +1,73 @@
 /*================ Site Header ================*/
-.site-logo {
-  display: block;
+header {
+  background-color: #fff;
+  font-family: $font-stack-header;
+  text-align: center;
+  vertical-align: top;
+  height: 100px;
 
-  img {
-    display: block;
+  .header-section-icon {
+    display: inline-block;
     width: 100%;
+    text-align: center;
+    position: relative;
+
+    h1 {
+      display: inline-block;
+    }
+  }
+
+  .header-section-cart {
+    display: inline-block;
+    width: 39%;
+    position: absolute;
+    text-align: right;
+    vertical-align: top;
+    right: 0;
+
+    ul {
+      li {
+        list-style: none;
+        display: inline-block;
+      }
+    }
+
+    .customer-options {
+      top: 0;
+      display: inline-block;
+    }
+
+    .search-form {
+      display: inline-block;
+    }
+  }
+
+  .site-logo {
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+nav {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+
+  ul {
+    li {
+      display: inline-block;
+      margin: 5px 10px;
+    }
+  }
+
+  .header-cart {
+    float: right;
+    right: 5px;
+    margin: 25px;
+    position: absolute;
   }
 }
