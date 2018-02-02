@@ -1,7 +1,11 @@
 /*================ General layout styles ================*/
+a {
+  text-decoration: none;
+}
 body,
 html {
   background-color: $color-body;
+  font-family: $font-stack-body;
 }
 
 .page-width {
