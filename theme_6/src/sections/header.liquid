@@ -31,15 +31,16 @@
           <label for="Search" class="label-hidden">
             {{ 'general.search.placeholder' | t }}
           </label>
-          <input type="search"
-                name="q"
-                id="Search"
-                value="{{ search.terms | escape }}"
-                placeholder="{{ 'general.search.placeholder' | t }}">
-          <button type="submit" class="btn">
-            {% include 'icon-search' %}
-            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-          </button>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="input-group">
+                <input type="text" class="form-control"/>
+                <button class="input-group-addon" type="submit">
+                  {% include 'icon-search' %}
+                </button>
+              </div>
+            </div>
+          </div>
         </form>
 
         {% if shop.customer_accounts_enabled %}

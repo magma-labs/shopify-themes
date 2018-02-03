@@ -38,7 +38,33 @@ header {
     }
 
     .search-form {
+      margin-top: 10px;
       display: inline-block;
+
+      input {
+        background-color: #FBFBFB;
+        background-image: url('images/microphone.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        border: 1px solid #D2D2D2;
+        color: #AFAFAF;
+        font-size: 14px;
+        height: 35px;
+        padding-left: 5px;
+        width: 232px;
+      }
+
+      button {
+        color: #627387;
+        position: absolute;
+        right: 3px;
+        top: 2px;
+        z-index: 999;
+        height: 30px;
+        width: 34px;
+        border: none;
+        background-color: #FBFBFB;
+      }
     }
   }
 
