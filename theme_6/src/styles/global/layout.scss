@@ -8,10 +8,32 @@ html {
   background-color: $color-body;
   font-family: $font-stack-body;
 }
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 290px;
+  min-height: 100%;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 .page-width {
   @include clearfix();
   max-width: $width-site;
   padding: 0 $gutter;
   margin: 0 auto;
+}
+
+.subtitle {
+  color: $color-subtitle-text;
+  font-weight: bold;
+  text-transform: uppercase;
 }
