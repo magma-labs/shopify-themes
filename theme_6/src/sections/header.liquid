@@ -3,27 +3,11 @@
   <header role="banner">
 
     <div class="header-section-icon">
-      {% if template.name == 'index' %}
-        <h1 itemscope itemtype="http://schema.org/Organization">
-      {% else %}
-        <div class="h1" itemscope itemtype="http://schema.org/Organization">
-      {% endif %}
-          <a href="/" itemprop="url" class="site-logo site-header__logo-image">
-            {% if section.settings.logo != blank %}
-              {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
-              <img src="{{ section.settings.logo | img_url: image_size }}"
-                  srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-                  alt="{{ section.settings.logo.alt | default: shop.name }}"
-                  itemprop="logo">
-            {% else %}
-              {{ shop.name }}
-            {% endif %}
-          </a>
-      {% if template.name == 'index' %}
-        </h1>
-      {% else %}
-        </div>
-      {% endif %}
+      <h1 itemscope itemtype="http://schema.org/Organization">
+        <a href="/" itemprop="url" class="site-logo site-header__logo-image">
+          <img src="{{ 'logo.png' | asset_url }}">
+        </a>
+      </h1>
 
       <div class="header-section-cart">
 
@@ -69,7 +53,6 @@
         {% endif %}
 
       </div>
-
     </div>
 
   </header>
@@ -109,9 +92,6 @@
     </div>
 
   </nav>
-
- 
-
 </div>
 
 {% schema %}
