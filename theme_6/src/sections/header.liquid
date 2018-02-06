@@ -16,51 +16,50 @@
           <img src="{{ 'logo-mobile.png' | asset_url }}" class="medium-up--hide small--show">
         </a>
       </h1>
+    </div>
 
-      <div class="header-section-cart">
-
-        <form class="search-form small--hide" action="/search" method="get" role="search">
-          <label for="Search" class="label-hidden">
-            {{ 'general.search.placeholder' | t }}
-          </label>
-          <div class="row">
-            <div class="col-xs-6">
-              <div class="input-group">
-                <input type="text" class="form-control"/>
-                <button class="input-group-addon" type="submit">
-                  {% include 'icon-search' %}
-                </button>
-              </div>
+    <div class="header-top-right">
+      <form class="search-form small--hide" action="/search" method="get" role="search">
+        <label for="Search" class="label-hidden">
+          {{ 'general.search.placeholder' | t }}
+        </label>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="input-group">
+              <input type="text" class="form-control"/>
+              <button class="input-group-addon" type="submit">
+                {% include 'icon-search' %}
+              </button>
             </div>
           </div>
-        </form>
+        </div>
+      </form>
 
-        {% if shop.customer_accounts_enabled %}
-          <ul class="customer-options small--hide">
-            {% if customer %}
-              <li>
-                {% if customer.first_name != blank %}
-                  {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
-                  {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
-                {% else %}
-                  <a href="/account">{{ 'layout.customer.account' | t }}</a>
-                {% endif %}
-              </li>
-              <li>
-                {{ 'layout.customer.log_out' | t | customer_logout_link }}
-              </li>
-            {% else %}
-              <li>
-                {{ 'layout.customer.log_in' | t | customer_login_link }}
-              </li>
-              <li>
-                {{ 'layout.customer.create_account' | t | customer_register_link }}
-              </li>
-            {% endif %}
-          </ul>
-        {% endif %}
+      {% if shop.customer_accounts_enabled %}
+        <ul class="customer-options small--hide">
+          {% if customer %}
+            <!-- <li> -->
+            <!--   {% if customer.first_name != blank %} -->
+            <!--     {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %} -->
+            <!--     {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }} -->
+            <!--   {% else %} -->
+            <!--     <a href="/account">{{ 'layout.customer.account' | t }}</a> -->
+            <!--   {% endif %} -->
+            <!-- </li> -->
+            <li>
+              {{ 'layout.customer.log_out' | t | customer_logout_link }}
+            </li>
+          {% else %}
+            <li>
+              {{ 'layout.customer.log_in' | t | customer_login_link }}
+            </li>
+            <li>
+              {{ 'layout.customer.create_account' | t | customer_register_link }}
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
 
-      </div>
     </div>
 
   </header>

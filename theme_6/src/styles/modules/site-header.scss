@@ -4,32 +4,35 @@ header {
   font-family: $font-stack-header;
   text-align: center;
   vertical-align: top;
-  height: 100px;
+  height: 172px;
+  position: relative;
 
   .header-section-icon {
     display: inline-block;
     width: 100%;
     text-align: center;
-    position: relative;
 
     h1 {
       display: inline-block;
     }
   }
 
-  .header-section-cart {
+  .header-top-right {
     display: inline-block;
     width: 39%;
     position: absolute;
     text-align: right;
     vertical-align: top;
-    right: 0;
+    right: 35px;
+    top: 25px;
 
     ul {
       li {
         list-style: none;
         display: inline-block;
-        margin-right: 15px;
+      }
+      li:first-child {
+        margin-right: 30px;
       }
     }
 
@@ -39,14 +42,11 @@ header {
     }
 
     .search-form {
-      margin-top: 10px;
       display: inline-block;
+      margin-right: 70px;
 
       input {
         background-color: #FBFBFB;
-        background-image: url('images/microphone.png');
-        background-repeat: no-repeat;
-        background-position: right;
         border: 1px solid #D2D2D2;
         color: #AFAFAF;
         font-size: 14px;
