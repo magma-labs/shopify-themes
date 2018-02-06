@@ -1,7 +1,7 @@
 <footer>
 
-  <div class="container">
-    <div class="footer-left">
+  <div class="container grid">
+    <div class="footer-left grid__item medium-up--four-tenths small--one-whole">
       <p class="subtitle">Follow us</p>
       {%- assign social_accounts = 'Facebook, Twitter, Youtube' | split: ', ' -%}
       <ul>
@@ -22,17 +22,18 @@
       </ul>
     </div>
 
-    <div class="footer-center">
+    <div class="footer-center grid__item medium-up--two-tenths small--hide">
       <img src="{{ 'logo_small.png' | asset_url }}">
     </div>
 
-    <div class="footer-right">
+    <div class="footer-right grid__item medium-up--four-tenths small--one-whole">
       <p class="subtitle">Join our newsletter!</p>
       <input class="newsletter" type="text" placeholder="EMAIL">
     </div>
+
   </div>
 
-  <div class="footer-nav">
+  <div class="footer-nav grid__item small--hide">
     <ul>
       <li>Contact us</li>
       <li>About us</li>
