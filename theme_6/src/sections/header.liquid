@@ -2,16 +2,24 @@
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
   <header role="banner">
 
+  
+
     <div class="header-section-icon">
+
+      <div class="nav-mobile medium-up--hide small--show">
+        {% include 'icon-plus' | 'small' %} Menu
+      </div>
+
       <h1 itemscope itemtype="http://schema.org/Organization">
         <a href="/" itemprop="url" class="site-logo site-header__logo-image">
-          <img src="{{ 'logo.png' | asset_url }}">
+          <img src="{{ 'logo.png' | asset_url }}" class="small--hide">
+          <img src="{{ 'logo-mobile.png' | asset_url }}" class="medium-up--hide small--show">
         </a>
       </h1>
 
       <div class="header-section-cart">
 
-        <form class="search-form" action="/search" method="get" role="search">
+        <form class="search-form small--hide" action="/search" method="get" role="search">
           <label for="Search" class="label-hidden">
             {{ 'general.search.placeholder' | t }}
           </label>
@@ -28,7 +36,7 @@
         </form>
 
         {% if shop.customer_accounts_enabled %}
-          <ul class="customer-options">
+          <ul class="customer-options small--hide">
             {% if customer %}
               <li>
                 {% if customer.first_name != blank %}
@@ -58,7 +66,7 @@
   </header>
 
   <nav role="navigation">
-    <ul class="site-nav">
+    <ul class="site-nav small--hide">
       {% for link in linklists[section.settings.main_linklist].links %}
         {%- assign child_list_handle = link.title | handleize -%}
         {% if menus[child_list_handle].links != blank %}
@@ -85,8 +93,9 @@
 
     <div class="header-cart">
       <a href="/cart">
-        {{ 'layout.cart.title' | t }}
-        ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
+        <span class="small--hide">{{ 'layout.cart.title' | t }}
+        (</span>{{ cart.item_count }} 
+        <span class="small--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }})</span>
         {% include 'icon-cart' %}
       </a>
     </div>
