@@ -26,7 +26,7 @@
         <div class="row">
           <div class="col-xs-6">
             <div class="input-group">
-              <input type="text" class="form-control"/>
+                    <input type="text" placeholder="{{'general.search.placeholder' | t}}"/>
               <button class="input-group-addon" type="submit">
                 {% include 'icon-search' %}
               </button>
@@ -62,44 +62,44 @@
 
     </div>
 
+
+    <nav role="navigation">
+      <ul class="site-nav small--hide">
+        {% for link in linklists[section.settings.main_linklist].links %}
+          {%- assign child_list_handle = link.title | handleize -%}
+          {% if menus[child_list_handle].links != blank %}
+            <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
+              <a href="{{ link.url }}" class="site-nav__link">
+                {{ link.title }}
+                {% include 'icon-arrow-down' %}
+              </a>
+              <ul class="site-nav__submenu">
+                {% for childlink in menus[child_list_handle].links %}
+                  <li {% if childlink.active %}class="site-nav--active"{% endif %}>
+                    <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li {% if link.active %}class="site-nav--active"{% endif %}>
+              <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      <div class="header-cart">
+        <a href="/cart">
+          <span class="small--hide">{{ 'layout.cart.title' | t }}
+          (</span>{{ cart.item_count }} 
+          <span class="small--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }})</span>
+          {% include 'icon-cart' %}
+        </a>
+      </div>
+
+    </nav>
   </header>
-
-  <nav role="navigation">
-    <ul class="site-nav small--hide">
-      {% for link in linklists[section.settings.main_linklist].links %}
-        {%- assign child_list_handle = link.title | handleize -%}
-        {% if menus[child_list_handle].links != blank %}
-          <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
-            <a href="{{ link.url }}" class="site-nav__link">
-              {{ link.title }}
-              {% include 'icon-arrow-down' %}
-            </a>
-            <ul class="site-nav__submenu">
-              {% for childlink in menus[child_list_handle].links %}
-                <li {% if childlink.active %}class="site-nav--active"{% endif %}>
-                  <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% else %}
-          <li {% if link.active %}class="site-nav--active"{% endif %}>
-            <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-
-    <div class="header-cart">
-      <a href="/cart">
-        <span class="small--hide">{{ 'layout.cart.title' | t }}
-        (</span>{{ cart.item_count }} 
-        <span class="small--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }})</span>
-        {% include 'icon-cart' %}
-      </a>
-    </div>
-
-  </nav>
 </div>
 
 {% schema %}
