@@ -1,12 +1,49 @@
 /*================ General layout styles ================*/
+a {
+  color: $color-link-text;
+  text-decoration: none;
+}
 body,
 html {
   background-color: $color-body;
+  font-family: $font-stack-body;
 }
-
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 290px;
+  min-height: 100%;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+textarea:focus, input:focus {
+  outline: none;
+}
+*:focus {
+  outline: none;
+}
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .page-width {
   @include clearfix();
   max-width: $width-site;
   padding: 0 $gutter;
   margin: 0 auto;
+}
+.text-color-pink {
+  color: $color-pink !important;
+
+  a {
+    color: $color-pink !important;
+  }
 }
