@@ -1,9 +1,183 @@
 /*================ Site Header ================*/
-.site-logo {
+header {
+  
+  height: auto;
+  margin-bottom: 10px;
+
+  .header-first-line {
+    background-color: $color-dark;
+    height: 40px;
+    margin: 0;
+  }
+
+  .header-section-user {
+    text-align: right;
+    line-height: 40px;
+    font-size: 14px;
+    height: 40px;
+    overflow: hidden;
+    ul {
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 15px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .header-section-nav {
+    padding: 5px 0 0 15px;
+
+    .icon-hamburger {
+      fill: $color-pink;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .header-section-cart {
+    color: white;
+    text-align: right;
+    padding-right: 15px;
+    font-size: 1.5rem;
+
+
+    .icon-cart {
+      width: 30px;
+      height: 30px;
+      fill: white;
+    }
+  }
+
+  .header-section-icon {
+    display: inline-block;
+    text-align: center;
+    height: 25px;
+
+    h1 {
+      margin: 6px 0;
+      display: inline-block;
+    }
+
+  }
+
+  .header-second-line {
+    background: #fff;
+
+     @include media-query($medium-up) {
+       margin-top: 30px;
+     }
+  }
+
+  .header-section-navbar {
+    display: inline-block;
+  }
+
+  .header-section-medium-cart {
+    color: black;
+    display: inline-block;
+
+    a {
+      color: black;
+    }
+
+    .icon-cart {
+      width: 30px;
+      height: 30px;
+      fill: black;
+    }
+  }
+
+  .site-logo {
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    @include media-query($medium-up) {
+      margin-left: 15px;
+      img {
+        height: 22px;
+        width: auto;
+        display: inline-block;
+      }
+    }
+  }
+
+  .site-logo-tablet {
+    img {
+      height: 40px;
+    }
+  }
+
+  .header-main-nav {
+    list-style: none;
+    display: inline-block;
+
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+
+.search-form {
+  border-bottom: 2px solid gray;
+  margin: 0 15px;
+  padding: 10px 0 0 0;
   display: block;
 
-  img {
-    display: block;
-    width: 100%;
+  input {
+    background-color: none;
+    background-position: right;
+    border: none;
+    color: $color-light-gray;
+    font-size: 14px;
+    height: 35px;
+    outline: none;
+  }
+
+  button {
+    background-color: transparent;
+    color: $color-gray;
+    outline: none;
+    padding-right: 0px;
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    z-index: 999;
+    height: 30px;
+    width: 34px;
+    border: none;
+
+    .icon {
+      color: $color-gray;
+      font-size: 1.5rem;
+      height: 19px;
+      width: 19px;
+    }
+  }
+
+  @include media-query($medium-up) {
+    border: none;
+    display: inline-block;
+    width: 150px;
+    margin-left: 10px;
+
+    input {
+      border: none;
+      width: 20px;
+      display: inline-block;
+
+      ::placeholder {
+        content: '';
+      }
+    }
   }
 }
