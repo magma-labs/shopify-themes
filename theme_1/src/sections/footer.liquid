@@ -1,24 +1,7 @@
-<footer>
+<footer class="margin-theme">
+  {%- assign social_accounts = 'Facebook, Twitter, Google,' | split: ', ' -%}
 
-  {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
-  <ul>
-    {% for social in social_accounts %}
-      {%- assign social_handle = social | handleize -%}
-      {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
-      {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
-
-      {% if settings[social_link] != blank %}
-        <li>
-          <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
-            {% include social_icon %}
-            <span class="icon-fallback-text">{{ social }}</span>
-          </a>
-        </li>
-      {% endif %}
-
-    {% endfor %}
-  </ul>
-
+  {% comment %}
   {% if section.settings.show_payment_icons %}
     {% unless shop.enabled_payment_types == empty %}
       {%- assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' -%}
@@ -46,9 +29,64 @@
       {% endfor %}
     </ul>
   {% endif %}
+  {% endcomment %}
 
-  <div>
-    <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
+  <div class="grid">
+    <div class="grid__item medium-up--one-third">
+                  
+      <div class="grid medium-up--hide">
+        {% for social in social_accounts %}
+          {%- assign social_handle = social | handleize -%}
+          {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+          {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+
+          {% if settings[social_link] != blank %}
+            <div class="grid__item small--one-quarter">
+              <a href="{{ settings[social_link] }}"
+                title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
+                {% comment %}{% include social_icon %}{% endcomment %}
+                <div class="{{social_icon}}"></div>
+              </a>
+            </div>
+          {% endif %}
+
+        {% endfor %}
+      </div>
+
+      <div class="grid small--hide">
+        <div class="grid__item one-third">CONTACT</div>
+        <div class="grid__item one-third">ABOUT US</div>
+        <div class="grid__item one-third">FAQ</div>
+      </div>
+
+    </div>
+    <div class="grid__item medium-up--one-third text-center">
+      <div class="logo-footer"></div>
+    </div>
+    <div class="grid__item medium-up--one-third small--hide text-right">
+      <div class="grid">
+        <div class="grid__item two-fifths">FOLLOW US!</div>
+        {% for social in social_accounts %}
+          {%- assign social_handle = social | handleize -%}
+          {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+          {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+
+          {% if settings[social_link] != blank %}
+            <div class="grid__item one-fifth">
+              <a href="{{ settings[social_link] }}"
+                title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
+                {% comment %}{% include social_icon %}{% endcomment %}
+                <div class="{{social_icon}}"></div>
+              </a>
+            </div>
+          {% endif %}
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="medium-up--text-left small--text-center copy-right pading">
+    © 2015 All Rights Reserved. Design by Crowd Interactive. Powered by Spree.
   </div>
 </footer>
 

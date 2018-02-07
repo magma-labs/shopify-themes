@@ -1,0 +1,42 @@
+/*================ Site Footer ================*/
+.site-logo {
+  display: block;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.logo-footer {
+  background: url('../assets/sprite.png') no-repeat -103px -363px;
+  width: 40px;
+  height: 25px;
+  display: inline-block;
+}
+.icon-facebook {
+  background: url('../assets/sprite.png') no-repeat -61px -273px;
+  width: 12px;
+  height: 24px;
+}
+.icon-twitter {
+  background: url('../assets/sprite.png') no-repeat -116px -277px;
+  width: 19px;
+  height: 16px;
+}
+.icon-google {
+  background: url('../assets/sprite.png') no-repeat -178px -274px;
+  width: 21px;
+  height: 22px;
+}
+.margin-theme {
+  margin: 0px 10px 0px;
+}
+.copy-right {
+  padding: 16px 4px 32px;
+  border-top: solid gray 2px;
+}
+@include media-query($medium-up) {
+  .margin-theme {
+    margin: 0px 38px 0px;
+  }
+}
