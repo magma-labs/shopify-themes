@@ -135,6 +135,10 @@ header {
       display: inline-block;
       margin-left: 20px;
       text-transform: uppercase;
+
+      a {
+        color: $color-gray;
+      }
     }
 
     @include media-query($large-up) {
