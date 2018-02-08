@@ -1,0 +1,113 @@
+.jumbotron {
+  margin-bottom: 54px;
+  padding: 0;
+  position: relative;
+
+  .title {
+    position: absolute;
+    font-size: 20px;
+    top: 10%;
+    left: 10%;
+  }
+
+  .subtitle {
+    position: absolute;
+    font-weight: bold;
+    color: #fff;
+    font-size: 35px;
+    top: 25%;
+    left: 10%;
+  }
+
+  .description {
+    position: absolute;
+    font-weight: bold;
+    color: #fff;
+    font-size: 24px;
+    top: 45%;
+    left: 10%;
+  }
+
+  button {
+    background-color: $color-pink;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    padding: 10px 15px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 65%;
+    left: 10%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.separator {
+  border: 1px solid $color-medium-gray;
+}
+
+@include media-query($medium-up) {
+  .jumbotron {
+    .title {
+      font-size: 30px;
+    }
+    .subtitle {
+      top: 20%;
+      font-size: 72px;
+    }
+    .description {
+      font-size: 50px;
+    }
+    button {
+      font-size: 24px;
+    }
+  }
+}
+
+@include media-query($large-up) {
+  .jumbotron {
+    .title {
+      font-size: 38px;
+    }
+
+    .subtitle {
+      font-size: 90px;
+    }
+
+    .description {
+      font-size: 62px;
+    }
+
+    button {
+      font-size: 30px;
+      top: 68%;
+    }
+  }
+}
+
+@include media-query($widescreen) {
+  .jumbotron {
+    .title {
+      font-size: 48px;
+    }
+    .subtitle {
+      font-size: 100px;
+    }
+    .description {
+      font-size: 72px;
+      top: 41%;
+    }
+    button {
+      font-size: 40px;
+      top: 65%;
+      height: 83px;
+      padding: 10px 25px;
+      width: 325px;
+    }
+  }
+}

@@ -47,9 +47,9 @@
 
     </div>
 
-    <div class="header-second-line">
+    <div class="grid header-second-line">
       
-      <div class="header-section-navbar medium-one-third small--hide">
+      <div class="header-section-icon grid__item small--hide medium-up--two-tenths">
         <h1 itemscope itemtype="http://schema.org/Organization">
           <a href="/" itemprop="url" class="site-logo site-header__logo-image">
             <img src="{{ 'logo-1280.png' | asset_url }}">
@@ -57,30 +57,25 @@
         </h1>
       </div>
 
-      <ul class="header-main-nav small--hide">
-        <li>Boards</li>
-        <li>Goggles</li>
-        <li>Gloves</li>
-        <li>Helmets</li>
+      <ul class="header-main-nav grid__item small--hide medium-up--five-tenths">
+        <li><a href="/collections/boards">Boards</a></li>
+        <li><a href="/collections/goggles">Goggles</a></li>
+        <li><a href="/collections/gloves">Gloves</a></li>
+        <li><a href="/collections/helmets">Helmets</a></li>
       </ul>
 
-      <form class="search-form" action="/search" method="get" role="search">
-        <label for="Search" class="label-hidden">
-          {{ 'general.search.placeholder' | t }}
-        </label>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="input-group">
-              <input type="text" class="form-control" />
-              <button class="input-group-addon" type="submit">
-                {% include 'icon-search' %}
-              </button>
-            </div>
+      <form class="search-form grid__item small-one-whole medium-up--two-tenths" action="/search" method="get" role="search">
+        <div class="col-lg-12">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control input-search" placeholder="Search" autocomplete="off" />
+            <button class="input-group-addon" type="submit">
+              {% include 'icon-search' %}
+            </button>
           </div>
         </div>
       </form>
 
-      <div class="header-section-medium-cart small--hide">
+      <div class="header-section-medium-cart grid__item small--hide medium-up--one-tenth">
         <a href="/cart">     
           {{ cart.item_count }}
           {% include 'icon-cart' %}
