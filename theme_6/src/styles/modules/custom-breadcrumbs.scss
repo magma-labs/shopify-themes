@@ -1,0 +1,15 @@
+nav.custom-breadcrumb {
+  align-items: center;
+  background-color: $color-body;
+  display: flex;
+  height: 55px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-left: 37px;
+  a {
+    color: $color-breadcrumb-link;
+  }
+  span {
+    color: $color-breadcrumb-text;
+  }
+}

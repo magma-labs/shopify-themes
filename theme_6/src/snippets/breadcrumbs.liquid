@@ -1,8 +1,8 @@
 {% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
-<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+<nav class="custom-breadcrumb" role="navigation" aria-label="breadcrumbs">
   <a href="/" title="Home">Home</a>
   {% if template contains 'page' %}
-    <span aria-hidden="true">&rsaquo;</span>
+    <span aria-hidden="true">&nbsp;&nbsp;&rsaquo;&nbsp;&nbsp;</span>
     <span>{{ page.title }}</span>
   {% elsif template contains 'product' %}
     {% if collection.url %}
