@@ -76,27 +76,28 @@ header {
     display: inline-block;
   }
 
-}
-
-nav {
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-  font-size: 18pt;
-  ul {
-    li {
-      display: inline-block;
-      margin: 5px 10px;
-      .site-nav--active{
-      font-color:#D3495A;
+  nav {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 18pt;
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 80px;
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+      li.site-nav--active{
+        font-color:#D3495A;
       }
     }
-  }
-
-  .header-cart {
-    float: right;
-    right: 15px;
-    position: absolute;
+  
+    .header-cart {
+      float: right;
+      right: 35px;
+      position: absolute;
+    }
   }
 }

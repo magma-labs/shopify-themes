@@ -1,9 +1,9 @@
 <footer>
 
-  <div class="container grid">
-    <div class="footer-left grid__item medium-up--four-tenths small--one-whole">
-      <p class="subtitle">Follow us</p>
-      {%- assign social_accounts = 'Facebook, Twitter, Youtube' | split: ', ' -%}
+  <div class="content grid">
+    <div class="footer-social-media grid__item medium-up--four-tenths small--one-whole">
+      <span class="subtitle">Follow us</span>
+      {%- assign social_accounts = 'Facebook, Twitter, Googleplus, Youtube' | split: ', ' -%}
       <ul>
       {% for social in social_accounts %}
         {%- assign social_handle = social | handleize -%}
@@ -22,29 +22,42 @@
       </ul>
     </div>
 
-    <div class="footer-center grid__item medium-up--two-tenths small--hide">
+    <div class="footer-logo grid__item medium-up--two-tenths small--hide">
       <img src="{{ 'logo_small.png' | asset_url }}">
     </div>
 
-    <div class="footer-right grid__item medium-up--four-tenths small--one-whole">
-      <p class="subtitle">Join our newsletter!</p>
+    <div class="footer-newsletter grid__item medium-up--four-tenths small--one-whole">
+      <span class="subtitle">Join our newsletter!</span>
       <input class="newsletter" type="text" placeholder="EMAIL">
     </div>
 
-  </div>
+    {% comment %}
+    <div class="footer-nav grid__item small--hide">
+      <ul>
+        <li>Contact us</li>
+        <li>About us</li>
+        <li>Terms & conditions</li>
+        <li>Return policy</li>
+        <li>Privacy policy</li>
+      </ul>
+    </div>
+    {% endcomment %}
 
-  <div class="footer-nav grid__item small--hide">
-    <ul>
-      <li>Contact us</li>
-      <li>About us</li>
-      <li>Terms & conditions</li>
-      <li>Return policy</li>
-      <li>Privacy policy</li>
-    </ul>
-  </div>
+    <div class="footer-nav grid__item small--hide">
+      {%- assign footer_linklist = section.settings.footer_linklist -%}
+      {% if linklists[footer_linklist].links.size > 0 %}<Paste>
+        <ul>
+        {% for link in linklists[footer_linklist].links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
 
-  <div class="footer-copyright">
-    Created by MagmaLabs {{ 'now' | date: "%Y" }}
+    <div class="footer-copyright">
+      Created by MagmaLabs {{ 'now' | date: "%Y" }}
+    </div>
+
   </div>
 
 </footer>

@@ -38,14 +38,14 @@
       {% if shop.customer_accounts_enabled %}
         <ul class="customer-options small--hide">
           {% if customer %}
-            <!-- <li> -->
-            <!--   {% if customer.first_name != blank %} -->
-            <!--     {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %} -->
-            <!--     {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }} -->
-            <!--   {% else %} -->
-            <!--     <a href="/account">{{ 'layout.customer.account' | t }}</a> -->
-            <!--   {% endif %} -->
-            <!-- </li> -->
+            <li>
+              {% if customer.first_name != blank %}
+                {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+                {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
+              {% else %}
+                <a href="/account">{{ 'layout.customer.account' | t }}</a>
+              {% endif %}
+            </li>
             <li>
               {{ 'layout.customer.log_out' | t | customer_logout_link }}
             </li>
@@ -92,8 +92,10 @@
       <div class="header-cart">
         <a href="/cart">
           <span class="small--hide">{{ 'layout.cart.title' | t }}
-          (</span>{{ cart.item_count }} 
-          <span class="small--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }})</span>
+          </span>{{ cart.item_count }}
+          {% comment %}
+          <span class="small--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+          {% endcomment %}
           {% include 'icon-cart' %}
         </a>
       </div>
