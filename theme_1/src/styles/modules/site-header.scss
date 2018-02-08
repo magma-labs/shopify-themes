@@ -64,19 +64,18 @@ header {
 
   .header-second-line {
     background: #fff;
+    font-size: 14px;
 
      @include media-query($medium-up) {
-       margin-top: 30px;
+       margin: 40px 0 0 0;
      }
-  }
-
-  .header-section-navbar {
-    display: inline-block;
   }
 
   .header-section-medium-cart {
     color: black;
     display: inline-block;
+    padding-right: 15px;
+    text-align: right;
 
     a {
       color: black;
@@ -86,6 +85,10 @@ header {
       width: 30px;
       height: 30px;
       fill: black;
+    }
+
+    @include media-query($medium-up) {
+      float: right; 
     }
   }
 
@@ -98,11 +101,21 @@ header {
     }
 
     @include media-query($medium-up) {
-      margin-left: 15px;
+      margin: 0 0 0 15px;
+      padding: 0;
+      line-height: 22px;
+
       img {
         height: 22px;
         width: auto;
         display: inline-block;
+      }
+    }
+
+    @include media-query($large-up) {
+
+      img {
+        height: 33px;
       }
     }
   }
@@ -115,30 +128,43 @@ header {
 
   .header-main-nav {
     list-style: none;
-    display: inline-block;
+    padding-top: 10px;
+    font-size: 14px;
 
     li {
       display: inline-block;
-      margin-right: 15px;
+      margin-left: 20px;
       text-transform: uppercase;
     }
+
+    @include media-query($large-up) {
+      font-size: 16px;
+      padding-top: 12px;
+
+      li {
+        margin-left: 54px;
+      }
+    }
+
+    @include media-query($widescreen) {
+      font-size: 18px;
+    }
+
   }
 
 }
 
-
 .search-form {
-  border-bottom: 2px solid gray;
-  margin: 0 15px;
-  padding: 10px 0 0 0;
-  display: block;
 
   input {
     background-color: none;
     background-position: right;
     border: none;
+    border-radius: 0;
+    border-bottom: 3px solid $color-light-gray;
     color: $color-light-gray;
     font-size: 14px;
+    margin: 15px 0;
     height: 35px;
     outline: none;
   }
@@ -147,7 +173,7 @@ header {
     background-color: transparent;
     color: $color-gray;
     outline: none;
-    padding-right: 0px;
+    padding: 15px 0 0 0;
     position: absolute;
     right: 3px;
     top: 2px;
@@ -166,18 +192,39 @@ header {
 
   @include media-query($medium-up) {
     border: none;
-    display: inline-block;
-    width: 150px;
-    margin-left: 10px;
 
     input {
       border: none;
+      margin-top: 0px;
       width: 20px;
       display: inline-block;
+    }
 
-      ::placeholder {
-        content: '';
-      }
+    input::placeholder {
+      color: white;
+    }
+
+    button {
+      padding: 0;
+    }
+  }
+
+  @include media-query($large-up) {
+
+    input {
+      border-bottom: 3px solid $color-light-gray;
+    }
+
+    input::placeholder {
+      color: $color-light-gray;
+      ;
+    }
+
+  }
+
+  @include media-query($widescreen) {
+    input {
+      font-size: 16px;
     }
   }
 }
