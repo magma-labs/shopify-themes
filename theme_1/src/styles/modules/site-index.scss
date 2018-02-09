@@ -52,7 +52,6 @@
 }
 
 .collections {
-  margin-bottom: 18px;
 
   .row {
     display: -ms-flexbox; /* IE10 */
@@ -117,6 +116,34 @@
   }
 }
 
+.promotional-banner {
+  background-position: left center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url('../assets/mobile-promotional-banner.jpg');
+  height: 148px;
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #fff;
+    font-size: 34px;
+    font-weight: bold;
+    left: 10%;
+    position: absolute;
+    top: 20%;
+  }
+
+  .description {
+    font-family: $font-stack-additional;
+    font-size: 26px;
+    font-weight: lighter;
+    left: 10%;
+    position: absolute;
+    top: 50%;
+  }
+}
+
 @include media-query($medium-up) {
   .jumbotron {
     .title {
@@ -168,6 +195,10 @@
       background-image: url('../assets/tablet-gloves-collection.png');
     }
   }
+
+  .promotional-banner {
+    background-image: url('../assets/tablet-promotional-banner.png');
+  }
 }
 
 @include media-query($large-up) {
@@ -207,6 +238,19 @@
       background-image: url('../assets/tablet-gloves-collection.png');
       height: 186px;
       width: 475px;
+    }
+  }
+
+  .promotional-banner {
+    background-image: url('../assets/1024-promotional-banner.jpg');
+
+    .title {
+      font-size: 48px;
+    }
+
+    .description {
+      font-size: 26px;
+      top: 53%;
     }
   }
 }
@@ -254,6 +298,19 @@
       background-image: url('../assets/1440-gloves-collection.jpg');
       height: 267px;
       width: 673px;
+    }
+  }
+
+  .promotional-banner {
+    background-image: url('../assets/1440-promotional-banner.jpg');
+    height: 250px;
+    
+    .title {
+      font-size: 72px;
+    }
+    .description {
+      font-size: 36px;
+      top: 53%;
     }
   }
 }
