@@ -29,6 +29,10 @@ textarea:focus, input:focus {
 *:focus {
   outline: none;
 }
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+ }
 .form-control:focus {
   border-color: inherit;
   -webkit-box-shadow: none;
@@ -50,4 +54,24 @@ textarea:focus, input:focus {
 
 .subtitle {
   text-transform: uppercase;
+}
+
+@include media-query($medium-up) {
+  .container {
+    max-width: 752px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@include media-query($large-up) {
+  .container {  
+    max-width: 972px;
+  }
+}
+
+@include media-query($widescreen) {
+  .container {
+    max-width: 1366px;
+  }
 }

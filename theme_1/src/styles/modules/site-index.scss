@@ -51,6 +51,99 @@
   border: 1px solid $color-medium-gray;
 }
 
+.collections {
+
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .column {
+    -ms-flex: 100%; /* IE10 */
+    flex: 100%;
+    max-width: 100%;
+
+    img {
+      margin-bottom: 2%;
+      vertical-align: middle;
+      margin-right: 2px;
+    }
+  }
+
+  .left-item,
+  .top-right-item,
+  .bottom-right-item
+  {
+    background-position: left center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 115px;
+    margin-bottom: 10px;
+    position: relative;
+    vertical-align: top;
+
+    .info {
+      color: $color-gray;
+      font-size: 24px;
+      position: absolute; 
+      text-align: center;
+      bottom: 13%;
+      padding-top: 70px;
+      right: 20px;
+
+      .icon {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .left-item {
+    background-image: url('../assets/mobile-helmets-collection.jpg');
+  }
+  
+  .top-right-item {
+    background-image: url('../assets/Mobile-goggles-collection.jpg');
+  }
+
+  .bottom-right-item {
+    background-image: url('../assets/mobile-gloves-collection.jpg');
+  }
+}
+
+.promotional-banner {
+  background-position: left center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url('../assets/mobile-promotional-banner.jpg');
+  height: 148px;
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #fff;
+    font-size: 34px;
+    font-weight: bold;
+    left: 10%;
+    position: absolute;
+    top: 20%;
+  }
+
+  .description {
+    font-family: $font-stack-additional;
+    font-size: 26px;
+    font-weight: lighter;
+    left: 10%;
+    position: absolute;
+    top: 50%;
+  }
+}
+
 @include media-query($medium-up) {
   .jumbotron {
     .title {
@@ -66,6 +159,45 @@
     button {
       font-size: 24px;
     }
+  }
+
+  .collections {
+    .column {
+      -ms-flex: 50%; /* IE10 */
+      flex: 50%;
+      max-width: 50%;
+      padding: 0 4px;
+    }
+
+    .left-item {
+      background-image: url('../assets/tablet-helmets-collection.png');
+      height: 300px;
+      width: 371px;
+      display: inline-block;
+
+      .info {
+        bottom: 13%;
+        right: 20px;
+      }
+    }
+
+    .top-right-item, .bottom-right-item {
+      display: inline-block;
+      height: 145px;
+      width: 371px;
+    }
+
+    .top-right-item {
+      background-image: url('../assets/tablet-goggles-collection.png');
+    }
+
+    .bottom-right-item {
+      background-image: url('../assets/tablet-gloves-collection.png');
+    }
+  }
+
+  .promotional-banner {
+    background-image: url('../assets/tablet-promotional-banner.png');
   }
 }
 
@@ -88,6 +220,39 @@
       top: 68%;
     }
   }
+
+  .collections {
+
+    .left-item {
+      background-image: url('../assets/1024-helmets-collection.jpg');
+      height: 385px;
+      width: 475px;
+    }
+    .top-right-item {
+      background-image: url('../assets/tablet-goggles-collection.png');
+      height: 186px;
+      width: 475px;
+    }
+
+    .bottom-right-item {
+      background-image: url('../assets/tablet-gloves-collection.png');
+      height: 186px;
+      width: 475px;
+    }
+  }
+
+  .promotional-banner {
+    background-image: url('../assets/1024-promotional-banner.jpg');
+
+    .title {
+      font-size: 48px;
+    }
+
+    .description {
+      font-size: 26px;
+      top: 53%;
+    }
+  }
 }
 
 @include media-query($widescreen) {
@@ -108,6 +273,44 @@
       height: 83px;
       padding: 10px 25px;
       width: 325px;
+    }
+  }
+
+  .collections {
+
+    .left-item, .top-right-item, .bottom-right-item {
+      .info {
+        font-size: 42px;
+      }
+    }
+
+    .left-item {
+      background-image: url('../assets/1440-helmets-collection.jpg');
+      height: 544px;
+      width: 672px;
+    }
+    .top-right-item {
+      background-image: url('../assets/1440-goggles-collection.jpg');
+      height: 267px;
+      width: 673px;
+    }
+    .bottom-right-item {
+      background-image: url('../assets/1440-gloves-collection.jpg');
+      height: 267px;
+      width: 673px;
+    }
+  }
+
+  .promotional-banner {
+    background-image: url('../assets/1440-promotional-banner.jpg');
+    height: 250px;
+    
+    .title {
+      font-size: 72px;
+    }
+    .description {
+      font-size: 36px;
+      top: 53%;
     }
   }
 }
