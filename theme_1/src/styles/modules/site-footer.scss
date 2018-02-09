@@ -1,6 +1,6 @@
 /*================ Site Footer ================*/
   footer{
-    width: 95%;
+    width: 96%;
     position: absolute;
 }
 .site-logo {
@@ -33,17 +33,24 @@
   height: 22px;
 }
 .margin-theme {
-  margin: 0px 10px 0px;
+  margin: 0px 2% 0px;
   height: 153px;
   bottom: 0;
 }
 .copy-right {
   padding: 16px 4px 32px;
-  border-top: solid gray 2px;
+  border-top: solid #888888 2px;
+  font-size: 14pt;
+  color: #888888; 
 }
 @include media-query($medium-up) {
   .margin-theme {
-    margin: 0px 38px 0px;
+    margin: 0px  2%x 0px;
     bottom: 0px;
   }
 }
+@include media-query($small){
+  .margin-theme{
+  }
+}
+

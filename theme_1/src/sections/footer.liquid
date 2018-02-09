@@ -45,7 +45,7 @@
               <a href="{{ settings[social_link] }}"
                 title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
                 {% comment %}{% include social_icon %}{% endcomment %}
-                <div class="{{social_icon}}"></div>
+                <div class="{{social_icon}} icon"></div>
               </a>
             </div>
           {% endif %}
@@ -65,7 +65,7 @@
     </div>
     <div class="grid__item medium-up--one-third small--hide text-right">
       <div class="grid">
-        <div class="grid__item two-fifths">FOLLOW US!</div>
+        <div class="grid__item two-fifths text-left">FOLLOW US!</div>
         {% for social in social_accounts %}
           {%- assign social_handle = social | handleize -%}
           {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
@@ -76,7 +76,7 @@
               <a href="{{ settings[social_link] }}"
                 title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
                 {% comment %}{% include social_icon %}{% endcomment %}
-                <div class="{{social_icon}}"></div>
+                <div class="{{social_icon}} icon"></div>
               </a>
             </div>
           {% endif %}
