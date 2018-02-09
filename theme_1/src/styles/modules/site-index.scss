@@ -146,19 +146,42 @@
 }
 
 .new-arrivals {
-  outline: 1px solid red;
 
   .slider {
     padding: 2px;
+
     .slider-item {
       background: $color-ight-blue;
       height: 412px;
       width: 100%;
+      padding: 10px 15px;
 
-      img {
-        margin: 5px auto;
-        max-height: 90%;
-        max-width: 90%;
+      .slider-item__image {
+        justify-content: center;
+        padding: 10px;
+        height: 300px;
+        vertical-align: middle;
+
+        img {
+          align-self: center;
+          margin: 5px auto;
+          display: block;
+          max-height: 90%;
+          max-width: 90%;
+        }
+      }
+
+      .separator {
+        margin: 5px;
+      }
+
+      .slider-item__name {
+        font-size: 24px;
+      }
+
+      .slider-item__price {
+        font-size: 20px;
+        font-weight: lighter;
       }
     }
   }
