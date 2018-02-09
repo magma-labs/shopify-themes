@@ -16,13 +16,13 @@ footer {
     .footer-social-media {
       height: 110px;
       width: 326px;
-      vertical-align: top;
       text-align: center;
       span {
         font-size: 18px;
         font-weight: $font-weight-footer;
         display: block;
         margin-bottom: 5px;
+        vertical-align: top;
       }
       ul {
         list-style: none;
@@ -37,6 +37,7 @@ footer {
           margin: 0;
           padding: 0;
           border-radius: 3px;						
+          vertical-align: middle;
         }
       }
     }

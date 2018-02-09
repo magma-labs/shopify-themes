@@ -31,18 +31,6 @@
       <input class="newsletter" type="text" placeholder="EMAIL">
     </div>
 
-    {% comment %}
-    <div class="footer-nav grid__item small--hide">
-      <ul>
-        <li>Contact us</li>
-        <li>About us</li>
-        <li>Terms & conditions</li>
-        <li>Return policy</li>
-        <li>Privacy policy</li>
-      </ul>
-    </div>
-    {% endcomment %}
-
     <div class="footer-nav grid__item small--hide">
       {%- assign footer_linklist = section.settings.footer_linklist -%}
       {% if linklists[footer_linklist].links.size > 0 %}<Paste>
