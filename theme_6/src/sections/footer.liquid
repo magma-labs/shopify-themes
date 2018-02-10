@@ -3,7 +3,7 @@
   <div class="content grid">
     <div class="footer-social-media grid__item medium-up--four-tenths small--one-whole">
       <span class="subtitle">Follow us</span>
-      {%- assign social_accounts = 'Facebook, Twitter, Googleplus, Youtube' | split: ', ' -%}
+      {%- assign social_accounts = 'Facebook, Twitter, Googleplus' | split: ', ' -%}
       <ul>
       {% for social in social_accounts %}
         {%- assign social_handle = social | handleize -%}

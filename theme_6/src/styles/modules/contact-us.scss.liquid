@@ -1,0 +1,172 @@
+div.page-contac-us {
+  width: 100%;
+  background-color: $color-body;
+
+  h1 {
+    font-size: 32px;
+    font-family: $font-title-body;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-body-title;
+  }
+
+  .contact-body-wrapper {
+    height: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    // Body content
+    .contact-body-content {
+      height: 1270px;
+      width: 1368px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      // Form super-wrapper
+      .contact-form-super-wrapper {
+        background-color: #ffffff;
+        height: 945px;
+        width: 100%;
+
+        // Form Title
+        h2 {
+          text-transform: uppercase;
+          font-size: 28px;
+          font-family: $font-title-body;
+          margin: 0;
+          padding: 0;
+          height: 96px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        // Form wrapper
+        .contact-form-wrapper {
+          height: 847px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          // Form content
+          .contact-form-content {
+            height: 100%;
+            width: 675px;
+
+            // Form description
+            p {
+              font-size: 20px;
+              text-align: center;
+              margin: 0;
+              padding: 0;
+              height: 100px;
+              width: 100%;
+            }
+
+            // Form social media
+            .contact-social-media {
+              height: 78px;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+
+              ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                li {
+                  margin: 0 23px 0 0;
+                  padding: 0;
+                  height: 35px;
+                  width: 93px;
+                  border: 2px solid $color-link-text; 
+                  border-radius: 3px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                li:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+
+            // Form label fields
+            .contact-label-field-content {
+              height: 42px;
+              width: 100%;
+              color: $color-contact-form;
+              font-size: $font-size-contact-form;
+              font-weight: $font-weight-bold;
+            }
+            .contact-small-field-content {
+              height: 59px;
+              width: 100%;
+              input {
+                height: 40px;
+                background-color: #FBFBFB;
+                border: 1px solid #D2D2D2;
+                border-radius: 3px;
+                padding-left: 10px;
+              }
+            }
+            .contact-wrapper-column-field {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              .contact-column-field-content {
+                height: 100%;
+                width: 325px;
+              }
+            }
+            .contact-column-field {
+              width: 324px;
+            }
+            .contact-form-large-field {
+              width: 100%;
+            }
+            .contact-text-area {
+              width: 100%;
+              height: 198px;
+              textarea {
+                width: 100%;
+                padding: 5px 0 0 10px;
+                height: 145px;
+                background-color: #FBFBFB;
+                border: 1px solid #D2D2D2;
+                border-radius: 3px;
+              }
+            }
+            .contact-sumbit-container {
+              height: 78px;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              input {
+                height: 77px;
+                width: 320px;
+                background-color: #4A90E2;
+                font-size: 32px;
+                font-family: $font-title-body;
+                text-transform: uppercase;
+                color: #ffffff;
+              }
+            }
+
+          }
+        }
+      }
+
+      // Footer wrapper
+      .contact-footer-wrapper {
+        width: inherit;
+        height: 300px;
+      }
+    }
+  }
+}
