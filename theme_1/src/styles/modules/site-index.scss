@@ -1,5 +1,5 @@
+// Mobile version
 .jumbotron {
-  margin-bottom: 54px;
   padding: 0;
   position: relative;
 
@@ -148,6 +148,8 @@
 .new-arrivals {
 
   .slider {
+    display: flex;
+   
     padding: 2px;
 
     .slider-item {
@@ -155,6 +157,11 @@
       height: 412px;
       width: 100%;
       padding: 10px 15px;
+      display: block;
+
+      &:nth-child(2) {
+        margin: 0 5px;
+      }
 
       .slider-item__image {
         justify-content: center;
@@ -187,6 +194,7 @@
   }
 }
 
+// Tablet version 
 @include media-query($medium-up) {
   .jumbotron {
     .title {
@@ -241,8 +249,22 @@
   .promotional-banner {
     background-image: url('../assets/tablet-promotional-banner.png');
   }
+
+  .new-arrivals {
+    .slider {
+      justify-content: space-between;
+      .slider-item {
+        width: 246px;
+
+        &:nth-child(4) {
+          display: none !important;
+        }
+      }
+    }
+  }
 }
 
+// Desktop version
 @include media-query($large-up) {
   .jumbotron {
     .title {
@@ -295,8 +317,21 @@
       top: 53%;
     }
   }
+
+  .new-arrivals {
+    .slider {
+      .slider-item {
+        width: 228px;
+
+        &:nth-child(4) {
+          display: inline-block !important;
+        }
+      }
+    }
+  }
 }
 
+// Widescreen version
 @include media-query($widescreen) {
   .jumbotron {
     .title {
@@ -353,6 +388,27 @@
     .description {
       font-size: 36px;
       top: 53%;
+    }
+  }
+
+  .new-arrivals {
+    .slider {
+      .slider-item {
+        width: 325px;
+        height: 550px;
+
+        .slider-item__image {
+          height: 400px;
+        }
+
+        .slider-item__name {
+           font-size: 32px;
+         }
+
+         .slider-item__price {
+           font-size: 24px;
+         }
+      }
     }
   }
 }
