@@ -1,9 +1,9 @@
-<footer class="margin-theme">
+<footer>
   {%- assign social_accounts = 'Facebook, Twitter, Google,' | split: ', ' -%}
   <div class="grid">
     <div class="grid__item medium-up--one-third">
                   
-      <div class="grid medium-up--hide">
+      <div class="grid small--hide medium-up--hide">
         {% for social in social_accounts %}
           {%- assign social_handle = social | handleize -%}
           {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
