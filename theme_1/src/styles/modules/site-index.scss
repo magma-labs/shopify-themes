@@ -1,5 +1,6 @@
 // Mobile version
 .jumbotron {
+  margin-bottom: 25px;
   padding: 0;
   position: relative;
 
@@ -28,7 +29,7 @@
     left: 10%;
   }
 
-  button {
+  a {
     background-color: $color-pink;
     border: none;
     color: #fff;
@@ -153,7 +154,7 @@
     padding: 2px;
 
     .slider-item {
-      background: $color-ight-blue;
+      background: $color-light-blue;
       height: 412px;
       width: 100%;
       padding: 10px 15px;
@@ -207,7 +208,7 @@
     .description {
       font-size: 50px;
     }
-    button {
+    a {
       font-size: 24px;
     }
   }
@@ -279,7 +280,7 @@
       font-size: 62px;
     }
 
-    button {
+    a {
       font-size: 30px;
       top: 68%;
     }
@@ -344,7 +345,7 @@
       font-size: 72px;
       top: 41%;
     }
-    button {
+    a {
       font-size: 40px;
       top: 65%;
       height: 83px;
