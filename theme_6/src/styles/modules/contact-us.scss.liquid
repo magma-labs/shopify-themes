@@ -88,6 +88,13 @@ div.page-contac-us {
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                  a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
                 }
                 li:last-child {
                   margin-right: 0;
@@ -103,6 +110,7 @@ div.page-contac-us {
               font-size: $font-size-contact-form;
               font-weight: $font-weight-bold;
             }
+            // Contact field
             .contact-small-field-content {
               height: 59px;
               width: 100%;
@@ -114,6 +122,7 @@ div.page-contac-us {
                 padding-left: 10px;
               }
             }
+            // Wrapper column
             .contact-wrapper-column-field {
               height: 100%;
               width: 100%;
@@ -124,12 +133,15 @@ div.page-contac-us {
                 width: 325px;
               }
             }
+            // Column field
             .contact-column-field {
               width: 324px;
             }
+            // large field
             .contact-form-large-field {
               width: 100%;
             }
+            // Text area
             .contact-text-area {
               width: 100%;
               height: 198px;
@@ -142,6 +154,7 @@ div.page-contac-us {
                 border-radius: 3px;
               }
             }
+            // Button submit
             .contact-sumbit-container {
               height: 78px;
               width: 100%;
@@ -164,9 +177,62 @@ div.page-contac-us {
 
       // Footer wrapper
       .contact-footer-wrapper {
-        width: inherit;
+        width: 100%;
         height: 300px;
+        clear: both;
+
+        > .contact-footer-element {
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          float: left;
+        }
+
+        .contact-address-info {
+          background-image: url({{ 'address-info.png', asset_url }});
+          background-repeat: no-repeat;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h3 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 32px;
+            font-family: $font-title-body;
+            color: white;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: block;
+            height: 63px;
+          }
+          span {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            display: block;
+            margin: 0;
+            padding: 0;
+            height: 24px;
+            width: 100%;
+          }
+        }
+
+        // Footer map
+        a[href^="http://maps.google.com/maps"],
+        a[href^="https://maps.google.com/maps"],
+        a[href^="https://www.google.com/maps"] {
+          display: none !important;
+        }
+        .gmnoprint:not(.gm-bundled-control) {
+            display: none;
+        }
+        .gm-bundled-control .gmnoprint {
+            display: block;
+        }
       }
+
     }
   }
 }
