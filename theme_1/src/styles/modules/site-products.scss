@@ -1,43 +1,86 @@
-.product-item {
-  background: $color-light-blue;
-  color: $color-gray;
-  padding-bottom: 7px;
+.products-container {
+  .product-item-grid {
+    background: $color-light-blue;
+    color: $color-gray;
+    display: block;
+    overflow: hidden;
+    padding: 10px 15px;
+    margin: 0 0 8px 0;
+    width: 100%;
 
-  .product-item__image {
-    justify-content: center;
-    padding: 10px;
-    height: 300px;
-    vertical-align: middle;
-    
-    img {
-      align-self: center;
-      margin: 5px auto;
-      display: block;
-      max-height: 90%;
-      max-width: 90%;
+    .product-item__image {
+      padding: 10px;
+      height: 350px;
+      vertical-align: middle;
+
+      img {
+        align-self: center;
+        margin: 5px auto;
+        display: block;
+        line-height: 350px;
+        max-height: 100%;
+        max-width: 100%;
+      }
     }
-  }
 
-  .product-item__name {
-    font-size: 24px;
-
-    a {
-      color: $color-gray;
-    }
-  }
-
-  .product-item__price {
-    font-size: 20px;
-    font-weight: lighter;
-    margin-bottom: 10px;
-   }
-
-   .details {
-      display: block;
-      margin: 10px 0;
+    .product-item__name {
+      font-size: 24px;
 
       a {
-        color: $color-pink;
+        color: $color-gray;
       }
-   }
+    }
+
+    .product-item__price {
+      font-size: 20px;
+      font-weight: lighter;
+      margin-bottom: 10px;
+    }
+
+    .details {
+        display: block;
+        margin: 10px 0;
+
+        a {
+          color: $color-pink;
+        }
+    }
+  }
+} 
+
+// Tablet version 
+@include media-query($medium-up) {
+  .products-container {
+    .product-item-grid {
+      display: inline-block;
+      width: 245px;
+      min-width: 245px;
+      max-width: 245px;
+    }
+  } 
+}
+
+// Desktop version 
+@include media-query($large-up) {
+  .products-container {
+    .product-item-grid {
+      width: 228px;
+      min-width: 228px;
+      max-width: 228px;
+    }
+  }
+}
+
+// Widescreen version 
+@include media-query($widescreen) {
+  .products-container {
+    display: flex;
+    justify-content: space-between;
+    
+    .product-item-grid {
+      width: 289px;
+      min-width: 289px;
+      max-width: 289px;
+    }
+  }
 }

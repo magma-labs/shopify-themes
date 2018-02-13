@@ -4,6 +4,8 @@
 
 <div class="container">
 
+{% include 'breadcrumbs' %}
+
 {% paginate collection.products by 12 %}
   <header class="categories-header" role="banner">
 
@@ -12,7 +14,8 @@
           <p class="categories-title">{{ collection.title }}</p>
       </div>
       <div class="span6 text-right">
-        <span class="back-link"><i class="fa fa-angle-left"></i> Back </span>
+        <span class="back-link small--hide">Back</span>
+        <span class="back-link medium-up--hide"><i class="fa fa-angle-left"></i> Back </span>
       </div>
     </div>
 
@@ -29,32 +32,32 @@
 
   </header>
 
-  <div>
+  <div class="products-container grid">
     {% for product in collection.products %}
-       <div class="product-item">
-        <div class="container">
-          {% if product.featured_image != blank %}
-            <div class="product-item__image">
-              <a href="{{ product.url | within: collection }}">
-                {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
-              </a>
-            </div>  
-          {% endif %}
-
-          <span class="product-item__name">
-            <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-          </span>
-          <hr class="separator"></hr>
-
-          <span class="product-item__price">
-            {{ product.price | money }}
-          </span>
-
-          <span class="details">
+      <div class="product-item-grid wide--one-fourth large--one-fourth medium--one-third small--one-half">
+        {% if product.featured_image != blank %}
+          <div class="product-item__image">
             <a href="{{ product.url | within: collection }}">
-              <i class="fa fa-plus"></i> View details</span>
-            </a>  
+              {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
+            </a>
+          </div>  
+        {% endif %}
 
+        <span class="product-item__name">
+          <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+        </span>
+        <hr class="separator"></hr>
+
+        <span class="product-item__price">
+          {{ product.price | money }}
+        </span>
+
+        <span class="details">
+          <a href="{{ product.url | within: collection }}">
+            <i class="fa fa-plus"></i> View details
+          </a>
+        </span>
+      </div>
     {% else %}
       {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
         {% for i in (1..8) %}
@@ -76,7 +79,6 @@
       {% endif %}
 
     {% endfor %}
-    </div>
   </div>
 
   {% if paginate.pages > 1 %}
