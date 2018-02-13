@@ -12,11 +12,7 @@ header {
     display: flex;
     justify-content: center;
 
-    .nav-mobile {
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
-    }
+    .nav-mobile { }
 
     .section-cart-mobile {
       display: flex;
@@ -135,6 +131,9 @@ header {
       .nav-mobile {
         height: 100%;
         width: 74px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
       }
       h1 {
         height: 100%;
