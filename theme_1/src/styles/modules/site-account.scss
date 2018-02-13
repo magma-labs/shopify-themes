@@ -1,0 +1,59 @@
+.login-form, .register-form, .recovery-form {
+  color: black;
+  margin-right: auto;
+
+  a {
+    color: $color-pink;
+  }
+
+  input, textarea {
+    box-sizing: border-box;
+    font-family: $font-stack-header;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    height: auto;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    margin: 8px 0;
+    padding: 14px 20px;
+    vertical-align: middle;
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  .button,
+  a.button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    display: inline-block;
+    margin: 0;
+    padding: 14px 2em;
+    border: 1px solid $color-pink;
+    background: $color-pink;
+    color: #fff;
+    font-family: Droid Sans;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    height: auto;
+    margin: 5px 0;
+    width: 210px;
+    border-radius: 2px;
+    transition: all 100ms linear;
+  }
+
+  .recover-password-link {
+    margin-top: 10px;
+    color: $color-pink;
+    display: block;
+  }
+
+}
