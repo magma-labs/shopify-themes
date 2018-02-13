@@ -1,37 +1,39 @@
 <footer>
 
-  <div class="content grid">
-    <div class="footer-social-media grid__item medium-up--four-tenths small--one-whole">
-      <span class="subtitle">Follow us</span>
-      {%- assign social_accounts = 'Facebook, Twitter, Googleplus' | split: ', ' -%}
-      <ul>
-      {% for social in social_accounts %}
-        {%- assign social_handle = social | handleize -%}
-        {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
-        {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+  <div class="content">
+    <div class="sect-footer-row1">
+      <div class="footer-social-media medium-up--four-tenths small--one-whole">
+        <span class="subtitle">Follow us</span>
+        {%- assign social_accounts = 'Facebook, Twitter, Googleplus' | split: ', ' -%}
+        <ul>
+        {% for social in social_accounts %}
+          {%- assign social_handle = social | handleize -%}
+          {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+          {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
 
-        {% if settings[social_link] != blank %}
-          <li>
-            <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
-              {% include social_icon %}
-              <span class="icon-fallback-text">{{ social }}</span>
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-      </ul>
+          {% if settings[social_link] != blank %}
+            <li>
+              <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
+                {% include social_icon %}
+                <span class="icon-fallback-text">{{ social }}</span>
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-logo medium-down--hide">
+        <img src="{{ 'logo_small.png' | asset_url }}">
+      </div>
+
+      <div class="footer-newsletter medium-up--four-tenths small--one-whole">
+        <span class="subtitle">Join our newsletter!</span>
+        <input class="newsletter" type="text" placeholder="EMAIL">
+      </div>
     </div>
 
-    <div class="footer-logo grid__item medium-up--two-tenths small--hide">
-      <img src="{{ 'logo_small.png' | asset_url }}">
-    </div>
-
-    <div class="footer-newsletter grid__item medium-up--four-tenths small--one-whole">
-      <span class="subtitle">Join our newsletter!</span>
-      <input class="newsletter" type="text" placeholder="EMAIL">
-    </div>
-
-    <div class="footer-nav grid__item small--hide">
+    <div class="footer-nav medium-down--hide">
       {%- assign footer_linklist = section.settings.footer_linklist -%}
       {% if linklists[footer_linklist].links.size > 0 %}<Paste>
         <ul>
@@ -42,7 +44,7 @@
       {% endif %}
     </div>
 
-    <div class="footer-copyright grid__item">
+    <div class="footer-copyright">
       Created by MagmaLabs {{ 'now' | date: "%Y" }}
     </div>
 
