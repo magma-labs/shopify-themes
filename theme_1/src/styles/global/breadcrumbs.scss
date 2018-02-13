@@ -1,0 +1,14 @@
+.breadcrumb {
+  background: none;
+  font-size: 14px;
+  padding: 0;
+  a {
+    color: $color-gray;
+  }
+
+  .separator {
+    margin: 0 5px;
+    padding: 0;
+    border: none;
+  }
+}
