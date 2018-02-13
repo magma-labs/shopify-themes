@@ -1,25 +1,29 @@
-
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
   <header role="banner">
 
-  
-
     <div class="header-section-icon">
 
-      <div class="nav-mobile medium-up--hide small--show">
-        {% include 'icon-plus' | 'small' %} Menu
+      <div class="nav-mobile large-up--hide medium--show">
+        {% include 'icon-menu' %} Menu
       </div>
 
       <h1 itemscope itemtype="http://schema.org/Organization">
         <a href="/" itemprop="url" class="site-logo site-header__logo-image">
-          <img src="{{ 'logo.png' | asset_url }}" class="small--hide">
-          <img src="{{ 'logo-mobile.png' | asset_url }}" class="medium-up--hide small--show">
+          <img src="{{ 'logo.png' | asset_url }}" class="medium-down--hide">
+          <img src="{{ 'logo-mobile.png' | asset_url }}" class="large-up--hide medium-down--show">
         </a>
       </h1>
+
+      <div class="section-cart-mobile large-up--hide medium--show">
+        <a href="/cart">
+          <span>{{ cart.item_count }}</span>
+          {% include 'icon-cart' %}
+        </a>
+      </div>
     </div>
 
-    <div class="header-top-right">
-      <form class="search-form small--hide" action="/search" method="get" role="search">
+    <div class="header-top-right medium-down--hide">
+      <form class="search-form" action="/search" method="get" role="search">
         <label for="Search" class="label-hidden">
           {{ 'general.search.placeholder' | t }}
         </label>
@@ -36,7 +40,7 @@
       </form>
 
       {% if shop.customer_accounts_enabled %}
-        <ul class="customer-options small--hide">
+        <ul class="customer-options small-hide">
           {% if customer %}
             <li>
               {% if customer.first_name != blank %}
@@ -62,37 +66,38 @@
 
     </div>
 
-
-    <nav role="navigation">
-      <ul class="site-nav small--hide">
-        {% for link in linklists[section.settings.main_linklist].links %}
-          {%- assign child_list_handle = link.title | handleize -%}
-          {% if menus[child_list_handle].links != blank %}
-            <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
-              <a href="{{ link.url }}" class="site-nav__link">
-                {{ link.title }}
-                {% include 'icon-arrow-down' %}
-              </a>
-              <ul class="site-nav__submenu">
-                {% for childlink in menus[child_list_handle].links %}
-                  <li {% if childlink.active %}class="site-nav--active"{% endif %}>
-                    <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </li>
-          {% else %}
-            <li {% if link.active %}class="site-nav--active"{% endif %}>
-              <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+    <nav role="navigation" class="medium-down--hide">
+      <div class="header-nav-content">
+        <ul class="site-nav">
+          {% for link in linklists[section.settings.main_linklist].links %}
+            {%- assign child_list_handle = link.title | handleize -%}
+            {% if menus[child_list_handle].links != blank %}
+              <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
+                <a href="{{ link.url }}" class="site-nav__link">
+                  {{ link.title }}
+                  {% include 'icon-arrow-down' %}
+                </a>
+                <ul class="site-nav__submenu">
+                  {% for childlink in menus[child_list_handle].links %}
+                    <li {% if childlink.active %}class="site-nav--active"{% endif %}>
+                      <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li {% if link.active %}class="site-nav--active"{% endif %}>
+                <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
 
       <div class="header-cart">
         <a href="/cart">
-          <span class="small--hide">{{ 'layout.cart.title' | t }}
-          </span>{{ cart.item_count }}
+          <span class="small--hide">{{ 'layout.cart.title' | t }}</span>
+          <span>{{ cart.item_count }}</span>
           {% comment %}
           <span class="small--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
           {% endcomment %}
