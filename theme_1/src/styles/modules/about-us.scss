@@ -1,15 +1,12 @@
-/*================ Site Footer ================*/
-footer {
-  bottom: 0;
-  height: 135px;
-  margin: 15px 2% 0px;
-  padding-top: 30px;
-  position: absolute;
-  width: 96%;
-  a{
-  color:black;
-  }
+/*================ About us ================*/
+.about-us--title{
+  text-transform: uppercase;
+  font-weight:bold;
+  border-bottom: 2px solid #979797;
+  padding-bottom: 20px;
 }
+// Mobile
+
 .site-logo {
   display: block;
 
