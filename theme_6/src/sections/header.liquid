@@ -3,7 +3,7 @@
 
     <div class="header-section-icon">
 
-      <div class="nav-mobile large-up--hide medium-down--show">
+      <div id="nvar-open" class="nav-mobile large-up--hide medium-down--show">
         {% include 'icon-menu' %} Menu
       </div>
 
@@ -69,6 +69,7 @@
     <nav role="navigation" class="medium-down--hide">
       <div class="header-nav-content">
         <ul class="site-nav">
+
           {% for link in linklists[section.settings.main_linklist].links %}
             {%- assign child_list_handle = link.title | handleize -%}
             {% if menus[child_list_handle].links != blank %}
@@ -91,6 +92,7 @@
               </li>
             {% endif %}
           {% endfor %}
+
         </ul>
       </div>
 
@@ -106,8 +108,84 @@
       </div>
 
     </nav>
+
+    <!-- Menu mobile -->
+    <!-- <div id="NavDrawer" class="drawer drawer--left medium-up--hide"> -->
+    <div id="NavDrawer" class="drawer drawer--left">
+      <div id="shopify-section-sidebar-menu" class="shopify-section sidebar-menu-section">
+        <!-- Header -->
+        <div class="drawer__header" data-section-id="sidebar-menu" data-section-type="sidebar-menu-section">
+          <div id="navbar-close" class="drawer__close">
+            <img src="{{ 'logo-close-nav.png' | asset_url }}">
+            <div class="button-nav-close">
+              Close {% include 'menu-mobile-close' %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="drawer__inner">
+          <ul class="drawer-nav">
+            {% for link in linklists[section.settings.main_linklist].links %}
+              {%- assign child_list_handle = link.title | handleize -%}
+              {% if menus[child_list_handle].links != blank %}
+                <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
+                  <a href="{{ link.url }}" class="site-nav__link">
+                    {{ link.title }}
+                    {% include 'icon-arrow-down' %}
+                  </a>
+                  <ul class="site-nav__submenu">
+                    {% for childlink in menus[child_list_handle].links %}
+                      <li {% if childlink.active %}class="site-nav--active"{% endif %}>
+                        <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% else %}
+                <li {% if link.active %}class="site-nav--active"{% endif %}>
+                  <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+
+          <ul class="drawer-user-info">
+          </ul>
+
+          <div class="drawer-social-media">
+          </div>
+          <div class="drawer-newsletter">
+          </div>
+
+          <ul class="drawer-second-nav">
+            {%- assign footer_linklist_mobile = section.settings.footer_linklist_mobile -%}
+            {% if linklists[footer_linklist_mobile].links.size > 0 %}<Paste>
+              {% for link in linklists[footer_linklist_mobile].links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </header>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    // Toggle navBar
+    $("#nvar-open").on('click', toggleNavBar);
+    $("#navbar-close").on('click',  toggleNavBar);
+
+    function toggleNavBar(){
+      console.log("Test");
+      $('#NavDrawer').toggleClass('drawer--show');
+    }
+  });  
+</script>
 
 {% schema %}
   {
@@ -133,7 +211,13 @@
         "id": "main_linklist",
         "label": "Menu",
         "default": "main-menu"
-      }
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_mobile",
+        "label": "First menu",
+        "default": "footer"
+      },
     ]
   }
 {% endschema %}

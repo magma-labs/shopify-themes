@@ -64,7 +64,7 @@
 
               <!-- Name and phone fields -->
               <!-- Labels -->
-              <div class="contact-label-field-content">
+              <div class="contact-label-field-content small--hide">
                 <div class="contact-wrapper-column-field">
                   <div class="contact-column-field-content">
                     <label for="ContactFormName">{{ 'contact.form.name' | t }}*:</label>
@@ -75,7 +75,7 @@
                 </div>
               </div>
               <!-- Fields -->
-              <div class="contact-small-field-content">
+              <div class="contact-small-field-content small--hide">
                 <div class="contact-wrapper-column-field">
                   <div class="contact-column-field-content">
                     <input type="text" class="contact-column-field"
@@ -93,6 +93,34 @@
                       pattern="[0-9\-]*">
                   </div>
                 </div>
+              </div>
+
+              <!-- Name mobile -->
+              <div class="contact-label-field-content small--show medium-up--hide">
+                <label for="ContactFormNameMobile">{{ 'contact.form.name' | t }}*:</label>
+              </div>
+              <div class="contact-small-field-content small--show medium-up--hide">
+                <input type="text" class="contact-form-large-field"
+                  name="contact[name]"
+                  id="ContactFormNameMobile"
+                  value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                  spellcheck="false"
+                  autocomplete="off"
+                  autocapitalize="off">
+              </div>
+
+              <!-- Phone mobile -->
+              <div class="contact-label-field-content small--show medium-up--hide">
+                <label for="ContactFormPhoneMobile">{{ 'contact.form.phone' | t }}:</label>
+              </div>
+              <div class="contact-small-field-content small--show medium-up--hide">
+                <input type="tel" class="contact-form-large-field"
+                  name="contact[phone]"
+                  id="ContactFormPhoneMobile"
+                  value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                  spellcheck="false"
+                  autocomplete="off"
+                  autocapitalize="off">
               </div>
 
               <!-- Email -->
@@ -152,17 +180,25 @@
 
         <!-- Footer address info -->
         <div class="contact-footer-element contact-address-info">
-                        <h3>Come Visit!</h3>
-                        <span>You can findus at:</span>
-                        <span>3798 Somerset Drive</span>
-                        <span>Apple Valley, CA 92307</span>
+          <img src="{{ 'address-info.png' | asset_url }}" class="small-portrait--hide">
+          <img src="{{ 'address-info-mobile.png' | asset_url }}" class="small-portrait-up--hide small-portrait--show">
+          <div class="contact-address-content">
+            <h3>Come Visit!</h3>
+            <span>You can findus at:</span>
+            <span>3798 Somerset Drive</span>
+            <span>Apple Valley, CA 92307</span>
+          </div>
         </div>
-
-
-        <!-- Footer address info -->
 
         <!-- Footer map -->
         <div class="contact-footer-element contact-map" id="contact-map"></div>
+      </div>
+
+      <!-- Contact scroll up mobile -->
+      <div class="contact-scroll-up small-portrait-up--hide small-portrait--show">
+        <a href="javascript:void(0)" title="Scroll Up" onclick="window.scrollTo(0, 0);">
+          <span>Sroll Up</span>
+        </a>
       </div>
 
         <script>
