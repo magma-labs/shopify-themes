@@ -4,63 +4,66 @@
     <div class="header-first-line grid">
       <div class="header-section-nav grid__item small--one-third medium-up--hide">
         
-        <button type="button" class="site-header__link text-link site-header__toggle-nav" onclick="showNav()" aria-controls="NavDrawer" aria-expanded="true">
+        <button type="button" class="site-header__link text-link site-header__toggle-nav" id="navbar-toggle" aria-controls="NavDrawer" aria-expanded="true">
           {% include 'icon-hamburger' %}
         </button>
 
-        <div id="NavDrawer" class="drawer" tabindex="-1">
-          <div id="shopify-section-sidebar-menu" class="shopify-section sidebar-menu-section"><div class="drawer__header" data-section-id="sidebar-menu" data-section-type="sidebar-menu-section">
-          <div class="drawer__close">
-            <button type="button" class="drawer__close-button js-drawer-close">
-              <span class="icon icon-x" aria-hidden="true"></span>
-              <span class="icon__fallback-text">Close menu</span>
-            </button>
-          </div>
-        </div>
-        <div class="drawer__inner">
-          <ul class="drawer-nav">
-            <li class="drawer-nav__item">
-              <a href="/collections/boards" class="drawer-nav__link h2">Boards</a>
-            </li>
-            <li class="drawer-nav__item">
-              <a href="/collections/goggles" class="drawer-nav__link h2">Goggles</a>
-            </li>
-            <li class="drawer-nav__item">
-              <a href="/collections/gloves" class="drawer-nav__link h2">Gloves</a>
-            </li>
-            <li class="drawer-nav__item">
-              <a href="/collections/helmets" class="drawer-nav__link h2">Helmets</a>
-            </li>
-            <li class="drawer-nav__spacer"></li>
-            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/account/login">Login</a></li>
-            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/account/register">Create account</a></li>
-            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/pages/contact">Contact</a></li>
-            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/blogs/about-us">About us</a></li>
-            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/blogs/faq">Faq</a></li>
-          </ul>
+        <div id="NavDrawer" class="drawer">
+          
+          <div id="shopify-section-sidebar-menu" class="sidebar-menu-section">
+            
+            <div class="drawer__header" data-section-id="sidebar-menu" data-section-type="sidebar-menu-section">
+              <div class="drawer__close">
+                <button id="navbar-close" type="button" class="drawer__close-button js-drawer-close" >
+                  <span class="fa fa-close" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
 
-          <ul class="list--inline social-icons social-icons--drawer">
-              <li>
-                <a href="https://twitter.com/shopify" title="Twitter">
-                  <span class="icon icon-twitter" aria-hidden="true"></span>
-                  <span class="visually-hidden">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="http://instagram.com/shopify" title="Instagram">
-                  <span class="icon icon-instagram" aria-hidden="true"></span>
-                  <span class="visually-hidden">Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a href="http://plus.google.com" title="Google+">
-                  <span class="icon icon-google" aria-hidden="true"></span>
-                  <span class="visually-hidden">Google+</span>
-                </a>
-              </li>
-          </ul>
-        </div>
-        </div>
+            <div class="container">
+              <hr>
+            
+              <div class="drawer__inner">
+                <ul class="drawer-nav">
+                  <li class="drawer-nav__item"><a href="/collections/boards" class="drawer-nav__link h2">Boards</a></li>
+                  <li class="drawer-nav__item"><a href="/collections/goggles" class="drawer-nav__link h2">Goggles</a></li>
+                  <li class="drawer-nav__item"><a href="/collections/gloves" class="drawer-nav__link h2">Gloves</a></li>
+                  <li class="drawer-nav__item"><a href="/collections/helmets" class="drawer-nav__link h2">Helmets</a></li>
+                  <li class="drawer-nav__spacer">
+                    <hr class="separator"></hr>
+                  </li>
+                  <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/account/login">Login</a></li>
+                  <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/account/register">Create account</a></li>
+                  <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/pages/contact">Contact</a></li>
+                  <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/pages/about-us">About us</a></li>
+                  <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/pages/faq">Faq</a></li>
+                </ul>
+
+                <ul class="list--inline">
+                   <li>
+                    <a href="https://facebook.com" title="Facebook">
+                      <span class="icon icon-facebook" aria-hidden="true"></span>
+                      <span class="visually-hidden">Facebook</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/shopify" title="Twitter">
+                      <span class="icon icon-twitter" aria-hidden="true"></span>
+                      <span class="visually-hidden">Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://plus.google.com" title="Google+">
+                      <span class="icon icon-google" aria-hidden="true"></span>
+                      <span class="visually-hidden">Google+</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -196,10 +199,20 @@
 {% endschema %}
 
 <script type="text/javascript">
-  function showNav(){ 
-    console.log("Show nav!");
-  }
-  function hideNav{ 
-    console.log("Hide nav!");
-  }
+  $(document).ready(function() {
+
+    // Toggle navBar
+	  $("#navbar-toggle").on('click', toggleNavBar);
+    $("#navbar-close").on('click',  closeNavBar);
+    $(".drawer-nav__item").on('click',  closeNavBar);
+
+    function toggleNavBar(){
+		  $('#NavDrawer').toggleClass('drawer--show');
+	  }
+
+    // Close navBar
+    function closeNavBar(){
+		  $('#NavDrawer').removeClass('drawer--show');
+	  }
+  });  
 </script>
