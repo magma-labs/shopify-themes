@@ -56,6 +56,11 @@ textarea:focus, input:focus {
   border: 1px solid $color-medium-gray;
 }
 
+.separator-nomargin {
+  border: 1px solid $color-medium-gray;
+  margin: 0;
+}
+
 .subtitle {
   font-weight: bold;
   font-size: 24px;
