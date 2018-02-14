@@ -84,13 +84,16 @@
       <div class="header-section-user grid__item medium-one-whole small--hide">
         <ul>
           {% if customer %}
-            <li>
+            <li class="text-color-pink">
             {% if customer.first_name != blank %}
               {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
               {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
             {% else %}
               <a href="/account">{{ 'layout.customer.account' | t }}</a>
             {% endif %}
+            </li>
+            <li>
+              <a href="/account/logout"> Logout </a>
             </li>
           {% else %}
             <li>
