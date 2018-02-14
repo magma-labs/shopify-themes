@@ -78,6 +78,18 @@
         <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
 
         <form action="/cart/add" method="post" enctype="multipart/form-data">
+
+          <select name="id" class="no-js" data-product-select>
+          {% for variant in product.variants %}
+              <option
+                {% if variant == current_variant %}selected="selected"{% endif %}
+                {% unless variant.available %}disabled="disabled"{% endunless %}
+                value="{{ variant.id }}">
+                  {{ variant.title }}
+              </option>
+            {% endfor %}
+          </select>
+
           <button
             type="submit"
             name="add"
