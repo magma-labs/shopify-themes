@@ -2,6 +2,7 @@
 .about-us--title{
   text-transform: uppercase;
   font-weight:bold;
+  font-size: 24px;
   border-bottom: 2px solid #979797;
   padding-bottom: 20px;
 }
@@ -19,23 +20,23 @@
 }
 .about-us--img-title{
   position: absolute;
-  left: 379px;
-  top: 10px;
+  left: 55%;
+  top: 20px;
   font-weight: bold;  
   font-size: 24px;
   color:white;
 }
 .about-us--img-subtitle{
   position: absolute;
-  left: 379px;
-  top:46px;
+  left: 55%;
+  top: 56px;
   font-size: 24px;
   color: #373737;
 }
 .about-us--img-quote{
   position: absolute;
-  left: 379px;
-  top: 80px;
+  left: 55%;
+  top: 90px;
   font-style:italic;
   font-size: 18px;
   color: #444444;
@@ -90,10 +91,21 @@
     display: flex;
   flex-direction: column;
   .about-us--item{
-    
   }
   h1{
     font-weight: 200;
   }
  }
+}
+@include media-query($large-up) {   
+  .about-us--img-title{
+    font-size:36px;
+  }
+  .about-us--img-subtitle{
+    font-size:36px;
+    top: 75px;
+  }
+  .about-us--img-quote{
+    top: 125px;
+  }
 }

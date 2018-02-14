@@ -2,24 +2,28 @@
   <h1 class="about-us--img-title">"A job worth doing</h1>
   <span class="about-us--img-subtitle">is worth doing together"</span>
   <span class="about-us--img-quote">Anonymous</span>
-  <img class="img-fluid" src="{{ 'Banner_1440.jpg' | asset_url }}">
+  <img class="img-fluid small--hide large-up--hide" src="{{ 'Banner_Tablet.jpg' | asset_url }}">
+  <img class="img-fluid small--hide medium-up--hide large-up--show" src="{{ 'Banner_1440.jpg' | asset_url }}">
 </div>
 <div class="container">
+  <div class="small--hide">      
+        {% include 'breadcrumbs' %}
+  </div>      
   <h1 class="about-us--title">{{ page.title }}</h1>
   <div class="jumbotron">
     <img class="img-fluid about-us--image medium-up--hide" src="{{ 'TeamBanner_Mobile.jpg' | asset_url }}">
     <img class="img-fluid about-us--image small--hide large-up--hide" src="{{ 'TeamBanner_tablet.jpg' | asset_url }}">
     <img class="img-fluid about-us--image small--hide medium-up--hide large-up--show" src="{{ 'TeamBanner_1440.jpg' | asset_url }}">
   </div>
-  <div class="about-us--container">
+  <div class="about-us--container grid">
     <h1>We are Davos!</h1>
-    <div class="about-us--item">
+    <div class="about-us--item grid__item">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget feugiat velit. Phasellus rhoncus vel erat eget fringilla. Nam interdum tortor quam, id luctus turpis tempus ut. Pellentesque vel mollis nisl. Aenean pretium magna dui. Aenean convallis diam id urna scelerisque, a dapibus sem vehicula. Fusce mollis leo sed tempus condimentum. Sed et ante dignissim, vestibulum nulla tincidunt, interdum erat. In malesuada quam at nisl tincidunt, sed sagittis risus luctus.
     </div>
-    <div class="about-us--item">
+    <div class="about-us--item grid__item large-up--one-half">
             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin et risus aliquet, varius sapien ut, tincidunt ipsum. Aliquam nec urna nec quam fringilla consectetur eget sollicitudin nisi.
     </div>
-    <div class="about-us--item">
+    <div class="about-us--item grid__item large-up--one-half">
             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin et risus aliquet, varius sapien ut, tincidunt ipsum. Aliquam nec urna nec quam fringilla consectetur eget sollicitudin nisi.
     </div>
   </div>        
