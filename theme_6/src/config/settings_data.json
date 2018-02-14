@@ -33,9 +33,8 @@
         }
       },
       "content_for_index": [
-        "collection-list",
-        "featured-collection",
-        "featured-product"
+        "featured-product",
+        "collection-list"
       ]
     }
   }

@@ -1,0 +1,35 @@
+.button {
+  background: #4A90E2;
+  border-radius: 3px;
+  height:77px;
+  font-family: Oswald-Regular;
+  font-size: 32px;
+  color: #FFFFFF;
+  line-height: 44px;
+}
+.button-mobile {
+  background: #4A90E2;
+  height: 40px;
+  font-family: Oswald-Regular;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 25px;
+}
+.button-product {
+  background: #4A90E2;
+  border-radius: 3px;
+  height: 50px;
+  width: 100%;
+  font-family: Oswald-Regular;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button:hover,
+.button-mobile:hover,
+.button-product:hover {
+  background: #ED7F03;
+}

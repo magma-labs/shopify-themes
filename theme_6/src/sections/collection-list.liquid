@@ -1,9 +1,11 @@
+<div class="collection-list">
+{% comment %}        
 {% if section.settings.title != blank %}
   <h2>{{ section.settings.title | escape }}</h2>
 {% endif %}
-
+{% endcomment %}
 {% for block in section.blocks limit: section.blocks.size %}
-  <div {{ block.shopify_attributes }}>
+        <div class="collections" {{ block.shopify_attributes }}>
     {%- assign collection = collections[block.settings.collection] -%}
 
     <a href="{% if collection == empty %}#{% else %}{{ collection.url }}{% endif %}">
@@ -14,8 +16,9 @@
       {% elsif collection == empty %}
         {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
         {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
-      {% endif %}
+{% endif %}
 
+    <div class="mask"></div>
       <p>
         {% if collection == empty %}
           {{ 'homepage.onboarding.collection_title' | t }}
@@ -30,11 +33,11 @@
 {% if section.blocks.size == 0 %}
   {% include 'no-blocks' %}
 {% endif %}
-
+</div>
 {% schema %}
   {
     "name": "Collection list",
-    "max_blocks": 12,
+    "max_blocks": 3,
     "settings": [
       {
         "type": "text",
@@ -52,6 +55,16 @@
             "label": "Collection",
             "id": "collection",
             "type": "collection"
+          },
+          {
+            "label": "Vertical position",
+            "id": "vertical",
+            "type": "number"
+          },
+          {
+            "label": "Horizontal Position",
+            "id": "horizonal",
+            "type": "number"
           }
         ]
       }

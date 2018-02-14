@@ -1,0 +1,142 @@
+.home{
+  display: flex;
+  justify-content: center;
+}
+.home-content {
+  max-width: 1370px;
+}
+
+.product-slider {
+  height: 340px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+}
+.featured-products {
+  height: auto;
+}
+.product-image{
+  height: 190px;
+  flex: 2 100%;
+}
+.product-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
+.new-tag {
+  backgrownd: #ABC828;
+  border-radius: 3px;
+  height:77px;
+  font-family: Oswald-Regular;
+  font-size: 24px;
+  color: #FFFFFF;
+  line-height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.product-name {
+  font-family: Lato;
+  font-size: 20px;
+  color: #627387;
+  flex:2 100%;
+}
+.buton-product {flex:2 100%;}
+.product-price {
+  margin-right: 10px;
+  color: #954180;
+  font-family: Lato;
+  font-size: 25px;
+  flex:1 content;
+}
+.compare_at_price {
+  text-decoration: line-through;
+  font-family: Lato;
+  font-size: 25px;
+  color: #D2D2D2;
+  flex: 1 content;
+}
+
+.featured-product {
+  background: #EEEEEE;
+  height: 340px;
+  margin-left: 23px;
+  padding: 13px;
+  justify-content: flex-start;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+.featured-product:first-child {
+  margin-left: 0px;
+}
+.featured-product:last-child {
+  margin-right: 0px;
+}
+
+.collection-list {
+  display: flex;
+  flex-direction: column;
+}
+@include media-query($small) {
+  .featured-product:nth-child(2),
+  .featured-product:nth-child(3),
+  .featured-product:nth-child(4) {
+    display: none;
+  }
+}
+@include media-query($medium-up) {
+  .product-slider {
+    height: 473px;
+    margin: 40px 0px;
+  }
+  .featured-product {
+    height: 473px;
+  }
+  .product-image {
+    height: 323px;
+  }
+  .collection-list {
+    flex-direction: row;
+    .collections {
+      flex: 3;
+      flex-grow: 1;
+      height: auto;
+      margin-left: 23px;
+    }
+  }
+  .collections:first-child {
+    margin-left: 0px;
+  }
+  .collections:nth-child(2) {
+    flex-grow: 2;
+  }
+}
+.collections {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.collections p {
+  font-family: "Oswald";
+  font-size: 30px;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 0px;
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+.collections img {
+  width: 100%;
+  height: 100%;
+}
+.collections .mask {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 69px;
+  background-repeat: repeat-x;
+  background-image: url({{ "mask_collection_mobile.png", assets_url }});
+}
