@@ -29,6 +29,12 @@ header {
   .header-section-nav {
     padding: 5px 0 0 15px;
 
+    .site-header__link {
+      background: none;
+      border: 0;
+      outline: none;
+    }
+
     .icon-hamburger {
       fill: $color-pink;
       width: 30px;

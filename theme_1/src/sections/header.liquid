@@ -3,7 +3,64 @@
 
     <div class="header-first-line grid">
       <div class="header-section-nav grid__item small--one-third medium-up--hide">
-        {% include 'icon-hamburger' %}
+        
+        <button type="button" class="site-header__link text-link site-header__toggle-nav" onclick="showNav()" aria-controls="NavDrawer" aria-expanded="true">
+          {% include 'icon-hamburger' %}
+        </button>
+
+        <div id="NavDrawer" class="drawer" tabindex="-1">
+          <div id="shopify-section-sidebar-menu" class="shopify-section sidebar-menu-section"><div class="drawer__header" data-section-id="sidebar-menu" data-section-type="sidebar-menu-section">
+          <div class="drawer__close">
+            <button type="button" class="drawer__close-button js-drawer-close">
+              <span class="icon icon-x" aria-hidden="true"></span>
+              <span class="icon__fallback-text">Close menu</span>
+            </button>
+          </div>
+        </div>
+        <div class="drawer__inner">
+          <ul class="drawer-nav">
+            <li class="drawer-nav__item">
+              <a href="/collections/fixies" class="drawer-nav__link h2">Classic Fixies</a>
+            </li>
+            <li class="drawer-nav__item">
+              <a href="/collections/premium-fixies" class="drawer-nav__link h2">Premium Fixies</a>
+            </li>
+            <li class="drawer-nav__item">
+              <a href="/collections/glow" class="drawer-nav__link h2">Glow</a>
+            </li>
+            <li class="drawer-nav__item">
+              <a href="/collections/kids" class="drawer-nav__link h2">Kids</a>
+            </li>
+            <li class="drawer-nav__spacer"></li>
+            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/pages/service">Services &amp; Repairs</a></li>
+            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/pages/shipping-returns">Shipping &amp; Returns</a></li>
+            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/pages/about-us">About Us</a></li>
+            <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/blogs/news">News</a></li>
+          </ul>
+
+          <ul class="list--inline social-icons social-icons--drawer">
+              <li>
+                <a href="https://twitter.com/shopify" title="City Velo on Twitter">
+                  <span class="icon icon-twitter" aria-hidden="true"></span>
+                  <span class="visually-hidden">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="http://instagram.com/shopify" title="City Velo on Instagram">
+                  <span class="icon icon-instagram" aria-hidden="true"></span>
+                  <span class="visually-hidden">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="http://shopify.tumblr.com" title="City Velo on Tumblr">
+                  <span class="icon icon-tumblr" aria-hidden="true"></span>
+                  <span class="visually-hidden">Tumblr</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+        </div>
+        </div>
       </div>
 
       <div class="header-section-icon grid__item small--one-third medium-up--hide">
@@ -133,3 +190,12 @@
     ]
   }
 {% endschema %}
+
+<script type="text/javascript">
+  function showNav(){ 
+    console.log("Show nav!");
+  }
+  function hideNav{ 
+    console.log("Hide nav!");
+  }
+</script>
