@@ -121,3 +121,16 @@
       }
   }
 }
+@include media-query($widescreen){
+  .about-us--img-title{
+    font-size:48px;
+    top: 30px;
+  }
+  .about-us--img-subtitle{
+    font-size:48px;
+    top: 105px;
+  }
+  .about-us--img-quote{
+    top: 165px;
+  }
+}
