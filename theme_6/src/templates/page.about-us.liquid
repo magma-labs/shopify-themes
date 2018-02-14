@@ -1,8 +1,15 @@
 <div class="page-about-us">
-  {% include 'breadcrumbs' %}
+  <div class="medium-down--hide">{% include 'breadcrumbs' %}</div>
   <h1>{{ page.title }}</h1>
+
+  <!-- Body content -->
   <div class="page-body-content">
+
+    <!-- Banner -->
     <div class="page-body-banner">
+      <img src="{{ 'banner-about-us.png' | asset_url }}" class="small-portrait--hide">
+      <img src="{{ 'banner-about-us-mobile.png' | asset_url }}" class="small-portrait-up--hide small-portrait--show">
+
       <div class="page-about-banner-legend">
         <div class="page-about-banner-title">LET THE KIDS BE KIDS AGAIN.</div>
         <div class="page-about-banner-description">
@@ -12,6 +19,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Story -->
     <div class="page-body-story">
       <div class="about-story-content">
         <div class="about-story-title">Our Story</div>
@@ -27,6 +36,8 @@ condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante,
         </div>
       </div>
     </div>
+
+    <!-- More about -->
     <div class="page-body-more-about">
       <div class="more-about-legend">
         <div class="more-about-content">
@@ -38,15 +49,31 @@ condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante,
           </div>
         </div>
       </div>
-      <div class="more-about-image"></div>
+      <div class="more-about-image">
+        <img src="{{ 'more-about.png' | asset_url }}" class="small-portrait--hide">
+        <img src="{{ 'more-about-mobile.png' | asset_url }}" class="small-portrait-up--hide small-portrait--show">
+      </div>
     </div>
-    <div class="page-body-images">
+
+    <!-- Images -->
+    <div class="page-body-images small-portrait--hide">
       <div class="about-image1">
+        <img src="{{ 'about-image1.png' | asset_url }}">
       </div>
       <div class="about-image2">
+        <img src="{{ 'about-image2.png' | asset_url }}">
       </div>
       <div class="about-image3">
+        <img src="{{ 'about-image3.png' | asset_url }}">
       </div>
     </div>
+
+    <!-- Button scroll top -->
+    <div class="page-body-scroll-up small-portrait-up--hide small-portrait--show">
+      <a href="javascript:void(0)" title="Scroll Up" onclick="window.scrollTo(0, 0);">
+        <span>Sroll Up</span>
+      </a>
+    </div>
+
   </div>
 </div>

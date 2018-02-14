@@ -48,11 +48,17 @@ $font-weight-footer: $font-weight-bold;
   Grid Breakpoints and Class Names
     - Do not change the variable names
 ==============================================================================*/
+$grid-small-portrait: 320px;
+$grid-pre-portrait: 500px;
 $grid-medium: 750px;
 $grid-large: 990px;
+$grid-large-hd: 1370px;
 $grid-widescreen: 1400px;
 $grid-gutter: 0;
 
+$small-portrait: 'small-portrait';
+$small-portrait-up: 'small-portrait-up';
+$pre-portrait: 'pre-portrait';
 $small: 'small';
 $medium: 'medium';
 $medium-down: 'medium-down';
@@ -60,11 +66,17 @@ $medium-up: 'medium-up';
 $large: 'large';
 $large-down: 'large-down';
 $large-up: 'large-up';
+$large-hd: 'large-hd';
+$large-hd-down: 'large-hd-down';
+$large-hd-up: 'large-hd-up';
 $widescreen: 'widescreen';
 
 // The `$breakpoints` list is used to build our media queries.
 // You can use these in the media-query mixin.
 $breakpoints: (
+  $small-portrait '(max-width: #{$grid-small-portrait})',
+  $small-portrait-up '(min-width: #{$grid-small-portrait + 1})',
+  $pre-portrait '(max-width: #{$grid-pre-portrait})',
   $small '(max-width: #{$grid-medium - 1})',
   $medium '(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})',
   $medium-down '(max-width: #{$grid-large - 1})',
@@ -72,6 +84,9 @@ $breakpoints: (
   $large '(min-width: #{$grid-large}) and (max-width: #{$grid-widescreen - 1})',
   $large-down '(max-width: #{$grid-widescreen - 1})',
   $large-up '(min-width: #{$grid-large})',
+  $large-hd '(min-width: #{$grid-large-hd}) and (max-width: #{$grid-widescreen - 1})',
+  $large-hd-down '(max-width: #{$grid-widescreen - 1})',
+  $large-hd-up '(min-width: #{$grid-large-hd})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
 
@@ -81,7 +96,7 @@ $breakpoints: (
     - Default is no push classes
     - Will not work if `styles/global/grid.scss` is removed
 ==============================================================================*/
-$breakpoint-has-widths: ($small, $medium-up, $medium-down, $large-up, $large-down);
+$breakpoint-has-widths: ($small-portrait, $small-portrait-up, $pre-portrait, $small, $medium-up, $medium-down, $large-up, $large-down, $large-hd-down);
 $breakpoint-has-push: ();
 
 /*================ Sizing Variables ================*/
