@@ -1,4 +1,79 @@
 <div class="page-about-us">
-  {% include 'breadcrumbs' %}
+  <div class="medium-down--hide">{% include 'breadcrumbs' %}</div>
   <h1>{{ page.title }}</h1>
+
+  <!-- Body content -->
+  <div class="page-body-content">
+
+    <!-- Banner -->
+    <div class="page-body-banner">
+      <img src="{{ 'banner-about-us.png' | asset_url }}" class="small-portrait--hide">
+      <img src="{{ 'banner-about-us-mobile.png' | asset_url }}" class="small-portrait-up--hide small-portrait--show">
+
+      <div class="page-about-banner-legend">
+        <div class="page-about-banner-title">LET THE KIDS BE KIDS AGAIN.</div>
+        <div class="page-about-banner-description">
+          We attempt to bring back the good old days when children would play fusce vehicula dolor arcu,
+          sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus.
+          Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula
+        </div>
+      </div>
+    </div>
+
+    <!-- Story -->
+    <div class="page-body-story">
+      <div class="about-story-content">
+        <div class="about-story-title">Our Story</div>
+        <div class="about-story-description">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis.
+
+Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nuncvenenatis facilisis dolor.. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. 
+
+Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. 
+
+Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at 
+
+condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis
+        </div>
+      </div>
+    </div>
+
+    <!-- More about -->
+    <div class="page-body-more-about">
+      <div class="more-about-legend">
+        <div class="more-about-content">
+          <div class="more-about-title">LOREM IPSUM DOLOR SUM.</div>
+          <div class="more-about-description">
+            Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi,
+            quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus,
+            at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.
+          </div>
+        </div>
+      </div>
+      <div class="more-about-image">
+        <img src="{{ 'more-about.png' | asset_url }}" class="small-portrait--hide">
+        <img src="{{ 'more-about-mobile.png' | asset_url }}" class="small-portrait-up--hide small-portrait--show">
+      </div>
+    </div>
+
+    <!-- Images -->
+    <div class="page-body-images small-portrait--hide">
+      <div class="about-image1">
+        <img src="{{ 'about-image1.png' | asset_url }}">
+      </div>
+      <div class="about-image2">
+        <img src="{{ 'about-image2.png' | asset_url }}">
+      </div>
+      <div class="about-image3">
+        <img src="{{ 'about-image3.png' | asset_url }}">
+      </div>
+    </div>
+
+    <!-- Button scroll top -->
+    <div class="page-body-scroll-up small-portrait-up--hide small-portrait--show">
+      <a href="javascript:void(0)" title="Scroll Up" onclick="window.scrollTo(0, 0);">
+        <span>Sroll Up</span>
+      </a>
+    </div>
+
+  </div>
 </div>
