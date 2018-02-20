@@ -25,7 +25,7 @@ p {
   height: 50px;
   width: auto;
 }
-/*MESSAGE SECCTION*/
+/*<MESSAGE SECTION>*/
 .body-message {
   text-align: center; 
   background: #F3F9EF;
@@ -73,6 +73,7 @@ h2.title span {
   border: 3px solid #E83671;
   font-weight: bold;
 }
+/* </MESSAGE SECTION> */
 .category-list {
   width: auto;
   margin:0;
