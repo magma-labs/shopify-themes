@@ -8,26 +8,35 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "styles" %>
-    <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <header class="header">
-      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </header>
+    <div class="container">
+      <header class="header" >
 
-    <section class="bodyMessage">
-    </section>
+        <div class="upper-row">
+        </div>
 
-    <section class="categoryList">
-    </section>
+        <img src="../images/home/logo_fiorella.png" alt="fiorella" id="logo_fiorella">
+      </header>
 
-    <section class="promotion">
-    </section>
+      <section class="body-message">
+        <p class="text">Body Message</p>
+      </section>
 
-    <footer class="footer">
-    </footer>
-    <!--
-    <%= yield %>
-    -->
+      <section class="category-list">
+        <p class="text">Category List</p>
+      </section>
+
+      <section class="promotion">
+        <p class="text">Promotion</p>
+      </section>
+
+      <footer class="footer">
+        <p class="text">Footer</p>
+      </footer>
+      <!--
+      <%= yield %>
+      -->
+    </div>
   </body>
 </html>

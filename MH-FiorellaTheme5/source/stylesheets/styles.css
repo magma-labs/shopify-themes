@@ -3,22 +3,30 @@ html, body {
   padding: 0;
 }
 
-.header {
-  display: flex;/*Debe de ir al principio y da propiedades flex a los componentes interiores*/
-  width: auto;
-  margin:0;
-  padding-left: 5%;
-  padding-right: 5%;
-  height: 500px;
-  background-color: #FFFFFF;
-  align-items: center;
-}
-
 p {
   text-align: center;
 }
 
-.bodyMessage {
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  margin:0;
+  height: 700px;
+  background-image: url("../images/home/header_background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.upper-row {
+  background-color: #F3F9EF;
+  opacity: 0.5;
+  height: 50px;
+  width: auto;
+}
+
+.body-message {
   width: auto;
   margin:0;
   padding: 0;
@@ -27,7 +35,7 @@ p {
   align-items: center;
 }
 
-.categoryList {
+.category-list {
   width: auto;
   margin:0;
   padding: 0;
