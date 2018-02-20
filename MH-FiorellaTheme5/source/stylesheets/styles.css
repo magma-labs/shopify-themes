@@ -1,0 +1,55 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;/*Debe de ir al principio y da propiedades flex a los componentes interiores*/
+  width: auto;
+  margin:0;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 500px;
+  background-color: #FFFFFF;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+}
+
+.bodyMessage {
+  width: auto;
+  margin:0;
+  padding: 0;
+  height: 300px;
+  background-color: #F3F9EF;
+  align-items: center;
+}
+
+.categoryList {
+  width: auto;
+  margin:0;
+  padding: 0;
+  height: 300px;
+  background-color: #FFFFFF;
+  align-items: center;
+}
+
+.promotion {
+  width: auto;
+  margin:0;
+  padding: 0;
+  height: 300px;
+  background-color: #F3F9EF;
+  align-items: center;
+}
+
+.footer {
+  width: auto;
+  margin:0;
+  padding: 0;
+  height: 300px;
+  background-color: #FFFFFF;
+  align-items: center;
+}
