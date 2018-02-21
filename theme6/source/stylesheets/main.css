@@ -1,3 +1,7 @@
+.featured-kits {
+  font-family: 'Oswald', sans-serif;
+}
+
 .big-banner {
   background-image: url("../images/banner1_mobile.png");
   background-size: contain;
@@ -17,9 +21,31 @@
 .big-banner-content h1 {
   margin-bottom: 0;
 }
+
+.big-banner-content p {
+  font-family: 'Lato', sans-serif;
+}
+
+.big-banner-content button {
+  font-family: 'Oswald', sans-serif;
+  border-radius: 0;
+  border-style: none;
+  background-color: #4A90E2;
+  margin-bottom: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.big-banner-content button h1 {
+  margin: 0;
+  padding: 10px 0 10px 0;
+  color: #FFFFFF;
+}
+
 .small-banner {
   display: flex;
   background-image: url("../images/banner2.png");
+  box-shadow: inset 0 0 0 1000px rgba(245, 166, 35,0.8);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -27,8 +53,14 @@
   justify-content: center;
   align-items: center;
   padding: 20px 20px;
+  color: #FFFFFF;
 }
 
 .small-banner h1 {
   margin: 0 0;
+  font-size: 45px;
+}
+
+.small-banner h3 {
+  margin: 0;
 }
