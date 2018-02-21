@@ -1,0 +1,20 @@
+.big-banner {
+  background: linear-gradient(180deg, rgba(251,239,227,0) 0%, #FBEFE3 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+  height: 300px;
+}
+
+.big-banner-content {
+  background-image: url("../images/banner1_mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.small-banner {
+  background-image: url("../images/banner2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
