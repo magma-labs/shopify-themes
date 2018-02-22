@@ -4,26 +4,29 @@
 
 .big-banner {
   background-image: url("../images/banner1_mobile.png");
-  background-size: contain;
+  background-size: 120%;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 .big-banner-content {
-  background: linear-gradient(180deg, rgba(251,239,227,0) 0%, #FBEFE3 100%);
+  background: linear-gradient(0deg, rgba(251,239,227,0), rgba(251,239,227, 1) 20%, rgba(251,239,227, 0.2) 50%, rgba(251,239,227, 0.1));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 300px;
+  height: 320px;
   text-align: center;
 }
 
 .big-banner-content h1 {
   margin-bottom: 0;
+  font-size: 20px;
 }
 
 .big-banner-content p {
   font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  margin: 0;
 }
 
 .big-banner-content button {
