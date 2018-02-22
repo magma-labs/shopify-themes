@@ -76,7 +76,7 @@
   text-align: center;
 }
 
-.mid-banner-sailor {
+.mid-banner-saylor {
   background-image: url("../images/mid_banner1.png");
   background-size: 130%;
   background-repeat: no-repeat;
@@ -90,7 +90,7 @@
   background-position: top;
 }
 
-.mid-banner-sailor .mid-banner-content {
+.mid-banner-saylor .mid-banner-content {
   background: linear-gradient(0deg,
     rgba(239, 239, 239),
     rgba(239, 239, 239, 1) 20%,
@@ -126,7 +126,7 @@
   margin-right: 5px;
 }
 
-.mid-banner-sailor button {
+.mid-banner-saylor button {
   border-color: #627387;
 }
 
@@ -134,7 +134,7 @@
   border-color: #FFFFFF;
 }
 
-.mid-banner-sailor button h1 {
+.mid-banner-saylor button h1 {
   margin: 0;
   padding: 10px 0 10px 0;
   color: #627387;
