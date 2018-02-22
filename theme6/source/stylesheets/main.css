@@ -174,3 +174,107 @@
     background-position: top;
   }
 }
+
+@media only screen and (min-width: 769px) {
+  .flex-grid {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .big-banner {
+    flex: 2;
+    display: flex;
+    background-image: url("../images/banner1.png");
+    background-size: contain;
+    background-position: left;
+    justify-content: flex-end;
+    height: 400px;
+    margin-right: 20px;
+  }
+
+  .big-banner-content {
+    display: flex;
+    background: linear-gradient(270deg,
+      rgba(251,239,227),
+      rgba(251,239,227, 1) 20%,
+      rgba(251,239,227, 1) 60%,
+      rgba(251,239,227, 0));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 50%;
+  }
+
+  .big-banner-content p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .big-banner-content h1 {
+    font-size: 32px;
+  }
+
+  .big-banner-content button {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .small-banner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mid-banner {
+    flex: 1;
+    background-size: 60%;
+    background-position: right;
+    justify-content: flex-end;
+    height: 200px;
+  }
+
+  .mid-banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 200px;
+  }
+
+  .mid-banner-content button {
+    width: 90%;
+  }
+
+  .mid-banner-content p {
+    font-size: 13px;
+  }
+
+  .mid-banner-saylor .mid-banner-content {
+    background: linear-gradient(90deg,
+      rgba(239, 239, 239),
+      rgba(239, 239, 239, 1) 20%,
+      rgba(239, 239, 239, 1) 85%,
+      rgba(239, 239, 239, 0));
+  }
+
+  .mid-banner-archeologist .mid-banner-content {
+    background: linear-gradient(90deg,
+      rgba(189, 152, 107),
+      rgba(189, 152, 107, 1) 20%,
+      rgba(189, 152, 107, 1) 85%,
+      rgba(189, 152, 107, 0));
+  }
+
+  .mid-banner-archeologist {
+    margin-left: 20px;
+  }
+
+
+}
