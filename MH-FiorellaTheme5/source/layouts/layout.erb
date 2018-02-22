@@ -1,22 +1,59 @@
 <!doctype html>
+<!--
+padding: 40px 20px;
+
+-->
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "styles" %>
   </head>
   <body>
     <div class="container">
-      <header class="header" >
-
+      <header class="header">
         <div class="upper-row">
+          <div class="topnav">
+            <div class="burger-menu">
+              <i class="fas fa-bars"></i>
+              <img src="../images/home/wlogo_fiorella_mobil.png" alt="bag">
+              <div class="bag-container">
+                <span>8</span>
+                <img src="../images/home/wicon-bag.png" alt="bag">
+              </div>
+            </div>
+            <div class="mobile-search-container">
+              <form action="/action_page.php">
+                <input type="text" placeholder="SEARCH" name="search">
+              </form>
+              <img src="../images/home/icon_lens.png" alt="lens">
+            </div>
+            <div class="search-container">
+              <img src="../images/home/icon_lens.png" alt="lens">
+              <form action="/action_page.php">
+                <input type="text" placeholder="SEARCH" name="search">
+              </form>
+            </div>
+            <div class="icon-bag-container">
+              <div class="dot"><span>8</span></div>
+              <img src="../images/home/icon_bag.png" alt="bag">
+            </div>
+            <div class="account-container">
+              <a href="#about">LOG IN</a>
+              <a href="#contact">CREATE ACCOUNT</a>
+            </div>
+          </div>
+          <div class="logo_fiorella">
+            <img src="../images/home/logo_fiorella.png" alt="fiorella">
+          </div>
         </div>
 
-        <img src="../images/home/logo_fiorella.png" alt="fiorella" id="logo_fiorella">
+        <div class="nav-bar">
+        </div>
       </header>
 
       <section class="body-message">
