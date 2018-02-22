@@ -1,5 +1,5 @@
 @import url('/stylesheets/fonts.css');
-html, body {
+body {
   margin: 0;
   padding: 0;
 }
@@ -8,43 +8,43 @@ p {
 }
 
 .category-list {
-  width: auto;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 300px;
   margin:0;
   padding: 0;
-  height: 300px;
-  background-color: #FFFFFF;
-  align-items: center;
+  width: auto;
 }
 
 .promotion {
-  width: auto;
+  align-items: center;
+  background-color: #F3F9EF;
+  height: 300px;
   margin:0;
   padding: 0;
-  height: 300px;
-  background-color: #F3F9EF;
-  align-items: center;
+  width: auto;
 }
 
 .footer {
-  width: auto;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 300px;
   margin:0;
   padding: 0;
-  height: 300px;
-  background-color: #FFFFFF;
-  align-items: center;
+  width: auto;
 }
 
 /*<MESSAGE SECTION>*/
 .body-message {
-  text-align: center;
   background: #F3F9EF;
   padding: 40px 20px;
+  text-align: center;
 }
 
 h2 {
   letter-spacing: 3px;
-  position: relative;
-  margin-top: 20px;
+	margin-top: 20px;
+	position: relative;
 }
 
 h2.title {
@@ -52,38 +52,38 @@ h2.title {
 }
 
 h2.title:before {
-  content: "";
-  display: block;
-  border-top: solid 1px #E83671;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
+	border-top: solid 1px #E83671;
+	content: "";
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	z-index: 1;
 }
 
 h2.title span {
   background: #F3F9EF;
-  padding: 0 10px;
-  position: relative;
-  z-index: 5;
+	padding: 0 10px;
+	position: relative;
+	z-index: 5;
 }
 
 .text-message{
   font-family: "MerriweatherSans-Light";
-  line-height: 2em;
   font-size: 22px;
+  line-height: 2em;
 }
 
 .btn-call-action{
-  font-family: 'PlayfairDisplay-Bold';
-  width: 200px;
-  padding: 10px 30px;
-  font-size: 20px;
   background: transparent;
-  color: #E83671;
   border: 3px solid #E83671;
+  color: #E83671;
+  font-family: 'PlayfairDisplay-Bold';
+  font-size: 20px;
   font-weight: bold;
+  padding: 10px 30px;
+  width: 200px;
 }
 /* </MESSAGE SECTION> */
 @media only screen and ( max-width: 768px ) {
@@ -109,19 +109,19 @@ h2.title span {
   }
 
   .topnav .burger-menu {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    align-items: center;
     background-color: #E83671;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
   }
 
   .topnav .burger-menu .bag-container  {
-    display: flex;
     align-items: center;
+    display: flex;
   }
 
   .topnav .burger-menu img {
@@ -129,34 +129,34 @@ h2.title span {
   }
 
   .topnav .burger-menu i {
-    font-size: 30px;
     color: white;
+    font-size: 30px;
   }
 
   .topnav .burger-menu .bag-container span {
-    margin-right: 15px;
-    font-size: 25px;
     color: white;
+    font-size: 25px;
+    margin-right: 15px;
   }
 
   .topnav .mobile-search-container {
-    display: flex;
-    justify-content: space-between;
-    height: 30px;
-    width: auto;
     border-bottom: 1px solid red;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    width: auto;
   }
 
   .topnav .mobile-search-container input[type=text] {
+    background-color: white;
+    border: none;
+    color: black;
     font-family: "MerriweatherSans-Light";
     font-size: 17px;
-    border: none;
-    background-color: white;
-    color: black;
   }
 
   .topnav .mobile-search-container img {
@@ -166,27 +166,27 @@ h2.title span {
 
   /*<homeMenu>*/
   .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 6;
-    top: 0;
-    left: 0;
     background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    text-align:left;
+		height: 100%;
+		left: 0;
+		overflow-x: hidden;
+		padding-top: 60px;
+		position: fixed;
+		text-align:left;
+		top: 0;
+		transition: 0.5s;
+		width: 0;
+		z-index: 6;
   }
 
   .sidenav a {
-    padding: 8px 8px 8px 20px;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: "MerriweatherSans-Light";
     color: black;
     display: block;
-    transition: 0.3s;
+    font-family: "MerriweatherSans-Light";
+    font-size: 25px;
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    transition: 0.3s
   }
 
   .sidenav a:hover{
@@ -194,31 +194,31 @@ h2.title span {
   }
 
   .sidenav .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 25px;
+    color: #E83671;
     font-size: 36px;
     margin-left: 50px;
-    color: #E83671;
+    position: absolute;
+    right: 25px;
+    top: 10px;
   }
 
   .sidenav .mobile-search-container {
-    display: flex;
-    justify-content: space-between;
-    height: 30px;
-    width: auto;
     border-bottom: 1px solid red;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    margin-bottom: 8px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 8px;
+    width: auto;
   }
 
   .sidenav .mobile-search-container input[type=text] {
+    background-color: white;
+    border: none;
+    color: black;
     font-family: "MerriweatherSans-Light";
     font-size: 17px;
-    border: none;
-    background-color: white;
-    color: black;
   }
 
   .sidenav .mobile-search-container img {
@@ -227,14 +227,14 @@ h2.title span {
   }
 
   .sidenav .mobile-navbar-container .line {
-    display: flex;
-    justify-content: space-between;
-    height: 30px;
-    width: auto;
     border-bottom: 1px solid #555555;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    margin-bottom: 8px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 8px;
+    width: auto;
   }
 
   .sidenav .mobile-account-container a {
@@ -244,13 +244,12 @@ h2.title span {
 
   .sidenav .mobile-account-container .line {
     display: flex;
-    justify-content: space-between;
     height: 30px;
-    width: auto;
-    width: auto;
+    justify-content: space-between;
+    margin-bottom: 8px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 8px;
+    width: auto;
   }
 
   .sidenav .mobile-info-container a {
@@ -304,19 +303,19 @@ h2.title span {
   }
 
   .header {
-    width: auto;
-    margin:0;
-    height: 700px;
     background-image: url("../images/home/header_background.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
+  	background-repeat: no-repeat;
+  	background-size: 100%;
+  	height: 700px;
+  	margin:0;
+  	width: auto;
   }
 
   .upper-row {
     background-color: #F3F9EF;
-    opacity: 0.85;
-    height: 300px;
-    width: auto;
+  	height: 300px;
+  	opacity: 0.85;
+  	width: auto;
   }
 
   .sidenav {
@@ -333,12 +332,12 @@ h2.title span {
   }
 
   .topnav {
-    overflow: hidden;
     background-color: #F3F9EF;
-    margin-left: 40px;
-    margin-right: 40px;
-    border-bottom: 1px solid red;
-    vertical-align: middle;
+		border-bottom: 1px solid red;
+		margin-left: 40px;
+		margin-right: 40px;
+		overflow: hidden;
+		vertical-align: middle;
   }
 
   .topnav .account-container {
@@ -367,38 +366,38 @@ h2.title span {
   }
 
   .topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
+    background-color: #F3F9EF;
+    border: none;
+    color: black;
+    color: green;
     font-family: "MerriweatherSans-Light";
     font-size: 17px;
-    color: green;
-    border: none;
-    background-color: #F3F9EF;
-    color: black;
+    margin-top: 8px;
+    padding: 6px;
   }
 
   .topnav .search-container img {
-    width: 20px;
     height: 20px;
-    padding-top: 13px;
     margin-right: 15px;
+    padding-top: 13px;
+    width: 20px;
   }
 
   .topnav .icon-bag-container {
-    margin-top: 6px;
     display: flex;
     float: right;
+    margin-top: 6px;
   }
 
   .topnav .icon-bag-container .dot {
-    height: 35px;
-    width: 35px;
-    margin-right: 4px;
+    align-items: center;
     background-color: red;
     border-radius: 50%;
     display: flex;
+    height: 35px;
     justify-content: center;
-    align-items: center;
+    margin-right: 4px;
+    width: 35px;
   }
 
   .topnav .icon-bag-container .dot span {
