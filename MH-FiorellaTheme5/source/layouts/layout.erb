@@ -9,17 +9,46 @@ padding: 40px 20px;
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "styles" %>
+    <%= javascript_include_tag "site" %>
   </head>
   <body>
     <div class="container">
+      <div id="mySidenav" class="sidenav">
+        <!--<a href="#" class="closebtn" onclick="closeNav()">&times;</a>-->
+        <i class="fas fa-bars closebtn" onclick="closeNav()"></i>
+        <div class="mobile-search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="SEARCH" name="search">
+          </form>
+          <img src="../images/home/icon_lens.png" alt="lens">
+        </div>
+        <div class="mobile-navbar-container">
+          <a href="#">BOUQUETS</a>
+          <a href="#">BOUTONNIERES</a>
+          <a href="#">CENTERPIECES</a>
+          <a href="#">CEREMONY</a>
+          <div class="line"></div>
+        </div>
+        <div class="mobile-account-container">
+          <a href="#">LOG IN</a>
+          <a href="#">CREATE ACCOUNT</a>
+          <a href="#">CONTACT</a>
+          <div class="line"></div>
+        </div>
+        <div class="mobile-info-container">
+          <a href="#">ABOUT US</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
       <header class="header">
         <div class="upper-row">
           <div class="topnav">
             <div class="burger-menu">
-              <i class="fas fa-bars"></i>
+              <i class="fas fa-bars" onclick="openNav()"></i>
               <img src="../images/home/wlogo_fiorella_mobil.png" alt="bag">
               <div class="bag-container">
                 <span>8</span>
