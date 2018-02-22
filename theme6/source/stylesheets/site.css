@@ -64,8 +64,9 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: 66%;
-    }
+      width: 100%;
+      margin: 10px;
+      margin-top: 10px;   }
 
     footer .contenedorsocial .logo {
       margin-left: 96px;
@@ -120,12 +121,13 @@
 /*=============Stylesheet MOBILE==========*/
     @media screen and(max-width:320px) {
       footer .information{display: none;}
-      footer.logo{display:none;}
+      footer .contenedorsocial .logo{display:none;}
       footer #twt{
         margin-left:-20px;
         margin-right: -20px;}
 
       footer.contenedorsocial{
+         width: 100;
           display:flex;
         margin-left: 50px;}
       footer .box-social{align-content:center;}
