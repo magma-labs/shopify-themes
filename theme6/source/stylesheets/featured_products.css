@@ -4,6 +4,14 @@
   padding-right: 5px;
 }
 
+.product-card {
+  display: none;
+}
+
+.first-product-card {
+  display: block;
+}
+
 .featured-products h2 {
   text-align: center;
   color: #72808C;
@@ -77,13 +85,74 @@
   color: #954180;
 }
 
+.product-data .offer {
+  display: none;
+}
+
 .product-data button {
   font-family: 'Oswald', sans-serif;
-  border-radius: 0;
+  border-radius: 3px;;
   border-style: none;
   background-color: #4A90E2;
   padding: 10px 0 10px 0;
   color: #FFFFFF;
   font-weight: bold;
   width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  .slider-navigator {
+    display: none;
+  }
+
+  .product-card {
+    display: block;
+  }
+
+  .featured-products h2 {
+    text-align: left;
+  }
+
+  .featured-products-list {
+    display: flex;
+  }
+
+  .product-card .front-label {
+    display: none;
+  }
+
+  .new-product .front-label {
+    display: flex;
+  }
+
+  .product-card {
+    margin: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .product-data p {
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+
+  .product-card .price {
+    display: flex;
+  }
+
+  .product-card .offer {
+    display: flex;
+    margin-left: 5px;
+    text-decoration: line-through;
+    color: #D2D2D2;
+  }
+
+  .product-card button {
+    border-radius: 3px;
+  }
+
+  .product-card button:hover {
+    background-color: #ED7F03;
+  }
+
 }
