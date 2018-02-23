@@ -1,104 +1,401 @@
-html, body {
+@import url('/stylesheets/fonts.css');
+body {
   margin: 0;
   padding: 0;
 }
-
 p {
   text-align: center;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: auto;
+.category-list {
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 300px;
   margin:0;
-  height: 700px;
-  background-image: url("../images/home/header_background.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  padding: 0;
+  width: auto;
 }
 
-.upper-row {
+.promotion {
+  align-items: center;
   background-color: #F3F9EF;
-  opacity: 0.5;
-  height: 50px;
+  height: 300px;
+  margin:0;
+  padding: 0;
   width: auto;
 }
+
+.footer {
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 300px;
+  margin:0;
+  padding: 0;
+  width: auto;
+}
+
 /*<MESSAGE SECTION>*/
 .body-message {
-  text-align: center; 
   background: #F3F9EF;
   padding: 40px 20px;
+  text-align: center;
 }
+
 h2 {
   letter-spacing: 3px;
-  position: relative;
-  margin-top: 20px;
+	margin-top: 20px;
+	position: relative;
 }
 
 h2.title {
   margin-top: 0;
 }
+
 h2.title:before {
-  content: "";
-  display: block;
-  border-top: solid 1px #E83671;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
+	border-top: solid 1px #E83671;
+	content: "";
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	z-index: 1;
 }
 
 h2.title span {
   background: #F3F9EF;
-  padding: 0 10px;
-  position: relative;
-  z-index: 5;
+	padding: 0 10px;
+	position: relative;
+	z-index: 5;
 }
+
 .text-message{
   font-family: "MerriweatherSans-Light";
-  line-height: 2em;
   font-size: 22px;
-
+  line-height: 2em;
 }
+
 .btn-call-action{
-  font-family: 'PlayfairDisplay-Bold';
-  width: 200px;
-  padding: 10px 30px;
-  font-size: 20px;
   background: transparent;
-  color: #E83671;
   border: 3px solid #E83671;
+  color: #E83671;
+  font-family: 'PlayfairDisplay-Bold';
+  font-size: 20px;
   font-weight: bold;
+  padding: 10px 30px;
+  width: 200px;
 }
 /* </MESSAGE SECTION> */
-.category-list {
-  width: auto;
-  margin:0;
-  padding: 0;
-  height: 300px;
-  background-color: #FFFFFF;
-  align-items: center;
+@media only screen and ( max-width: 768px ) {
+  /*<SearchBar> */
+  .topnav {
+    height: 90px;
+  }
+
+  .logo_fiorella {
+    display: none;
+  }
+
+  .topnav .account-container {
+    display: none;
+  }
+
+  .topnav .search-container {
+    display: none;
+  }
+
+  .topnav .icon-bag-container {
+    display: none;
+  }
+
+  .topnav .burger-menu {
+    align-items: center;
+    background-color: #E83671;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+  }
+
+  .topnav .burger-menu .bag-container  {
+    align-items: center;
+    display: flex;
+  }
+
+  .topnav .burger-menu img {
+    height: 30px;
+  }
+
+  .topnav .burger-menu i {
+    color: white;
+    font-size: 30px;
+  }
+
+  .topnav .burger-menu .bag-container span {
+    color: white;
+    font-size: 25px;
+    margin-right: 15px;
+  }
+
+  .topnav .mobile-search-container {
+    border-bottom: 1px solid red;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    width: auto;
+  }
+
+  .topnav .mobile-search-container input[type=text] {
+    background-color: white;
+    border: none;
+    color: black;
+    font-family: "MerriweatherSans-Light";
+    font-size: 17px;
+  }
+
+  .topnav .mobile-search-container img {
+    height: 25px;
+    width: 25px;
+  }
+    /*</SearchBar> */
+
+  /*<homeMenu>*/
+  .sidenav {
+    background-color: white;
+		height: 100%;
+		left: 0;
+		overflow-x: hidden;
+		padding-top: 60px;
+		position: fixed;
+		text-align:left;
+		top: 0;
+		transition: 0.5s;
+		width: 0;
+		z-index: 6;
+  }
+
+  .sidenav a {
+    color: black;
+    display: block;
+    font-family: "MerriweatherSans-Light";
+    font-size: 25px;
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    transition: 0.3s
+  }
+
+  .sidenav a:hover{
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    color: #E83671;
+    font-size: 36px;
+    margin-left: 50px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+  }
+
+  .sidenav .mobile-search-container {
+    border-bottom: 1px solid red;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  .sidenav .mobile-search-container input[type=text] {
+    background-color: white;
+    border: none;
+    color: black;
+    font-family: "MerriweatherSans-Light";
+    font-size: 17px;
+  }
+
+  .sidenav .mobile-search-container img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .sidenav .mobile-navbar-container .line {
+    border-bottom: 1px solid #555555;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  .sidenav .mobile-account-container a {
+    color: #E83671;
+    font-size: 20px;
+  }
+
+  .sidenav .mobile-account-container .line {
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  .sidenav .mobile-info-container a {
+    font-size: 20px;
+  }
+
+  /*</homeMenu>*/
+
+  /*<MESSAGE SECTION>*/
+  .text-message{
+    padding: 0px;
+    line-height: 2em;
+    font-size: 16px;
+  }
+
+  .image-message{
+    width: 50%;
+  }
+
+  .btn-call-action{
+    width: auto;
+    font-size: 14px;
+  }
+  /*<MESSAGE SECTION>*/
 }
 
-.promotion {
-  width: auto;
-  margin:0;
-  padding: 0;
-  height: 300px;
-  background-color: #F3F9EF;
-  align-items: center;
-}
+@media only screen and ( min-width: 769px ) {
+  .logo_fiorella {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: auto;
+    opacity: 1;
+  }
 
-.footer {
-  width: auto;
-  margin:0;
-  padding: 0;
-  height: 300px;
-  background-color: #FFFFFF;
-  align-items: center;
+  .header {
+    background-image: url("../images/home/header_background.jpg");
+  	background-repeat: no-repeat;
+  	background-size: 100%;
+  	height: 700px;
+  	margin:0;
+  	width: auto;
+  }
+
+  .upper-row {
+    background-color: #F3F9EF;
+  	height: 300px;
+  	opacity: 0.85;
+  	width: auto;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  /*<SearchBar> */
+  .burger-menu {
+    display: none;
+  }
+
+  .mobile-search-container {
+    display: none;
+  }
+
+  .topnav {
+    background-color: #F3F9EF;
+		border-bottom: 1px solid red;
+		margin-left: 40px;
+		margin-right: 40px;
+		overflow: hidden;
+		vertical-align: middle;
+  }
+
+  .topnav .account-container {
+    margin-right: 150px;
+  }
+
+  .topnav div a {
+    font-family: "MerriweatherSans-Light";
+    font-size: 17px;
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .topnav a:hover {
+    background-color: #F3F9EF;
+    color: black;
+  }
+
+  .topnav .search-container {
+    display: flex;
+    float: left;
+  }
+
+  .topnav input[type=text] {
+    background-color: #F3F9EF;
+    border: none;
+    color: black;
+    color: green;
+    font-family: "MerriweatherSans-Light";
+    font-size: 17px;
+    margin-top: 8px;
+    padding: 6px;
+  }
+
+  .topnav .search-container img {
+    height: 20px;
+    margin-right: 15px;
+    padding-top: 13px;
+    width: 20px;
+  }
+
+  .topnav .icon-bag-container {
+    display: flex;
+    float: right;
+    margin-top: 6px;
+  }
+
+  .topnav .icon-bag-container .dot {
+    align-items: center;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    margin-right: 4px;
+    width: 35px;
+  }
+
+  .topnav .icon-bag-container .dot span {
+    color: white;
+    font-family: "MerriweatherSans-Light";
+    font-size: 20px;
+  }
+
+  .topnav .icon-bag-container img {
+    height: 35px;
+    width: 35px;
+  }
+  /*</SearchBar> */
 }
 @media only screen and ( max-width: 700px ) {
   .text-message{
