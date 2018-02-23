@@ -1,0 +1,25 @@
+.producto{
+  width: 100%;
+  height: 100%;
+}
+#oso{
+  width: 100%;
+  height: 100%;
+}
+
+.info{
+  width: 100%;
+  display:block;
+  text-align: center;
+}
+
+.contenedoradd{
+  display: flex;
+  width: 100%;
+}
+.add{
+  width: 95%;
+  background-color: blue;
+  text-align: center;
+  justify-content: center;
+}
