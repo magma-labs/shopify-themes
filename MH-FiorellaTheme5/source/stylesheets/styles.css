@@ -52,27 +52,27 @@ h2.title {
 }
 
 h2.title:before {
-	border-top: solid 1px #E83671;
-	content: "";
-	display: block;
-	height: 1px;
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	z-index: 1;
+  border-top: solid 1px #E83671;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 1;
 }
 
 h2.title span {
   background: #F3F9EF;
-	padding: 0 10px;
-	position: relative;
-	z-index: 5;
+  padding: 0 10px;
+  position: relative;
+  z-index: 5;
 }
 
 .text-message{
   font-family: "MerriweatherSans-Light";
   font-size: 22px;
-  line-height: 2em;
+  line-height: 40px;
 }
 
 .btn-call-action{
@@ -260,11 +260,6 @@ h2.title span {
   /*</homeMenu>*/
 
   /*<MESSAGE SECTION>*/
-  .text-message{
-    padding: 0px;
-    line-height: 2em;
-    font-size: 16px;
-  }
 
   .image-message{
     width: 50%;
@@ -289,11 +284,11 @@ h2.title span {
 
   .header {
     background-image: url("../images/home/header_background.jpg");
-  	background-repeat: no-repeat;
-  	background-size: 100%;
-  	height: 700px;
-  	margin:0;
-  	width: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 700px;
+    margin:0;
+    width: auto;
   }
 
   .upper-row {
@@ -318,11 +313,11 @@ h2.title span {
 
   .topnav {
     background-color: #F3F9EF;
-  	border-bottom: 1px solid red;
-  	margin-left: 40px;
-  	margin-right: 40px;
-  	overflow: hidden;
-  	vertical-align: middle;
+    border-bottom: 1px solid red;
+    margin-left: 40px;
+    margin-right: 40px;
+    overflow: hidden;
+    vertical-align: middle;
   }
 
   .topnav .account-container {
