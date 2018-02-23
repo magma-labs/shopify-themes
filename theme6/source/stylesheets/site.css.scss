@@ -12,7 +12,7 @@ li {
   display: inline;
 }
 
-.socialmedia {
+.social-media {
   color: #72808C;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
@@ -54,32 +54,32 @@ li {
   text-align: center;
 }
 
-footer .box-social {
+footer .social-media-box {
   align-content: center;
   width: 350px;
 }
 
-footer .box-social button:hover {
+footer .social-media-box button:hover {
   cursor: pointer;
 }
 
-footer .contenedorsocial {
+footer .social-media-container {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 66%;
 }
 
-footer .contenedorsocial .logo {
+footer .social-media-container .logo {
   margin-left: 96px;
   margin-right: 96px;
 }
 
-footer .box-social p {
+footer .social-media-box p {
   text-align: center;
 }
 
-footer .contenedornews {
+footer .news-container {
   width: 33%;
   display: inline-flex;
 }
@@ -137,38 +137,38 @@ footer .author p {
     margin-right: -20px;
   }
 
-  .contenedorsocial {
+  .social-media-container {
     display: flex;
     margin-left: 50px;
   }
 
-  .box-social {
+  .social-media-box {
     align-content: center;
   }
 
-  .box-social p {
+  .social-media-box p {
     font-size: 14px;
   }
 
-  .boxsocialmedia {
+  .social-media-icon-group {
     width: 95%;
     display: inline-flex;
     justify-content: space-between;
     align-content: center;
   }
 
-  .contenedornews {
+  .news-container {
     margin-top: 5px;
     display: block;
     align-content: center;
     width: 100%;
   }
 
-  .contenedornews p {
+  .news-container p {
     font-size: 15px;
   }
 
-  .contenedornews input {
+  .news-container input {
     height: 40px;
     width: 305px;
     border: 2px solid #D2D2D2;
