@@ -64,9 +64,9 @@ footer .social-media-box button:hover {
 }
 
 footer .social-media-container {
+  align-items: center;
   display: inline-flex;
   justify-content: center;
-  align-items: center;
   width: 66%;
 }
 
@@ -80,26 +80,26 @@ footer .social-media-box p {
 }
 
 footer .news-container {
-  width: 33%;
   display: inline-flex;
+  width: 33%;
 }
 
 footer .newsletter input {
   height: 35px;
-  width: 300px;
   justify-content: center;
+  width: 300px;
 }
 
 footer .information ul li a {
-  height: 22px;
-  width: 192px;
+  align-items: center;
   color: #72808C;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  height: 22px;
   line-height: 21px;
-  text-decoration: none;
-  align-items: center;
   margin-right: 50PX;
+  text-decoration: none;
+  width: 192px;
 }
 
 footer .information ul li {
@@ -151,16 +151,16 @@ footer .author p {
   }
 
   .social-media-icon-group {
-    width: 95%;
+    align-content: center;
     display: inline-flex;
     justify-content: space-between;
-    align-content: center;
+    width: 95%;
   }
 
   .news-container {
-    margin-top: 5px;
-    display: block;
     align-content: center;
+    display: block;
+    margin-top: 5px;
     width: 100%;
   }
 
@@ -169,15 +169,15 @@ footer .author p {
   }
 
   .news-container input {
-    height: 40px;
-    width: 305px;
+    background-color: #FBFBFB;
     border: 2px solid #D2D2D2;
     border-radius: 2px;
-    background-color: #FBFBFB;
+    height: 40px;
+    width: 305px;
   }
 
-  footer .author p{
+  .author p {
+    font-size: 12px;
     margin-top: 35px;
-    font-size: 12px
   }
 }
