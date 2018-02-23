@@ -7,6 +7,16 @@ p {
   text-align: center;
 }
 
+.whiteLogo{
+  content:url("../images/home/wlogo_fiorella_mobil.png");
+  z-index: 10;
+}
+
+.pinkLogo{
+  content:url("../images/home/logo_fiorella_menu.png");
+  z-index: 10;
+}
+
 .category-list {
   align-items: center;
   background-color: #FFFFFF;
@@ -166,6 +176,14 @@ h2.title span {
     /*</SearchBar> */
 
   /*<homeMenu>*/
+  .openSideNav {
+    width: 95%;
+  }
+
+  .closeSideNav {
+    width: 0;
+  }
+
   .sidenav {
     background-color: white;
     height: 100%;
@@ -176,7 +194,6 @@ h2.title span {
     text-align:left;
     top: 0;
     transition: 0.5s;
-    width: 0;
     z-index: 6;
   }
 
