@@ -318,11 +318,11 @@ h2.title span {
 
   .topnav {
     background-color: #F3F9EF;
-		border-bottom: 1px solid red;
-		margin-left: 40px;
-		margin-right: 40px;
-		overflow: hidden;
-		vertical-align: middle;
+  	border-bottom: 1px solid red;
+  	margin-left: 40px;
+  	margin-right: 40px;
+  	overflow: hidden;
+  	vertical-align: middle;
   }
 
   .topnav .account-container {
