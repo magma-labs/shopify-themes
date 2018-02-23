@@ -44,6 +44,28 @@ p {
   width: auto;
 }
 
+.upper-row .navbar-container {
+  width: auto;
+  height: 20px;
+  /*border: solid red;*/
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.upper-row .navbar-container .navbar {
+
+}
+
+.upper-row .navbar-container .navbar a{
+
+}
+
+.upper-row .navbar-container .navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 /*<MESSAGE SECTION>*/
 .body-message {
   background: #F3F9EF;
@@ -96,6 +118,8 @@ h2.title span {
   width: 200px;
 }
 /* </MESSAGE SECTION> */
+
+
 @media only screen and ( max-width: 768px ) {
   /*<SearchBar> */
   .topnav {
