@@ -2,48 +2,47 @@
 
 /*==========Stylesheet DESKTOP========*/
     footer {
-      // position: fixed;
       bottom: 0;
       display: inline;
       width: 100%;
-      border-top: 2px solid grey;
+
     }
 
     .information{justify-content: center;}
 
-    footer li{display: inline;}
+    li{display: inline;}
 
-    footer .socialmedia{
+    .socialmedia{
         color: #72808C;
         font-family:'Montserrat', sans-serif;
         font-size: 18px;
         line-height: 21px;
     }
 
-    footer .sm {
+    .sm {
         height: 35px;
         width: 93px;
         border: 2px solid #72808C;
         border-radius: 3px;
     }
-    footer #fb{
+    #fb{
       background: url("../images/fb.svg");
       background-position: center center;
       background-repeat: no-repeat;
       margin-right: 23px;
     }
-    footer #twt{
+    #twt{
         background: url("../images/twt.svg");
         background-position: center center;
         background-repeat: no-repeat;}
-    footer #g{
+    #g{
         background: url("../images/g+.svg");
         background-position: center center;
         background-repeat: no-repeat;
         margin-left: 23px;
       }
 
-    footer .newsletter {
+    .newsletter {
       color: #72808C;
       font-family: 'Montserrat', sans-serif;
       font-size: 18px;
@@ -120,35 +119,36 @@
     }
 /*=============Stylesheet MOBILE==========*/
     @media screen and(max-width:320px) {
-      footer .information{display: none;}
-      footer .contenedorsocial .logo{display:none;}
-      footer #twt{
+
+      .information{display: none;}
+      .logo{display:none;}
+      #twt{
         margin-left:-20px;
         margin-right: -20px;}
 
-      footer.contenedorsocial{
-         width: 100;
+        .contenedorsocial{
+
           display:flex;
         margin-left: 50px;}
-      footer .box-social{align-content:center;}
-      footer .box-social p{font-size: 14px}
-      footer  .boxsocialmedia{
+        .box-social{align-content:center;}
+        .box-social p{font-size: 14px}
+        .boxsocialmedia{
           width: 95%;
           display:inline-flex;
           justify-content:space-between;
           align-content:center;
         }
 
-      footer.contenedornews{
+        .contenedornews{
           margin-top: 5px;
           display:block;
           align-content: center;
           width: 100%;
         }
-      footer .contenedornews p{
+        .contenedornews p{
           font-size: 15px;
         }
-      footer .contenedornews input{
+        .contenedornews input{
           height: 40px;
           width: 305px;
           border: 2px solid #D2D2D2;
