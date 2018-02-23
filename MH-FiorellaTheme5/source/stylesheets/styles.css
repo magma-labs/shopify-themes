@@ -43,8 +43,8 @@ p {
 
 h2 {
   letter-spacing: 3px;
-	margin-top: 20px;
-	position: relative;
+  margin-top: 20px;
+  position: relative;
 }
 
 h2.title {
@@ -168,16 +168,16 @@ h2.title span {
   /*<homeMenu>*/
   .sidenav {
     background-color: white;
-		height: 100%;
-		left: 0;
-		overflow-x: hidden;
-		padding-top: 60px;
-		position: fixed;
-		text-align:left;
-		top: 0;
-		transition: 0.5s;
-		width: 0;
-		z-index: 6;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    position: fixed;
+    text-align:left;
+    top: 0;
+    transition: 0.5s;
+    width: 0;
+    z-index: 6;
   }
 
   .sidenav a {
@@ -293,9 +293,9 @@ h2.title span {
 
   .upper-row {
     background-color: #F3F9EF;
-  	height: 300px;
-  	opacity: 0.85;
-  	width: auto;
+    height: 300px;
+    opacity: 0.85;
+    width: auto;
   }
 
   .sidenav {
