@@ -305,16 +305,14 @@ h2.title span {
     justify-content: center;
     width: auto;
     height: 30px;
-    border: solid red;
     margin-top: 40px;
   }
 
   .upper-row .navbar-container .navbar {
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    width: 100%;
     height: auto;
-    border: solid blue;
   }
 
   .upper-row .navbar-container .navbar nav ul{
@@ -334,8 +332,8 @@ h2.title span {
     text-decoration: none;
      /* space between links */
     width: auto;   /* adjust width as needed or use auto */
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 28px;
+    padding-left: 28px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: "PlayfairDisplay";
