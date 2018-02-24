@@ -3,21 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <%= stylesheet_link_tag "styles" %>
+    <%= stylesheet_link_tag "slick" %>
+    <%= stylesheet_link_tag "slick-theme" %>
+    
   </head>
   <body>
     <div class="container">
       <header class="header" >
-
-        <div class="upper-row">
-        </div>
-
+<!--
+        <div class="upper-row"></div>
         <img src="../images/home/logo_fiorella.png" alt="fiorella" id="logo_fiorella">
+-->
+      <section class="slider">
+        <div class="img-item">
+          <img class="img1" src="/images/home/hero1homemobil.jpg" alt="">
+          <p class="msg">Check out the new arrangements.</p>
+          <button class="btn-slider">SHOP NOW</button>
+        </div>
+        <div class="img-item">
+          <img class="img2" src="/images/home/hero1homemobil.jpg" alt="">
+          <p class="msg">Check out the new arrangements.</p>
+          <button class="btn-slider">SHOP NOW</button>
+        </div>
+      </section>
+        
       </header>
 
       <section class="body-message">
@@ -82,5 +96,8 @@
       <%= yield %>
       -->
     </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <%= javascript_include_tag "slick" %>
+    <%= javascript_include_tag "site" %>
   </body>
 </html>

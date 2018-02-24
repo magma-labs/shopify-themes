@@ -3,37 +3,49 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
 p {
   text-align: center;
 }
-
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: auto;
-  margin:0;
-  height: 700px;
-  background-image: url("../images/home/header_background.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  width: 100%;
 }
-
 .upper-row {
   background-color: #F3F9EF;
   opacity: 0.5;
   height: 50px;
   width: auto;
 }
-
+/* Buttons */
+.btn-slider,.btn-call-action{
+  font-family: 'PlayfairDisplay-Bold';
+  background: transparent;
+  color: #E83671;
+  border: 2px solid #E83671;
+  font-weight: bold;
+}
+/* end buttos */
+/* slider */
+.img-item{
+   position: relative;
+   text-align: right;
+}
+.img-item img{
+  width: 100%;
+  height: auto;
+}
+.msg{
+  letter-spacing: 1px;
+}
+.slick-next .slick-arrow{
+  display: none;
+}
+/* end slider */
 /* body message */
 .body-message {
   text-align: center; 
   background: #F3F9EF;
   padding: 40px 20px;
 }
-/*title-message*/
 .title-message{
   overflow: hidden;
   text-align: center;
@@ -55,22 +67,11 @@ p {
   left: 0.5em;
   margin-right: -50%;
 }
-
 .text-message{
   font-family: "MerriweatherSans-Light";
   line-height: 32px;
   font-size: 22px;
 
-}
-.btn-call-action{
-  font-family: 'PlayfairDisplay-Bold';
-  width: 200px;
-  padding: 10px 30px;
-  font-size: 20px;
-  background: transparent;
-  color: #E83671;
-  border: 3px solid #E83671;
-  font-weight: bold;
 }
 /*end body-message*/
 .category-list {
@@ -170,6 +171,41 @@ p {
 }
 /* end footer*/
 @media only screen and ( max-width: 768px ) {
+  .btn-slider,.btn-call-action{
+    width: 175px;
+    height: 40px;
+    font-size: 16px;
+  }
+  /*body message*/
+  .image-message{
+    width: 50%;
+  }
+  /* end message*/
+  /* slider */
+  .slick-dots {
+      top: 0px;
+  }
+  .slick-dotted.slick-slider{
+    margin-bottom: 0px;
+  }
+  .slick-dots li button:before{
+    font-size: 30px;
+  }
+  .msg{
+    width: 150px;
+    font-family: 'PlayfairDisplay-BoldItalic';
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    bottom: 100px;
+    font-size: 16px;
+  }
+  .btn-slider{
+    position: absolute;
+    right: 15px;
+    bottom: 50px;
+  }
+  /* end slider*/
   /* footer */
   .footer_fiorella,.footer_info,.footer_contact{
     display: none;
@@ -177,6 +213,44 @@ p {
   /* end footer */
 }
 @media only screen and ( min-width: 769px ) and ( max-width: 1023px ){
+  .btn-slider,.btn-call-action{
+    width: 288px;
+    height: 64px;
+    font-size: 28px;
+  }
+  /* slider */
+  .img1{
+    content:url("../images/home/hero1hometablet.jpg");
+  }
+  .img2{
+    content:url("../images/home/hero1hometablet.jpg");
+  }
+  .slick-dots {
+    bottom: 10px;
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 0px;
+  }
+  .slick-dots li button:before
+  {
+    font-size: 50px;
+  }
+  .msg{
+    font-family: 'PlayfairDisplay-BoldItalic';
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    bottom: 110px;
+    font-size: 20px;
+  }
+  .btn-slider{
+    position: absolute;
+    right: 15px;
+    padding: 10 60px;
+    font-size: 24px;
+    bottom: 50px;
+  }
+  /* end slider*/
   /* footer */
   .footer_fiorella,.footer_info,.footer_contact{
     display: block;
@@ -195,6 +269,45 @@ p {
   /*end footer*/
 }
 @media only screen and ( min-width: 1024px ){
+  .btn-slider,.btn-call-action{
+    width: 325px;
+    height: 73px;
+    font-size: 28px;
+  }
+  /* slider */
+  .img1{
+    content:url("../images/home/hero1home1280.jpg");
+  }
+  .img2{
+    content:url("../images/home/hero1home1280.jpg");
+  }
+  .slick-dots {
+    bottom: 10px;
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 0px;
+  }
+    .slick-dots li button:before
+  {
+    font-size: 50px;
+  }
+  .msg{
+    font-family: 'PlayfairDisplay-BoldItalic';
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    bottom: 110px;
+    font-size: 32px;
+  }
+  .btn-slider{
+    position: absolute;
+    width: 300px;
+    right: 15px;
+    padding: 10 60px;
+    font-size: 24px;
+    bottom: 50px;
+  }
+  /* end slider*/
   /* footer */
   .box-footer{
     display: flex;
