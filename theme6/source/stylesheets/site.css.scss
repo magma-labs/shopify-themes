@@ -1,159 +1,169 @@
+footer {
+  bottom: 0;
+  display: inline;
+  width: 100%;
+}
 
+.information {
+  display: inline-block;
+  justify-content: center;
+  margin-top: 2%;
+  text-align: center;
+  width: 100%;
+}
 
-/*==========Stylesheet DESKTOP========*/
-    footer {
-      bottom: 0;
-      display: inline;
-      width: 100%;
-      
-    }
+li {
+  display: inline;
+}
 
-    .information{justify-content: center;}
+.social-media {
+  color: #72808C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+}
 
-    li{display: inline;}
+.sm {
+  border: 2px solid #72808c;
+  border-radius: 3px;
+  height: 35px;
+  width: 93px;
+}
 
-    .socialmedia{
-        color: #72808C;
-        font-family:'Montserrat', sans-serif;
-        font-size: 18px;
-        line-height: 21px;
-    }
+.fb {
+  background: url("../images/fb.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 23px;
+}
 
-    .sm {
-        height: 35px;
-        width: 93px;
-        border: 2px solid #72808C;
-        border-radius: 3px;
-    }
-    #fb{
-      background: url("../images/fb.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-      margin-right: 23px;
-    }
-    #twt{
-        background: url("../images/twt.svg");
-        background-position: center center;
-        background-repeat: no-repeat;}
-    #g{
-        background: url("../images/g+.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        margin-left: 23px;
-      }
+.twt {
+  background: url("../images/twt.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
-    .newsletter {
-      color: #72808C;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 18px;
-      line-height: 21px;
-      text-align: center;
-    }
+.g {
+  background: url("../images/g+.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-left: 23px;
+}
 
-    footer .box-social {
-      align-content: center;
-      width: 350px;
-    }
+.newsletter {
+  color: #72808c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  height: 35px;
+  justify-content: center;
+  line-height: 21px;
+  text-align: center;
+  width: 300px;
+}
 
-    footer .box-social button:hover {
-      cursor: pointer;
-    }
+.social-media-box {
+  align-content: center;
+  text-align: center;
+  width: 350px;
+}
 
-    footer .contenedorsocial {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 66%;
-    }
+.social-media-icon-group button {
+  cursor: pointer;
+}
 
-    footer .contenedorsocial .logo {
-      margin-left: 96px;
-      margin-right: 96px;
-    }
+.social-media-container {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  width: 66%;
+}
 
-    footer .box-social p{
-      text-align: center;
-    }
-    footer .contenedornews{
-      width: 33%;
-      display: inline-flex;
-    }
-    footer .newsletter input {
-      height: 35px;
-      width:300px;
-      justify-content: center;
-    }
+.logo {
+  margin-left: 96px;
+  margin-right: 96px;
+}
 
-    footer .information ul li a{
-      height: 22px;
-      width: 192px;
-      color: #72808C;
-      font-family:'Montserrat', sans-serif;
-      font-size: 18px;
-      line-height: 21px;
-      text-decoration: none;
-      align-items: center;
-      margin-right: 50;
+.news-container {
+  display: inline-flex;
+  width: 33%;
+}
 
-    }
+.information a {
+  align-items: center;
+  color: #72808C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  height: 22px;
+  line-height: 21px;
+  margin-right: 50PX;
+  text-decoration: none;
+  width: 192px;
+}
 
-    footer .information ul li{
-      display: inline-block;
-    }
-    footer .information ul{
-      margin-top: 2%;
-      text-align: center;
-    }
+.author {
+  color: #72808c;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+}
 
-    footer .author {
-      display:block;
-      text-align: center;
-    }
+@media screen and (max-width: 320px) {
+  .information {
+    display: none;
+  }
 
-    footer .author p {
-      color: #72808C;
-      font-family:'Montserrat', sans-serif;
-      font-size: 16px;
-      line-height: 18px;
-    }
-/*=============Stylesheet MOBILE==========*/
-    @media screen and(max-width:320px) {
-      .information{display: none;}
-      .logo{display:none;}
-      #twt{
-        margin-left:-20px;
-        margin-right: -20px;}
+  .logo {
+    display: none;
+  }
 
-        .contenedorsocial{
-          display:flex;
-        margin-left: 50px;}
-        .box-social{align-content:center;}
-        .box-social p{font-size: 14px}
-        .boxsocialmedia{
-          width: 95%;
-          display:inline-flex;
-          justify-content:space-between;
-          align-content:center;
-        }
+  #twt {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 
-        .contenedornews{
-          margin-top: 5px;
-          display:block;
-          align-content: center;
-          width: 100%;
-        }
-        .contenedornews p{
-          font-size: 15px;
-        }
-        .contenedornews input{
-          height: 40px;
-          width: 305px;
-          border: 2px solid #D2D2D2;
-          border-radius: 2px;
-          background-color: #FBFBFB;
-        }
-        footer .author p{
-          margin-top: 35px;
-          font-size: 12px
-        }
-    }
+  .social-media-container {
+    display: flex;
+    margin-left: 50px;
+  }
+
+  .social-media-box {
+    align-content: center;
+  }
+
+  .social-media-box p {
+    font-size: 14px;
+  }
+
+  .social-media-icon-group {
+    align-content: center;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  .news-container {
+    align-content: center;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .news-container p {
+    font-size: 15px;
+  }
+
+  .news-container input {
+    background-color: #fbfbfb;
+    border: 2px solid #d2d2d2;
+    border-radius: 2px;
+    height: 40px;
+    width: 305px;
+  }
+
+  .author p {
+    font-size: 12px;
+    margin-top: 35px;
+  }
+}
