@@ -29,14 +29,13 @@ p {
 
 /* body message */
 .body-message {
-  text-align: center; 
+  text-align: center;
   background: #F3F9EF;
   padding: 40px 20px;
 }
 /*title-message*/
 .title-message{
   overflow: hidden;
-  text-align: center;
 }
 .title-message:before,.title-message:after {
   background-color: #E83671;
