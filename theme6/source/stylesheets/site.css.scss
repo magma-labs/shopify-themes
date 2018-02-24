@@ -5,7 +5,11 @@ footer {
 }
 
 .information {
+  display: inline-block;
   justify-content: center;
+  margin-top: 2%;
+  text-align: center;
+  width: 100%;
 }
 
 li {
@@ -26,20 +30,20 @@ li {
   width: 93px;
 }
 
-#fb {
+.fb {
   background: url("../images/fb.svg");
   background-position: center center;
   background-repeat: no-repeat;
   margin-right: 23px;
 }
 
-#twt {
+.twt {
   background: url("../images/twt.svg");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-#g {
+.g {
   background: url("../images/g+.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -50,16 +54,20 @@ li {
   color: #72808C;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  height: 35px;
+  justify-content: center;
   line-height: 21px;
   text-align: center;
+  width: 300px;
 }
 
 .social-media-box {
   align-content: center;
+  text-align: center;
   width: 350px;
 }
 
-.social-media-box button:hover {
+.social-media-box button {
   cursor: pointer;
 }
 
@@ -75,19 +83,9 @@ li {
   margin-right: 96px;
 }
 
-.social-media-box p {
-  text-align: center;
-}
-
 .news-container {
   display: inline-flex;
   width: 33%;
-}
-
-.newsletter input {
-  height: 35px;
-  justify-content: center;
-  width: 300px;
 }
 
 .information a {
@@ -102,25 +100,13 @@ li {
   width: 192px;
 }
 
-.information li {
-  display: inline-block;
-}
-
-.information ul {
-  margin-top: 2%;
-  text-align: center;
-}
-
 .author {
-  display: block;
-  text-align: center;
-}
-
-.author p {
   color: #72808C;
+  display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 18px;
+  text-align: center;
 }
 
 @media screen and (max-width: 320px) {
