@@ -1,3 +1,4 @@
+@import url('/stylesheets/fonts.css');
 html, body {
   margin: 0;
   padding: 0;
@@ -25,41 +26,36 @@ p {
   height: 50px;
   width: auto;
 }
-/*<MESSAGE SECTION>*/
 .body-message {
-  text-align: center; 
+  text-align: center;
   background: #F3F9EF;
   padding: 40px 20px;
 }
-h2 {
-  letter-spacing: 3px;
-  position: relative;
-  margin-top: 20px;
+/*title-message*/
+.title-message{
+  overflow: hidden;
 }
-
-h2.title {
-  margin-top: 0;
-}
-h2.title:before {
+.title-message:before,.title-message:after {
+  background-color: #E83671;
   content: "";
-  display: block;
-  border-top: solid 1px #E83671;
-  width: 100%;
+  display: inline-block;
   height: 1px;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+.title-message:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+.title-message:after {
+  left: 0.5em;
+  margin-right: -50%;
 }
 
-h2.title span {
-  background: #F3F9EF;
-  padding: 0 10px;
-  position: relative;
-  z-index: 5;
-}
 .text-message{
   font-family: "MerriweatherSans-Light";
-  line-height: 2em;
+  line-height: 32px;
   font-size: 22px;
 
 }
@@ -73,7 +69,7 @@ h2.title span {
   border: 3px solid #E83671;
   font-weight: bold;
 }
-/* </MESSAGE SECTION> */
+
 .category-list {
   width: auto;
   margin:0;
@@ -82,7 +78,6 @@ h2.title span {
   background-color: #FFFFFF;
   align-items: center;
 }
-
 .promotion {
   width: auto;
   margin:0;
@@ -91,26 +86,121 @@ h2.title span {
   background-color: #F3F9EF;
   align-items: center;
 }
-
-.footer {
-  width: auto;
-  margin:0;
-  padding: 0;
-  height: 300px;
-  background-color: #FFFFFF;
-  align-items: center;
+/* footer */
+.footer{
+  padding: 15px 10px;
 }
-@media only screen and ( max-width: 700px ) {
-  .text-message{
-    padding: 0px;
-    line-height: 2em;
-    font-size: 16px;
+.social-media{
+  border: 2px solid #E83671;
+  text-align: center;
+}
+.box-footer-item{
+  text-align: center;
+}
+.ul-footer{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.ul-footer li a {
+  font-family: "MerriweatherSans-Regular";
+  text-decoration:none;
+  display: block;
+  margin: 10px;
+  color: #000;
+}
+.ul-footer li a:hover{
+  color: #E83671;
+  font-weight: bold;
+}
+.ul-social{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.title-footer{
+  color: #E83671;
+  text-align: center;
+  font-family: "PlayfairDisplay-Bold";
+}
+.social-media li{
+  float: left;
+}
+.social-media li a {
+  display: block;
+  margin: 10px;
+}
+.icon_facebook, .icon_pinterest,.icon_gplus{
+  width: 40px;
+  height: 40px;
+}
+.icon_facebook{
+  background-image: url('../images/home/icon_facebook.png');
+  background-size: 40px;
+  background-repeat: no-repeat;
+}
+.icon_pinterest{
+  background-image: url('../images/home/icon_pinterest.png');
+  background-size: 40px;
+  background-repeat: no-repeat;
+}
+.icon_gplus{
+  background-image: url('../images/home/icon_gplus.png');
+  background-size: 40px;
+  background-repeat: no-repeat;
+}
+.icon_facebook:hover{
+  background-image: url('../images/home/bicon_facebook.png');
+  background-size: 40px;
+}
+.icon_pinterest:hover{
+  background-image: url('../images/home/bicon_pinterest.png');
+  background-size: 40px;
+}
+.icon_gplus:hover{
+  background-image: url('../images/home/bicon_gplus.png');
+  background-size: 40px;
+}
+/* end footer*/
+@media only screen and ( max-width: 768px ) {
+  /* footer */
+  .footer_fiorella,.footer_info,.footer_contact{
+    display: none;
   }
-  .image-message{
-    width: 50%;
+  /* end footer */
+}
+@media only screen and ( min-width: 769px ) and ( max-width: 1023px ){
+  /* footer */
+  .footer_fiorella,.footer_info,.footer_contact{
+    display: block;
   }
-  .btn-call-action{
-    width: auto;
-    font-size: 14px;
+  .box-footer{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #E83671;
   }
+  .social-media{
+    border: 0px;
+  }
+  .ul-social li{
+    text-align: center;
+  }
+  /*end footer*/
+}
+@media only screen and ( min-width: 1024px ){
+  /* footer */
+  .box-footer{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #E83671;
+    padding-bottom: 20px;
+  }
+  .social-media{
+    border: 0px;
+  }
+  /*end footer*/
 }
