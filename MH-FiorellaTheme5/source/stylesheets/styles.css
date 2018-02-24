@@ -44,27 +44,7 @@ p {
   width: auto;
 }
 
-.upper-row .navbar-container {
-  width: auto;
-  height: 20px;
-  /*border: solid red;*/
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
 
-.upper-row .navbar-container .navbar {
-
-}
-
-.upper-row .navbar-container .navbar a{
-
-}
-
-.upper-row .navbar-container .navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
 
 /*<MESSAGE SECTION>*/
 .body-message {
@@ -124,6 +104,10 @@ h2.title span {
   /*<SearchBar> */
   .topnav {
     height: 90px;
+  }
+
+  .upper-row .navbar-container {
+    display: none;
   }
 
   .logo_fiorella {
@@ -314,6 +298,66 @@ h2.title span {
 }
 
 @media only screen and ( min-width: 769px ) {
+  /*********************************************************/
+
+  .upper-row .navbar-container {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 30px;
+    border: solid red;
+    margin-top: 40px;
+  }
+
+  .upper-row .navbar-container .navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: auto;
+    border: solid blue;
+  }
+
+  .upper-row .navbar-container .navbar nav ul{
+    margin: 0;
+    padding: 0
+  }
+
+  .upper-row .navbar-container .navbar nav li {
+    list-style: none;
+    font-size: 12px;
+    float: left;
+    text-align: center;
+  }
+
+  .upper-row .navbar-container .navbar nav li a {
+    display: block;
+    text-decoration: none;
+     /* space between links */
+    width: auto;   /* adjust width as needed or use auto */
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "PlayfairDisplay";
+    font-size: 20px;
+    line-height: 8px;
+    color: #555555;
+    border-right: 1px solid #E83671;
+  }
+
+  .upper-row .navbar-container .navbar nav li:last-child a{
+    border:none;
+  }
+
+
+  .upper-row .navbar-container .navbar a:hover {
+    color: #E83671;
+  }
+
+
+  /*********************************************************/
+
+
   .logo_fiorella {
     display: flex;
     justify-content: center;
