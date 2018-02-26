@@ -184,8 +184,8 @@
     flex: 2;
     display: flex;
     background-image: url("../images/banner1.png");
-    background-size: contain;
-    background-position: left;
+    background-size: cover;
+    background-position: left top;
     justify-content: flex-end;
     height: 400px;
     margin-right: 20px;
@@ -194,9 +194,8 @@
   .big-banner-content {
     display: flex;
     background: linear-gradient(270deg,
-      rgba(251,239,227),
-      rgba(251,239,227, 1) 20%,
-      rgba(251,239,227, 1) 60%,
+      rgb(251,239,227),
+      rgba(251,239,227, 1) 80%,
       rgba(251,239,227, 0));
     flex-direction: column;
     justify-content: center;
@@ -232,48 +231,58 @@
 
   .mid-banner {
     flex: 1;
-    background-size: 60%;
-    background-position: right;
     justify-content: flex-end;
     height: 200px;
   }
 
   .mid-banner-content {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 200px;
+    width: 50%;
   }
 
   .mid-banner-content button {
-    width: 90%;
+    width: 100%;
   }
 
   .mid-banner-content p {
     font-size: 13px;
   }
 
+  .mid-banner-saylor {
+    background: url("../images/mid_banner1.png") 100px 0px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 400px 300px;
+  }
+
   .mid-banner-saylor .mid-banner-content {
     background: linear-gradient(90deg,
-      rgba(239, 239, 239),
-      rgba(239, 239, 239, 1) 20%,
-      rgba(239, 239, 239, 1) 85%,
+      rgb(239, 239, 239),
+      rgb(239, 239, 239) 50%,
+      rgb(239, 239, 239) 90%,
       rgba(239, 239, 239, 0));
+  }
+
+  .mid-banner-archeologist {
+    background: url("../images/mid_banner2.png") 100px 0px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 400px 300px;
+    margin-left: 20px;
   }
 
   .mid-banner-archeologist .mid-banner-content {
     background: linear-gradient(90deg,
-      rgba(189, 152, 107),
-      rgba(189, 152, 107, 1) 20%,
-      rgba(189, 152, 107, 1) 85%,
+      rgb(189, 152, 107),
+      rgb(189, 152, 107) 50%,
+      rgb(189, 152, 107) 90%,
       rgba(189, 152, 107, 0));
   }
-
-  .mid-banner-archeologist {
-    margin-left: 20px;
-  }
-
 
 }
