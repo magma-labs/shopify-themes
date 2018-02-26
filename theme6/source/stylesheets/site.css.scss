@@ -6,7 +6,7 @@
       bottom: 0;
       display: inline;
       width: 100%;
-      
+
     }
 
     .information{justify-content: center;}
@@ -119,31 +119,40 @@
     }
 /*=============Stylesheet MOBILE==========*/
     @media screen and(max-width:320px) {
-      .information{display: none;}
-      .logo{display:none;}
+      .information {
+        display: none;
+      }
+      .logo {
+        display:none;
+      }
       #twt{
         margin-left:-20px;
         margin-right: -20px;}
 
-        .contenedorsocial{
+        .contenedorsocial {
           display:flex;
-        margin-left: 50px;}
-        .box-social{align-content:center;}
-        .box-social p{font-size: 14px}
-        .boxsocialmedia{
+          margin-left: 50px;
+      }
+        .box-social {
+          align-content:center;
+        }
+        .box-social p {
+          font-size: 14px
+        }
+        .boxsocialmedia {
           width: 95%;
           display:inline-flex;
           justify-content:space-between;
           align-content:center;
         }
 
-        .contenedornews{
+        .contenedornews {
           margin-top: 5px;
           display:block;
           align-content: center;
           width: 100%;
         }
-        .contenedornews p{
+        .contenedornews p {
           font-size: 15px;
         }
         .contenedornews input{
@@ -155,6 +164,6 @@
         }
         footer .author p{
           margin-top: 35px;
-          font-size: 12px
+          font-size: 12px;
         }
     }
