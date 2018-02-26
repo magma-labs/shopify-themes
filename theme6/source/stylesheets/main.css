@@ -11,7 +11,7 @@
 
 .big-banner-content {
   background: linear-gradient(0deg,
-    rgba(251,239,227),
+    rgb(251,239,227),
     rgba(251,239,227, 1) 20%,
     rgba(251,239,227, 0.2) 50%,
     rgba(251,239,227, 0.1));
@@ -174,7 +174,7 @@
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
   .flex-grid {
     display: flex;
     margin-bottom: 20px;
@@ -207,18 +207,18 @@
   .big-banner-content p {
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 20px;
     margin-bottom: 30px;
   }
 
   .big-banner-content h1 {
-    font-size: 32px;
+    font-size: 25px;
   }
 
   .big-banner-content button {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .small-banner {
@@ -227,6 +227,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .small-banner h2 {
+    font-size: 70px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .small-banner h3 {
+    width: 100%;
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: center;
   }
 
   .mid-banner {
@@ -284,5 +297,130 @@
       rgb(189, 152, 107) 90%,
       rgba(189, 152, 107, 0));
   }
+}
 
+@media only screen and (min-width: 1280px) {
+
+  .flex-grid {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .big-banner {
+    flex: 2;
+    display: flex;
+    background-image: url("../images/banner1.png");
+    background-size: cover;
+    background-position: left top;
+    justify-content: flex-end;
+    height: 400px;
+    margin-right: 20px;
+  }
+
+  .big-banner-content {
+    display: flex;
+    background: linear-gradient(270deg,
+      rgb(251,239,227),
+      rgba(251,239,227, 1) 80%,
+      rgba(251,239,227, 0));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 50%;
+  }
+
+  .big-banner-content p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .big-banner-content h1 {
+    font-size: 32px;
+  }
+
+  .big-banner-content button {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .small-banner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .small-banner h2 {
+    font-size: 70px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .small-banner h3 {
+    width: 100%;
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .mid-banner {
+    flex: 1;
+    justify-content: flex-end;
+    height: 200px;
+  }
+
+  .mid-banner-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 200px;
+    width: 50%;
+  }
+
+  .mid-banner-content button {
+    width: 100%;
+  }
+
+  .mid-banner-content p {
+    font-size: 13px;
+  }
+
+  .mid-banner-saylor {
+    background: url("../images/mid_banner1.png") 100px 0px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 400px 300px;
+  }
+
+  .mid-banner-saylor .mid-banner-content {
+    background: linear-gradient(90deg,
+      rgb(239, 239, 239),
+      rgb(239, 239, 239) 50%,
+      rgb(239, 239, 239) 90%,
+      rgba(239, 239, 239, 0));
+  }
+
+  .mid-banner-archeologist {
+    background: url("../images/mid_banner2.png") 100px 0px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 400px 300px;
+    margin-left: 20px;
+  }
+
+  .mid-banner-archeologist .mid-banner-content {
+    background: linear-gradient(90deg,
+      rgb(189, 152, 107),
+      rgb(189, 152, 107) 50%,
+      rgb(189, 152, 107) 90%,
+      rgba(189, 152, 107, 0));
+  }
 }
