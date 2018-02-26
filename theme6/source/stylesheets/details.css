@@ -25,7 +25,7 @@
 .box-product {
   display: flex;
   width: 100%;
-  height: 300px;
+  height: 300upx;
 }
 
 .box-product .product {
@@ -145,11 +145,28 @@
     display: inline-flex;
     justify-content:flex-end;
     width: 100%;
+
+  }
+
+  .front-label{
+      display: flex;
+      position: absolute;
+      justify-content: flex-end;
+      width: 100%;
+  }
+
+  .front-label p {
+    background-color: #ABC828;
+    padding: 5px 25px 5px 25px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #FFFFFF;
   }
 
   .box-product {
       width: 550px;
       height: 550px;
+      position: relative;
   }
 
   .box-product .product {
@@ -157,15 +174,7 @@
     width: 100%;
     height: 100%;
   }
-
-  .product {
-    display:flex;
-    justify-content: flex-star;
-    align-content: flex-start;
-    width: 90%;
-    object-fit: contain
-  }
-
+  
   .box-micro {
     display: inline-flex;
     flex-direction: column;
