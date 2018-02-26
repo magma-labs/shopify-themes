@@ -4,8 +4,10 @@
 
 .shipping {display: none;}
 
-.superproduct{
-  display:flex;
+ .front-label {display: none;}
+
+.super-product{
+  display:block;
   justify-content: center;
 }
 
@@ -17,11 +19,20 @@
 .box-micro .view {
   width: 60px;
   height: 60px;
+  object-fit: contain;
 }
 
-.product {
-  width: 300px;
+.box-product {
+  display: flex;
+  width: 100%;
   height: 300px;
+}
+
+.box-product .product {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .info{
@@ -56,20 +67,20 @@
   font-family: 'Lato';
 }
 
-.contenedoradd{
+.contenedor-add{
   width: 100%;
   background-color: #4A90E2;
   border-radius: 3px;
 }
 
-.contenedoradd .add{
+.contenedor-add .add{
   display: inline-flex;
   width: 95%;
   align-items: center;
   justify-content: center;
   height: 40px;
 }
-.contenedoradd .add p{
+.contenedor-add .add p{
   color: #FFFFFF;
   font-size: 18px;
   font-family:"Oswald";
@@ -84,14 +95,14 @@
 
 .description .review{font-family:'Oswald';}
 
-.showless{
+.show-less{
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-.showless  p{
+.show-less  p{
   display: inline-block;
   width: 50%;
   text-decoration: none;
@@ -99,7 +110,7 @@
   font-family: 'Oswald';
 }
 
-.showless img{
+.show-less img{
   display: inline-flex;
   margin-left: 6px;
   align-self: flex-end;
@@ -112,8 +123,9 @@
   .a {display: flex;}
 
   .half-left {
-    width: 50%;
+    width: 45%;
     display: inline-block;
+    margin-right:1px;
   }
 
   .next {
@@ -121,25 +133,45 @@
     color:#654AED;
     text-decoration: none;
     height: 10px;
+    font-family: 'Lato';
   }
 
-  .history .selection {color: #000000;}
+  .history .selection {
+    color: #000000;
+    font-family: 'Lato';
+  }
 
-  .superproduct {
-    display: inline-block;
-    width: 80%;
+  .super-product {
+    display: inline-flex;
+    justify-content:flex-end;
+    width: 100%;
+  }
+
+  .box-product {
+      width: 550px;
+      height: 550px;
+  }
+
+  .box-product .product {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 
   .product {
-    display: inline-block;
-    width: 500px;
-    height: 500px;
+    display:flex;
+    justify-content: flex-star;
+    align-content: flex-start;
+    width: 90%;
+    object-fit: contain
   }
 
   .box-micro {
     display: inline-flex;
     flex-direction: column;
-    transform: translateY(-400px);
+    margin-right: 10px;
+    margin-top: 47px;
+    justify-content:flex-start;
   }
 
   .view {
@@ -148,11 +180,12 @@
   }
 
   .half-right {
-    width:50%;
+    width:55%;
     display: block;
+    transform: translateY(15px);
   }
 
-  .superinfo{display: flex;}
+  .superinfo {display: flex;}
 
   .info {
     margin-top: 70px;
@@ -181,13 +214,13 @@
 
   .box-quantity select {width: 65px;}
 
-  .contenedoradd {
+  .contenedor-add {
     display:block;
     width: 40%;
     height: 50px;;
   }
 
-  .contenedoradd .add  p{
+  .contenedor-add .add  p{
         display: flex;
         text-align: center;
         font-size: 24px;
@@ -207,6 +240,6 @@
     font-size: 15px;
   }
 
-  .showless {display: none;}
+  .show-less {display: none;}
 
 }
