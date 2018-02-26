@@ -3,84 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <title><%= current_page.data.title || "Middleman" %></title>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <%= stylesheet_link_tag "styles" %>
+    <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <div class="container">
-      <header class="header" >
-
-        <div class="upper-row">
-        </div>
-
-        <img src="../images/home/logo_fiorella.png" alt="fiorella" id="logo_fiorella">
-      </header>
-
-      <section class="body-message">
-          <h2 class="title-message">ALWAYS FRESH</h2>
-      
-        <div class="box-image-message">
-          <img class="image-message" src="/images/home/complementary_image_home_mobil@2x.png" alt="complementary image">
-        </div>
-        <div class="p-message">
-          <p class="text-message">We promise to always deliver fresh flowers and we guarantee the highest quality. Supported by our excellent express delivery mechanism we have the best delivery times on the day of your event, feel safe that your arrangements will be on time. Find a store you!</p>
-        </div>
-        <button type="button" class="btn-call-action">READ MORE</button>
-      </section>
-
-      <section class="category-list">
-        <p class="text">Category List</p>
-      </section>
-
-      <section class="promotion">
-        <p class="text">Promotion</p>
-      </section>
-      <footer class="footer">
-        <div class="box-footer">
-          <div class="box footer-item footer_fiorella">
-             <h3 class="title-footer">FIORELLA</h3>
-            <ul class="ul-footer">
-              <li><a href="#">ABOUT US</a></li>
-              <li><a href="#">CONTACT US</a></li>
-              <li><a href="#">STORE LOCATION</a></li>
-            </ul>
-          </div>
-          <div class="box footer-item footer_info">
-            <h3 class="title-footer">INFORMATION</h3>
-            <ul class="ul-footer">
-              <li><a href="#">FAQ's</a></li>
-              <li><a href="#">PAYMENT METHODS</a></li>
-              <li><a href="#">DELIVERY</a></li>
-            </ul>
-          </div>
-          <div class="box footer-item footer_contact">
-          <h3 class="title-footer">MY ACCOUNT</h3>
-            <ul class="ul-footer">
-              <li><a href="#">ORDER HISTORY</a></li>
-              <li><a href="#">WISH LIST</a></li>
-              <li><a href="#">NEWSLETTER</a></li>
-            </ul>
-          </div>
-          <div class="box footer-item">
-            <div class="social-media">
-              <h3 class="title-footer">FOLLOW US</h3>
-              <ul class="ul-social">
-                <li><a href="#" class="icon_facebook"></a></li>
-                <li><a href="#" class="icon_pinterest"></a></li>
-                <li><a href="#" class="icon_gplus"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <p>&#169; 2015 All Rights Reserved. Designed by Crowd Interactive. Powered by Spree.</p>
-      </footer>
-      <!--
-      <%= yield %>
-      -->
-    </div>
+    <%= yield %>
   </body>
 </html>
