@@ -1,0 +1,32 @@
+@media only screen and ( min-width: 768px ) {
+	.banner_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+  text-align: center;
+	width: 55%;
+	color: white;
+}
+.banner_content p {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.banner_description {
+	width: 80%;
+}
+.banner_handcrafted {
+  background-image: url("images/carving-w-butcher-gouge.jpg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: right;
+
+}
+.banner_handcrafted .banner_content {
+  background: linear-gradient(90deg,
+    rgb(200, 190, 183),
+		rgb(200, 190, 183, 1) 40%,
+		rgb(200, 190, 183, 1) 80%,
+		rgba(200, 190, 183, 0));
+  }
+}
