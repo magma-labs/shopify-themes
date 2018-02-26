@@ -1,5 +1,6 @@
 @import url('/stylesheets/fonts.css');
-body {
+
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -44,13 +45,10 @@ p {
   width: auto;
 }
 
-
-
-/*<MESSAGE SECTION>*/
 .body-message {
+  text-align: center;
   background: #F3F9EF;
   padding: 40px 20px;
-  text-align: center;
 }
 
 h2 {
@@ -77,12 +75,33 @@ h2.title:before {
 h2.title span {
   background: #F3F9EF;
   padding: 0 10px;
+=======
+/*title-message*/
+.title-message{
+  overflow: hidden;
+}
+.title-message:before,.title-message:after {
+  background-color: #E83671;
+  content: "";
+  display: inline-block;
+  height: 1px;
   position: relative;
-  z-index: 5;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.title-message:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+.title-message:after {
+  left: 0.5em;
+  margin-right: -50%;
 }
 
 .text-message{
   font-family: "MerriweatherSans-Light";
+  line-height: 32px;
   font-size: 22px;
   line-height: 40px;
 }
@@ -101,6 +120,12 @@ h2.title span {
 
 
 @media only screen and ( max-width: 768px ) {
+  /* footer */
+  .footer_fiorella,.footer_info,.footer_contact{
+    display: none;
+  }
+  /* end footer */
+  
   /*<SearchBar> */
   .topnav {
     height: 90px;
@@ -475,4 +500,112 @@ h2.title span {
     width: 35px;
   }
   /*</SearchBar> */
+
+.social-media{
+  border: 2px solid #E83671;
+  text-align: center;
+}
+.box-footer-item{
+  text-align: center;
+}
+.ul-footer{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.ul-footer li a {
+  font-family: "MerriweatherSans-Regular";
+  text-decoration:none;
+  display: block;
+  margin: 10px;
+  color: #000;
+}
+.ul-footer li a:hover{
+  color: #E83671;
+  font-weight: bold;
+}
+.ul-social{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.title-footer{
+  color: #E83671;
+  text-align: center;
+  font-family: "PlayfairDisplay-Bold";
+}
+.social-media li{
+  float: left;
+}
+.social-media li a {
+  display: block;
+  margin: 10px;
+}
+.icon_facebook, .icon_pinterest,.icon_gplus{
+  width: 40px;
+  height: 40px;
+}
+.icon_facebook{
+  background-image: url('../images/home/icon_facebook.png');
+  background-size: 40px;
+  background-repeat: no-repeat;
+}
+.icon_pinterest{
+  background-image: url('../images/home/icon_pinterest.png');
+  background-size: 40px;
+  background-repeat: no-repeat;
+}
+.icon_gplus{
+  background-image: url('../images/home/icon_gplus.png');
+  background-size: 40px;
+  background-repeat: no-repeat;
+}
+.icon_facebook:hover{
+  background-image: url('../images/home/bicon_facebook.png');
+  background-size: 40px;
+}
+.icon_pinterest:hover{
+  background-image: url('../images/home/bicon_pinterest.png');
+  background-size: 40px;
+}
+.icon_gplus:hover{
+  background-image: url('../images/home/bicon_gplus.png');
+  background-size: 40px;
+}
+/* end footer*/
+
+@media only screen and ( min-width: 769px ) and ( max-width: 1023px ){
+  /* footer */
+  .footer_fiorella,.footer_info,.footer_contact{
+    display: block;
+  }
+  .box-footer{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #E83671;
+  }
+  .social-media{
+    border: 0px;
+  }
+  .ul-social li{
+    text-align: center;
+  }
+  /*end footer*/
+}
+@media only screen and ( min-width: 1024px ){
+  /* footer */
+  .box-footer{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #E83671;
+    padding-bottom: 20px;
+  }
+  .social-media{
+    border: 0px;
+  }
+  /*end footer*/
 }
