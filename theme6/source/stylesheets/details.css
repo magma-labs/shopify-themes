@@ -1,10 +1,27 @@
-.producto{
-  width: 100%;
-  height: 100%;
+/*Starts MOBILE*/
+
+.next {display: none;}
+
+.shipping {display: none;}
+
+.superproduct{
+  display:flex;
+  justify-content: center;
 }
-#oso{
-  width: 100%;
-  height: 100%;
+
+.box-micro {
+  display: flex;
+  justify-content: center;
+}
+
+.box-micro .view {
+  width: 60px;
+  height: 60px;
+}
+
+.product {
+  width: 300px;
+  height: 300px;
 }
 
 .info{
@@ -13,13 +30,183 @@
   text-align: center;
 }
 
-.contenedoradd{
+.box-quantity{
   display: flex;
-  width: 100%;
-}
-.add{
-  width: 95%;
-  background-color: blue;
-  text-align: center;
   justify-content: center;
+  margin-bottom: 20px;
+  font-family: 'Oswald';
+}
+
+.box-quantity p{
+  display: block;
+  width: 50%;
+  text-align: center;
+  color:#627387;
+  font-family: 'Lato';
+}
+
+.info .name p{
+  color: #627387;
+  font-size: 20px;
+  font-family: 'Lato';
+}
+.info .price p{
+  color: #954180;
+  font-size: 25px;
+  font-family: 'Lato';
+}
+
+.contenedoradd{
+  width: 100%;
+  background-color: #4A90E2;
+  border-radius: 3px;
+}
+
+.contenedoradd .add{
+  display: inline-flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.contenedoradd .add p{
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family:"Oswald";
+  font-style: normal;
+}
+
+.description{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Lato';
+}
+
+.description .review{font-family:'Oswald';}
+
+.showless{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.showless  p{
+  display: inline-block;
+  width: 50%;
+  text-decoration: none;
+  color: #654AED;
+  font-family: 'Oswald';
+}
+
+.showless img{
+  display: inline-flex;
+  margin-left: 6px;
+  align-self: flex-end;
+  width:13px;
+  height: 13px;
+}
+
+/*Starts DESKTOP*/
+@media only screen and (min-width:768px) {
+  .a {display: flex;}
+
+  .half-left {
+    width: 50%;
+    display: inline-block;
+  }
+
+  .next {
+    display:inline-block;
+    color:#654AED;
+    text-decoration: none;
+    height: 10px;
+  }
+
+  .history .selection {color: #000000;}
+
+  .superproduct {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .product {
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+  }
+
+  .box-micro {
+    display: inline-flex;
+    flex-direction: column;
+    transform: translateY(-400px);
+  }
+
+  .view {
+    width: 75px;
+    height:75px;
+  }
+
+  .half-right {
+    width:50%;
+    display: block;
+  }
+
+  .superinfo{display: flex;}
+
+  .info {
+    margin-top: 70px;
+    display:block;
+    text-align: left;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+  }
+
+  .info .name p {
+    display: block;
+    font-size: 25px;
+    color: black;
+  }
+
+  .info .price p {font-size: 25px;}
+
+
+  .box-quantity {display: block;}
+
+  .box-quantity .quantity{
+      display: block;
+      text-align: left;
+  }
+
+  .box-quantity select {width: 65px;}
+
+  .contenedoradd {
+    display:block;
+    width: 40%;
+    height: 50px;;
+  }
+
+  .contenedoradd .add  p{
+        display: flex;
+        text-align: center;
+        font-size: 24px;
+  }
+
+  .shipping {
+    display: block;
+    color:#627387;
+    font-family: 'Lato';
+  }
+
+  .description .preview {display: none;}
+
+  .description .review {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .showless {display: none;}
+
 }
