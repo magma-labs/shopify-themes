@@ -1,3 +1,6 @@
+.banner_handcrafted {
+	font-family: 'Lato', sans-serif;
+}
 @media only screen and ( min-width: 768px ) {
 	.banner_content {
   display: flex;
@@ -16,7 +19,7 @@
 	width: 80%;
 }
 .banner_handcrafted {
-  background-image: url("images/carving-w-butcher-gouge.jpg");
+  background-image: url("../images/carving-w-butcher-gouge.jpg");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: right;
