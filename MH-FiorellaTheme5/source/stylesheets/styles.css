@@ -23,14 +23,7 @@ p{
   z-index: 10;
 }
 
-.category-list {
-  align-items: center;
-  background-color: #FFFFFF;
-  height: 300px;
-  margin:0;
-  padding: 0;
-  width: auto;
-}
+
 
 .promotion {
   align-items: center;
@@ -428,6 +421,44 @@ p{
     font-size: 20px;
   }
   /*</homeMenu>*/
+
+  /*<CategoryList>*/
+  .category-list {
+    background-color: #FFFFFF;
+    height: auto;
+    width: 100%;
+    margin:0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .category-list .category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-family: "PlayfairDisplay-Bold";
+    font-size: 40px;
+  }
+
+  .category-list .category-container img {
+    max-width: 95%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .category-list .category-container .category-text-block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /*</CategoryList>*/
+
 }
 
 @media only screen and ( min-width: 769px ) {
