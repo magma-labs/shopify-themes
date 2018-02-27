@@ -1,14 +1,14 @@
 var images = ["bear_toy", "train_toy", "plane_toy", "ship_toy"];
 var i = 0;
 
-var leftArrow = document.getElementById("leftArrow");
-var rightArrow = document.getElementById("rightArrow");
+const leftArrow = document.getElementById("leftArrow");
+const rightArrow = document.getElementById("rightArrow");
 
-this.leftArrow.addEventListener('click', () => {
+leftArrow.addEventListener("click", () => {
   changeImage(-1);
 });
 
-this.rightArrow.addEventListener('click', () => {
+rightArrow.addEventListener("click", () => {
   changeImage(1);
 });
 
