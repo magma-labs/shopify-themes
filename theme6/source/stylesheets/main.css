@@ -4,9 +4,9 @@
 
 .big-banner {
   background-image: url("../images/banner1_mobile.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .big-banner-content {
@@ -23,8 +23,8 @@
 }
 
 .big-banner-content h1 {
-  margin-bottom: 0;
   font-size: 20px;
+  margin-bottom: 0;
 }
 
 .big-banner-content p {
@@ -34,38 +34,38 @@
 }
 
 .big-banner-content button {
-  font-family: 'Oswald', sans-serif;
+  background-color: #4A90E2;
   border-radius: 0;
   border-style: none;
-  background-color: #4A90E2;
+  font-family: 'Oswald', sans-serif;
   margin-bottom: 12px;
   margin-left: 5px;
   margin-right: 5px;
 }
 
 .big-banner-content button h1 {
+  color: #FFFFFF;
   margin: 0;
   padding: 10px 0 10px 0;
-  color: #FFFFFF;
 }
 
 .small-banner {
-  display: flex;
+  align-items: center;
   background-image: url("../images/banner2.png");
-  box-shadow: inset 0 0 0 1000px rgba(245, 166, 35,0.8);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(245, 166, 35,0.8);
+  color: #FFFFFF;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 20px 20px;
-  color: #FFFFFF;
 }
 
 .small-banner h1 {
-  margin: 0 0;
   font-size: 45px;
+  margin: 0 0;
 }
 
 .small-banner h3 {
@@ -75,16 +75,16 @@
 .mid-banner-content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   height: 300px;
+  justify-content: flex-end;
   text-align: center;
 }
 
 .mid-banner-saylor {
   background-image: url("../images/mid_banner1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mid-banner-archeologist {
@@ -120,10 +120,10 @@
 }
 
 .mid-banner-content button {
-  font-family: 'Lato', sans-serif;
   background-color: Transparent;
   border-radius: 2px;
   border-style: solid;
+  font-family: 'Lato', sans-serif;
   margin-bottom: 12px;
   margin-left: 5px;
   margin-right: 5px;
@@ -138,21 +138,21 @@
 }
 
 .mid-banner-saylor button h1 {
+  color: #627387;
   margin: 0;
   padding: 10px 0 10px 0;
-  color: #627387;
 }
 
 .mid-banner-archeologist button h1 {
+  color: #FFFFFF;
   margin: 0;
   padding: 10px 0 10px 0;
-  color: #FFFFFF;
 }
 
 @media only screen and (width: 768px) {
   .big-banner {
-    background-size: cover;
     background-position: center;
+    background-size: cover;
   }
 
   .big-banner-content p {
@@ -160,13 +160,13 @@
   }
 
   .small-banner {
-    background-size: cover;
     background-position: bottom;
+    background-size: cover;
   }
 
   .mid-banner-saylor {
-    background-size: cover;
     background-position: center;
+    background-size: cover;
   }
 
   .mid-banner-archeologist {
@@ -181,35 +181,35 @@
   }
 
   .big-banner {
-    flex: 2;
-    display: flex;
     background-image: url("../images/banner1.png");
-    background-size: cover;
     background-position: left top;
-    justify-content: flex-end;
+    background-size: cover;
+    display: flex;
+    flex: 2;
     height: 400px;
+    justify-content: flex-end;
     margin-right: 20px;
   }
 
   .big-banner-content {
-    display: flex;
+    align-items: center;
     background: linear-gradient(270deg,
       rgb(251,239,227),
       rgba(251,239,227, 1) 80%,
       rgba(251,239,227, 0));
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 400px;
+    justify-content: center;
     width: 50%;
   }
 
   .big-banner-content p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 15px;
-    margin-top: 20px;
-    margin-bottom: 30px;
   }
 
   .big-banner-content h1 {
@@ -222,11 +222,11 @@
   }
 
   .small-banner {
-    flex: 1;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    flex: 1;
     justify-content: center;
-    align-items: center;
   }
 
   .small-banner h2 {
@@ -236,26 +236,26 @@
   }
 
   .small-banner h3 {
-    width: 100%;
-    font-weight: lighter;
     font-size: 30px;
+    font-weight: lighter;
     text-align: center;
+    width: 100%;
   }
 
   .mid-banner {
     flex: 1;
-    justify-content: flex-end;
     height: 200px;
+    justify-content: flex-end;
   }
 
   .mid-banner-content {
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 200px;
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
-    height: 200px;
     width: 50%;
   }
 
@@ -268,10 +268,10 @@
   }
 
   .mid-banner-saylor {
-    background: url("../images/mid_banner1.png") 100px 0px;
-    background-repeat: no-repeat;
     background-position: right;
+    background-repeat: no-repeat;
     background-size: 400px 300px;
+    background: url("../images/mid_banner1.png") 100px 0px;
   }
 
   .mid-banner-saylor .mid-banner-content {
@@ -283,10 +283,10 @@
   }
 
   .mid-banner-archeologist {
-    background: url("../images/mid_banner2.png") 100px 0px;
-    background-repeat: no-repeat;
     background-position: right;
+    background-repeat: no-repeat;
     background-size: 400px 300px;
+    background: url("../images/mid_banner2.png") 100px 0px;
     margin-left: 20px;
   }
 
@@ -307,35 +307,35 @@
   }
 
   .big-banner {
-    flex: 2;
-    display: flex;
     background-image: url("../images/banner1.png");
-    background-size: cover;
     background-position: left top;
-    justify-content: flex-end;
+    background-size: cover;
+    display: flex;
+    flex: 2;
     height: 400px;
+    justify-content: flex-end;
     margin-right: 20px;
   }
 
   .big-banner-content {
-    display: flex;
+    align-items: center;
     background: linear-gradient(270deg,
       rgb(251,239,227),
       rgba(251,239,227, 1) 80%,
       rgba(251,239,227, 0));
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 400px;
+    justify-content: center;
     width: 50%;
   }
 
   .big-banner-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 30px;
   }
 
   .big-banner-content h1 {
@@ -348,11 +348,11 @@
   }
 
   .small-banner {
-    flex: 1;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    flex: 1;
     justify-content: center;
-    align-items: center;
   }
 
   .small-banner h2 {
@@ -362,26 +362,26 @@
   }
 
   .small-banner h3 {
-    width: 100%;
-    font-weight: lighter;
     font-size: 30px;
+    font-weight: lighter;
     text-align: center;
+    width: 100%;
   }
 
   .mid-banner {
     flex: 1;
-    justify-content: flex-end;
     height: 200px;
+    justify-content: flex-end;
   }
 
   .mid-banner-content {
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 200px;
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
-    height: 200px;
     width: 50%;
   }
 
@@ -394,10 +394,10 @@
   }
 
   .mid-banner-saylor {
-    background: url("../images/mid_banner1.png") 100px 0px;
-    background-repeat: no-repeat;
     background-position: right;
+    background-repeat: no-repeat;
     background-size: 400px 300px;
+    background: url("../images/mid_banner1.png") 100px 0px;
   }
 
   .mid-banner-saylor .mid-banner-content {
@@ -409,10 +409,10 @@
   }
 
   .mid-banner-archeologist {
-    background: url("../images/mid_banner2.png") 100px 0px;
-    background-repeat: no-repeat;
     background-position: right;
+    background-repeat: no-repeat;
     background-size: 400px 300px;
+    background: url("../images/mid_banner2.png") 100px 0px;
     margin-left: 20px;
   }
 
