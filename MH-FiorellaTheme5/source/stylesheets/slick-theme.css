@@ -9,6 +9,7 @@
     list-style: none;
     text-align: center;
 }
+
 .slick-dots li
 {
     position: relative;
@@ -16,6 +17,7 @@
     padding: 0;
     cursor: pointer;
 }
+
 .slick-dots li button
 {
     cursor: pointer;
@@ -24,24 +26,21 @@
     outline: none;
     background: transparent;
 }
+
 .slick-dots li button:hover,
 .slick-dots li button:focus
 {
     outline: none;
 }
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before
-{
-  
-}
+
 .slick-dots li button:before
 {
     content: '•';
     text-align: center;
     color: #FFF;
 }
+
 .slick-dots li.slick-active button:before
 {
-
     color: #E83671;
 }
