@@ -3,7 +3,7 @@
 }
 
 .big-banner {
-  background-image: url("../images/banner1_mobile.png");
+  background-image: url("/images/banner1_mobile.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,7 +51,7 @@
 
 .small-banner {
   align-items: center;
-  background-image: url("../images/banner2.png");
+  background-image: url("/images/banner2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,7 +81,7 @@
 }
 
 .mid-banner-saylor {
-  background-image: url("../images/mid_banner1.png");
+  background-image: url("/images/mid_banner1.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,7 +95,7 @@
     rgb(239, 239, 239),
     rgba(239, 239, 239, 1) 20%,
     rgba(239, 239, 239, 0.2) 50%,
-    rgba(239, 239, 239, 0)), url("../images/mid_banner1.png") no-repeat top;
+    rgba(239, 239, 239, 0)), url("/images/mid_banner1.png") no-repeat top;
   background-size: cover;
   color: #000000;
 }
@@ -105,7 +105,7 @@
     rgb(189, 152, 107),
     rgba(189, 152, 107, 1) 10%,
     rgba(189, 152, 107, 0.2) 50%,
-    rgba(189, 152, 107, 0)), url("../images/mid_banner2.png") no-repeat top;
+    rgba(189, 152, 107, 0)), url("/images/mid_banner2.png") no-repeat top;
   background-size: cover;
   color: #FFFFFF;
 
@@ -181,7 +181,7 @@
   }
 
   .big-banner {
-    background-image: url("../images/banner1.png");
+    background-image: url("/images/banner1.png");
     background-position: left top;
     background-size: cover;
     display: flex;
@@ -230,7 +230,7 @@
   }
 
   .small-banner h2 {
-    font-size: 70px;
+    font-size: 50px;
     margin: 0;
     padding: 0;
   }
@@ -268,10 +268,10 @@
   }
 
   .mid-banner-saylor {
+    background: url("/images/mid_banner1.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: 400px 300px;
-    background: url("../images/mid_banner1.png") 100px 0px;
   }
 
   .mid-banner-saylor .mid-banner-content {
@@ -283,10 +283,10 @@
   }
 
   .mid-banner-archeologist {
+    background: url("/images/mid_banner2.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: 400px 300px;
-    background: url("../images/mid_banner2.png") 100px 0px;
     margin-left: 20px;
   }
 
@@ -307,7 +307,7 @@
   }
 
   .big-banner {
-    background-image: url("../images/banner1.png");
+    background-image: url("/images/banner1.png");
     background-position: left top;
     background-size: cover;
     display: flex;
@@ -394,10 +394,10 @@
   }
 
   .mid-banner-saylor {
+    background: url("/images/mid_banner1.png") 100px 0px;
     background-position: right;
     background-repeat: no-repeat;
     background-size: 400px 300px;
-    background: url("../images/mid_banner1.png") 100px 0px;
   }
 
   .mid-banner-saylor .mid-banner-content {
@@ -409,10 +409,10 @@
   }
 
   .mid-banner-archeologist {
+    background: url("/images/mid_banner2.png") 100px 0px;
     background-position: right;
     background-repeat: no-repeat;
     background-size: 400px 300px;
-    background: url("../images/mid_banner2.png") 100px 0px;
     margin-left: 20px;
   }
 
