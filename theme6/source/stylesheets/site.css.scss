@@ -5,7 +5,9 @@ footer {
   width: 100%;
 }
 
-.footer-content { margin: 0 40px 0 40px;}
+.footer-content {
+  margin: 0 40px;
+}
 
 .information {
   display: inline-flex;
@@ -19,9 +21,9 @@ footer {
 .information ul {
   display: flex;
   justify-content: space-between;
+  margin-left: 0;
+  padding-left: 0;
   width: 100%;
-  margin-left: 0px;
-  padding-left: 0px;
 }
 
 .information li {
@@ -30,34 +32,33 @@ footer {
 }
 
 .social-media-container {
-  width: 100%;
   display: flex;
+  width: 100%;
 }
 
 .social-media-box {
-  flex: 1;
   display: flex;
-  justify-content: flex-start;
-  transform: rotateY(100px);
+  flex: 1;
+  text-align: center;
 }
 
 .logo {
-  display: flex;
-  width: 100px;
-  justify-content: center;
   align-content: center;
+  display: flex;
+  justify-content: center;
+  width: 100px;
 }
 
 .social-media {
   color: #72808C;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 18px;
   line-height: 21px;
 }
 
 .sm {
-  border: 2px solid #72808c;
   border-radius: 3px;
+  border: 2px solid #72808c;
   height: 35px;
   width: 93px;
 }
@@ -83,33 +84,35 @@ footer {
 }
 
 .newsletter {
+  flex: 1;
   display: flex;
-  color: #72808c;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  text-align: right;
   align-items: flex-end;
-  line-height: 21px;
-  text-align: center;
-  flex:1;
   flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  text-align: center;
 }
 
-.newsletter .box-newsletter {justify-content: center;}
+.newsletter p {
+  color: #72808c;
+}
+
+.newsletter .box-newsletter {
+  justify-content: center;
+}
 
 .newsletter input {
-  width: 300px;
+  background-color: #fbfbfb;
+  border-radius: 2px;
+  border: 2px solid #d2d2d2;
+  width: 200px;
   height: 20px;
-  font-size: 15px;
+  width: 300px;
 }
 
-.social-media-box {
-  align-content: center;
-  text-align: center;
-  width: 350px;
+.social-media-icon-group button {
+  cursor: pointer;
 }
-
-.social-media-icon-group button {cursor: pointer;}
 
 .social-media-container {
   align-items: center;
@@ -120,7 +123,7 @@ footer {
 
 .information a {
   color: #72808C;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 18px;
   line-height: 21px;
   text-decoration: none;
@@ -129,60 +132,65 @@ footer {
 .author {
   color: #72808c;
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
 }
-
-@media screen and (max-width: 1024px){
-  .information a{ font-size: 14px}
-
+@media screen and (max-width: 1024px) {
+  .information a {
+    font-size: 14px;
+  }
 
   .sm {
-    border: 2px solid #72808c;
     border-radius: 3px;
+    border: 2px solid #72808c;
     height: 25px;
     width: 60px;
   }
 
   .newsletter input {
     width: 200px;
-    height: 15px;
-    font-size: 12px;
   }
 
-  .newsletter p {font-size: 15px;}
-
+  .newsletter p {
+    font-size: 15px;
+  }
 }
-
-
 @media screen and (max-width: 768px) {
-  .information {display: none;}
+  .information {
+    display: none;
+  }
 
-  .logo { display: none;}
+  .logo {
+    display: none;
+  }
 
   .social-media-container {
-    display:block;
+    display: block;
     width: 100%;
   }
 
   .social-media-box {
-    width: 100%;
     display: block;
-  justify-content: center;
-  height: auto;
-}
+    height: auto;
+    justify-content: center;
+    width: 100%;
+  }
 
   .social-media p {
-    width: 100%;
-    text-align: center;
     font-size: 14px;
+    text-align: center;
+    width: 100%;
   }
 
   .social-media-icon-group {
     display: inline-flex;
     justify-content: center;
+  }
+  .sm {
+    height: 35px;
+    width: 93px;
   }
 
   .twt {
@@ -192,28 +200,26 @@ footer {
 
   .newsletter {
     display: block;
+    display: block;
     justify-content: center;
     text-align: center;
-    display: block;
     transform: translateY(5px);
     width: 100%;
-    padding-bottom: 10px;
   }
 
   .newsletter p {
-    text-align: center;
     font-size: 15px;
+    text-align: center;
   }
 
   .newsletter input {
-    background-color: #fbfbfb;
-    border: 2px solid #d2d2d2;
-    border-radius: 2px;
     height: 40px;
     width: 305px;
   }
 
-  .author {margin-top: 60px}
+  .author {
+    margin-top: 30px;
+  }
 
   .author p {
     font-size: 12px;
