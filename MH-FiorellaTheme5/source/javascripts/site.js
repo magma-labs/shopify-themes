@@ -1,4 +1,4 @@
-$(".slider").slick({
+$('.slider').slick({
     autoplay: true,
     dots: true,
     prevArrow: false,
