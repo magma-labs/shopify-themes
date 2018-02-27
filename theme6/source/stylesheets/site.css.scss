@@ -1,169 +1,184 @@
-
-
-
 /*==========Stylesheet DESKTOP========*/
-    footer {
-      bottom: 0;
-      display: inline;
-      width: 100%;
+footer {
+  bottom: 0;
+  display: inline;
+  width: 100%;
+}
 
-    }
+.information {
+  justify-content: center;
+}
 
-    .information{justify-content: center;}
+li {
+  display: inline;
+}
 
-    li{display: inline;}
+.socialmedia {
+  color: #72808C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+}
 
-    .socialmedia{
-        color: #72808C;
-        font-family:'Montserrat', sans-serif;
-        font-size: 18px;
-        line-height: 21px;
-    }
+.sm {
+  height: 35px;
+  width: 93px;
+  border: 2px solid #72808C;
+  border-radius: 3px;
+}
 
-    .sm {
-        height: 35px;
-        width: 93px;
-        border: 2px solid #72808C;
-        border-radius: 3px;
-    }
-    #fb{
-      background: url("../images/fb.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-      margin-right: 23px;
-    }
-    #twt{
-        background: url("../images/twt.svg");
-        background-position: center center;
-        background-repeat: no-repeat;}
-    #g{
-        background: url("../images/g+.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        margin-left: 23px;
-      }
+#fb {
+  background: url("../images/fb.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 23px;
+}
 
-    .newsletter {
-      color: #72808C;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 18px;
-      line-height: 21px;
-      text-align: center;
-    }
+#twt {
+  background: url("../images/twt.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
-    footer .box-social {
-      align-content: center;
-      width: 350px;
-    }
+#g {
+  background: url("../images/g+.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-left: 23px;
+}
 
-    footer .box-social button:hover {
-      cursor: pointer;
-    }
+.newsletter {
+  color: #72808C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
 
-    footer .contenedorsocial {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 66%;
-    }
+footer .box-social {
+  align-content: center;
+  width: 350px;
+}
 
-    footer .contenedorsocial .logo {
-      margin-left: 96px;
-      margin-right: 96px;
-    }
+footer .box-social button:hover {
+  cursor: pointer;
+}
 
-    footer .box-social p{
-      text-align: center;
-    }
-    footer .contenedornews{
-      width: 33%;
-      display: inline-flex;
-    }
-    footer .newsletter input {
-      height: 35px;
-      width:300px;
-      justify-content: center;
-    }
+footer .contenedorsocial {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  width: 66%;
+}
 
-    footer .information ul li a{
-      height: 22px;
-      width: 192px;
-      color: #72808C;
-      font-family:'Montserrat', sans-serif;
-      font-size: 18px;
-      line-height: 21px;
-      text-decoration: none;
-      align-items: center;
-      margin-right: 50;
+footer .contenedorsocial .logo {
+  margin-left: 96px;
+  margin-right: 96px;
+}
 
-    }
+footer .box-social p {
+  text-align: center;
+}
 
-    footer .information ul li{
-      display: inline-block;
-    }
-    footer .information ul{
-      margin-top: 2%;
-      text-align: center;
-    }
+footer .contenedornews {
+  width: 33%;
+  display: inline-flex;
+}
 
-    footer .author {
-      display:block;
-      text-align: center;
-    }
+footer .newsletter input {
+  height: 35px;
+  width: 300px;
+  justify-content: center;
+}
 
-    footer .author p {
-      color: #72808C;
-      font-family:'Montserrat', sans-serif;
-      font-size: 16px;
-      line-height: 18px;
-    }
+footer .information ul li a {
+  height: 22px;
+  width: 192px;
+  color: #72808C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  align-items: center;
+  margin-right: 50;
+}
+
+footer .information ul li {
+  display: inline-block;
+}
+
+footer .information ul {
+  margin-top: 2%;
+  text-align: center;
+}
+
+footer .author {
+  display: block;
+  text-align: center;
+}
+
+footer .author p {
+  color: #72808C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
 /*=============Stylesheet MOBILE==========*/
-    @media screen and(max-width:320px) {
-      .information {
-        display: none;
-      }
-      .logo {
-        display: none;
-      }
-      #twt{
-        margin-left: -20px;
-        margin-right: -20px;}
+@media screen and(max-width:320px) {
+  .information {
+    display: none;
+  }
 
-        .contenedorsocial {
-          display: flex;
-          margin-left: 50px;
-      }
-        .box-social {
-          align-content: center;
-        }
-        .box-social p {
-          font-size: 14px;
-        }
-        .boxsocialmedia {
-          width: 95%;
-          display: inline-flex;
-          justify-content: space-between;
-          align-content: center;
-        }
+  .logo {
+    display: none;
+  }
 
-        .contenedornews {
-          margin-top: 5px;
-          display: block;
-          align-content: center;
-          width: 100%;
-        }
-        .contenedornews p {
-          font-size: 15px;
-        }
-        .contenedornews input {
-          height: 40px;
-          width: 305px;
-          border: 2px solid #D2D2D2;
-          border-radius: 2px;
-          background-color: #FBFBFB;
-        }
-        footer .author p {
-          margin-top: 35px;
-          font-size: 12px;
-        }
-    }
+  #twt {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .contenedorsocial {
+    display: flex;
+    margin-left: 50px;
+  }
+
+  .box-social {
+    align-content: center;
+  }
+
+  .box-social p {
+    font-size: 14px;
+  }
+
+  .boxsocialmedia {
+    align-content: center;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 95%;
+  }
+  
+  .contenedornews {
+    align-content: center;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .contenedornews p {
+    font-size: 15px;
+  }
+
+  .contenedornews input {
+    background-color: #FBFBFB;
+    border: 2px solid #D2D2D2;
+    border-radius: 2px;
+    height: 40px;
+    width: 305px;
+  }
+
+  footer .author p {
+    font-size: 12px;
+    margin-top: 35px;
+  }
+}
