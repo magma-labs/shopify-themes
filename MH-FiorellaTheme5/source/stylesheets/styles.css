@@ -202,7 +202,7 @@ p{
 
 @media only screen and ( max-width: 768px ) {
   /* footer */
-  
+
     .btn-slider, .btn-call-action{
     width: 175px;
     height: 40px;
@@ -246,7 +246,7 @@ p{
   }
 
   /* end footer */
-  
+
   /*<SearchBar> */
   .topnav {
     height: 90px;
@@ -496,7 +496,10 @@ p{
     height: auto;
     padding-bottom: 15px;
     opacity: 0.85;
-    width: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
   }
 
   .sidenav {
