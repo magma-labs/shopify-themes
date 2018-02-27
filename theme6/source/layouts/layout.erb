@@ -9,9 +9,9 @@
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lato|Oswald:300" %>
     <%= stylesheet_link_tag "featured_products" %>
-    <%= javascript_include_tag "featured_products" %>
   </head>
   <body>
     <%= yield %>
+    <%= javascript_include_tag "featured_products" %>
   </body>
 </html>

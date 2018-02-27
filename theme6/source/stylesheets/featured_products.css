@@ -58,6 +58,11 @@
   justify-content: center;
 }
 
+.slider-navigator button {
+  background-color: transparent;
+  border-style: none;
+}
+
 .slider-navigator img {
   width: 14px;
 }

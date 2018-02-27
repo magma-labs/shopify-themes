@@ -1,6 +1,17 @@
 var images = ["bear_toy", "train_toy", "plane_toy", "ship_toy"];
 var i = 0;
 
+var leftArrow = document.getElementById("leftArrow");
+var rightArrow = document.getElementById("rightArrow");
+
+this.leftArrow.addEventListener('click', () => {
+  changeImage(-1);
+});
+
+this.rightArrow.addEventListener('click', () => {
+  changeImage(1);
+});
+
 function changeImage(value) {
   i += value;
 
