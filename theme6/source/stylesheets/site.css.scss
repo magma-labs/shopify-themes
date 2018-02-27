@@ -1,27 +1,44 @@
 footer {
   bottom: 0;
-  display: inline;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
+.footer-content { margin: 0 40px 0 40px;}
+
 .information {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: center;
   margin-top: 18px;
   text-align: center;
   width: 100%;
 }
 
-.information li {display: inline;}
+.information ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.information li {
+  display: flex;
+  justify-content: space-between;
+}
 
 .social-media-container {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
 }
+
 .social-media-box {
-  flex: 2;
-  justify-content: flex-end;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  transform: rotateY(100px);
 }
 
 .logo {
@@ -66,16 +83,19 @@ footer {
 }
 
 .newsletter {
-  transform: translateY(-27px);
+  display: flex;
   color: #72808c;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  height: 35px;
-  justify-content: center;
+  text-align: right;
+  align-items: flex-end;
   line-height: 21px;
   text-align: center;
-  flex:2;
+  flex:1;
+  flex-direction: column;
 }
+
+.newsletter .box-newsletter {justify-content: center;}
 
 .newsletter input {
   width: 300px;
@@ -89,9 +109,7 @@ footer {
   width: 350px;
 }
 
-.social-media-icon-group button {
-  cursor: pointer;
-}
+.social-media-icon-group button {cursor: pointer;}
 
 .social-media-container {
   align-items: center;
@@ -99,19 +117,6 @@ footer {
   justify-content: center;
   width: 100%;
 }
-.information {
-  display: inline-flex;
-  justify-content: center;
-  flex:1;
-}
-
-.information .rp {margin: 0 50px 0 30px; }
-
-.information .tc { margin: 0 20px 0 20px;}
-
-.information .au { margin:0 30px 0 50px;}
-
-.information .cu {margin-right: 30px}
 
 .information a {
   color: #72808C;
@@ -121,8 +126,6 @@ footer {
   text-decoration: none;
 }
 
-
-
 .author {
   color: #72808c;
   display: block;
@@ -131,17 +134,29 @@ footer {
   line-height: 18px;
   text-align: center;
 }
+
 @media screen and (max-width: 1024px){
-  .information a{ font-size: 16px}
+  .information a{ font-size: 14px}
 
-  .information .rp {margin: 0 10px 0 10px; }
 
-  .information .tc { margin: 0 10px 0 10px;}
+  .sm {
+    border: 2px solid #72808c;
+    border-radius: 3px;
+    height: 25px;
+    width: 60px;
+  }
 
-  .information .au { margin:0 10px 0 10px;}
+  .newsletter input {
+    width: 200px;
+    height: 15px;
+    font-size: 12px;
+  }
 
-  .information .cu {margin-right: 10px}
+  .newsletter p {font-size: 15px;}
+
 }
+
+
 @media screen and (max-width: 768px) {
   .information {display: none;}
 
