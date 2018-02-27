@@ -105,7 +105,6 @@ footer {
   background-color: #fbfbfb;
   border-radius: 2px;
   border: 2px solid #d2d2d2;
-  width: 200px;
   height: 20px;
   width: 300px;
 }
@@ -160,6 +159,10 @@ footer {
 @media screen and (max-width: 768px) {
   .information {
     display: none;
+  }
+
+  .footer-content {
+    margin: 0;
   }
 
   .logo {
