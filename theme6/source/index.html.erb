@@ -1,23 +1,112 @@
 ---
-title: Welcome to Middleman
+title: Lil Peep
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" class="middleman-logo" aria-labelledby="middleman-logo__title" role="img">
-  <title id="middleman-logo__title">Middleman</title>
-  <path class="middleman-logo__top-left-bar" fill-opacity=".45" d="M0 40L200 0v30L0 60z"/>
-  <path class="middleman-logo__top-right-bar" fill="#fff" d="M200 0l200 40v20L200 30z"/>
-  <path class="middleman-logo__left-m" fill-opacity=".45" d="M0 78v184l45 5V152l45 83 47-83v129l53 7V52l-57 8-43 83-43-70z"/>
-  <path class="middleman-logo__right-m" fill="#fff" d="M400 78v184l-45 5V152l-45 83-47-83v129l-53 7V52l57 8 43 83 43-70z"/>
-  <path class="middleman-logo__bottom-left-bar" fill-opacity=".45" d="M0 300l200 40v-30L0 280z"/>
-  <path class="middleman-logo__bottom-right-bar" fill="#fff" d="M200 340l200-40v-20l-200 30z"/>
-</svg>
-
-<h1>
-  Middleman is Running
-</h1>
-
-<%= link_to(
-  "Read Documentation",
-  "https://middlemanapp.com/basics/templating_language/",
-  target: "_blank"
-) %>
+<section class="featured-products">
+  <h2>FEATURED TOYS</h2>
+  <div class="featured-products-list">
+    <div class="product-card first-product-card">
+      <div class="products-slider">
+        <div class="front-label">
+          <p>NEW</p>
+        </div>
+        <div class="slider-navigator slider-navigator-left">
+          <button id="leftArrow">
+            <img src="images/arrow_left.png" alt="Arrow left">
+          </button>
+        </div>
+        <div class="product-image">
+          <img id="featuredToy" src="images/bear_toy.png" alt="Clown Bear Toy">
+        </div>
+        <div class="slider-navigator slider-navigator-right">
+          <button id="rightArrow">
+            <img src="images/arrow_right.png" alt="Arrow right">
+          </button>
+        </div>
+      </div>
+      <div class="product-data">
+        <p>Clown Bear - Plush Circus Series</p>
+        <div class="price">
+          <p class="price">$5 USD</p>
+          <p class="offer">$10 USD</p>
+        </div>
+        <button type="button" name="view-button">VIEW</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="products-slider">
+        <div class="front-label">
+          <p>NEW</p>
+        </div>
+        <div class="slider-navigator slider-navigator-left">
+          <a href="#" onclick="changeImage(-1)">
+            <img src="images/arrow_left.png" alt="Arrow left">
+          </a>
+        </div>
+        <div class="product-image">
+          <img id="featuredToy" src="images/train_toy.png" alt="Little Wagon Toy">
+        </div>
+        <div class="slider-navigator slider-navigator-right">
+          <a href="#" onclick="changeImage(1)">
+            <img src="images/arrow_right.png" alt="Arrow right">
+          </a>
+        </div>
+      </div>
+      <div class="product-data">
+        <p>Little Wagon</p>
+        <p class="price">$12 USD</p>
+        <button type="button" name="view-button">VIEW</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="products-slider">
+        <div class="front-label">
+          <p>NEW</p>
+        </div>
+        <div class="slider-navigator slider-navigator-left">
+          <a href="#" onclick="changeImage(-1)">
+            <img src="images/arrow_left.png" alt="Arrow left">
+          </a>
+        </div>
+        <div class="product-image">
+          <img id="featuredToy" src="images/plane_toy.png" alt="Wright's Plane">
+        </div>
+        <div class="slider-navigator slider-navigator-right">
+          <a href="#" onclick="changeImage(1)">
+            <img src="images/arrow_right.png" alt="Arrow right">
+          </a>
+        </div>
+      </div>
+      <div class="product-data">
+        <p>Wright's Plane</p>
+        <p class="price">$16 USD</p>
+        <button type="button" name="view-button">VIEW</button>
+      </div>
+    </div>
+    <div class="product-card new-product">
+      <div class="products-slider">
+        <div class="front-label">
+          <p>NEW</p>
+        </div>
+        <div class="slider-navigator slider-navigator-left">
+          <a href="#" onclick="changeImage(-1)">
+            <img src="images/arrow_left.png" alt="Arrow left">
+          </a>
+        </div>
+        <div class="product-image">
+          <img id="featuredToy" src="images/ship_toy.png" alt="Yellow Boat">
+        </div>
+        <div class="slider-navigator slider-navigator-right">
+          <a href="#" onclick="changeImage(1)">
+            <img src="images/arrow_right.png" alt="Arrow right">
+          </a>
+        </div>
+      </div>
+      <div class="product-data">
+        <p>Yellow boat</p>
+        <p class="price">$20 USD</p>
+        <button type="button" name="view-button">VIEW</button>
+      </div>
+    </div>
+  </div>
+</section>
