@@ -31,17 +31,75 @@ p{
   padding: 0;
   width: auto;
 }
-
-.promotion {
-  align-items: center;
-  background-color: #F3F9EF;
-  height: 300px;
-  margin:0;
-  padding: 0;
-  width: auto;
+/* ------ promotion ------ */
+.p-prom-description, .p-prom-price{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+  letter-spacing: 3px;
 }
 
+.p-prom-price{
+  color: #E83671;
+}
+.prom-price{
+  font-family: 'MerriweatherSans-Bold';
+}
+.title-icon {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 25px;
+  width: 100%;
+}
 
+.title-icon:before, .title-icon:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-color: #E83671; 
+}
+
+.title-icon:before {
+  right: 5px;
+  margin-left: -80%;
+}
+.title-icon:after {
+  left: 5px;
+  margin-right: -50%;
+}
+
+.title-icon-img {
+  width: 40px;
+  vertical-align: middle;
+}
+
+.promotion{
+  padding: 10px;
+}
+
+.box-promotions{
+  position: relative;
+  height: auto;
+  background: #F3F9EF;
+  background-image: url('../images/home/banner_image_home_tablet@2x.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.promotion-message{
+  position: absolute;
+  font-family: 'PlayfairDisplay-Bold';
+  left: 30px;
+  bottom: 25px;
+  font-size: 20px;
+}
+/* ------- end promotion --- */
 .btn-slider, .btn-call-action{
   font-family: 'PlayfairDisplay-Bold';
   background: transparent;
@@ -201,9 +259,8 @@ p{
 }
 
 @media only screen and ( max-width: 768px ) {
-  /* footer */
 
-    .btn-slider, .btn-call-action{
+  .btn-slider, .btn-call-action{
     width: 175px;
     height: 40px;
     font-size: 16px;
@@ -243,6 +300,19 @@ p{
 
   .footer_fiorella, .footer_info, .footer_contact{
     display: none;
+  }
+
+  .box-promotions{
+    height: 260px;
+    background-image: url('../images/home/banner_image_home_mobil@2x.jpg');
+      
+  }
+  .p-prom-description{
+    width: 100px;
+  }
+
+  .p-prom-price{
+    width: 150px;
   }
 
   /* end footer */
@@ -598,6 +668,7 @@ p{
 }
 
 @media only screen and ( min-width: 769px ) and ( max-width: 1023px ){
+
   .btn-slider, .btn-call-action{
     width: 288px;
     height: 64px;
@@ -659,9 +730,34 @@ p{
     text-align: center;
   }
 
+  .title-icon{
+    top: 40px;
+  }
+
+  .promotion-message{
+    left: 40px;
+    bottom: 40px;
+    font-size: 40px;
+  }
+
+  .box-promotions{
+    height: 400px;
+    background-image: url('../images/home/banner_image_home_tablet@2x.jpg');
+  }
+
+  .p-prom-description{
+    width: 500px;
+    font-size: 50px;
+  }
+
+  .p-prom-price{
+    width: 450px;
+  }
+
 }
 
 @media only screen and ( min-width: 1024px ){
+
   .btn-slider, .btn-call-action{
     width: 325px;
     height: 73px;
@@ -716,5 +812,29 @@ p{
 
   .social-media{
     border: 0px;
+  }
+
+  .title-icon{
+    top: 50px;
+  }
+
+  .promotion-message{
+    left: 60px;
+    bottom: 35px;
+    font-size: 50px;
+  }
+
+  .box-promotions{
+    height: 500px;
+    background-image: url('../images/home/banner_image_home_1024@2x.jpg');
+  }
+
+  .p-prom-description{
+    width: 500px;
+    font-size: 60px;
+  }
+
+  .p-prom-price{
+    width: 550px;
   }
 }
