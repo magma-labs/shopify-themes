@@ -53,7 +53,7 @@ p{
   width: 100%;
 }
 
-.title-icon:before, .title-icon:after {
+.title-icon:after, .title-icon:before {
   border-color: #E83671;
   border-top-style: solid;
   border-top-width: 1px;
