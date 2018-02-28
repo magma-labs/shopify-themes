@@ -423,6 +423,10 @@ p{
   /*</homeMenu>*/
 
   /*<CategoryList>*/
+  .desktop-category-list {
+    display: none;
+  }
+
   .category-list {
     background-color: #FFFFFF;
     height: auto;
@@ -456,12 +460,90 @@ p{
     padding-left: 20px;
     padding-right: 20px;
   }
-
   /*</CategoryList>*/
 
 }
 
 @media only screen and ( min-width: 769px ) {
+
+    /*<CategoryList>*/
+    .category-list {
+      display: none;
+    }
+
+    .desktop-category-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      width: auto;
+      padding-top: 60px;
+    }
+
+    .desktop-category-list .category-products {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      z-index: 2;
+      width: 80%;
+    }
+
+    .desktop-category-list .category-container {
+      margin-right: 30px;
+      justify-content: center;
+    }
+
+    .desktop-category-list .category-container:last-child{
+      margin-right: 0;
+    }
+
+    .desktop-category-list .category-container h2 {
+      font-size: 30px;
+      font-family: "PlayfairDisplay-Bold";
+      text-align: center;
+    }
+
+    .desktop-category-list .category-container p {
+      text-align: center;
+      font-size: 25px;
+      font-family: "MerriweatherSans-Light";
+    }
+
+    .desktop-category-list .category-container img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+    }
+
+    .desktop-category-list .category-container img:hover {
+
+    }
+
+    .desktop-category-list .category-container:nth-child(1) img {
+      content:url("/images/home/bouquets_home_desktop.jpg");
+    }
+
+    .desktop-category-list .category-container:nth-child(2) img {
+      content:url("/images/home/boutonnieres_home_desktop.jpg");
+    }
+
+    .desktop-category-list .category-container:nth-child(3) img {
+      content:url("/images/home/centerpieces_home_desktop.jpg");
+    }
+
+    .desktop-category-list .pink-rectangle {
+      width: 90%;
+      height: 400px;
+      border: 2px solid #E83671;
+      margin-top: -400px;
+      margin-bottom: 100px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    /*</CategoryList>*/
+
+
   .upper-row .navbar-container {
     display: flex;
     justify-content: center;
