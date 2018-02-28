@@ -12,14 +12,14 @@
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lato|Oswald:300" %>
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag "category-description-banner" %>
+    <%= stylesheet_link_tag "categories" %>
     <%= javascript_include_tag "site" %>
+
 
 
   </head>
   <body>
-    <%= partial 'partials/header' %>
-    <%= partial 'partials/offers' %>
+    <%= partial 'partials/categories' %>
     <%= yield %>
-    <%= partial 'partials/footer' %>
   </body>
 </html>
