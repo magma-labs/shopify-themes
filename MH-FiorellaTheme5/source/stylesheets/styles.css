@@ -68,6 +68,7 @@ p{
   margin-left: -80%;
   right: 5px;
 }
+
 .title-icon:after {
   left: 5px;
   margin-right: -50%;
@@ -78,11 +79,11 @@ p{
   width: 40px;
 }
 
-.promotion{
+.promotion {
   padding: 10px;
 }
 
-.box-promotions{
+.box-promotions {
   background: #F3F9EF;
   background-image: url('../images/home/banner_image_home_tablet@2x.jpg');
   background-position: right;
@@ -809,15 +810,15 @@ p{
     padding-bottom: 20px;
   }
 
-  .social-media{
+  .social-media {
     border: 0px;
   }
 
-  .title-icon{
+  .title-icon {
     top: 50px;
   }
 
-  .promotion-message{
+  .promotion-message {
     bottom: 35px;
     font-size: 50px;
     left: 60px;
