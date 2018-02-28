@@ -12,13 +12,13 @@ $('.slider').slick({
     }]
 });
 
-document.getElementById("CloseMenu").addEventListener("click", () => {
+document.getElementById("CloseMenu").addEventListener("click", function() {
   document.getElementById("logo").className = 'whiteLogo';
   document.getElementById('mySidenav').classList.remove('openSideNav');
   document.getElementById('mySidenav').classList.add('closeSideNav');
 });
 
-document.getElementById("OpenMenu").addEventListener("click", () => {
+document.getElementById("OpenMenu").addEventListener("click", function() {
   document.getElementById('logo').className = 'pinkLogo';
   document.getElementById('mySidenav').classList.remove('closeSideNav');
   document.getElementById('mySidenav').classList.add('openSideNav');
