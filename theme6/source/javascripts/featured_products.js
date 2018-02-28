@@ -1,17 +1,3 @@
-var images = ["bear_toy", "train_toy", "plane_toy", "ship_toy"];
-var i = 0;
-
-const leftArrow = document.getElementById("leftArrow");
-const rightArrow = document.getElementById("rightArrow");
-
-leftArrow.addEventListener("click", () => {
-  changeImage(-1);
-});
-
-rightArrow.addEventListener("click", () => {
-  changeImage(1);
-});
-
 function changeImage(value) {
   i += value;
 
@@ -22,5 +8,19 @@ function changeImage(value) {
     i = 0;
   }
 
-  document.getElementById("featuredToy").src = "images/" + images[i] + ".png";
+  document.getElementById('featuredToy').src = 'images/' + images[i] + '.png';
 }
+
+var images = ['bear_toy', 'train_toy', 'plane_toy', 'ship_toy'];
+var i = 0;
+
+const leftArrow = document.getElementById('leftArrow');
+const rightArrow = document.getElementById('rightArrow');
+
+leftArrow.addEventListener('click', () => {
+  changeImage(-1);
+});
+
+rightArrow.addEventListener('click', () => {
+  changeImage(1);
+});
