@@ -49,7 +49,6 @@
 
 .box-quantity {
   display: flex;
-  font-family: 'Oswald';
   justify-content: center;
   margin-bottom: 20px;
 }
@@ -58,8 +57,24 @@
   color: #627387;
   display: block;
   font-family: 'Lato';
-  text-align: center;
-  width: 50%;
+}
+
+.box-quantity.box {
+  display: flex;
+}
+
+.box select {
+  height: 20px;
+  margin-top: 10px;
+  width: 50px;
+}
+
+.box-quantity .quantity {
+  width: 90px;
+}
+
+.box-quantity select {
+  margin-top: 12px;
 }
 
 .info .name p {
@@ -216,13 +231,17 @@
   }
   .box-quantity {
     display: block;
+    padding: 10px 0 10px 0;
   }
   .box-quantity .quantity {
+    margin: 0;
     display: block;
     text-align: left;
+    font-size: 13px;
   }
   .box-quantity select {
-    width: 65px;
+    width: 90px;
+    height: 30px;
   }
   .contenedor-add {
     display: block;
