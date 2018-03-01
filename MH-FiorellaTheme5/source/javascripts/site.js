@@ -3,7 +3,7 @@ $('.slider').slick({
     dots: true,
     prevArrow: false,
     nextArrow: false,
-    responsive: [{ 
+    responsive: [{
         settings: {
             dots: false,
             arrows: false,
@@ -12,15 +12,14 @@ $('.slider').slick({
     }]
 });
 
-// This is where it all goes :)
-function openNav() {
-  document.getElementById('logo').className = 'pinkLogo';
-  document.getElementById('mySidenav').classList.remove('closeSideNav');
-  document.getElementById('mySidenav').classList.add('openSideNav');
-}
-
-function closeNav() {
+document.getElementById('CloseMenu').addEventListener('click', function() {
   document.getElementById("logo").className = 'whiteLogo';
   document.getElementById('mySidenav').classList.remove('openSideNav');
   document.getElementById('mySidenav').classList.add('closeSideNav');
-}
+});
+
+document.getElementById('OpenMenu').addEventListener('click', function() {
+  document.getElementById('logo').className = 'pinkLogo';
+  document.getElementById('mySidenav').classList.remove('closeSideNav');
+  document.getElementById('mySidenav').classList.add('openSideNav');
+});
