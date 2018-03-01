@@ -42,10 +42,18 @@
   padding: 5px 25px 5px 25px;
 }
 
+.product-card .front-label {
+  display: none;
+}
+
+.new-product .front-label {
+  display: flex;
+}
+
+
 .product-image {
   display: flex;
   flex-direction: row;
-  flex: 6;
   justify-content: center;
 }
 
@@ -166,6 +174,7 @@
 
   .product-card {
     display: block;
+    flex: 1;
   }
 
   .related-products h2 {
@@ -173,14 +182,6 @@
   }
 
   .related-products-list {
-    display: flex;
-  }
-
-  .product-card .front-label {
-    display: none;
-  }
-
-  .new-product .front-label {
     display: flex;
   }
 
