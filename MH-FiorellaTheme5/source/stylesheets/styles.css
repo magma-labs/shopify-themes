@@ -17,16 +17,85 @@ html, body {
   z-index: 10;
 }
 
-.promotion {
+.category-list {
   align-items: center;
-  background-color: #F3F9EF;
+  background-color: #FFFFFF;
   height: 300px;
   margin:0;
   padding: 0;
   width: auto;
 }
+/* ------ promotion ------ */
+.p-prom-description, .p-prom-price {
+  letter-spacing: 3px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: left;
+}
 
-.btn-slider, .btn-call-action {
+.p-prom-price {
+  color: #E83671;
+}
+.prom-price {
+  font-family: 'MerriweatherSans-Bold';
+}
+.title-icon {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 25px;
+  width: 100%;
+}
+
+.title-icon:after, .title-icon:before {
+  border-color: #E83671;
+  border-top-style: solid;
+  border-top-width: 1px;
+  content: "";
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.title-icon:after {
+  left: 5px;
+  margin-right: -50%;
+}
+
+.title-icon:before {
+  margin-left: -80%;
+  right: 5px;
+}
+
+.title-icon-img {
+  vertical-align: middle;
+  width: 40px;
+}
+
+.promotion {
+  padding: 10px;
+}
+
+.box-promotions {
+  background: #F3F9EF;
+  background-image: url('/images/home/banner_image_home_tablet@2x.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: auto;
+  position: relative;
+}
+
+.promotion-message {
+  bottom: 25px;
+  font-family: 'PlayfairDisplay-Bold';
+  font-size: 20px;
+  left: 30px;
+  position: absolute;
+}
+/* ------- end promotion --- */
+.btn-call-action, .btn-slider {
   background: transparent;
   border: 2px solid #E83671;
   color: #E83671;
@@ -48,7 +117,7 @@ html, body {
   letter-spacing: 1px;
 }
 
-.slick-next .slick-arrow {
+.slick-arrow, .slick-next {
   display: none;
 }
 
@@ -62,7 +131,7 @@ html, body {
   overflow: hidden;
 }
 
-.title-message:before, .title-message:after {
+.title-message:after, .title-message:before {
   background-color: #E83671;
   content: "";
   display: inline-block;
@@ -85,7 +154,6 @@ html, body {
 .text-message {
   font-family: "MerriweatherSans-Light";
   font-size: 22px;
-  line-height: 32px;
   line-height: 40px;
 }
 
@@ -114,7 +182,7 @@ html, body {
   display: block;
   font-family: "MerriweatherSans-Regular";
   margin: 10px;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .ul-footer li a:hover {
@@ -146,7 +214,7 @@ html, body {
   margin: 10px;
 }
 
-.icon_facebook, .icon_pinterest, .icon_gplus {
+.icon_facebook, .icon_gplus, .icon_pinterest {
   height: 40px;
   width: 40px;
 }
@@ -196,7 +264,7 @@ html, body {
   }
 
   .slick-dots {
-      top: 0px;
+    top: 0px;
   }
 
   .slick-dotted .slick-slider {
@@ -223,10 +291,25 @@ html, body {
     right: 15px;
   }
 
-  .footer_fiorella, .footer_info, .footer_contact {
+   .footer_contact, .footer_fiorella, .footer_info {
     display: none;
   }
 
+  .box-promotions {
+    background-image: url('/images/home/banner_image_home_mobil@2x.jpg');
+    height: 260px;
+  }
+  .p-prom-description {
+    width: 100px;
+  }
+
+  .p-prom-price {
+    width: 150px;
+  }
+
+  /* end footer */
+
+  /*<SearchBar> */
   .topnav {
     height: 90px;
   }
@@ -730,7 +813,7 @@ html, body {
 }
 
 @media only screen and ( min-width: 769px ) and ( max-width: 1023px ) {
-  .btn-slider, .btn-call-action {
+  .btn-call-action, .btn-slider {
     font-size: 28px;
     height: 64px;
     width: 288px;
@@ -768,12 +851,12 @@ html, body {
   .btn-slider {
     bottom: 50px;
     font-size: 24px;
-    padding: 10 60px;
+    padding: 10px 60px;
     position: absolute;
     right: 15px;
   }
 
-  .footer_fiorella, .footer_info, .footer_contact {
+  .footer_contact, .footer_fiorella, .footer_info {
     display: block;
   }
 
@@ -790,6 +873,31 @@ html, body {
   .ul-social li {
     text-align: center;
   }
+
+  .title-icon {
+    top: 40px;
+  }
+
+  .promotion-message {
+    bottom: 40px;
+    font-size: 40px;
+    left: 40px;
+  }
+
+  .box-promotions {
+    background-image: url('/images/home/banner_image_home_tablet@2x.jpg');
+    height: 400px;
+  }
+
+  .p-prom-description {
+    font-size: 50px;
+    width: 500px;
+  }
+
+  .p-prom-price {
+    width: 450px;
+  }
+
 }
 
 @media only screen and ( min-width: 1024px ) {
@@ -797,7 +905,7 @@ html, body {
     font-size: 30px;
   }
 
-  .btn-slider, .btn-call-action {
+  .btn-call-action, .btn-slider {
     font-size: 28px;
     height: 73px;
     width: 325px;
@@ -835,7 +943,7 @@ html, body {
   .btn-slider {
     bottom: 50px;
     font-size: 24px;
-    padding: 10 60px;
+    padding: 10px 60px;
     position: absolute;
     right: 15px;
     width: 300px;
@@ -850,5 +958,29 @@ html, body {
 
   .social-media {
     border: 0px;
+  }
+
+  .title-icon {
+    top: 50px;
+  }
+
+  .promotion-message {
+    bottom: 35px;
+    font-size: 50px;
+    left: 60px;
+  }
+
+  .box-promotions {
+    background-image: url('/images/home/banner_image_home_1024@2x.jpg');
+    height: 500px;
+  }
+
+  .p-prom-description {
+    font-size: 60px;
+    width: 500px;
+  }
+
+  .p-prom-price {
+    width: 550px;
   }
 }
