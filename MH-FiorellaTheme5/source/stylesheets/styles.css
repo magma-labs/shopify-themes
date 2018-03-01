@@ -8,12 +8,12 @@ html, body {
 }
 
 .whiteLogo {
-  content:url("../images/home/wlogo_fiorella_mobil.png");
+  content:url('/images/home/wlogo_fiorella_mobil.png');
   z-index: 10;
 }
 
 .pinkLogo {
-  content:url("../images/home/logo_fiorella_menu.png");
+  content:url('/images/home/logo_fiorella_menu.png');
   z-index: 10;
 }
 
@@ -26,7 +26,7 @@ html, body {
   width: auto;
 }
 
-.btn-slider, .btn-call-action{
+.btn-slider, .btn-call-action {
   background: transparent;
   border: 2px solid #E83671;
   color: #E83671;
@@ -39,7 +39,7 @@ html, body {
    text-align: right;
 }
 
-.img-item img{
+.img-item img {
   height: auto;
   width: 100%;
 }
@@ -48,7 +48,7 @@ html, body {
   letter-spacing: 1px;
 }
 
-.slick-next .slick-arrow{
+.slick-next .slick-arrow {
   display: none;
 }
 
@@ -152,40 +152,39 @@ html, body {
 }
 
 .icon_facebook {
-  background-image: url('../images/home/icon_facebook.png');
+  background-image: url('/images/home/icon_facebook.png');
   background-repeat: no-repeat;
   background-size: 40px;
 }
 
 .icon_pinterest {
-  background-image: url('../images/home/icon_pinterest.png');
+  background-image: url('/images/home/icon_pinterest.png');
   background-repeat: no-repeat;
   background-size: 40px;
 }
 
 .icon_gplus {
-  background-image: url('../images/home/icon_gplus.png');
+  background-image: url('/images/home/icon_gplus.png');
   background-repeat: no-repeat;
   background-size: 40px;
 }
 
 .icon_facebook:hover {
-  background-image: url('../images/home/bicon_facebook.png');
+  background-image: url('/images/home/bicon_facebook.png');
   background-size: 40px;
 }
 
 .icon_pinterest:hover {
-  background-image: url('../images/home/bicon_pinterest.png');
+  background-image: url('/images/home/bicon_pinterest.png');
   background-size: 40px;
 }
 
 .icon_gplus:hover {
-  background-image: url('../images/home/bicon_gplus.png');
+  background-image: url('/images/home/bicon_gplus.png');
   background-size: 40px;
 }
 
 @media only screen and ( max-width: 768px ) {
-  /* footer */
   .btn-slider, .btn-call-action {
     font-size: 16px;
     height: 40px;
@@ -227,9 +226,7 @@ html, body {
   .footer_fiorella, .footer_info, .footer_contact {
     display: none;
   }
-  /* end footer */
 
-  /*<SearchBar> */
   .topnav {
     height: 90px;
   }
@@ -309,9 +306,7 @@ html, body {
     height: 25px;
     width: 25px;
   }
-    /*</SearchBar> */
 
-  /*<homeMenu>*/
   .openSideNav {
     width: 95%;
   }
@@ -409,9 +404,7 @@ html, body {
   .sidenav .mobile-info-container a {
     font-size: 20px;
   }
-  /*</homeMenu>*/
 
-  /*<CategoryList>*/
   .desktop-category-list {
     display: none;
   }
@@ -461,11 +454,9 @@ html, body {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  /*</CategoryList>*/
 }
 
 @media only screen and ( min-width: 769px ) {
-  /*<CategoryList>*/
   .mobile-category-list {
     display: none;
   }
@@ -554,15 +545,15 @@ html, body {
   }
 
   .desktop-category-list .category-container:nth-child(1) img {
-    content:url("/images/home/bouquets_home_desktop.jpg");
+    content:url('/images/home/bouquets_home_desktop.jpg');
   }
 
   .desktop-category-list .category-container:nth-child(2) img {
-    content:url("/images/home/boutonnieres_home_desktop.jpg");
+    content:url('/images/home/boutonnieres_home_desktop.jpg');
   }
 
   .desktop-category-list .category-container:nth-child(3) img {
-    content:url("/images/home/centerpieces_home_desktop.jpg");
+    content:url('/images/home/centerpieces_home_desktop.jpg');
   }
 
   .desktop-category-list .pink-rectangle {
@@ -574,7 +565,6 @@ html, body {
     margin-top: -400px;
     width: 90%;
   }
-  /*</CategoryList>*/
 
   .upper-row .navbar-container {
     display: flex;
@@ -649,7 +639,6 @@ html, body {
   .sidenav {
     display: none;
   }
-  /*<SearchBar> */
 
   .burger-menu {
     display: none;
@@ -720,7 +709,7 @@ html, body {
   .topnav .icon-bag-container .dot {
     align-items: center;
     background-color: red;
-    border-radius: 50%;
+    border-radius: 17.5px;
     display: flex;
     height: 35px;
     justify-content: center;
@@ -738,7 +727,6 @@ html, body {
     height: 35px;
     width: 35px;
   }
-  /*</SearchBar> */
 }
 
 @media only screen and ( min-width: 769px ) and ( max-width: 1023px ) {
@@ -749,11 +737,11 @@ html, body {
   }
 
   .img1 {
-    content:url("../images/home/hero1hometablet.jpg");
+    content:url("/images/home/hero1hometablet.jpg");
   }
 
   .img2 {
-    content:url("../images/home/hero1hometablet.jpg");
+    content:url("/images/home/hero1hometablet.jpg");
   }
 
   .slick-dots {
@@ -805,11 +793,9 @@ html, body {
 }
 
 @media only screen and ( min-width: 1024px ) {
-  /*<CategoryList>*/
   .desktop-category-list .category-container .image-container .middle div {
     font-size: 30px;
   }
-  /*</CategoryList>*/
 
   .btn-slider, .btn-call-action {
     font-size: 28px;
@@ -818,11 +804,11 @@ html, body {
   }
 
   .img1 {
-    content:url("../images/home/hero1home1280.jpg");
+    content:url("/images/home/hero1home1280.jpg");
   }
 
   .img2 {
-    content:url("../images/home/hero1home1280.jpg");
+    content:url("/images/home/hero1home1280.jpg");
   }
 
   .slick-dots {
