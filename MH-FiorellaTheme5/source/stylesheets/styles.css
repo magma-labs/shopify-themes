@@ -13,12 +13,12 @@ p{
   width: 100%;
 }
 
-.whiteLogo{
+.whiteLogo {
   content:url("../images/home/wlogo_fiorella_mobil.png");
   z-index: 10;
 }
 
-.pinkLogo{
+.pinkLogo {
   content:url("../images/home/logo_fiorella_menu.png");
   z-index: 10;
 }
@@ -32,17 +32,17 @@ p{
   width: auto;
 }
 /* ------ promotion ------ */
-.p-prom-description, .p-prom-price{
+.p-prom-description, .p-prom-price {
   letter-spacing: 3px;
-  margin-top: 0px;
   margin-bottom: 0px;
+  margin-top: 0px;
   text-align: left;
 }
 
-.p-prom-price{
+.p-prom-price {
   color: #E83671;
 }
-.prom-price{
+.prom-price {
   font-family: 'MerriweatherSans-Bold';
 }
 .title-icon {
@@ -93,7 +93,7 @@ p{
   position: relative;
 }
 
-.promotion-message{
+.promotion-message {
   bottom: 25px;
   font-family: 'PlayfairDisplay-Bold';
   font-size: 20px;
@@ -101,7 +101,7 @@ p{
   position: absolute;
 }
 /* ------- end promotion --- */
-.btn-slider, .btn-call-action{
+.btn-call-action, .btn-slider {
   background: transparent;
   border: 2px solid #E83671;
   color: #E83671;
@@ -109,21 +109,21 @@ p{
   font-weight: bold;
 }
 
-.img-item{
-   text-align: right;
+.img-item {
    position: relative;
+   text-align: right;
 }
 
-.img-item img{
+.img-item img {
   height: auto;
   width: 100%;
 }
 
-.msg{
+.msg {
   letter-spacing: 1px;
 }
 
-.slick-next .slick-arrow{
+.slick-arrow, .slick-next {
   display: none;
 }
 
@@ -133,11 +133,11 @@ p{
   text-align: center;
 }
 
-.title-message{
+.title-message {
   overflow: hidden;
 }
 
-.title-message:before, .title-message:after {
+.title-message:after, .title-message:before{
   background-color: #E83671;
   content: "";
   display: inline-block;
@@ -149,34 +149,34 @@ p{
 
 .title-message:before {
   margin-left: -50%;
-  right: 0.5em;
+  right: 10px;
 }
 
 .title-message:after {
-  left: 0.5em;
+  left: 10px;
   margin-right: -50%;
 }
 
-.text-message{
+.text-message {
   font-family: "MerriweatherSans-Light";
   font-size: 22px;
   line-height: 40px;
 }
 
-.footer{
+.footer {
   padding: 15px 10px;
 }
 
-.social-media{
+.social-media {
   border: 2px solid #E83671;
   text-align: center;
 }
 
-.box-footer-item{
+.box-footer-item {
   text-align: center;
 }
 
-.ul-footer{
+.ul-footer {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -191,12 +191,12 @@ p{
   text-decoration:none;
 }
 
-.ul-footer li a:hover{
+.ul-footer li a:hover {
   color: #E83671;
   font-weight: bold;
 }
 
-.ul-social{
+.ul-social {
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -205,13 +205,13 @@ p{
   padding: 0;
 }
 
-.title-footer{
+.title-footer {
   color: #E83671;
   font-family: "PlayfairDisplay-Bold";
   text-align: center;
 }
 
-.social-media li{
+.social-media li {
   float: left;
 }
 
@@ -220,53 +220,53 @@ p{
   margin: 10px;
 }
 
-.icon_facebook, .icon_pinterest, .icon_gplus{
+.icon_facebook, .icon_gplus, .icon_pinterest{
   height: 40px;
   width: 40px;
 }
 
-.icon_facebook{
+.icon_facebook {
   background-image: url('../images/home/icon_facebook.png');
   background-repeat: no-repeat;
   background-size: 40px;
 }
 
-.icon_pinterest{
+.icon_pinterest {
   background-image: url('../images/home/icon_pinterest.png');
   background-repeat: no-repeat;
   background-size: 40px;
 }
 
-.icon_gplus{
+.icon_gplus {
   background-image: url('../images/home/icon_gplus.png');
   background-repeat: no-repeat;
   background-size: 40px;
 }
 
-.icon_facebook:hover{
+.icon_facebook:hover {
   background-image: url('../images/home/bicon_facebook.png');
   background-size: 40px;
 }
 
-.icon_pinterest:hover{
+.icon_pinterest:hover {
   background-image: url('../images/home/bicon_pinterest.png');
   background-size: 40px;
 }
 
-.icon_gplus:hover{
+.icon_gplus:hover {
   background-image: url('../images/home/bicon_gplus.png');
   background-size: 40px;
 }
 
 @media only screen and ( max-width: 768px ) {
 
-  .btn-slider, .btn-call-action{
+  .btn-call-action, .btn-slider {
     font-size: 16px;
     height: 40px;
     width: 175px;
   }
 
-  .image-message{
+  .image-message {
     width: 50%;
   }
 
@@ -274,15 +274,15 @@ p{
     top: 0px;
   }
 
-  .slick-dotted .slick-slider{
+  .slick-dotted .slick-slider {
     margin-bottom: 0px;
   }
 
-  .slick-dots li button:before{
+  .slick-dots li button:before {
     font-size: 30px;
   }
 
-  .msg{
+  .msg {
     bottom: 100px;
     font-family: 'PlayfairDisplay-BoldItalic';
     font-size: 16px;
@@ -292,26 +292,26 @@ p{
     width: 150px;
   }
 
-  .btn-slider{
+  .btn-slider {
     bottom: 50px;
     position: absolute;
     right: 15px;
   }
 
-  .footer_fiorella, .footer_info, .footer_contact{
+   .footer_contact, .footer_fiorella, .footer_info {
     display: none;
   }
 
-  .box-promotions{
+  .box-promotions {
     background-image: url('../images/home/banner_image_home_mobil@2x.jpg');
     height: 260px;
 
   }
-  .p-prom-description{
+  .p-prom-description {
     width: 100px;
   }
 
-  .p-prom-price{
+  .p-prom-price {
     width: 150px;
   }
 
@@ -431,7 +431,7 @@ p{
     transition: 0.3s
   }
 
-  .sidenav a:hover{
+  .sidenav a:hover {
     color: #f1f1f1;
   }
 
@@ -503,48 +503,48 @@ p{
 @media only screen and ( min-width: 769px ) {
   .upper-row .navbar-container {
     display: flex;
-    justify-content: center;
-    width: auto;
     height: 30px;
+    justify-content: center;
     margin-top: 40px;
+    width: auto;
   }
 
   .upper-row .navbar-container .navbar {
     display: flex;
+    height: auto;
     justify-content: space-around;
     width: 100%;
-    height: auto;
   }
 
-  .upper-row .navbar-container .navbar nav ul{
+  .upper-row .navbar-container .navbar nav ul {
     margin: 0;
     padding: 0
   }
 
   .upper-row .navbar-container .navbar nav li {
-    list-style: none;
-    font-size: 12px;
     float: left;
+    font-size: 12px;
+    list-style: none;
     text-align: center;
   }
 
   .upper-row .navbar-container .navbar nav li a {
+    border-right: 1px solid #E83671;
+    color: #555555;
     display: block;
-    text-decoration: none;
-     /* space between links */
-    width: auto;   /* adjust width as needed or use auto */
-    padding-right: 28px;
-    padding-left: 28px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     font-family: "PlayfairDisplay";
     font-size: 20px;
     line-height: 8px;
-    color: #555555;
-    border-right: 1px solid #E83671;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 10px;
+    text-decoration: none;
+     /* space between links */
+    width: auto;   /* adjust width as needed or use auto */
   }
 
-  .upper-row .navbar-container .navbar nav li:last-child a{
+  .upper-row .navbar-container .navbar nav li:last-child a {
     border:none;
   }
 
@@ -553,19 +553,19 @@ p{
   }
 
   .logo_fiorella {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 30px;
-    padding: auto;
     opacity: 1;
+    padding: auto;
   }
 
   .upper-row {
     background-color: #F3F9EF;
     height: auto;
-    padding-bottom: 15px;
     opacity: 0.85;
+    padding-bottom: 15px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -599,13 +599,13 @@ p{
   }
 
   .topnav div a {
+    color: black;
+    display: block;
+    float: right;
     font-family: "MerriweatherSans-Light";
     font-size: 17px;
-    float: right;
-    display: block;
-    color: black;
-    text-align: center;
     padding: 14px 16px;
+    text-align: center;
     text-decoration: none;
   }
 
@@ -669,107 +669,18 @@ p{
 
 @media only screen and ( min-width: 769px ) and ( max-width: 1023px ){
 
-  .btn-slider, .btn-call-action{
+  .btn-call-action, .btn-slider {
     font-size: 28px;
     height: 64px;
     width: 288px;
   }
 
-  .img1{
+  .img1 {
     content:url("../images/home/hero1hometablet.jpg");
   }
 
-  .img2{
+  .img2 {
     content:url("../images/home/hero1hometablet.jpg");
-  }
-
-  .slick-dots {
-    bottom: 10px;
-  }
-
-  .slick-dotted .slick-slider{
-    margin-bottom: 0px;
-  }
-
-  .slick-dots li button:before{
-    font-size: 50px;
-  }
-
-  .msg{
-    bottom: 110px;
-    font-family: 'PlayfairDisplay-BoldItalic';
-    font-size: 20px;
-    position: absolute;
-    right: 15px;
-    text-align: right;
-  }
-
-  .btn-slider{
-    bottom: 50px;
-    font-size: 24px;
-    padding: 10 60px;
-    position: absolute;
-    right: 15px;
-  }
-
-  .footer_fiorella, .footer_info, .footer_contact{
-    display: block;
-  }
-
-  .box-footer{
-    border: 2px solid #E83671;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .social-media{
-    border: 0px;
-  }
-
-  .ul-social li{
-    text-align: center;
-  }
-
-  .title-icon{
-    top: 40px;
-  }
-
-  .promotion-message{
-    bottom: 40px;
-    font-size: 40px;
-    left: 40px;
-  }
-
-  .box-promotions{
-    background-image: url('../images/home/banner_image_home_tablet@2x.jpg');
-    height: 400px;
-  }
-
-  .p-prom-description{
-    font-size: 50px;
-    width: 500px;
-  }
-
-  .p-prom-price{
-    width: 450px;
-  }
-
-}
-
-@media only screen and ( min-width: 1024px ){
-
-  .btn-slider, .btn-call-action{
-    font-size: 28px;
-    height: 73px;
-    width: 325px;
-  }
-
-  .img1{
-    content:url("../images/home/hero1home1280.jpg");
-  }
-
-  .img2{
-    content:url("../images/home/hero1home1280.jpg");
   }
 
   .slick-dots {
@@ -784,8 +695,96 @@ p{
     font-size: 50px;
   }
 
-  .msg
-  {
+  .msg {
+    bottom: 110px;
+    font-family: 'PlayfairDisplay-BoldItalic';
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    text-align: right;
+  }
+
+  .btn-slider {
+    bottom: 50px;
+    font-size: 24px;
+    padding: 10px 60px;
+    position: absolute;
+    right: 15px;
+  }
+
+  .footer_contact, .footer_fiorella, .footer_info{
+    display: block;
+  }
+
+  .box-footer {
+    border: 2px solid #E83671;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .social-media {
+    border: 0px;
+  }
+
+  .ul-social li {
+    text-align: center;
+  }
+
+  .title-icon {
+    top: 40px;
+  }
+
+  .promotion-message {
+    bottom: 40px;
+    font-size: 40px;
+    left: 40px;
+  }
+
+  .box-promotions {
+    background-image: url('../images/home/banner_image_home_tablet@2x.jpg');
+    height: 400px;
+  }
+
+  .p-prom-description {
+    font-size: 50px;
+    width: 500px;
+  }
+
+  .p-prom-price {
+    width: 450px;
+  }
+
+}
+
+@media only screen and ( min-width: 1024px ){
+
+  .btn-call-action, .btn-slider{
+    font-size: 28px;
+    height: 73px;
+    width: 325px;
+  }
+
+  .img1 {
+    content:url("../images/home/hero1home1280.jpg");
+  }
+
+  .img2 {
+    content:url("../images/home/hero1home1280.jpg");
+  }
+
+  .slick-dots {
+    bottom: 10px;
+  }
+
+  .slick-dotted .slick-slider {
+    margin-bottom: 0px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 50px;
+  }
+
+  .msg {
     bottom: 110px;
     font-family: 'PlayfairDisplay-BoldItalic';
     font-size: 32px;
@@ -794,16 +793,16 @@ p{
     text-align: right;
   }
 
-  .btn-slider{
+  .btn-slider {
     bottom: 50px;
     font-size: 24px;
-    padding: 10 60px;
+    padding: 10px 60px;
     position: absolute;
     right: 15px;
     width: 300px;
   }
 
-  .box-footer{
+  .box-footer {
     border: 2px solid #E83671;
     display: flex;
     justify-content: space-around;
@@ -824,17 +823,17 @@ p{
     left: 60px;
   }
 
-  .box-promotions{
+  .box-promotions {
     background-image: url('../images/home/banner_image_home_1024@2x.jpg');
     height: 500px;
   }
 
-  .p-prom-description{
+  .p-prom-description {
     font-size: 60px;
     width: 500px;
   }
 
-  .p-prom-price{
+  .p-prom-price {
     width: 550px;
   }
 }
