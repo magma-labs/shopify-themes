@@ -495,7 +495,7 @@ p{
 
   .desktop-category-list .category-container {
     justify-content: center;
-    margin-right: 30px;
+    margin-right: 15px;
     position: relative;
   }
 
@@ -528,6 +528,7 @@ p{
     display: block;
     height: auto;
     margin: 0 auto;
+    min-width: 239px;
     opacity: 1;
     width: 100%;
   }
@@ -578,7 +579,7 @@ p{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: -400px;
-    width: 90%;
+    width: 97%;
   }
   /*</CategoryList>*/
 
@@ -812,8 +813,18 @@ p{
 
 @media only screen and ( min-width: 1024px ) {
   /*<CategoryList>*/
+  .desktop-category-list .category-container {
+    justify-content: center;
+    margin-right: 30px;
+    position: relative;
+  }
+
   .desktop-category-list .category-container .image-container .middle div {
     font-size: 30px;
+  }
+
+  .desktop-category-list .pink-rectangle {
+    width: 90%;
   }
   /*</CategoryList>*/
 
