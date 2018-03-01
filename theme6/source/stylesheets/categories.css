@@ -59,8 +59,8 @@
 
 .product-image img {
   height: 100%;
-  width: 100%;
   object-fit: contain;
+  width: 100%;
 }
 
 .products-slider label {
@@ -125,8 +125,8 @@
 }
 
 .slider-button img {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .left-button p {
@@ -187,13 +187,13 @@
 
   .product-card {
     margin: 5px;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
   }
 
   .product-data p {
-    text-overflow: ellipsis;
     font-size: 15px;
+    text-overflow: ellipsis;
   }
 
   .product-card .price {
@@ -201,10 +201,10 @@
   }
 
   .product-card .offer {
+    color: #D2D2D2;
     display: flex;
     margin-left: 5px;
     text-decoration: line-through;
-    color: #D2D2D2;
   }
 
   .product-card button {
