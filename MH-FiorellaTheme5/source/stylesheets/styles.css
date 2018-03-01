@@ -64,14 +64,14 @@ p{
   width: 100%;
 }
 
-.title-icon:before {
-  margin-left: -80%;
-  right: 5px;
-}
-
 .title-icon:after {
   left: 5px;
   margin-right: -50%;
+}
+
+.title-icon:before {
+  margin-left: -80%;
+  right: 5px;
 }
 
 .title-icon-img {
