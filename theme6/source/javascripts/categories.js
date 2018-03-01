@@ -4,6 +4,7 @@ var imagesGroup = [images, images2];
 
 var prevButton = document.getElementById("prevNavigator");
 var nextButton = document.getElementById("nextNavigator");
+var closeDialogBtn = document.getElementById("closeDialog");
 
 prevButton.disabled = true;
 
@@ -31,4 +32,8 @@ prevButton.addEventListener('click', function() {
 
 nextButton.addEventListener('click', function() {
   changeGroup(1);
+});
+
+closeDialogBtn.addEventListener('click', function() {
+  document.getElementById("ship-info-dialog").style.display = 'none';
 });
