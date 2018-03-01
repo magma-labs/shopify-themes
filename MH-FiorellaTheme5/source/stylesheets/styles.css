@@ -85,7 +85,7 @@ p{
 
 .box-promotions {
   background: #F3F9EF;
-  background-image: url('../images/home/banner_image_home_tablet@2x.jpg');
+  background-image: url('/images/home/banner_image_home_tablet@2x.jpg');
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -188,7 +188,7 @@ p{
   display: block;
   font-family: "MerriweatherSans-Regular";
   margin: 10px;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .ul-footer li a:hover {
@@ -220,7 +220,7 @@ p{
   margin: 10px;
 }
 
-.icon_facebook, .icon_gplus, .icon_pinterest{
+.icon_facebook, .icon_gplus, .icon_pinterest {
   height: 40px;
   width: 40px;
 }
@@ -303,9 +303,8 @@ p{
   }
 
   .box-promotions {
-    background-image: url('../images/home/banner_image_home_mobil@2x.jpg');
+    background-image: url('/images/home/banner_image_home_mobil@2x.jpg');
     height: 260px;
-
   }
   .p-prom-description {
     width: 100px;
@@ -712,7 +711,7 @@ p{
     right: 15px;
   }
 
-  .footer_contact, .footer_fiorella, .footer_info{
+  .footer_contact, .footer_fiorella, .footer_info {
     display: block;
   }
 
@@ -741,7 +740,7 @@ p{
   }
 
   .box-promotions {
-    background-image: url('../images/home/banner_image_home_tablet@2x.jpg');
+    background-image: url('/images/home/banner_image_home_tablet@2x.jpg');
     height: 400px;
   }
 
@@ -756,9 +755,9 @@ p{
 
 }
 
-@media only screen and ( min-width: 1024px ){
+@media only screen and ( min-width: 1024px ) {
 
-  .btn-call-action, .btn-slider{
+  .btn-call-action, .btn-slider {
     font-size: 28px;
     height: 73px;
     width: 325px;
@@ -824,7 +823,7 @@ p{
   }
 
   .box-promotions {
-    background-image: url('../images/home/banner_image_home_1024@2x.jpg');
+    background-image: url('/images/home/banner_image_home_1024@2x.jpg');
     height: 500px;
   }
 
