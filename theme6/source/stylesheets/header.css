@@ -117,50 +117,48 @@
     height: 2px;
     width: 228px;
   }
-  footer {
+  .sidenav_social_container {
     color: #72808C;
     text-align: center;
   }
-  .boxsocialmedia_ {
+  .social_media {
     align-content: center;
     justify-content: space-between;
   }
-  .sm_ {
+  .sm {
     border-radius: 3px;
     border: 2px solid #72808C;
     height: 35px;
     width: 72px;
     background-repeat: no-repeat;
   }
-  #fb_ {
+  .f {
     background-image: url("../images/Fill 4 Copy@2x.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 8px;
   }
-  #twt_ {
+  .twt {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("../images/Fill 1 Copy@2x.png");
     background-size: 15px;
   }
-  #g_ {
+  .g {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("../images/Fill 2 Copy@2x.png");
     background-size: 15px;
   }
-  .newsletter_ input {
+  .email_box {
     background-color: #FBFBFB;
     border-radius: 2px;
     border: 2px solid #D2D2D2;
     height: 25px;
     width: 227px;
+    margin-bottom: 20px;
   }
-  .information_ ul {
-    padding: 0;
-  }
-  .information_ ul li a {
+  .info_list a {
     color: #72808C;
     padding-bottom: 20px;
     padding-left: 0;
