@@ -131,7 +131,7 @@ html, body {
   overflow: hidden;
 }
 
-.title-message:after, .title-message:before{
+.title-message:after, .title-message:before {
   background-color: #E83671;
   content: "";
   display: inline-block;
