@@ -5,7 +5,8 @@
     <!-- SIDEBAR -->
     <div id="mySidenav" class="sidenav">
       <div class="sidenav-logo">
-        <img class="sidenavhorse" src="../images/logo2.png">
+        <a href="/">
+          <img class="sidenavhorse" src="../images/logo2.png"></a>
         <button type="button" class="closebtn" onclick="closeNav()">
           <p>Close
             <img class="arrow-back" src="../images/Path 322 Copy 3@2x.png"></p>
@@ -20,8 +21,8 @@
         <a href="/categories.html">OUTDOORS
           <br><br></a>
         <hr class="line">
-        <a class="sidenav-login" href="#">LOG IN</a>
-        <a class="sidenav-login" href="#">SIGN UP<br><br></a>
+        <a class="sidenav-login nav-login" href="#">LOG IN</a>
+        <a class="sidenav-login nav-signup" href="#">SIGN UP<br><br></a>
       </div>
       <!-- Seccion del footer Sidenav -->
       <div class="sidenav-social-container">
@@ -30,9 +31,21 @@
             <p>
               FOLLOW US</p>
             <div class="social-media">
-              <button type="button" class="smm f"></button>
-              <button type="button" class="smm twt"></button>
-              <button type="button" class="smm g"></button>
+              <div class="smm">
+               <a href="http://www.facebook.com">
+                 <p><img src="/images/fb.svg" alt="Facebook" class="fb-icon"></p>
+               </a>
+             </div>
+             <div class="smm twt">
+               <a href="http://www.twitter.com">
+                 <p><img src="/images/twt.svg" alt="Twitter" class="twt-icon"></p>
+               </a>
+             </div>
+             <div class="smm">
+               <a href="https://plus.google.com">
+                 <p><img src="/images/g+.svg" alt="Google+" class="g-icon"></p>
+               </a>
+             </div>
             </div>
           </div>
         </div>
@@ -60,7 +73,9 @@
         <img class="arrow" src="../images/Path 322 Copy 5@2x.png">Menu</button>
 
     </div>
-    <img class="horse" src="../images/logo2.png">
+    <a href="/">
+      <img class="horse" src="../images/logo2.png">
+    </a>
     <span class="num-cart">0
       <img class="imported-layers" src="../images/Cart_Icon@2x.png">
     </span>
@@ -69,7 +84,9 @@
   <!-- version desktop -->
   <div class="navbar-desktop">
     <div class="menubar-desktop">
-      <div class="logocontainer"><img class="logodesktop" src="../images/Logo@2x.png"></div>
+      <div class="logocontainer">
+        <a href="/"><img class="logodesktop" src="../images/Logo@2x.png"></a>
+      </div>
       <div class="searchlogin">
         <input type="text" class="searchbar" name="search" placeholder="Search">
         <ul>

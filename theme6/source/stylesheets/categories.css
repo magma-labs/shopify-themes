@@ -93,6 +93,10 @@
   padding: 5px 25px 5px 25px;
 }
 
+.product-card-category {
+  background-color: #fff; 
+}
+
 .product-card-category:hover {
   background-color: rgba(83, 150, 230, 0.1);
 }

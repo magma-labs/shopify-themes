@@ -8,6 +8,10 @@
   display: none;
 }
 
+.product-card {
+  background-color: #fff;
+}
+
 .first-product-card {
   display: block;
 }
