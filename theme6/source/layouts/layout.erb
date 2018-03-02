@@ -7,11 +7,14 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lato|Oswald:300" %>
     <%= stylesheet_link_tag "header" %>
     <%= stylesheet_link_tag "main" %>
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lato|Oswald:300" %>
     <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "category-description-banner" %>
+    <%= stylesheet_link_tag "categories" %>
     <%= javascript_include_tag "site" %>
+
 
 
   </head>
@@ -19,6 +22,7 @@
     <%= partial 'partials/header' %>
     <%= partial 'partials/offers' %>
     <%= yield %>
+    <%= partial 'partials/categories' %>
     <%= partial 'partials/footer' %>
   </body>
 </html>
