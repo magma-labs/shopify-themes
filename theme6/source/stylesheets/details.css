@@ -1,4 +1,7 @@
 /*Starts MOBILE*/
+.banner_handcrafted {
+  display: none;
+}
 
 .next {
   display: none;
@@ -249,5 +252,32 @@
   }
   .show-less {
     display: none;
+  }
+  .banner_handcrafted {
+    background-image: url("../images/carving-w-butcher-gouge.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    display: block;
+    font-family: 'Lato', sans-serif;
+  }
+  .banner_content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: center;
+    text-align: center;
+    width: 55%;
+  }
+  .banner_content p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .banner_description {
+    width: 80%;
+  }
+  .banner_handcrafted .banner_content {
+    background: linear-gradient(90deg, rgba(200, 190, 183), rgba(200, 190, 183, 1) 40%, rgba(200, 190, 183, 1) 80%, rgba(200, 190, 183, 0));
   }
 }
