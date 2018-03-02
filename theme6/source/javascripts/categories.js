@@ -1,5 +1,5 @@
-var images = ["bear_toy", "train_toy", "plane_toy", "ship_toy"];
-var images2 = ["train_toy", "bear_toy", "ship_toy", "plane_toy"];
+var images = ['bear_toy', 'train_toy', 'plane_toy', 'ship_toy'];
+var images2 = ['train_toy', 'bear_toy', 'ship_toy', 'plane_toy'];
 var imagesGroup = [images, images2];
 
 var prevButton = document.getElementById('prevNavigator');
@@ -22,7 +22,7 @@ function changeGroup(value) {
   }
 
   for (var i = 0, j = 1; i < images.length; i++, j++) {
-    id = "toy" + j.toString();
+    id = 'toy' + j.toString();
     route = '/images/' + imagesGroup[value][i] + '.png';
     document.getElementById(id).src = route;
   }
