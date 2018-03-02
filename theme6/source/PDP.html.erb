@@ -1,45 +1,44 @@
 <div class="a">
-    <!-- Fotografias -->
-    <div class="half-left">
-      <div class="history">
-        <a href="#" class="next main"><p>HOME</p></a>
-        <img src="../images/path-right.png" alt="path" class='next'>
-        <a href="#" class='next category' ><p>WOODEN TOYS</p></a>
-        <img src="../images/path-right.png" alt="Path" class='next'>
-        <a href="#" class='next selection'><p>DALMATIAN DOG</p></a>
+  <!-- Fotografias -->
+  <div class="half-left">
+    <div class="history">
+      <a href="#" class="next main"><p>HOME</p></a>
+      <img src="../images/path-right.png" alt="path" class='next'>
+      <a href="#" class='next category' ><p>WOODEN TOYS</p></a>
+      <img src="../images/path-right.png" alt="Path" class='next'>
+      <a href="#" class='next selection'><p>DALMATIAN DOG</p></a>
+    </div>
+    <div class="super-product">
+      <div class="box-product">
+        <div class="front-label"><p>NEW</p></div>
+        <img src="../images/oso.png" alt="bear" class="product" id="product">
       </div>
-      <div class="super-product">
-        <div class="box-product">
-          <div class="front-label"><p>NEW</p></div>
-          <img src="../images/oso.png" alt="bear" class="product" id="product">
-        </div>
-        <div class="box-micro">
-          <a href="#" onclick="selectimage('oso')"><img src="../images/oso.png" alt="bear" class="view"></a>
-          <a href="#" onclick="selectimage('avion')"><img src="../images/avion.png" alt="airplane" class="view"></a>
-        </div>
+      <div class="box-micro">
+        <a href="#" onclick="selectimage('oso')"><img src="../images/oso.png" alt="bear" class="view"></a>
+        <a href="#" onclick="selectimage('avion')"><img src="../images/avion.png" alt="airplane" class="view"></a>
       </div>
+    </div>
   </div>
-    <div class="half-right">
-
-      <div class="info">
-        <div class="name"><p>DALMATIAN DOG</p></div>
-        <div class="price"><p>$10 USD</p></div>
-      </div>
+  <div class="half-right">
+    <div class="info">
+      <div class="name"><p>DALMATIAN DOG</p></div>
+      <div class="price"><p>$10 USD</p></div>
+    </div>
       <!-- Cantidad -->
-      <div class="box-quantity">
-        <p class='quantity'>Quantity: </p>
-        <select size="number" name="box">
-          <option value="1">1</option>
-          <option value="1">2</option>
-          <option value="1">3</option>
-          <option value="1">4</option>
-          <option value="1">5</option>
-        </select>
-      </div>
+    <div class="box-quantity">
+      <p class='quantity'>Quantity: </p>
+      <select size="number" name="box">
+        <option value="1">1</option>
+        <option value="1">2</option>
+        <option value="1">3</option>
+        <option value="1">4</option>
+        <option value="1">5</option>
+      </select>
+    </div>
       <!-- Add to car -->
-      <div class="contenedor-add">
-        <a href="#"><div class="add"><p>ADD TO CART</p></div></a>
-      </div>
+    <div class="contenedor-add">
+      <a href="#"><div class="add"><p>ADD TO CART</p></div></a>
+    </div>
 
       <p class="shipping">*FREE SHIPPING FOR ALL THE ORDERS INSIDE THE U.S</p>
       <!-- Description -->
@@ -60,5 +59,13 @@
           </a>
         </div>
     </div>
-    <!-- Informacion -->
+    <!--Show less  -->
+    <div class="show-less">
+      <a href="#"><p>LESS </p>
+        <img src="../images/path.png" alt="less">
+      </a>
+    </div>
+  </div>
+  <!-- Informacion -->
 </div>
+<%= partial 'partials/products-list' %>
