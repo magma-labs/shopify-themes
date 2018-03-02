@@ -7,14 +7,15 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lato|Oswald:300" %>
-    <%= stylesheet_link_tag "header" %>
-    <%= stylesheet_link_tag "main" %>
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag "category-description-banner" %>
     <%= stylesheet_link_tag "categories" %>
-    <%= javascript_include_tag "site" %>
-    <%= stylesheet_link_tag "featured-categories" %>
     <%= stylesheet_link_tag "featured_products" %>
+      <%= stylesheet_link_tag "featured-categories" %>
+      <%= stylesheet_link_tag "main" %>
+
+    <%= stylesheet_link_tag "details" %>
+      <%= stylesheet_link_tag "header" %>
 
 
   </head>
@@ -26,5 +27,7 @@
     <%= partial 'partials/footer' %>
     <%= javascript_include_tag "featured_products" %>
     <%= javascript_include_tag "categories" %>
+      <%= javascript_include_tag "details"%>
+        <%= javascript_include_tag "site" %>
   </body>
 </html>
