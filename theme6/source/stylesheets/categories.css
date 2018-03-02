@@ -1,3 +1,9 @@
+.categories-view {
+  font-family: 'Oswald', sans-serif;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .info-dialog {
   display: flex;
   align-items: center;
@@ -47,7 +53,7 @@
   display: none;
 }
 
-.related-products-list {
+.categories-row {
   display: none;
 }
 
@@ -55,17 +61,13 @@
   display: block;
 }
 
-.related-products {
+.categories-row {
   font-family: 'Oswald', sans-serif;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.first-product-card {
-  display: block;
-}
-
-.related-products h2 {
+.categories-row h2 {
   color: #72808c;
   text-align: center;
 }
@@ -91,11 +93,11 @@
   padding: 5px 25px 5px 25px;
 }
 
-.product-card:hover {
+.product-card-category:hover {
   background-color: rgba(83, 150, 230, 0.1);
 }
 
-.product-card .front-label {
+.product-card-category .front-label {
   display: none;
 }
 
@@ -134,15 +136,29 @@
   display: none;
 }
 
-.product-data button {
+.product-data .view-in-detail {
   background-color: #4a90e2;
   border-radius: 3px;;
   border-style: none;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+
+.product-data .view-in-detail:hover {
+  cursor: pointer;
+  background-color: #ed7f03;
+}
+
+.view-in-detail h4 {
   color: #fff;
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
-  padding: 10px 0 10px 0;
-  width: 100%;
+  margin: 0;
+}
+
+.view-in-detail a {
+  text-decoration: none;
 }
 
 .categories-slider-navigator {
@@ -174,6 +190,7 @@
   height: 20px;
   justify-content: center;
   padding: 2px;
+  font-family: 'Lato', sans-serif;
 }
 
 .slider-button img {
@@ -227,6 +244,10 @@
 }
 
 @media only screen and (min-width: 769px) {
+
+  .categories-row {
+    display: flex;
+  }
 
   .current-route {
     display: block;
@@ -286,7 +307,7 @@
     margin: 0 10px 0 0;
   }
 
-  .product-card {
+  .product-card-category {
     display: block;
     flex: 1;
   }
@@ -299,7 +320,7 @@
     display: flex;
   }
 
-  .product-card {
+  .product-card-category {
     margin: 5px;
     overflow: hidden;
     white-space: nowrap;
@@ -310,22 +331,22 @@
     text-overflow: ellipsis;
   }
 
-  .product-card .price {
+  .product-card-category .price {
     display: flex;
   }
 
-  .product-card .offer {
+  .product-card-category .offer {
     color: #D2D2D2;
     display: flex;
     margin-left: 5px;
     text-decoration: line-through;
   }
 
-  .product-card button {
+  .product-card-category button {
     border-radius: 3px;
   }
 
-  .product-card button:hover {
+  .product-card-category button:hover {
     background-color: #ED7F03;
     cursor: pointer;
   }
