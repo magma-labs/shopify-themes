@@ -47,6 +47,7 @@
   font-family: 'MerriweatherSans-Bold';
   margin-top: 10px;
 }
+
 @media only screen and ( max-width: 767px ) {
   .product-item {
     display: block;
@@ -59,10 +60,13 @@
   .product-hide {
     display: none;
   }
+
   .product-image img {
     width: 190px;
   }
+
 }
+
 @media only screen and ( min-width: 768px ) and ( max-width: 1023px ) {
   .product-item {
     display: block;
@@ -75,7 +79,9 @@
   .product-image img {
     width: 190px;
   }
+
 }
+
 @media only screen and ( min-width: 1024px ) {
   .product-item {
     display: block;
@@ -88,4 +94,5 @@
   .product-image img {
     width: 260px;
   }
+
 }
