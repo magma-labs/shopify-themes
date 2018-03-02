@@ -1,0 +1,97 @@
+.products-container {
+  display: table;
+  margin: 0 auto;
+  padding: 5px 5px;
+}
+
+.product-item {
+  display: table-cell;
+  float: left;
+  height: 300px;
+  text-align: center;
+  width: 180px;
+}
+
+.product-content {
+  border: 1px solid #E83671;
+  height: 100%;
+  margin: 5px;
+  position: relative;
+}
+
+.product-image {
+  padding: 30px;
+}
+
+.thumb {
+  margin-top: 30px;
+}
+
+.product-description {
+  bottom: 0px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.product-image img {
+  width: 90%;
+}
+
+.product-name {
+  margin-bottom: 0px;
+}
+
+.product-price {
+  color: #E83671;
+  font-family: 'MerriweatherSans-Bold';
+  margin-top: 10px;
+}
+
+@media only screen and ( max-width: 767px ) {
+  .product-item {
+    display: block;
+    height: 380px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .product-hide {
+    display: none;
+  }
+
+  .product-image img {
+    width: 190px;
+  }
+
+}
+
+@media only screen and ( min-width: 768px ) and ( max-width: 1023px ) {
+  .product-item {
+    display: block;
+    height: 380px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 33.33%;
+  }
+
+  .product-image img {
+    width: 190px;
+  }
+
+}
+
+@media only screen and ( min-width: 1024px ) {
+  .product-item {
+    display: block;
+    height: 550px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 33.33%;
+  }
+
+  .product-image img {
+    width: 260px;
+  }
+}
