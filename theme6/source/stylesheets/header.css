@@ -58,7 +58,7 @@
     width: 0;
     z-index: 1;
   }
-  .sidenav a {
+  .sidenav-categories a {
     color: #FFFFFF;
     display: block;
     font-size: 16px;
@@ -66,7 +66,40 @@
     text-decoration: none;
     transition: 0.3s;
   }
-  .sidenav a:hover {
+  .sidenav-categories a:hover {
+    text-decoration: underline;
+  }
+  .info-list a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .info-list a:hover {
+    text-decoration: underline;
+  }
+  .searchlogin a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .searchlogin a:hover {
+    text-decoration: underline;
+  }
+  .categories a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .categories a:hover {
     text-decoration: underline;
   }
   .sidenav .closebtn {
