@@ -1,0 +1,89 @@
+@media only screen and ( max-width: 768px ) {
+  .product {
+    padding: 10px;
+  }
+
+  .product .product-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #E83671;
+  }
+
+  .product .product-container-desktop {
+    display: none;
+  }
+
+  .product .product-container-mobile img {
+    content:url("/images/pdp/bouquet_victoria_pdp_mobile.jpg");
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and ( min-width: 769px ) {
+  .product {
+    width: 100%;
+    /*padding: 40px 25px*/
+  }
+
+  .product .product-container-mobile {
+    display: none;
+  }
+
+  .product .product-container-desktop {
+    border: 2px solid #E83671;
+    overflow: auto;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+
+  .product .product-container-desktop .product-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 47%;
+    margin: 0;
+    float: left ;
+  }
+
+  .product .product-container-desktop .product-img img {
+    content: url("/images/pdp/bouquet_victoria_pdp_desktop.jpg");
+    max-width: 80%;
+    height: auto;
+    /*
+      755.19
+      1134.34
+    */
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail img:nth-child(1) {
+    content: url("/images/pdp/pdp_thumbnail_1.jpg");
+    margin-bottom: 65px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail img:nth-child(2) {
+    content: url("/images/pdp/pdp_thumbnail_2.jpg");
+    max-width: 100%;
+    height: auto;
+  }
+  .product .product-container-desktop .product-info {
+    width: 47%;
+    margin: 0;
+    float: right ;
+  }
+
+  .footer {
+    clear: both;
+  }
+}
