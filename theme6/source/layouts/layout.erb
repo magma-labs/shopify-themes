@@ -13,16 +13,18 @@
     <%= stylesheet_link_tag "category-description-banner" %>
     <%= stylesheet_link_tag "categories" %>
     <%= javascript_include_tag "site" %>
+    <%= stylesheet_link_tag "featured-categories" %>
     <%= stylesheet_link_tag "featured_products" %>
+
 
   </head>
   <body>
     <%= partial 'partials/header' %>
-    <%= partial 'partials/offers' %>
+
     <%= yield %>
-    <%= partial 'partials/categories' %>
+
     <%= partial 'partials/footer' %>
     <%= javascript_include_tag "featured_products" %>
-    
+    <%= javascript_include_tag "categories" %>
   </body>
 </html>
