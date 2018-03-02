@@ -4,6 +4,8 @@
 
 @media only screen and ( min-width: 768px) {
   .banner_handcrafted {
+    margin-top: 15px;
+    margin-bottom: 15px;
     background-image: url("../images/carving-w-butcher-gouge.jpg");
     background-position: right;
     background-repeat: no-repeat;
