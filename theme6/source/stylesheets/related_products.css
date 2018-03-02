@@ -63,6 +63,10 @@
   border-style: none;
 }
 
+.slider-navigator button:hover {
+  cursor: pointer;
+}
+
 .slider-navigator img {
   width: 14px;
 }

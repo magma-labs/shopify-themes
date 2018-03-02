@@ -33,20 +33,29 @@
   margin: 0;
 }
 
-.big-banner-content button {
-  background-color: #4A90E2;
-  border-radius: 0;
+.big-banner-content .view-in-detail {
+  background-color: #4a90e2;
+  border-radius: 3px;;
   border-style: none;
-  font-family: 'Oswald', sans-serif;
-  margin-bottom: 12px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 10px;
+  padding: 10px 0 10px 0;
+  text-align: center;
 }
 
-.big-banner-content button h1 {
-  color: #FFFFFF;
+.big-banner-content .view-in-detail:hover {
+  cursor: pointer;
+  background-color: #ed7f03;
+}
+
+.view-in-detail h4 {
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
   margin: 0;
-  padding: 10px 0 10px 0;
+}
+
+.view-in-detail a {
+  text-decoration: none;
 }
 
 .small-banner {
@@ -63,12 +72,14 @@
   padding: 20px 20px;
 }
 
-.small-banner h1 {
-  font-size: 45px;
-  margin: 0 0;
+.small-banner p {
+  font-size: 20px;
+  margin: 0;
 }
 
-.small-banner h3 {
+.big-text p {
+  font-size: 40px;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -85,9 +96,6 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.mid-banner-archeologist {
 }
 
 .mid-banner-saylor {
@@ -108,7 +116,6 @@
     rgba(189, 152, 107, 0)), url("/images/mid_banner2.png") no-repeat top;
   background-size: cover;
   color: #FFFFFF;
-
 }
 
 .mid-banner-content h3 {
@@ -127,6 +134,10 @@
   margin-bottom: 12px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.mid-banner-content button:hover {
+  cursor: pointer;
 }
 
 .mid-banner-saylor button {
@@ -201,7 +212,12 @@
     flex-direction: column;
     height: 400px;
     justify-content: center;
+    padding-right: 10px;
     width: 50%;
+  }
+
+  .big-banner-content .view-in-detail {
+    width: 200px;
   }
 
   .big-banner-content p {
@@ -229,17 +245,15 @@
     justify-content: center;
   }
 
-  .small-banner h2 {
-    font-size: 50px;
+  .small-banner p {
+    font-size: 30px;
     margin: 0;
-    padding: 0;
   }
 
-  .small-banner h3 {
-    font-size: 30px;
-    font-weight: lighter;
-    text-align: center;
-    width: 100%;
+  .big-text p {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
   }
 
   .mid-banner {
@@ -330,6 +344,10 @@
     width: 50%;
   }
 
+  .big-banner-content .view-in-detail {
+    width: 300px;
+  }
+
   .big-banner-content p {
     font-size: 20px;
     margin-bottom: 30px;
@@ -355,17 +373,15 @@
     justify-content: center;
   }
 
-  .small-banner h2 {
-    font-size: 70px;
+  .small-banner p {
+    font-size: 40px;
     margin: 0;
-    padding: 0;
   }
 
-  .small-banner h3 {
-    font-size: 30px;
-    font-weight: lighter;
-    text-align: center;
-    width: 100%;
+  .big-text p {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
   }
 
   .mid-banner {

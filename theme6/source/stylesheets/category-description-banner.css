@@ -28,6 +28,6 @@
     width: 80%;
   }
   .banner_handcrafted .banner_content {
-    background: linear-gradient(90deg, rgba(200, 190, 183), rgba(200, 190, 183, 1) 40%, rgba(200, 190, 183, 1) 80%, rgba(200, 190, 183, 0));
+    background: linear-gradient(90deg, rgb(200, 190, 183), rgba(200, 190, 183, 1) 40%, rgba(200, 190, 183, 1) 80%, rgba(200, 190, 183, 0));
   }
 }
