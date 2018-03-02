@@ -144,33 +144,31 @@
   }
   .social-media {
     align-content: center;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
   }
   .smm {
     border-radius: 3px;
     border: 2px solid #72808C;
     height: 35px;
-    width: 72px;
+    width: 60px;
     background-repeat: no-repeat;
-  }
-  .f {
-    background-image: url("../images/Fill 4 Copy@2x.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 8px;
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .twt {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../images/Fill 1 Copy@2x.png");
-    background-size: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
-  .g {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../images/Fill 2 Copy@2x.png");
-    background-size: 15px;
+  .fb-icon {
+    width: 10px;
+  }
+  .twt-icon {
+    width: 20px;
+  }
+  .g-icon {
+    width: 20px;
   }
   .email-box {
     background-color: #FBFBFB;
