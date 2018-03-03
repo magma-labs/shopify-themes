@@ -1,3 +1,116 @@
+.product .product-title {
+  font-family: 'MerriweatherSans';
+  font-size: 28px;
+}
+
+.product .product-description {
+  margin-bottom: 20px;
+}
+.product .product-description b {
+  font-family: 'MerriweatherSans-Bold';
+  color: #555555;
+}
+
+.product .product-description p {
+  display: inline;
+  font-family: 'MerriweatherSans-Regular';
+  color: #555555;
+}
+
+.product .product-bouquet {
+  align-self: flex-start;
+  font-family: 'MerriweatherSans-Regular';
+  color: #555555;
+}
+
+.product .colors-bouquet {
+  padding: 20px;
+}
+
+.product .colors-bouquet span {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  display: inline-block;
+}
+
+.product .colors-bouquet span:nth-child(1) {
+  margin-right: 20px;
+  background-color: pink;
+}
+
+.product .colors-bouquet span:nth-child(2) {
+  margin-right: 20px;
+  background-color: orange;
+}
+
+.product .colors-bouquet span:nth-child(3) {
+  background-color: red;
+}
+
+.product .qty {
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.product .qty b {
+  font-family: "MerriweatherSans-Bold";
+  color: #555555;
+}
+
+.product .product-price {
+  font-family: "MerriweatherSans-Bold";
+  font-size: 30px;
+  color: #E83671;
+  align-self: flex-start;
+}
+
+.product button {
+  background-color: #E83671;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  font-family: 'PlayfairDisplay-Bold';
+  padding: 15px 30px;
+}
+
+.product .share-title {
+  color: #555555;
+  font-family: "MerriweatherSans-Bold";
+  font-size: 30;
+}
+
+.product .share-icons div img {
+  max-height: 40px;
+  width: auto;
+}
+
+.product .share-icons div:nth-child(1) img {
+  content: url("/images/pdp/icon_facebook_pink.png");
+}
+
+.product .share-icons div:nth-child(1) img:hover {
+  content: url("/images/pdp/icon_facebook_black.png");
+}
+
+.product .share-icons div:nth-child(2) img {
+  content: url("/images/pdp/icon_pinterest_pink.png");
+}
+
+.product .share-icons div:nth-child(2) img:hover {
+  content: url("/images/pdp/icon_pinterest_black.png");
+}
+
+.product .share-icons div:nth-child(3) img {
+  content: url("/images/pdp/icon_gPlus_pink.png");
+}
+
+.product .share-icons div:nth-child(3) img:hover {
+  content: url("/images/pdp/icon_gPlus_black.png");
+}
+
 @media only screen and ( max-width: 768px ) {
   .product {
     padding: 10px;
@@ -21,126 +134,15 @@
     max-width: 100%;
   }
 
-  .product .product-container-mobile .product-title {
-    font-family: 'MerriweatherSans';
-    font-size: 28px;
-  }
-
-  .product .product-container-mobile .product-description {
-    margin-bottom: 20px;
-  }
-  .product .product-container-mobile .product-description b {
-    font-family: 'MerriweatherSans-Regular';
-  }
-
-  .product .product-container-mobile .product-description p {
-    display: inline;
-    font-family: 'MerriweatherSans-Light';
-  }
-
-  .product .product-container-mobile .product-bouquet {
-    align-self: flex-start;
-    font-family: 'MerriweatherSans-Regular';
-  }
-
-  .product .product-container-mobile .colors-bouquet {
-    padding: 20px;
-  }
-
-  .product .product-container-mobile .colors-bouquet span {
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
-    display: inline-block;
-  }
-
-  .product .product-container-mobile .colors-bouquet span:nth-child(1) {
-    margin-right: 20px;
-    background-color: pink;
-  }
-
-  .product .product-container-mobile .colors-bouquet span:nth-child(2) {
-    margin-right: 20px;
-    background-color: orange;
-  }
-
-  .product .product-container-mobile .colors-bouquet span:nth-child(3) {
-    background-color: red;
-  }
-
-  .product .product-container-mobile .qty {
-    align-self: flex-start;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-  }
-
-  .product .product-container-mobile .qty b {
-    font-family: "MerriweatherSans-Bold";
-  }
-
-  .product .product-container-mobile .product-price {
-    font-family: "MerriweatherSans-Bold";
-    font-size: 30px;
-    color: #E83671;
-    align-self: flex-start;
-  }
-
-  .product .product-container-mobile button {
-    background-color: #E83671;
-    font-size: 25px;
-    color: white;
-    font-weight: bold;
-    font-family: 'PlayfairDisplay-Bold';
-    padding: 15px 30px;
-  }
-
-  .product .product-container-mobile .title-footer {
-    color: black;
-    font-family: "MerriweatherSans-Bold";
-    font-size: 30;
-  }
-
-  .product .product-container-mobile .share-icons {
+  .product .share-icons {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
   }
-
-  .product .product-container-mobile .share-icons div img {
-    max-width: 30px;
-    height: auto;
-  }
-
-  .product .product-container-mobile .share-icons div:nth-child(1) img {
-    content: url("/images/pdp/icon_facebook_pink.png");
-    max-width: 20px;
-  }
-
-  .product .product-container-mobile .share-icons div:nth-child(1) img:hover {
-    content: url("/images/pdp/icon_facebook_black.png");
-    max-width: 20px;
-  }
-
-  .product .product-container-mobile .share-icons div:nth-child(2) img {
-    content: url("/images/pdp/icon_pinterest_pink.png");
-  }
-
-  .product .product-container-mobile .share-icons div:nth-child(2) img:hover {
-    content: url("/images/pdp/icon_pinterest_black.png");
-  }
-
-  .product .product-container-mobile .share-icons div:nth-child(3) img {
-    content: url("/images/pdp/icon_gPlus_pink.png");
-  }
-
-  .product .product-container-mobile .share-icons div:nth-child(3) img:hover {
-    content: url("/images/pdp/icon_gPlus_black.png");
-  }
 }
 
-@media only screen and ( min-width: 769px ) {
+@media only screen and ( min-width: 769px )  {
   .product {
     margin-top: 40px;
     width: 100%;
@@ -151,6 +153,8 @@
   }
 
   .product .product-container-desktop {
+    display: flex;
+    align-items: center;
     border: 2px solid #E83671;
     height: auto;
     margin-left: 10px;
@@ -162,25 +166,29 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    float: left ;
-    margin: 0;
-    width: 47%;
+    justify-content: flex-end;
+    float: left;
+    margin-right: 30px;
+    width: 50%;
   }
 
   .product .product-container-desktop .product-img img {
     content: url("/images/pdp/bouquet_victoria_pdp_desktop.jpg");
     height: auto;
-    max-width: 80%;
+    margin-top: 5px;
+    max-width: 60%;
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail {
     display: flex;
     flex-direction: column;
     margin-left: 6%;
+    height: auto;
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container {
     padding: 4px;
+    height: auto;
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container:hover {
@@ -194,13 +202,13 @@
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container:nth-child(1) div img {
     content: url("/images/pdp/pdp_thumbnail_1.jpg");
     height: auto;
-    max-width: 100%;
+    max-width: 50px;
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container:nth-child(2) div img {
     content: url("/images/pdp/pdp_thumbnail_2.jpg");
     height: auto;
-    max-width: 100%;
+    max-width: 65px;
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container div:hover {
@@ -212,9 +220,47 @@
   }
 
   .product .product-container-desktop .product-info {
+    vertical-align: middle;
     float: right;
     margin: 0;
     width: 47%;
+  }
+
+  .product .product-description {
+    padding-right: 20px;
+    max-width: 490px;
+  }
+
+  .product .product-description b {
+    font-size: 18px;
+  }
+
+  .product .product-description p {
+    display: inline;
+    font-size: 18px;
+  }
+
+  .product button {
+    font-size: 30px;
+    padding: 15px 45px;
+  }
+
+  .product .share-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+  }
+
+  .product .share-container .share-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
   }
 
   .footer {
