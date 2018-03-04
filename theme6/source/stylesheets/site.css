@@ -3,6 +3,8 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: #fff;
+  margin-top: 15px;
 }
 
 .footer-content {
@@ -187,7 +189,7 @@ a {
   .sm {
     display: inline-flex;
     height: 35px;
-    width: 93px;
+    width: 75px;
   }
 
   .twt {
