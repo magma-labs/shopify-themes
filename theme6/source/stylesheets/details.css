@@ -143,14 +143,16 @@
     width: 45%;
   }
   .next {
-    color: #654AED;
+    color: #5396e5;
     display: inline-block;
     font-family: 'Lato', sans-serif;
     height: 10px;
     text-decoration: none;
+    font-size: 16px;
+    outline: none;
   }
   .history .selection {
-    color: #000000;
+    color: #72808c;
     font-family: 'Lato', sans-serif;
   }
   .super-product {
@@ -247,7 +249,7 @@
   }
   .description .review {
     display: block;
-    font-size: 15px;
+    font-size: 17px;
     text-align: left;
   }
   .show-less {

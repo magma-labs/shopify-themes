@@ -54,33 +54,25 @@ footer {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   line-height: 21px;
+  display: block;
 }
 
 .sm {
+  display: inline-flex;
   border-radius: 3px;
   border: 2px solid #72808c;
   height: 35px;
-  width: 93px;
-}
-
-.fb {
-  background: url("/images/fb.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
 }
 
 .twt {
-  background: url("/images/twt.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 0 7px 0 7px;
 }
 
-.g {
-  background: url("/images/g+.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
+a {
+  outline: none;
 }
 
 .newsletter {
@@ -188,10 +180,12 @@ footer {
   }
 
   .social-media-icon-group {
-    display: inline-flex;
+    flex-direction: column;
     justify-content: center;
   }
+
   .sm {
+    display: inline-flex;
     height: 35px;
     width: 93px;
   }
