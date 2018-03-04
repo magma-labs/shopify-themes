@@ -6,6 +6,7 @@
     background-color: #f8f8f8;
     border-bottom: 1px solid #e7e7e7;
     font-family: "Oswald", sans-serif;
+    margin-top: 15px;
   }
   .banner_wooden_toys {
     background-image: url("../images/2f6a2b4813c1fa94dc3775a1ce32273882082dff.png");
@@ -25,6 +26,7 @@
     color: white;
     margin-bottom: 5px;
     margin-left: 8px;
+    text-decoration: none;
   }
   .banner_plush_toys {
     background-image: url("../images/cfa5737207f1dce2b23e6b1fad66d742aa2fba70.png");
@@ -43,6 +45,7 @@
     color: white;
     margin-bottom: 5px;
     margin-left: 8px;
+    text-decoration: none;
   }
   .banner_outdoors {
     background-image: url("../images/05d65cfef44299788d269ebc094e45c98a019e50.png");
@@ -61,6 +64,7 @@
     color: white;
     margin-bottom: 5px;
     margin-left: 8px;
+    text-decoration: none;
   }
   .button_categories {
     display: flex;
@@ -104,6 +108,11 @@
     font-family: "Oswald", sans-serif;
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+  }
+
+  .categories_main a {
+    text-decoration: none;
   }
   .banner_wooden_toys {
     background-image: url("../images/2f6a2b4813c1fa94dc3775a1ce32273882082dff.png");

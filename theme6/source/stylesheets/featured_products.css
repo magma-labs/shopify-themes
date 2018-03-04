@@ -8,6 +8,10 @@
   display: none;
 }
 
+.product-card {
+  background-color: #fff;
+}
+
 .first-product-card {
   display: block;
 }
@@ -157,7 +161,7 @@
   }
 
   .product-card button:hover {
-    background-color: #ED7F03;
+    background-color: #ed7f03;
   }
 
 }

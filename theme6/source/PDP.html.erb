@@ -11,11 +11,11 @@
     <div class="super-product">
       <div class="box-product">
         <div class="front-label"><p>NEW</p></div>
-        <img src="../images/oso.png" alt="bear" class="product" id="product">
+        <img src="/images/bear_toy.png" alt="bear" class="product" id="product">
       </div>
       <div class="box-micro">
-        <a href="#" onclick="selectimage('oso')"><img src="../images/oso.png" alt="bear" class="view"></a>
-        <a href="#" onclick="selectimage('avion')"><img src="../images/avion.png" alt="airplane" class="view"></a>
+        <a href="#" onclick="selectimage('oso')"><img src="/images/bear_toy.png" alt="bear" class="view"></a>
+        <a href="#" onclick="selectimage('avion')"><img src="/images/plane_toy.png" alt="airplane" class="view"></a>
       </div>
     </div>
   </div>
@@ -55,19 +55,12 @@
         <!--Show less  -->
         <div class="show-less">
           <a href="#"><p>LESS</p>
-            <img src="../images/path.png" alt="less">
+            <img src="/images/arrow_up.png" alt="less">
           </a>
         </div>
     </div>
-    <!--Show less  -->
-    <div class="show-less">
-      <a href="#"><p>LESS </p>
-        <img src="../images/path.png" alt="less">
-      </a>
-    </div>
   </div>
   <!-- Informacion -->
-</div>
 
 <%= partial 'partials/products-list' %>
 <div class="banner_handcrafted">
@@ -78,3 +71,5 @@
     </div>
   </div>
 </div>
+
+<%= javascript_include_tag 'related_products' %>

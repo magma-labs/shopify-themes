@@ -1,5 +1,6 @@
 .navbar {
   font-family: 'Lato', sans-serif;
+  background-color: #fff;
 }
 
 .navbar-desktop {
@@ -58,7 +59,7 @@
     width: 0;
     z-index: 1;
   }
-  .sidenav a {
+  .sidenav-categories a {
     color: #FFFFFF;
     display: block;
     font-size: 16px;
@@ -66,7 +67,40 @@
     text-decoration: none;
     transition: 0.3s;
   }
-  .sidenav a:hover {
+  .sidenav-categories a:hover {
+    text-decoration: underline;
+  }
+  .info-list a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .info-list a:hover {
+    text-decoration: underline;
+  }
+  .searchlogin a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .searchlogin a:hover {
+    text-decoration: underline;
+  }
+  .categories a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .categories a:hover {
     text-decoration: underline;
   }
   .sidenav .closebtn {
@@ -111,32 +145,31 @@
   }
   .social-media {
     align-content: center;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
   }
   .smm {
     border-radius: 3px;
     border: 2px solid #72808C;
     height: 35px;
-    width: 72px;
+    width: 60px;
     background-repeat: no-repeat;
-  }
-  .f {
-    background-image: url("../images/Fill 4 Copy@2x.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .twt {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../images/Fill 1 Copy@2x.png");
-    background-size: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
-  .g {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../images/Fill 2 Copy@2x.png");
-    background-size: 15px;
+  .fb-icon {
+    width: 10px;
+  }
+  .twt-icon {
+    width: 20px;
+  }
+  .g-icon {
+    width: 20px;
   }
   .email-box {
     background-color: #FBFBFB;
@@ -163,6 +196,8 @@
     display: none;
   }
   .navbar-desktop {
+    background-color: #fff;
+    margin-bottom: 15px;
     height: 172px;
   }
   .menubar-desktop {
@@ -191,7 +226,7 @@
   }
   .searchbar {
     background-color: #FBFBFB;
-    background-image: url("sprites/Search icon@2x(1).png");
+    background-image: url("/images/Search_icon@2x.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: 15px 15px;
@@ -201,6 +236,11 @@
     margin-top: 10px;
     width: 212px;
   }
+
+  .linklogin {
+    margin-right: 15px;
+  }
+
   .navigation {
     display: flex;
   }
@@ -224,6 +264,7 @@
   }
   .categories a:hover {
     color: red;
+    text-decoration: underline;
   }
   .cart {
     color: #627387;

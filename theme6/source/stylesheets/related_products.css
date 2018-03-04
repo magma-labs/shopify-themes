@@ -8,6 +8,10 @@
   display: none;
 }
 
+.product-card {
+  background-color: #fff;
+}
+
 .first-product-card {
   display: block;
 }
@@ -61,6 +65,10 @@
 .slider-navigator button {
   background-color: transparent;
   border-style: none;
+}
+
+.slider-navigator button:hover {
+  cursor: pointer;
 }
 
 .slider-navigator img {

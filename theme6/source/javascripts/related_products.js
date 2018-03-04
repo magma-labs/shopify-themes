@@ -15,13 +15,13 @@ function changeImage(value) {
   document.getElementById('featuredToy').src = 'images/' + images[i] + '.png';
 }
 
-const leftArrow = document.getElementById('leftArrow');
-const rightArrow = document.getElementById('rightArrow');
+var leftArrow = document.getElementById('leftArrow');
+var rightArrow = document.getElementById('rightArrow');
 
-leftArrow.addEventListener('click', () => {
+leftArrow.addEventListener('click', function() {
   changeImage(-1);
 });
 
-rightArrow.addEventListener('click', () => {
+rightArrow.addEventListener('click', function() {
   changeImage(1);
 });

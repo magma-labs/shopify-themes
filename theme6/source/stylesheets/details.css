@@ -15,6 +15,10 @@
   display: none;
 }
 
+.front-label p {
+  font-family: 'Lato', sans-serif;
+}
+
 .super-product {
   display: block;
   justify-content: center;
@@ -98,6 +102,10 @@
   font-style: normal;
 }
 
+.contenedor-add a {
+  text-decoration: none;
+}
+
 .description {
   font-family: 'Lato';
   font-size: 18px;
@@ -115,10 +123,15 @@
   width: 100%;
 }
 
+.show-less a {
+  text-decoration: none;
+}
+
 .show-less p {
-  color: #654AED;
+  color: #4990e0;
   display: inline-block;
   font-family: 'Oswald';
+  font-weight: bold;
   text-decoration: none;
   width: 50%;
 }
