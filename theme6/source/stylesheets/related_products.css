@@ -6,6 +6,7 @@
 
 .product-card {
   display: none;
+  flex: 1;
 }
 
 .product-card {
@@ -43,16 +44,15 @@
 }
 
 .product-image {
-  flex: 6;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 .product-image img {
-  max-height: 100%;
-  max-width: 100%;
+  height: 100%;
   object-fit: contain;
+  width: 100%;
 }
 
 .slider-navigator {
