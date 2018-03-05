@@ -1,0 +1,274 @@
+.product .product-title {
+  font-family: 'MerriweatherSans';
+  font-size: 28px;
+}
+
+.product .product-gallery-description {
+  margin-bottom: 20px;
+}
+.product .product-gallery-description b {
+  color: #555555;
+  font-family: 'MerriweatherSans-Bold';
+}
+
+.product .product-gallery-description p {
+  color: #555555;
+  display: inline;
+  font-family: 'MerriweatherSans-Regular';
+}
+
+.product .product-bouquet {
+  align-self: flex-start;
+  color: #555555;
+  font-family: 'MerriweatherSans-Regular';
+}
+
+.product .colors-bouquet {
+  padding: 20px;
+}
+
+.product .colors-bouquet span {
+  border-radius: 25px;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.product .colors-bouquet span:nth-child(1) {
+  background-color: pink;
+  margin-right: 20px;
+}
+
+.product .colors-bouquet span:nth-child(2) {
+  background-color: orange;
+  margin-right: 20px;
+}
+
+.product .colors-bouquet span:nth-child(3) {
+  background-color: red;
+}
+
+.product .qty {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.product .qty b {
+  color: #555555;
+  font-family: "MerriweatherSans-Bold";
+}
+
+.product .product-price {
+  align-self: flex-start;
+  color: #E83671;
+  font-family: "MerriweatherSans-Bold";
+  font-size: 30px;
+}
+
+.product button {
+  background-color: #E83671;
+  color: white;
+  font-family: 'PlayfairDisplay-Bold';
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px 30px;
+}
+
+.product .share-title {
+  color: #555555;
+  font-family: "MerriweatherSans-Bold";
+  font-size: 30;
+}
+
+.product .share-icons div img {
+  max-height: 40px;
+  width: auto;
+}
+
+.product .share-icons div:nth-child(1) img {
+  content: url("/images/pdp/icon_facebook_pink.png");
+}
+
+.product .share-icons div:nth-child(1) img:hover {
+  content: url("/images/pdp/icon_facebook_black.png");
+}
+
+.product .share-icons div:nth-child(2) img {
+  content: url("/images/pdp/icon_pinterest_pink.png");
+}
+
+.product .share-icons div:nth-child(2) img:hover {
+  content: url("/images/pdp/icon_pinterest_black.png");
+}
+
+.product .share-icons div:nth-child(3) img {
+  content: url("/images/pdp/icon_gPlus_pink.png");
+}
+
+.product .share-icons div:nth-child(3) img:hover {
+  content: url("/images/pdp/icon_gPlus_black.png");
+}
+
+@media only screen and ( max-width: 768px ) {
+  .product {
+    padding: 10px;
+  }
+
+  .product .product-container-mobile {
+    align-items: center;
+    border: 2px solid #E83671;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+
+  .product .product-container-desktop {
+    display: none;
+  }
+
+  .product .product-container-mobile img {
+    content:url("/images/pdp/bouquet_victoria_pdp_mobile.jpg");
+    height: auto;
+    max-width: 100%;
+  }
+
+  .product .share-icons {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+@media only screen and ( min-width: 769px )  {
+  .product {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .product .product-container-mobile {
+    display: none;
+  }
+
+  .product .product-container-desktop {
+    align-items: center;
+    border: 2px solid #E83671;
+    display: flex;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: auto;
+  }
+
+  .product .product-container-desktop .product-img {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    float: left;
+    justify-content: flex-end;
+    margin-right: 30px;
+    width: 50%;
+  }
+
+  .product .product-container-desktop .product-img img {
+    content: url("/images/pdp/bouquet_victoria_pdp_desktop.jpg");
+    height: auto;
+    margin-top: 5px;
+    max-width: 60%;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail .image-container {
+    max-height: 54px;
+    max-width: 54px;
+    padding: 4px;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail .image-container:hover {
+    border: 1px solid red;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail .image-container div {
+    height: 50px;;
+    width: 50px;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail .image-container:nth-child(1) {
+    margin-bottom: 65px;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail .image-container:nth-child(1) div img {
+    content: url("/images/pdp/pdp_thumbnail_1.jpg");
+    max-height: 50px;
+    max-width: 50px;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail .image-container:nth-child(2) div img {
+    content: url("/images/pdp/pdp_thumbnail_2.jpg");
+    max-height: 50px;
+    max-width: 50px;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail .image-container div:hover {
+    background-color: #E83671;
+  }
+
+  .product .product-container-desktop .product-img .product-img-thumbnail .image-container div img:hover {
+    opacity: 0.3;
+  }
+
+  .product .product-container-desktop .product-info {
+    float: right;
+    margin: 0;
+    vertical-align: middle;
+    width: 47%;
+  }
+
+  .product .product-gallery-description {
+    max-width: 490px;
+    padding-right: 20px;
+  }
+
+  .product .product-gallery-description b {
+    font-size: 18px;
+  }
+
+  .product .product-gallery-description p {
+    display: inline;
+    font-size: 18px;
+  }
+
+  .product button {
+    font-size: 30px;
+    padding: 15px 45px;
+  }
+
+  .product .share-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 350px;
+  }
+
+  .product .share-container .share-icons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .footer {
+    clear: both;
+  }
+}
