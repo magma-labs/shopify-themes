@@ -3,15 +3,15 @@
   font-size: 28px;
 }
 
-.product .product-description {
+.product .product-gallery-description {
   margin-bottom: 20px;
 }
-.product .product-description b {
+.product .product-gallery-description b {
   color: #555555;
   font-family: 'MerriweatherSans-Bold';
 }
 
-.product .product-description p {
+.product .product-gallery-description p {
   color: #555555;
   display: inline;
   font-family: 'MerriweatherSans-Regular';
@@ -46,6 +46,7 @@
 
 .product .colors-bouquet span:nth-child(3) {
   background-color: #C0392B;
+
 }
 
 .product .qty {
@@ -87,27 +88,15 @@
   width: auto;
 }
 
-.product .share-icons div:nth-child(1) img {
-  content: url("/images/pdp/icon_facebook_pink.png");
-}
-
-.product .share-icons div:nth-child(1) img:hover {
+.product .share-icons .icon-facebook:hover {
   content: url("/images/pdp/icon_facebook_black.png");
 }
 
-.product .share-icons div:nth-child(2) img {
-  content: url("/images/pdp/icon_pinterest_pink.png");
-}
-
-.product .share-icons div:nth-child(2) img:hover {
+.product .share-icons .icon-pinterest:hover {
   content: url("/images/pdp/icon_pinterest_black.png");
 }
 
-.product .share-icons div:nth-child(3) img {
-  content: url("/images/pdp/icon_gPlus_pink.png");
-}
-
-.product .share-icons div:nth-child(3) img:hover {
+.product .share-icons .icon-gPlus:hover {
   content: url("/images/pdp/icon_gPlus_black.png");
 }
 
@@ -129,7 +118,6 @@
   }
 
   .product .product-container-mobile img {
-    content:url("/images/pdp/bouquet_victoria_pdp_mobile.jpg");
     height: auto;
     max-width: 100%;
   }
@@ -173,7 +161,6 @@
   }
 
   .product .product-container-desktop .product-img img {
-    content: url("/images/pdp/bouquet_victoria_pdp_desktop.jpg");
     height: auto;
     margin-top: 5px;
     max-width: 60%;
@@ -205,13 +192,11 @@
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container:nth-child(1) div img {
-    content: url("/images/pdp/pdp_thumbnail_1.jpg");
     max-height: 50px;
     max-width: 50px;
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container:nth-child(2) div img {
-    content: url("/images/pdp/pdp_thumbnail_2.jpg");
     max-height: 50px;
     max-width: 50px;
   }
@@ -231,16 +216,16 @@
     width: 47%;
   }
 
-  .product .product-description {
+  .product .product-gallery-description {
     max-width: 490px;
     padding-right: 20px;
   }
 
-  .product .product-description b {
+  .product .product-gallery-description b {
     font-size: 18px;
   }
 
-  .product .product-description p {
+  .product .product-gallery-description p {
     display: inline;
     font-size: 18px;
   }
