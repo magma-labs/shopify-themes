@@ -35,17 +35,18 @@
 }
 
 .product .colors-bouquet .pink-circle {
-  background-color: pink;
+  background-color: #FD79A8;
   margin-right: 20px;
 }
 
 .product .colors-bouquet .orange-circle {
-  background-color: orange;
+  background-color: #FECA57;
   margin-right: 20px;
 }
 
 .product .colors-bouquet .red-circle {
-  background-color: red;
+  background-color: #C0392B;
+
 }
 
 .product .qty {
@@ -69,7 +70,7 @@
 
 .product button {
   background-color: #E83671;
-  color: white;
+  color: #ECF0F1;
   font-family: 'PlayfairDisplay-Bold';
   font-size: 25px;
   font-weight: bold;
@@ -178,7 +179,7 @@
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container:hover {
-    border: 1px solid red;
+    border: 1px solid #C0392B;
   }
 
   .product .product-container-desktop .product-img .product-img-thumbnail .image-container div {
