@@ -34,17 +34,17 @@
   width: 50px;
 }
 
-.product .colors-bouquet span:nth-child(1) {
+.product .colors-bouquet .pink-circle {
   background-color: #FD79A8;
   margin-right: 20px;
 }
 
-.product .colors-bouquet span:nth-child(2) {
+.product .colors-bouquet .orange-circle {
   background-color: #FECA57;
   margin-right: 20px;
 }
 
-.product .colors-bouquet span:nth-child(3) {
+.product .colors-bouquet .red-circle {
   background-color: #C0392B;
 
 }
