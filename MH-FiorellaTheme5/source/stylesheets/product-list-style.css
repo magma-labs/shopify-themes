@@ -110,6 +110,10 @@ li.active {
   clear: both;
 }
 
+.footer {
+  clear: both;
+}
+
 @media only screen and ( max-width: 767px ) {
   .breadcrumb-desktop {
     display: none;
