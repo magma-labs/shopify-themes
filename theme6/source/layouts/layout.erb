@@ -21,9 +21,11 @@
   </head>
   <body>
     <%= partial 'partials/header' %>
+    <div class="main-container">
 
-    <%= yield %>
+      <%= yield %>
 
+    </div>
     <%= partial 'partials/footer' %>
     <%= javascript_include_tag "details"%>
     <%= javascript_include_tag "site" %>

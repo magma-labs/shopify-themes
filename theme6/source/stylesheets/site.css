@@ -5,6 +5,9 @@ footer {
   width: 100%;
   background-color: #fff;
   margin-top: 15px;
+  border-top-style: solid;
+  border-top-color: rgba(28, 26, 26, 0.1);
+  border-top-width: 1px;
 }
 
 .footer-content {

@@ -1,7 +1,3 @@
-body {
-  background-color: #f6f6f6;
-}
-
 .featured-kits {
   font-family: 'Oswald', sans-serif;
 }
@@ -318,6 +314,10 @@ body {
 }
 
 @media only screen and (min-width: 1280px) {
+
+  .main-container {
+    margin: 0 50px 0 50px;
+  }
 
   .flex-grid {
     display: flex;
