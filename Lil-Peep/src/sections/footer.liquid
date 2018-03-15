@@ -6,28 +6,24 @@
           <div class="social-media">
             <p>FOLLOW US</p>
           </div>
-          <div class="social-media-icon-group">
-            <div class="sm">
-              <a href="https://www.facebook.com/">
-                <p><img src="/images/fb.svg" alt="Facebook"></p>
-              </a>
-            </div>
-            <div class="sm twt">
-              <a href="https://twitter.com/?lang=en">
-                <p><img src="/images/twt.svg" alt="Twitter"></p>
-              </a>
-            </div>
-            <div class="sm">
-              <a href="https://plus.google.com/discover">
-                <p><img src="/images/g+.svg" alt="G+"></p>
-              </a>
-            </div>
-          </div>
+          {% if section.settings.show_share_buttons %}
+            {% include 'social-sharing-footer', share_title: product.title, share_permalink: product.url, share_image: product %}
+          {% endif %}
         </div>
       </div>
 
       <div class="logo">
-        <a href="/">  <img src="images/Logo.svg" alt="Lil Peep"> </a>
+        <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+          {% if section.settings.logo != blank %}
+            {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
+            <img src="{{ section.settings.logo | img_url: image_size }}"
+                 srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                 alt="{{ section.settings.logo.alt | default: shop.name }}"
+                 itemprop="logo">
+          {% else %}
+            {{ shop.name }}
+          {% endif %}
+        </a>
       </div>
 
       <div class="newsletter">
@@ -51,25 +47,6 @@
       <p>{{ 'layout.footer.copyright' | t }}</p>
     </div>
   </div>
-
-  {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
-  <ul>
-    {% for social in social_accounts %}
-      {%- assign social_handle = social | handleize -%}
-      {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
-      {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
-
-      {% if settings[social_link] != blank %}
-        <li>
-          <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
-            {% include social_icon %}
-            <span class="icon-fallback-text">{{ social }}</span>
-          </a>
-        </li>
-      {% endif %}
-
-    {% endfor %}
-  </ul>
 </footer>
 
 {% schema %}
@@ -81,6 +58,26 @@
         "id": "footer_linklist",
         "label": "First menu",
         "default": "footer"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": "Show social sharing buttons"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width",
+        "min": 50,
+        "max": 450,
+        "step": 10,
+        "unit": "px",
+        "label": "Custom logo width",
+        "default": 250
       }
     ]
   }

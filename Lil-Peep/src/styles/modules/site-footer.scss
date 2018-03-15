@@ -42,8 +42,7 @@ footer {
           }
         }
 
-        .social-media-icon-group button {
-          cursor: pointer;
+        .social-media-icon-group {
 
           .sm {
             display: inline-flex;
@@ -53,6 +52,10 @@ footer {
             width: 100px;
             justify-content: center;
             align-items: center;
+
+            img {
+              max-height: 20px;
+            }
 
             @media screen and (max-width: 1024px) {
               border-radius: 3px;
@@ -97,6 +100,15 @@ footer {
       display: flex;
       justify-content: center;
       width: 100px;
+
+      .site-logo {
+        display: block;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
 
       @media screen and (max-width: 768px) {
         display: none;
