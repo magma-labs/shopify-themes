@@ -1,0 +1,222 @@
+footer {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 15px;
+  border-top-style: solid;
+  border-top-color: rgba(28, 26, 26, 0.1);
+  border-top-width: 1px;
+}
+
+.footer-content {
+  margin: 0 40px;
+
+  .social-media-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .social-media-box {
+      display: flex;
+      flex: 1;
+      text-align: center;
+
+      .box-sm {
+
+        .social-media {
+          color: #72808C;
+          font-family: 'Lato', sans-serif;
+          font-size: 18px;
+          line-height: 21px;
+          display: block;
+
+          p {
+            @media screen and (max-width: 768px) {
+              font-size: 14px;
+              text-align: center;
+              width: 100%;
+            }
+          }
+        }
+
+        .social-media-icon-group button {
+          cursor: pointer;
+
+          .sm {
+            display: inline-flex;
+            border-radius: 3px;
+            border: 2px solid #72808c;
+            height: 35px;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width: 1024px) {
+              border-radius: 3px;
+              border: 2px solid #72808c;
+              height: 25px;
+              width: 60px;
+            }
+
+            @media screen and (max-width: 768px) {
+              display: inline-flex;
+              height: 35px;
+              width: 85px;
+            }
+          }
+
+          .twt {
+            margin: 0 7px 0 7px;
+
+            @media screen and (max-width: 768px) {
+              margin-left: 3px;
+              margin-right: 3px;
+            }
+          }
+
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        height: auto;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .logo {
+      align-content: center;
+      display: flex;
+      justify-content: center;
+      width: 100px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .newsletter {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      text-align: center;
+
+      .box-newsletter {
+        justify-content: center;
+
+        p {
+          color: #72808c;
+          @media screen and (max-width: 1024px) {
+            font-size: 15px;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 15px;
+            text-align: center;
+          }
+        }
+
+        input {
+          background-color: #fbfbfb;
+          border-radius: 2px;
+          border: 2px solid #d2d2d2;
+          height: 20px;
+          width: 300px;
+          @media screen and (max-width: 1024px) {
+            width: 200px;
+          }
+
+          @media screen and (max-width: 768px) {
+            height: 40px;
+            width: 305px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        transform: translateY(5px);
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      width: 100%;
+    }
+  }
+  .information {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 18px;
+    text-align: center;
+    width: 100%;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 0;
+      padding-left: 0;
+      width: 100%;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          color: #72808C;
+          font-family: 'Lato', sans-serif;
+          font-size: 18px;
+          line-height: 21px;
+          text-decoration: none;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .author {
+    color: #72808c;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+
+    p {
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+        margin-top: 35px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
+}

@@ -1,4 +1,56 @@
 <footer>
+  <div class="footer-content">
+    <div class="social-media-container">
+      <div class="social-media-box">
+        <div class="box-sm">
+          <div class="social-media">
+            <p>FOLLOW US</p>
+          </div>
+          <div class="social-media-icon-group">
+            <div class="sm">
+              <a href="https://www.facebook.com/">
+                <p><img src="/images/fb.svg" alt="Facebook"></p>
+              </a>
+            </div>
+            <div class="sm twt">
+              <a href="https://twitter.com/?lang=en">
+                <p><img src="/images/twt.svg" alt="Twitter"></p>
+              </a>
+            </div>
+            <div class="sm">
+              <a href="https://plus.google.com/discover">
+                <p><img src="/images/g+.svg" alt="G+"></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo">
+        <a href="/">  <img src="images/Logo.svg" alt="Lil Peep"> </a>
+      </div>
+
+      <div class="newsletter">
+        <div class="box-newsletter">
+          <p>JOIN OUR NEWSLETTER!</p>
+          <input type="email" placeholder="EMAIL" maxlength="25">
+        </div>
+      </div>
+    </div>
+    <div class="information">
+      {%- assign footer_linklist = section.settings.footer_linklist -%}
+      {% if linklists[footer_linklist].links.size > 0 %}
+        <ul>
+          {% for link in linklists[footer_linklist].links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <div class="author">
+      <p>{{ 'layout.footer.copyright' | t }}</p>
+    </div>
+  </div>
 
   {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
   <ul>
@@ -18,38 +70,6 @@
 
     {% endfor %}
   </ul>
-
-  {% if section.settings.show_payment_icons %}
-    {% unless shop.enabled_payment_types == empty %}
-      {%- assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' -%}
-
-      <span class="visually-hidden">{{ 'layout.footer.payment_methods' | t }}</span>
-      <ul class="payment-icons">
-        {% for type in shop.enabled_payment_types %}
-          {% if payment_icons_available contains type %}
-            <li>
-              {%- assign icon_name = type | prepend: 'icon-' -%}
-              {% include icon_name %}
-              <span class="visually-hidden">{{ type | capitalize | replace: '_', ' ' }}</span>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    {% endunless %}
-  {% endif %}
-
-  {%- assign footer_linklist = section.settings.footer_linklist -%}
-  {% if linklists[footer_linklist].links.size > 0 %}
-    <ul>
-      {% for link in linklists[footer_linklist].links %}
-        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-
-  <div>
-    <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
-  </div>
 </footer>
 
 {% schema %}
@@ -61,12 +81,6 @@
         "id": "footer_linklist",
         "label": "First menu",
         "default": "footer"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_payment_icons",
-        "label": "Show payment icons",
-        "default": false
       }
     ]
   }
