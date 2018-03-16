@@ -1,9 +1,234 @@
 /*================ Site Header ================*/
-.site-logo {
-  display: block;
+$featured-color: #e83671;
+$text-box-color: #555;
+$box-banner-color: #f3f9ef;
+$black-solid: #000;
+$white-solid: #fff;
+
+%positioning {
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+
+%transparent-button {
+  background-color: transparent;
+  border-style: none;
+}
+
+.desktop-btn-search {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  background-color: $white-solid;
+  font-family: 'Merriweather Sans', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 10px 20px;
+  position: fixed;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.menu-top-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  position: relative;
+
+  .menu-close {
+    @extend %positioning;
+    justify-content: flex-end;
+  }
+
+  button {
+    background-color: transparent;
+    border-style: none;
+  }
+}
+
+.search-container {
+  border-bottom-style: solid;
+  border-bottom-color: $featured-color;
+  margin: 20px 0 5px 0;
+  padding-bottom: 5px;
+
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    @extend %transparent-button;
+    padding-right: 0;
+  }
+
+  input {
+    background-color: transparent;
+    border-style: none;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $black-solid;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $black-solid;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $black-solid;
+  }
+}
+
+.mobile-nav {
+  border-bottom-style: solid;
+  border-bottom-color: $black-solid;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  h2 {
+    margin: 8px 0;
+  }
+}
+
+.mobile-user-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  h3 {
+    color: $featured-color;
+    margin: 8px 0;
+  }
+}
+
+.mobile-info-buttons {
+  margin-top: 10px;
+}
+
+.mobile-top-section {
+  display: flex;
+  align-items: center;
+  background-color: $featured-color;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+
+  button {
+    @extend %transparent-button;
+  }
+
+  p {
+    background-color: $featured-color;
+    border-style: none;
+    border-radius: 50%;
+    color: $white-solid;
+    display: inline;
+    padding: 4px 10px;
+  }
+
+  .header-card-button {
+    @extend %positioning;
+    justify-content: flex-end;
+    padding-right: 10px;
+
+    p {
+      display: inline;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
 
   img {
-    display: block;
     width: 100%;
+  }
+}
+
+.home-screen-mobile-search {
+  margin: 10px 8px 0 8px;
+}
+
+.menu-open {
+  @extend %positioning;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+@media screen and (min-width: 769px) {
+
+  .mobile-top-section {
+    display: none;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom-style: solid;
+    border-bottom-color: $featured-color;
+    font-family: 'Merriweather Sans', sans-serif;
+  }
+
+  .search-container {
+    flex: 1;
+    border-bottom-style: none;
+
+    form {
+      display: inline;
+    }
+
+    .desktop-btn-search {
+      display: inline;
+    }
+
+    .mobile-btn-search {
+      display: none;
+    }
+  }
+
+  .header-buttons-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+
+    a {
+      color: $black-solid;
+      margin-right: 20px;
+      text-decoration: none;
+    }
+  }
+
+  .header-card-button {
+    display: inline;
+    margin-left: 10px;
+
+    p {
+      background-color: $featured-color;
+      border-style: none;
+      border-radius: 50%;
+      color: $white-solid;
+      display: inline;
+      padding: 4px 10px;
+    }
+  }
+
+  .homepage-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+
+    img {
+      height: 100%;
+      margin: 20px 0 20px 0;
+    }
   }
 }

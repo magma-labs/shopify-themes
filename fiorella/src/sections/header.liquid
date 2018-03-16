@@ -6,7 +6,95 @@
   {% endif %}
 </style>
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
-  <header role="banner">
+  <header role="banner" class="">
+    <!-- Mobile slide out menu -->
+    <div id="menu" class="menu-container">
+      <div class="menu-top-section">
+        {{ 'logo2_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
+        <div id="hide-menu-btn" class="menu-close">
+          <button type="button" name="btn">{{ 'icon-hamburger.png' | asset_url | img_tag: 'Burguer Menu'}}</button>
+        </div>
+      </div>
+      <div class="search-container">
+        <form action="/search" method="get" role="search">
+          <label for="Search" class="label-hidden">
+            {{ 'general.search.placeholder' | t }}
+          </label>
+          <input type="search"
+                 name="q"
+                 id="Search"
+                 value="{{ search.terms | escape }}"
+                 placeholder="{{ 'general.search.placeholder' | t }}">
+          <button type="submit" class="btn">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+        </form>
+      </div>
+      <div class="mobile-nav">
+        <h2>BOUQUETS</h2>
+        <h2>BOUTONNIERES</h2>
+        <h2>CENTERPIECES</h2>
+        <h2>CEREMONY</h2>
+      </div>
+      <div class="mobile-user-buttons">
+        <h3>LOG IN</h3>
+        <h3>CREATE ACCOUNT</h3>
+        <h3>CONTACT</h3>
+      </div>
+      <div class="mobile-info-buttons">
+        <h3>ABOUT US</h3>
+        <h3>FAQ</h3>
+      </div>
+    </div><!-- end Mobile slide out menu-->
+
+    <div class="mobile-top-section">
+      <div id="show-menu-btn" class="menu-open">
+        <button type="button" name="btn">{% include 'icon-hamburger' %}</button>
+      </div>
+      <div class="logo-mobile-container">
+        {{ 'logo1_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
+      </div>
+      <div class="header-card-button">
+        <p>8</p>
+        <a href="#">{% include 'icon-cart' %}</a>
+      </div>
+    </div>
+    <div class="header-container">
+      <div class="search-container home-screen-mobile-search">
+        <form action="/search" method="get" role="search">
+          <label for="Search" class="label-hidden">
+            {{ 'general.search.placeholder' | t }}
+          </label>
+          <button type="submit" class="btn desktop-btn-search">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+          <input type="search"
+          name="q"
+          id="Search"
+          value="{{ search.terms | escape }}"
+          placeholder="{{ 'general.search.placeholder' | t }}">
+          <button type="submit" class="btn mobile-btn-search">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+        </form>
+      </div>
+      <div class="header-buttons-container">
+        <a href="#">CREATE ACCOUNT</a>
+        <a href="#">LOG IN</a>
+        <div class="header-card-button">
+          <p>8</p>
+          <a href="#">{% include 'icon-cart' %}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage-logo">
+      {{ 'logo_fiorella.png' | asset_url | img_tag: "Fiorella logo" }}
+    </div>
+
     {% if template.name == 'index' %}
       <h1 itemscope itemtype="http://schema.org/Organization">
     {% else %}
@@ -60,21 +148,6 @@
       </ul>
     {% endif %}
 
-    <form action="/search" method="get" role="search">
-      <label for="Search" class="label-hidden">
-        {{ 'general.search.placeholder' | t }}
-      </label>
-      <input type="search"
-             name="q"
-             id="Search"
-             value="{{ search.terms | escape }}"
-             placeholder="{{ 'general.search.placeholder' | t }}">
-      <button type="submit" class="btn">
-        {% include 'icon-search' %}
-        <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-      </button>
-    </form>
-
   </header>
 
   <nav role="navigation">
@@ -104,6 +177,19 @@
     </ul>
   </nav>
 </div>
+
+<script type="text/javascript">
+  var showMenu = document.getElementById("show-menu-btn");
+  var hideMenu = document.getElementById("hide-menu-btn");
+
+  showMenu.addEventListener('click', function() {
+    document.getElementById("menu").style.display = "block";
+  });
+
+  hideMenu.addEventListener('click', function() {
+    document.getElementById("menu").style.display = "none";
+  });
+</script>
 
 {% schema %}
   {
