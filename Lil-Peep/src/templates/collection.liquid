@@ -1,4 +1,7 @@
 {% paginate collection.products by 12 %}
+{% if paginate.pages > 1 %}
+  {% include 'pagination' %}
+{% endif %}
   <header role="banner">
     <h1>{{ collection.title }}</h1>
     {% if collection.description != blank %}
