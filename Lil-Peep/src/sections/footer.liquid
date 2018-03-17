@@ -4,7 +4,7 @@
       <div class="social-media-box">
         <div class="box-sm">
           <div class="social-media">
-            <p>FOLLOW US</p>
+            <p>{{ 'layout.footer.follow_us' | t }}</p>
           </div>
           {% if section.settings.show_share_buttons %}
             {% include 'social-sharing-footer', share_title: product.title, share_permalink: product.url, share_image: product %}
@@ -28,7 +28,7 @@
 
       <div class="newsletter">
         <div class="box-newsletter">
-          <p>JOIN OUR NEWSLETTER!</p>
+          <p>{{ 'layout.footer.join_our_newsletter' | t }}</p>
           <input type="email" placeholder="EMAIL" maxlength="25">
         </div>
       </div>
