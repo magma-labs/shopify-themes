@@ -1,11 +1,15 @@
 
-$mobile: "only screen and ( min-width: 767px )";
-$tablet: "only screen and ( min-width: 768px ) and ( max-width: 1023px )";
-$desktop: "only screen and ( min-width: 1024px )";
+$mobile: "only screen and (min-width: 767px)";
+$tablet: "only screen and (min-width: 768px) and (max-width: 1023px)";
+$desktop: "only screen and (min-width: 1024px)";
 
 $cerise-red-hover: rgba(#E83671, 0.7);
 $cerise-red: #E83671;
 $font-color-white: #FFFFFF;
 $border-color-white: #FFFFFF;
+$peppermind-color: #F3F9EF;
+$transparent: transparent;
 $playfair-display: "Playfair Display";
 $merriweathersans: "Merriweather Sans";
+
+$font-light: 300;

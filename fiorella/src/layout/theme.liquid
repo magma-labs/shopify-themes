@@ -59,7 +59,7 @@
   <!--[if lt IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
   {{ content_for_header }}
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Playfair+Display:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
@@ -70,6 +70,7 @@
 
   <main role="main" id="MainContent">
     {{ content_for_layout }}
+    {% section 'body-message' %}
     {% section 'category-products-list' %}
   </main>
   {% section 'footer' %}
