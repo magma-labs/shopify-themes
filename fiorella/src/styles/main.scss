@@ -4,6 +4,7 @@
     - You cannot use native CSS/Sass @imports in this file without a build script
 ==============================================================================*/
 
+
 /*================ UTILS ================*/
 @import url('tools/mixins.scss');
 
@@ -26,3 +27,7 @@
 /*================ MODULES ================*/
 @import url('modules/site-header.scss');
 @import url('modules/gift-card-template.scss');
+
+@import url('abstracts/_mixins.scss');
+@import url('abstracts/_variables.scss');
+@import url('layout/_category-products-list.scss');
