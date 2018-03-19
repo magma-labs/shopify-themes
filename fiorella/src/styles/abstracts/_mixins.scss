@@ -10,6 +10,18 @@
   *zoom: 1;
 }
 
+@mixin reset-ul($display) {
+  ul {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  li {
+    display: $display;
+    list-style-type: none;
+    margin: 15px 0;
+  }
+}
 /*============================================================================
   Prefix mixin for generating vendor prefixes.
   Based on https://github.com/thoughtbot/bourbon/blob/v4-stable/app/assets/stylesheets/addons/_prefixer.scss

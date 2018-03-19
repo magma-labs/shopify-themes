@@ -1,37 +1,38 @@
 /*================ Site Header ================*/
-$featured-color: #e83671;
-$text-box-color: #555;
-$box-banner-color: #f3f9ef;
-$black-solid: #000;
-$white-solid: #fff;
-
-%positioning {
-  position: absolute;
-  display: flex;
-  width: 100%;
-}
-
-
-%transparent-button {
-  background-color: transparent;
-  border-style: none;
+.homepage-logo {
+  display: none;
 }
 
 .desktop-btn-search {
   display: none;
 }
 
+.header-buttons-container {
+  display: none;
+}
 
 .menu-container {
-  display: none;
-  background-color: $white-solid;
-  font-family: 'Merriweather Sans', sans-serif;
+  background-color: $color-white-solid;
+  font-family: $font-menu-header;
   height: 100%;
+  width: 0;
   overflow-x: hidden;
-  padding: 10px 20px;
   position: fixed;
   transition: 0.5s;
   z-index: 2;
+
+  a {
+    color: $color-black-solid;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  @include reset-ul(block);
+}
+
+.show-menu {
+  width: 100%;
+  padding: 0 20px ;
 }
 
 .menu-top-section {
@@ -53,13 +54,17 @@ $white-solid: #fff;
 
 .search-container {
   border-bottom-style: solid;
-  border-bottom-color: $featured-color;
+  border-bottom-color: $color-featured;
   margin: 20px 0 5px 0;
   padding-bottom: 5px;
 
   form {
     display: flex;
     justify-content: space-between;
+  }
+
+  .desktop-btn-search {
+    display: none;
   }
 
   button {
@@ -75,29 +80,29 @@ $white-solid: #fff;
   }
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $black-solid;
+    color: $color-black-solid;
     opacity: 1; /* Firefox */
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $black-solid;
+    color: $color-black-solid;
   }
 
   ::-ms-input-placeholder { /* Microsoft Edge */
-    color: $black-solid;
+    color: $color-black-solid;
   }
 }
 
 .mobile-nav {
   border-bottom-style: solid;
-  border-bottom-color: $black-solid;
+  border-bottom-color: $color-black-solid;
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
   margin-bottom: 10px;
 
-  h2 {
-    margin: 8px 0;
+  a {
+    text-transform: uppercase;
   }
 }
 
@@ -106,9 +111,8 @@ $white-solid: #fff;
   flex-direction: column;
   margin-bottom: 20px;
 
-  h3 {
-    color: $featured-color;
-    margin: 8px 0;
+  a {
+    color: $color-featured;
   }
 }
 
@@ -119,7 +123,7 @@ $white-solid: #fff;
 .mobile-top-section {
   display: flex;
   align-items: center;
-  background-color: $featured-color;
+  background-color: $color-featured;
   height: 40px;
   justify-content: center;
   position: relative;
@@ -129,10 +133,10 @@ $white-solid: #fff;
   }
 
   p {
-    background-color: $featured-color;
+    background-color: $color-featured;
     border-style: none;
     border-radius: 50%;
-    color: $white-solid;
+    color: $color-white-solid;
     display: inline;
     padding: 4px 10px;
   }
@@ -164,7 +168,12 @@ $white-solid: #fff;
   z-index: 1;
 }
 
-@media screen and (min-width: 769px) {
+@media #{$desktop-view} {
+
+  .show-menu {
+    width: 0;
+    padding: 0;
+  }
 
   .mobile-top-section {
     display: none;
@@ -175,8 +184,10 @@ $white-solid: #fff;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
     border-bottom-style: solid;
-    border-bottom-color: $featured-color;
-    font-family: 'Merriweather Sans', sans-serif;
+    border-bottom-color: $color-featured;
+    font-family: $font-header;
+
+    @include reset-ul(inline);
   }
 
   .search-container {
@@ -202,7 +213,7 @@ $white-solid: #fff;
     justify-content: flex-end;
 
     a {
-      color: $black-solid;
+      color: $color-black-solid;
       margin-right: 20px;
       text-decoration: none;
     }
@@ -213,10 +224,10 @@ $white-solid: #fff;
     margin-left: 10px;
 
     p {
-      background-color: $featured-color;
+      background-color: $color-featured;
       border-style: none;
       border-radius: 50%;
-      color: $white-solid;
+      color: $color-white-solid;
       display: inline;
       padding: 4px 10px;
     }

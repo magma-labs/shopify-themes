@@ -5,8 +5,9 @@
 ==============================================================================*/
 
 /*================ ABSTRACTS ================*/
-@import url('abstracts/variables.scss.liquid');
+@import url('abstracts/_variables.scss.liquid');
 @import url('abstracts/_mixins.scss');
+@import url('abstracts/_placeholders.scss');
 
 /*================ BASE ================*/
 @import url('base/_normalize.scss');

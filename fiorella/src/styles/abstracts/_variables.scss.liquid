@@ -1,14 +1,19 @@
 /*================ Color Variables ================*/
 $color-primary: {{ settings.color_primary }};
+$color-featured: #e83671;
 
 // Text colors
 $color-body-text: {{ settings.color_body_text }};
 
 // Backgrounds
 $color-body: #fff;
+$color-white-solid: #fff;
+$color-box-banner: #f3f9ef;
 
 // Border colors
+$color-black-solid: #000;
 $color-border: #f6f6f6;
+$color-text-box: #555;
 
 // Helper colors for form error states
 $color-disabled: #000;
@@ -22,6 +27,8 @@ $color-success-bg: #000;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
+$font-menu-header: 'Merryweather Sans', sans-serif;
+$font-header: $font-menu-header;
 $font-stack-header: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-weight-header: $font-weight-bold;
 
@@ -67,6 +74,8 @@ $breakpoints: (
 ==============================================================================*/
 $breakpoint-has-widths: ($small, $medium-up);
 $breakpoint-has-push: ();
+
+$desktop-view: 'screen and (min-width: 769px)';
 
 /*================ Sizing Variables ================*/
 $width-site: 1180px;
