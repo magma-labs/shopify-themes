@@ -62,318 +62,128 @@
   padding-left: 5px;
   padding-right: 5px;
 
-  .categories-slider-navigator-top {
-    display: none;
+  h1 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+  }
 
-    button {
-      @media only screen and (min-width: 769px) {
-        background-color: transparent;
-        border-style: none;
-      }
-    }
-
-    .categories-slider-navigator-left-top {
-      .slider-button {
-        img {
-          @media only screen and (min-width: 769px) {
-            height: 100%;
-            width: 100%;
-          }
-        }
-        @media only screen and (min-width: 769px) {
-          display: flex;
-          font-size: 16px;
-          height: 20px;
-          justify-content: center;
-          padding: 2px;
-        }
-      }
-
-      .left-button {
-        p {
-          @media only screen and (min-width: 769px) {
-            margin: 0 0 0 10px;
-          }
-        }
-      }
-
-      @media only screen and (min-width: 769px) {
-        display: flex;
-        flex: none;
-        justify-content: flex-end;
-      }
-    }
-
-    .categories-slider-navigator-right-top {
-
-      .right-button {
-        p {
-          @media only screen and (min-width: 769px) {
-            margin: 0 10px 0 0;
-          }
-        }
-      }
-
-      @media only screen and (min-width: 769px) {
-        display: flex;
-        flex: none;
-        justify-content: flex-end;
-        margin-left: 60px;
-      }
-    }
-
-    @media only screen and (min-width: 769px) {
-      display: flex;
-      justify-content: flex-end;
-    }
+/*-----------------------------------------------*/
+  .collection-container {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .product-card-category {
-    background-color: #fff;
+    flex: 1 0 20%;
+    margin: 5px;
+    height: 470px;
+    background-color: #f5f6fa;
 
     &:hover {
       background-color: rgba(83, 150, 230, 0.1);
     }
 
-    button {
-      @media only screen and (min-width: 769px) {
-        border-radius: 3px;
-        &:hover {
-          background-color: #ED7F03;
-          cursor: pointer;
-        }
-      }
-    }
-
-    .products-slider {
+    .front-label {
       display: flex;
-      height: 240px;
-      position: relative;
+      justify-content: flex-end;
+      width: 100%;
 
-      label {
-        position: absolute;
+      .new-product {
+        background-color: #abc828;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: bold;
+        padding: 5px 25px 5px 25px;
       }
 
-      .front-label {
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        width: 100%;
-
-        p {
-          background-color: #abc828;
-          border-radius: 3px;
-          color: #fff;
-          font-weight: bold;
-          padding: 5px 25px 5px 25px;
-        }
-      }
-
-      .product-image {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        img {
-          height: 100%;
-          object-fit: contain;
-          width: 100%;
-        }
+      .not-new-product {
+        opacity: 1;
+        color: #f5f6fa;
+        padding: 5px 25px 5px 25px;
       }
     }
 
-    .product-data {
-      p {
-        color: #72808c;
-        font-family: 'Lato', sans-serif;
-        margin-bottom: 5px;
-        margin-top: 0;
+    .product-image {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      height: 300px;
+
+      img {
+        height: auto;
+        max-width: 250px;
+        max-height: 300px;
+        object-fit: contain;
       }
+    }
+  }
 
-      .price {
-        color: #954180;
-      }
+  .product-data {
+    padding-left: 15px;
+    padding-right: 15px;
 
-      .offer {
-        display: none;
-      }
+    p {
+      font-family: 'Lato', sans-serif;
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
 
-      .view-in-detail {
-        background-color: #4a90e2;
-        border-radius: 3px;;
-        border-style: none;
-        width: 100%;
-        padding: 10px 0 10px 0;
-        text-align: center;
+    .product-title {
+      color: #636e72;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-        a {
-          text-decoration: none;
-        }
+    .price {
+      color: #954180;
+    }
 
-        h4 {
-          color: #fff;
-          font-family: 'Oswald', sans-serif;
-          font-weight: bold;
-          margin: 0;
-        }
-      }
+    .offer {
+      display: none;
+    }
 
-      .product-data .view-in-detail:hover {
+    .view-in-detail {
+      background-color: #4a90e2;
+      border-radius: 3px;;
+      border-style: none;
+      width: 100%;
+      padding: 10px 0 10px 0;
+      text-align: center;
+
+      &:hover {
         cursor: pointer;
         background-color: #ed7f03;
       }
 
-      .price {
-        @media only screen and (min-width: 769px) {
-          display: flex;
-        }
+      a {
+        text-decoration: none;
       }
 
-      .offer {
-        @media only screen and (min-width: 769px) {
-          color: #D2D2D2;
-          display: flex;
-          margin-left: 5px;
-          text-decoration: line-through;
-        }
+      h4 {
+        color: #fff;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        margin: 0;
       }
     }
 
-
-    .product-data {
-      p {
-        @media only screen and (min-width: 769px) {
-          font-size: 15px;
-          text-overflow: ellipsis;
-        }
-      }
-    }
-
-
-    @media only screen and (min-width: 769px) {
-      display: block;
-      flex: 1;
-      margin: 5px;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-  }
-
-  .categories-slider-navigator {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-
-    button {
-      background-color: transparent;
-      border-style: none;
-    }
-
-    .categories-slider-navigator-left {
-      display: flex;
-      flex: 1;
-      justify-content: center;
-
-      .slider-button {
-        display: flex;
-        font-size: 16px;
-        height: 20px;
-        justify-content: center;
-        padding: 2px;
-        font-family: 'Lato', sans-serif;
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-
-      .left-button p {
-        margin: 0 0 0 10px;
-      }
-
+    .price {
       @media only screen and (min-width: 769px) {
         display: flex;
-        flex: none;
-        justify-content: flex-end;
       }
     }
 
-    .categories-slider-navigator-right {
-      display: flex;
-      flex: 1;
-      justify-content: center;
-
-      .slider-button {
-        display: flex;
-        font-size: 16px;
-        height: 20px;
-        justify-content: center;
-        padding: 2px;
-        font-family: 'Lato', sans-serif;
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-
-      .right-button p {
-        margin: 0 10px 0 0;
-      }
-
+    .offer {
       @media only screen and (min-width: 769px) {
+        color: #D2D2D2;
         display: flex;
-        flex: none;
-        justify-content: flex-end;
-        margin-left: 60px;
+        margin-left: 5px;
+        text-decoration: line-through;
       }
-    }
-
-    @media only screen and (min-width: 769px) {
-      display: flex;
-      justify-content: flex-end;
     }
   }
 
-  .scroll-up {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    text-align: center;
-
-    a {
-      text-decoration: none;
-    }
-
-    h3 {
-      font-family: "Oswald", sans-serif;
-      font-size: 16px;
-      margin-top: 6px;
-    }
-
-    .scroll-up-button {
-      background-color: #387ada;
-      border-radius: 3px;
-      border-style: none;
-      color: white;
-      display: flex;
-      display: inline-flex;
-      height: 40px;
-      justify-content: center;
-      width: 160px;
-
-      .up-arrow {
-        height: 15px;
-        padding-left: 10px;
-        padding-top: 10px;
-        width: 28px;
-      }
-    }
-
-    @media only screen and (min-width: 769px) {
-      display: none;
-    }
-  }
+/*-----------------------------------------------*/
 }
