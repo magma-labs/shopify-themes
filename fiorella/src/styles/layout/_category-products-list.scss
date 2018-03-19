@@ -39,7 +39,7 @@
 
   .category-description {
     display: none;
-
+    font-family: $merriweathersans;
     @media #{ $tablet } {
       display: block;
       font-size: 16px;
@@ -50,6 +50,7 @@
       font-size: 23px;
     }
   }
+
   @media #{ $tablet }, #{ $desktop } {
     margin: 0px 15px;
   }
@@ -63,11 +64,13 @@
   position: relative;
   width: 100%;
   z-index: 2;
+
   .category-image-item {
     background: $cerise-red-hover;
     height: 100%;
     object-fit: cover;
     width: 100%;
+
     @media #{ $tablet }, #{ $desktop } {
       height: 100%;
       width: 100%;
@@ -139,7 +142,7 @@
   position: absolute;
   right: 20px;
 
-  @media #{ $tablet }{
+  @media #{ $tablet } {
     display: block;
     height: 250px;
   }
