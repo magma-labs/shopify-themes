@@ -1,14 +1,38 @@
 {% paginate collection.products by 12 %}
-{% if paginate.pages > 1 %}
-  {% include 'pagination' %}
-{% endif %}
-  <header role="banner">
-    <h1>{{ collection.title }}</h1>
-    {% if collection.description != blank %}
-      <div class="rte">
-        {{ collection.description }}
-      </div>
-    {% endif %}
+<section id="ship-info-dialog" class="info-dialog">
+  <p>FREE SHIPPING FOR ALL ORDERS INSIDE THE US</p>
+  <div class="dialog-button-container">
+    <button id="closeDialog" type="button" name="closeDialog">x</button>
+  </div>
+</section>
+
+<section class="current-route">
+    <a class="home-route-section">HOME</a>
+    <a class="categories-route-section">&gt; WOODEN TOYS</a>
+</section>
+
+<div class="categories-view">
+
+  <h1>{{ collection.title }}</h1>
+  {% if collection.description != blank %}
+    <div class="rte">
+      {{ collection.description }}
+    </div>
+  {% endif %}
+
+  <header role="banner" class="categories-slider-navigator-top">
+    <div class="categories-slider-navigator-left-top">
+      <button id="prevNavigatorTop" class="slider-button left-button">
+        <img src="images/arrow_left.png" alt="Arrow left">
+        <p>PREV</p>
+      </button>
+    </div>
+    <div class="categories-slider-navigator-right-top">
+      <button id="nextNavigatorTop" class="slider-button right-button">
+        <p>NEXT</p>
+        <img src="images/arrow_right.png" alt="Arrow right">
+      </button>
+    </div>
 
     {% if collection.all_tags.size > 0 %}
       <ul>
@@ -27,75 +51,111 @@
     {% endif %}
   </header>
 
-  <div>
-    {% for product in collection.products %}
-      <div>
-        {% if product.featured_image != blank %}
-          <a href="{{ product.url | within: collection }}">
-            {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
-          </a>
-        {% endif %}
-
+  {% for product in collection.products %}
+    <div class="product-card-category">
+      <div class="products-slider">
+        <div class="front-label">
+          <p>NEW</p>
+        </div>
+        <div class="product-image">
+          {% if product.featured_image != blank %}
+            <a href="{{ product.url | within: collection }}">
+              {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="product-data">
         <p>
           <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
         </p>
-        <p>
-          {% if product.compare_at_price > product.price %}
+        <div class="price">
+          <p class="price">
+            {% if product.compare_at_price > product.price %}
 
-            {% if product.price_varies %}
-              {%- assign sale_price = product.price | money -%}
-              {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+              {% if product.price_varies %}
+                {%- assign sale_price = product.price | money -%}
+                {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+              {% else %}
+                {{ 'products.product.on_sale' | t }}
+                {{ product.price | money }}
+              {% endif %}
+
             {% else %}
-              {{ 'products.product.on_sale' | t }}
-              {{ product.price | money }}
+
+              {% if product.price_varies %}
+                {%- assign price = product.price | money -%}
+                {{ 'products.product.from_text_html' | t: price: price }}
+              {% else %}
+                {{ product.price | money }}
+              {% endif %}
+
             {% endif %}
 
-          {% else %}
-
-            {% if product.price_varies %}
-              {%- assign price = product.price | money -%}
-              {{ 'products.product.from_text_html' | t: price: price }}
-            {% else %}
-              {{ product.price | money }}
+            {% if product.compare_at_price > product.price %}
+              <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+              <s>{{ product.compare_at_price | money }}</s>
             {% endif %}
 
-          {% endif %}
-
-          {% if product.compare_at_price > product.price %}
-            <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-            <s>{{ product.compare_at_price | money }}</s>
-          {% endif %}
-
-          {% unless product.available %}
-            {{ 'products.product.sold_out' | t }}
-          {% endunless %}
-        </p>
-      </div>
-
-    {% else %}
-      {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
-        {% for i in (1..8) %}
-          <a href="#">
-            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+            {% unless product.available %}
+              {{ 'products.product.sold_out' | t }}
+            {% endunless %}
+          </p>
+          <p class="offer">$10 USD</p>
+        </div>
+        <div class="view-in-detail">
+          <a href="" type="button" name="view-button">
+            <h4>VIEW</h4>
           </a>
+        </div>
+      </div>
+    </div>
 
-          <p>
-            <a href="#">{{ 'homepage.onboarding.product_title' | t }}</a>
-          </p>
+  {% else %}
+    {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+      {% for i in (1..8) %}
+        <a href="#">
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+          {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+        </a>
 
-          <p>
-            {{ 1999 | money }}
-          </p>
-        {% endfor %}
-      {% else %}
-        <p>{{ 'collections.general.no_matches' | t }}</p>
-      {% endif %}
+        <p>
+          <a href="#">{{ 'homepage.onboarding.product_title' | t }}</a>
+        </p>
 
-    {% endfor %}
+        <p>
+          {{ 1999 | money }}
+        </p>
+      {% endfor %}
+    {% else %}
+      <p>{{ 'collections.general.no_matches' | t }}</p>
+    {% endif %}
+  {% endfor %}
+
+  <div class="categories-slider-navigator">
+    <div class="categories-slider-navigator-left">
+      <button id="prevNavigator" class="slider-button left-button">
+        <img src="images/arrow_left.png" alt="Arrow left">
+        <p>PREV</p>
+      </button>
+    </div>
+    <div class="categories-slider-navigator-right">
+      <button id="nextNavigator" class="slider-button right-button">
+        <p>NEXT</p>
+        <img src="images/arrow_right.png" alt="Arrow right">
+      </button>
+    </div>
   </div>
 
   {% if paginate.pages > 1 %}
     {% include 'pagination' %}
   {% endif %}
+
+  <div class="scroll-up">
+    <a href="#" class="scroll-up-button" name="scrollup">
+      <h3>SCROLL UP</h3>
+      <img class="up-arrow" src="/images/arrow_up_white.png" alt="Arrow Up">
+    </a>
+  </div>
+</div>
 {% endpaginate %}
