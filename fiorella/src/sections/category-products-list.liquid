@@ -1,49 +1,16 @@
-{%- if section.blocks.size > 0 -%}
 <div class="category-product-list">
   <div class="category-box">
-    {% for block in section.blocks %}
+    {%- for collection in collections -%}
     <div class="category-item">
-      <h2 class="category-title">{{block.settings.titleimg | upcase }}</h2>
+      <h2 class="category-title">{{ collection.title | upcase }}</h2>
       <div class="category-content-image">
-        <img class="category-image-item" src="{{ block.settings.categoryimg | img_url: '800x' }}" alt="{{ block.settings.categoryimg.alt }}" />
-        <h2 class="category-title-mobile">{{block.settings.titleimg | upcase }}</h2>
+        <img class="category-image-item" src="{{ collection | img_url: '800x' }}" alt="{{ collection.img.alt }}" />
+        <h2 class="category-title-mobile"><a href="{{ collection.url }}"> {{ collection.title | upcase }}</a></h2>
         <div class="overlay"></div>
-        <button class="btn-shop" type="button" name="button">SHOP NOW</button>
+        <a href="{{ collection.url }}" class="btn-shop">SHOP NOW</a>
       </div>
-      <p class="category-description">{{block.settings.description}}</p>
+      <p class="category-description">{{ collection.description }}</p>
     </div>
-    {% endfor %}
+    {%- endfor -%}
   </div>
-  <div class="border-box"></div>
 </div>
-{%- endif -%}
-
-{% schema %}
-{
-  "name":"Category products list",
-  "max_blocks":3,
-  "blocks":[
-    {
-      "type":"image",
-      "name":"Category items",
-      "settings":[
-        {
-          "type":"image_picker",
-          "id":"categoryimg",
-          "label":"Image"
-        },
-        {
-          "type": "text",
-          "id": "titleimg",
-          "label": "Title"
-        },
-        {
-          "type": "text",
-          "id": "description",
-          "label": "Description"
-        }
-      ]
-    }
-  ]
-}
-{% endschema %}
