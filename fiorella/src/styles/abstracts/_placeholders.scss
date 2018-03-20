@@ -8,3 +8,11 @@
   background-color: transparent;
   border-style: none;
 }
+
+%reset-a {
+  a {
+    color: $color-black-solid;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+}

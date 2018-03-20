@@ -3,6 +3,10 @@
   display: none;
 }
 
+.navbar {
+  display: none;
+}
+
 .desktop-btn-search {
   display: none;
 }
@@ -32,7 +36,7 @@
 
 .show-menu {
   width: 100%;
-  padding: 0 20px ;
+  padding: 0 20px;
 }
 
 .menu-top-section {
@@ -55,7 +59,7 @@
 .search-container {
   border-bottom-style: solid;
   border-bottom-color: $color-featured;
-  margin: 20px 0 5px 0;
+  margin: 20px 0 5px;
   padding-bottom: 5px;
 
   form {
@@ -159,7 +163,7 @@
 }
 
 .home-screen-mobile-search {
-  margin: 10px 8px 0 8px;
+  margin: 10px 8px 0;
 }
 
 .menu-open {
@@ -168,7 +172,7 @@
   z-index: 1;
 }
 
-@media #{$desktop-view} {
+@media #{$small-desktop-view} {
 
   .show-menu {
     width: 0;
@@ -236,12 +240,55 @@
   .homepage-logo {
     display: flex;
     justify-content: center;
+    height: 80px;
+    padding: 10px;
     width: 100%;
-    height: 60px;
+    margin: 20px 0;
 
     img {
       height: 100%;
-      margin: 20px 0 20px 0;
     }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    font-family: $font-navbar;
+    text-transform: uppercase;
+
+    a {
+      color: $color-black-solid;
+      text-decoration: none;
+      text-overflow: ellipsis;
+
+      &:hover {
+        font-weight: 900;
+        color: $color-featured;
+      }
+    }
+
+    @include reset-ul(inline);
+  }
+
+  .navbar-separator {
+    font-size: 20px;
+    color: $color-featured;
+    margin: 0 20px;
+  }
+}
+
+@media #{$large-desktop-view} {
+
+  .homepage-logo {
+    height: 100px;
+  }
+
+  .navbar {
+    font-size: 20px;
+  }
+
+  .navbar-separator {
+    font-size: 30px;
+    margin: 0 40px;
   }
 }

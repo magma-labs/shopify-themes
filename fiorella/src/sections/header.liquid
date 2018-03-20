@@ -66,6 +66,17 @@
       {{ 'logo_fiorella.png' | asset_url | img_tag: "Fiorella logo" }}
     </div>
 
+    <div class="navbar">
+      <ul>
+        {% for collection in collections %}
+          <li><a href="{{ collection.url }}" class="navbar-element">{{ collection.title }}</a></li>
+          {% if forloop.last != true %}
+            <span class="navbar-separator">|</span>
+          {% endif %}
+        {% endfor%}
+      </ul>
+    </div>
+
 
 
     {% if template.name == 'index' %}
