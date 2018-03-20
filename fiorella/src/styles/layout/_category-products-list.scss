@@ -80,6 +80,7 @@
   .category-title-mobile {
     position: absolute;
     top: 60px;
+    z-index: 3;
 
     a {
       color: $font-color-white;
