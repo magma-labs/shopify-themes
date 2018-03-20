@@ -8,7 +8,8 @@
     font-weight: $font-light;
     overflow: hidden;
 
-    &:after, &:before {
+    &:after,
+    &:before {
       background-color: $cerise-red;
       content: "";
       display: inline-block;
