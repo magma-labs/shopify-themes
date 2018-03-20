@@ -1,3 +1,19 @@
+<div class="pagination-container">
+  {% if paginate.previous.is_link == true and paginate.next.is_link != true  %}
+    <a class="active-button previous" href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
+    <a class="blocked-button" href="">Next »</a>
+  {% endif %}
+  {% if paginate.next.is_link == true and paginate.previous.is_link != true %}
+    <a class="blocked-button previous" href="">« Previous</a>
+    <a class="active-button" href="{{ paginate.next.url }}">{{ paginate.next.title }}</a>
+  {% endif %}
+  {% if paginate.previous.is_link == true and paginate.next.is_link == true %}
+    <a class="active-button previous" href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
+    <a class="active-button" href="{{ paginate.next.url }}">{{ paginate.next.title }}</a>
+  {% endif %}
+</div>
+<!--
 <div class="pagination">
   {{ paginate | default_pagination: next: 'NEXT', previous: 'PREV' }}
 </div>
+-->

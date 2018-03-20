@@ -52,3 +52,10 @@ $(document).ready(function() {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
 });
+
+var closeDialogBtn = document.getElementById('closeDialog');
+
+closeDialogBtn.addEventListener('click', function() {
+  document.getElementById('ship-info-dialog').classList.add('display-none');
+  document.getElementById('ship-info-dialog').classList.remove('info-dialog');
+});

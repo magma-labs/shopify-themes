@@ -1,10 +1,26 @@
+.desktop {
+  @media #{$breakpoint-mobile} {
+    display: none;
+  }
+}
+
+.mobile {
+  @media #{$breakpoint-tablet} {
+    display: none;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
 .info-dialog {
-  display: flex;
   align-items: center;
-  position: relative;
   background-color: #abc828;
+  display: flex;
   height: 35px;
   justify-content: center;
+  position: relative;
 
   p {
     color: #ffffff;
@@ -14,16 +30,16 @@
   }
 
   .dialog-button-container {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     justify-content: flex-end;
     position: absolute;
-    top: 7px;
     right: 5px;
+    top: 7px;
     width: 100%;
 
     button {
-      background-color: #fff;
+      background-color: #ffffff;
       border-radius: 50%;
       border-style: none;
       color: #abc828;
@@ -43,7 +59,7 @@
   display: none;
   margin-left: 30px;
 
-  @media only screen and (min-width: 769px) {
+  @media #{$breakpoint-tablet} {
     display: block;
     font-family: 'Lato', sans-serif;
     margin-top: 20px;
@@ -63,14 +79,14 @@
   padding-left: 30px;
   padding-right: 30px;
 
-  @media only screen and (max-width: 769px) {
+  @media #{$breakpoint-mobile} {
     padding-left: 10px;
     padding-right: 10px;
   }
 
   h1 {
-    text-align: center;
     font-family: 'Lato', sans-serif;
+    text-align: center;
   }
 
 .pagination-container {
@@ -79,36 +95,36 @@
   padding-left: 30px;
   padding-right: 30px;
 
-  @media only screen and (max-width: 769px) {
+  @media #{$breakpoint-mobile} {
     justify-content: space-between;
   }
 
   .active-button {
-    display: inline;
-    text-decoration: none;
-    font-size: 30px;
     color: #636e72;
+    display: inline;
+    font-size: 30px;
+    text-decoration: none;
 
-    @media only screen and (max-width: 769px) {
+    @media #{$breakpoint-mobile} {
       font-size: 20px;
     }
   }
 
   .blocked-button {
-    display: inline;
-    text-decoration: none;
-    font-size: 30px;
     color: #636e72;
+    display: inline;
+    font-size: 30px;
     opacity: 0.5;
+    text-decoration: none;
 
-    @media only screen and (max-width: 769px) {
+    @media #{$breakpoint-mobile} {
       font-size: 20px;
     }
   }
 
   .previous {
     margin-right: 50px;
-    @media only screen and (max-width: 769px) {
+    @media #{$breakpoint-mobile} {
       margin-right: 0px;
     }
   }
@@ -122,11 +138,11 @@
   }
 
   .product-card-category {
-    max-width: 435px;
-    flex: 1 0 20%;
-    margin: 10px;
-    height: 470px;
     background-color: #f5f6fa;
+    flex: 1 0 20%;
+    height: 470px;
+    margin: 10px;
+    max-width: 435px;
 
     &:hover {
       background-color: rgba(83, 150, 230, 0.1);
@@ -140,30 +156,30 @@
       .new-product {
         background-color: #abc828;
         border-radius: 3px;
-        color: #fff;
+        color: #ffffff;
         font-weight: bold;
         padding: 5px 25px 5px 25px;
       }
 
       .not-new-product {
-        opacity: 1;
         color: #f5f6fa;
+        opacity: 1;
         padding: 5px 25px 5px 25px;
       }
     }
 
     .product-image {
+      align-items: center;
       display: flex;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
 
       height: 300px;
+      justify-content: center;
 
       img {
         height: auto;
-        max-width: 250px;
         max-height: 300px;
+        max-width: 250px;
         object-fit: contain;
       }
     }
@@ -197,13 +213,13 @@
       background-color: #4a90e2;
       border-radius: 3px;;
       border-style: none;
-      width: 100%;
       padding: 10px 0 10px 0;
       text-align: center;
+      width: 100%;
 
       &:hover {
-        cursor: pointer;
         background-color: #ed7f03;
+        cursor: pointer;
       }
 
       a {
@@ -211,7 +227,8 @@
       }
 
       h4 {
-        color: #fff;
+        background-color: #4a90e2;
+        color: #ffffff;
         font-family: 'Oswald', sans-serif;
         font-weight: bold;
         margin: 0;
@@ -219,13 +236,13 @@
     }
 
     .price {
-      @media only screen and (min-width: 769px) {
+      @media #{$breakpoint-tablet} {
         display: flex;
       }
     }
 
     .offer {
-      @media only screen and (min-width: 769px) {
+      @media #{$breakpoint-tablet} {
         color: #D2D2D2;
         display: flex;
         margin-left: 5px;
