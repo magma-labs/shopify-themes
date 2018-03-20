@@ -1,0 +1,112 @@
+.a {
+  @media only screen and (min-width:768px) {
+    display: flex;
+  }
+}
+
+.half-left {
+  @media only screen and (min-width:768px) {
+    display: inline-block;
+    margin-right: 1px;
+    width: 45%;
+  }
+}
+
+.history {
+
+  .next {
+    display: none;
+    @media only screen and (min-width:768px) {
+      color: #5396e5;
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      height: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      outline: none;
+    }
+  }
+
+  .selection {
+    @media only screen and (min-width:768px) {
+      color: #72808c;
+      font-family: 'Lato', sans-serif;
+    }
+  }
+
+  @media only screen and (min-width:768px) {
+    color: #72808c;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+
+
+.super-product {
+  display: block;
+  justify-content: center;
+
+  .box-product {
+    display: flex;
+    height: 300px;
+    width: 100%;
+
+    .product {
+      height: 100%;
+      justify-content: center;
+      object-fit: contain;
+      width: 100%;
+
+      @media only screen and (min-width:768px) {
+        height: 100%;
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width:768px) {
+      height: 550px;
+      position: relative;
+      width: 550px;
+    }
+  }
+
+  .box-micro {
+    display: flex;
+    justify-content: center;
+
+    .view {
+      height: 85px;
+      object-fit: contain;
+      width: 85px;
+
+      @media only screen and (min-width:768px) {
+        height: 100px;
+        width: 100px;
+      }
+    }
+
+    @media only screen and (min-width:768px) {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-right: 10px;
+      margin-top: 47px;
+    }
+  }
+  @media only screen and (min-width:768px) {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+/**********************************************/
+
+.half-right {
+  @media only screen and (min-width:768px) {
+    display: block;
+    transform: translateY(15px);
+    width: 55%;
+  }
+}
