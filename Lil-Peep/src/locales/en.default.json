@@ -239,8 +239,11 @@
     },
     "footer": {
       "social_platform": "{{ name }} on {{ platform }}",
-      "copyright": "Copyright",
-      "payment_methods": "Payment methods accepted"
+      "copyright": "Created by Crowd Interactive 2015",
+      "payment_methods": "Payment methods accepted",
+      "follow_us": "FOLLOW US",
+      "join_our_newsletter": "JOIN OUR NEWSLETTER!",
+      "placeholder_email": "EMAIL"
     }
   },
   "products": {
