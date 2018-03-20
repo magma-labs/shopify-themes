@@ -22,10 +22,19 @@
 
   <header role="banner" class="categories-slider-navigator">
     <div class="pagination-container">
-      {% if paginate.pages > 1 %}
-        {% include 'pagination' %}
+      {% if paginate.previous.is_link  %}
+        <a class="active-button previous" href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
+        <a class="blocked-button" href="">Next »</a>
+      {% endif %}
+      {% if paginate.next.is_link %}
+        <a class="blocked-button previous" href="">« Previous</a>
+        <a class="active-button" href="{{ paginate.next.url }}">{{ paginate.next.title }}</a>
+      {% endif %}
+      {% if paginate.previous.is_link and paginate.next.is_link%}
+        <a href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
       {% endif %}
     </div>
+
 
     {% if collection.all_tags.size > 0 %}
       <ul>
@@ -121,9 +130,19 @@
     {% endfor %}
   </div>
 
-  {% if paginate.pages > 1 %}
-    {% include 'pagination' %}
-  {% endif %}
+  <div class="pagination-container">
+    {% if paginate.previous.is_link  %}
+      <a class="active-button previous" href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
+      <a class="blocked-button" href="">Next »</a>
+    {% endif %}
+    {% if paginate.next.is_link %}
+      <a class="blocked-button previous" href="">« Previous</a>
+      <a class="active-button" href="{{ paginate.next.url }}">{{ paginate.next.title }}</a>
+    {% endif %}
+    {% if paginate.previous.is_link and paginate.next.is_link%}
+      <a href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
+    {% endif %}
+  </div>
 
 </div>
 {% endpaginate %}
