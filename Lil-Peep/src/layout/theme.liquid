@@ -59,6 +59,7 @@
   <!--[if lt IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
   {{ content_for_header }}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Oswald:300">
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
@@ -69,6 +70,7 @@
 
   <main role="main" id="MainContent">
     {{ content_for_layout }}
+    {% section 'featured-kits' %}
   </main>
 
   {% section 'footer' %}
