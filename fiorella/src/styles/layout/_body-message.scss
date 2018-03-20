@@ -4,9 +4,9 @@
   text-align: center;
 
   .title-message {
-    overflow: hidden;
     font-family: $playfair-display;
     font-weight: $font-light;
+    overflow: hidden;
 
     &:after, &:before {
       background-color: $cerise-red;
@@ -40,11 +40,11 @@
   }
 
   .text-message {
-    margin: 10px 15px;
     font-family: $merriweathersans;
-    font-weight: $font-light;
     font-size: 16px;
+    font-weight: $font-light;
     line-height: 30px;
+    margin: 10px 15px;
 
     @media #{ $tablet } {
       font-size: 14px;
@@ -57,12 +57,12 @@
   }
 
   .btn-read-more {
+    display: inline-block;
     font-family: $playfair-display;
     font-weight: bold;
     margin-top: 15px;
-    text-decoration: none;
     padding: 12px 30px;
-    display: inline-block;
+    text-decoration: none;
     @include hover-categories($cerise-red, 2px, $cerise-red, 16px, 40px, 175px);
 
     @media #{ $tablet } {
