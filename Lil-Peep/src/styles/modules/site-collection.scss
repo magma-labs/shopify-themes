@@ -63,6 +63,11 @@
   padding-left: 30px;
   padding-right: 30px;
 
+  @media only screen and (max-width: 769px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   h1 {
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -74,11 +79,19 @@
   padding-left: 30px;
   padding-right: 30px;
 
+  @media only screen and (max-width: 769px) {
+    justify-content: space-between;
+  }
+
   .active-button {
     display: inline;
     text-decoration: none;
     font-size: 30px;
     color: #636e72;
+
+    @media only screen and (max-width: 769px) {
+      font-size: 20px;
+    }
   }
 
   .blocked-button {
@@ -87,10 +100,17 @@
     font-size: 30px;
     color: #636e72;
     opacity: 0.5;
+
+    @media only screen and (max-width: 769px) {
+      font-size: 20px;
+    }
   }
 
   .previous {
     margin-right: 50px;
+    @media only screen and (max-width: 769px) {
+      margin-right: 0px;
+    }
   }
 }
 
