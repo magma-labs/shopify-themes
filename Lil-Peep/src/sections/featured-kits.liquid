@@ -1,3 +1,6 @@
+{% if block.settings.type_banner  %}
+    <p>Esta activo </p>
+{% endif %}
 <section class="featured-kits">
   <div class="flex-grid">
     <div class="big-banner">
@@ -70,15 +73,25 @@
          "type": "text",
          "id": "title",
          "label": "Title"
+         "default": "Title"
        },
        {
          "type": "text",
          "id": "description",
-         "label": "Description"
-       },{
+         "label": "Description",
+         "default": "Description"
+       },
+       {
          "type": "text",
          "id": "button",
-         "label": "Button"
+         "label": "Button",
+         "default": "Text"
+       },
+       {
+         "type": "checkbox",
+         "id": "collection_sort",
+         "default": true,
+         "label": "Enable sorting"
        }
      ]
    }
