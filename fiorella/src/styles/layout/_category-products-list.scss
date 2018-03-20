@@ -19,7 +19,7 @@
 }
 
 .category-item {
-  margin: 5px 0px;
+  margin: 5px 0;
   text-align: center;
 
   .category-title {
@@ -52,7 +52,7 @@
   }
 
   @media #{ $tablet }, #{ $desktop } {
-    margin: 0px 15px;
+    margin: 0 15px;
   }
 }
 
@@ -93,7 +93,7 @@
 
   .overlay {
     background-color: $cerise-red-hover;
-    bottom: 0px;
+    bottom: 0;
     height: 100%;
     position: absolute;
     width: 100%;
