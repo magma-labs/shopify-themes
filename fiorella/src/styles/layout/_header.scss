@@ -27,16 +27,16 @@
 
   a {
     color: $color-black-solid;
-    text-decoration: none;
     font-size: 25px;
+    text-decoration: none;
   }
 
   @include reset-ul(block);
 }
 
 .show-menu {
-  width: 100%;
   padding: 0 20px;
+  width: 100%;
 }
 
 .menu-top-section {
@@ -102,8 +102,8 @@
   border-bottom-color: $color-black-solid;
   display: flex;
   flex-direction: column;
-  padding-bottom: 10px;
   margin-bottom: 10px;
+  padding-bottom: 10px;
 
   a {
     text-transform: uppercase;
@@ -175,8 +175,8 @@
 @media #{$small-desktop-view} {
 
   .show-menu {
-    width: 0;
     padding: 0;
+    width: 0;
   }
 
   .mobile-top-section {
@@ -241,9 +241,9 @@
     display: flex;
     justify-content: center;
     height: 80px;
+    margin: 20px 0;
     padding: 10px;
     width: 100%;
-    margin: 20px 0;
 
     img {
       height: 100%;
@@ -259,11 +259,11 @@
     a {
       color: $color-black-solid;
       text-decoration: none;
-      text-overflow: ellipsis;
+      text-align: justify;
 
       &:hover {
-        font-weight: 900;
         color: $color-featured;
+        font-weight: 900;
       }
     }
 
@@ -271,8 +271,8 @@
   }
 
   .navbar-separator {
-    font-size: 20px;
     color: $color-featured;
+    font-size: 20px;
     margin: 0 20px;
   }
 }
