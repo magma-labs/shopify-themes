@@ -54,14 +54,17 @@
     font-family: $playfair-display;
     font-weight: bold;
     margin-top: 15px;
-    @include hover-categories($transparent,$cerise-red, 2px, $cerise-red, 16px, 40px, 175px);
+    text-decoration: none;
+    padding: 12px 30px;
+    display: inline-block;
+    @include hover-categories($cerise-red, 2px, $cerise-red, 16px, 40px, 175px);
 
     @media #{ $tablet } {
-      @include hover-categories($transparent,$cerise-red, 2px, $cerise-red, 16px, 48px, 166px);
+      @include hover-categories($cerise-red, 2px, $cerise-red, 16px, 48px, 166px);
     }
 
     @media #{ $desktop } {
-      @include hover-categories($transparent,$cerise-red, 2px, $cerise-red, 23px, 61px, 211px);
+      @include hover-categories($cerise-red, 2px, $cerise-red, 23px, 61px, 211px);
     }
   }
 }

@@ -4,7 +4,7 @@
   <div class="text-message">
     <p>{{ section.settings.imagedescription }}</p>
   </div>
-  <button class="btn-read-more" type="button" name="button">READ MORE</button>
+  <a href="{{section.settings.link}}" class="btn-read-more">READ MORE</a>
 </div>
 
 {% schema %}
@@ -25,6 +25,11 @@
       "type": "text",
       "id": "imagedescription",
       "label": "Description"
+    },
+    {
+      "type":"url",
+      "id":"link",
+      "label":"link"
     }
   ]
 }

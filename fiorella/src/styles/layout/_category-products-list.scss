@@ -110,11 +110,11 @@
     position: absolute;
 
     @media #{ $tablet } {
-      @include hover-categories(transparent,$border-color-white, 2px, $font-color-white, 16px, 48px, 166px);
+      @include hover-categories($border-color-white, 2px, $font-color-white, 16px, 48px, 166px);
     }
 
     @media #{ $desktop } {
-      @include hover-categories(transparent,$border-color-white, 2px, $font-color-white, 23px, 61px, 211px);
+      @include hover-categories($border-color-white, 2px, $font-color-white, 23px, 61px, 211px);
     }
   }
 
