@@ -1,0 +1,9 @@
+<div class="box-micro">
+  {% if product.images.size > 1 %}
+      {% for image in product.images %}
+          <a href="#" class="{% if forloop.first == true %} selected {% endif %}" data-product-single-thumbnail>
+            <img onclick="selectimage('{{ image.src | img_url: '430x430' }}')" id="thumbnail-{{ image.id }}" class="view" src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}">
+          </a>
+      {% endfor %}
+  {% endif %}
+</div>

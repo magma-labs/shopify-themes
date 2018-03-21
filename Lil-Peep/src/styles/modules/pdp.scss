@@ -1,10 +1,15 @@
 .a {
+
   @media only screen and (min-width:768px) {
     display: flex;
   }
 }
 
 .half-left {
+
+  display: flex;
+  justify-content: center;
+
   @media only screen and (min-width:768px) {
     display: inline-block;
     margin-right: 1px;
@@ -16,6 +21,7 @@
 
   .next {
     display: none;
+
     @media only screen and (min-width:768px) {
       color: #5396e5;
       display: inline-block;
@@ -28,6 +34,7 @@
   }
 
   .selection {
+
     @media only screen and (min-width:768px) {
       color: #72808c;
       font-family: 'Lato', sans-serif;
@@ -43,11 +50,14 @@
 
 
 .super-product {
-  display: block;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   .box-product {
     display: flex;
+    justify-content: center;
     height: 300px;
     width: 100%;
 
@@ -73,7 +83,35 @@
 
   .box-micro {
     display: flex;
+    float: center;
     justify-content: center;
+    width: 70%;
+    margin-top: 25px;
+
+    a {
+
+      margin-right: 20px;
+      width: 85px;
+      height: 85px;
+
+      img {
+        border-style: solid;
+        border-width: 5px;
+        border-color: transparent;
+        object-fit: cover;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .selected {
+      border-style: solid;
+      border-color: #4a90e2;
+      border-width: 5px;
+      border-radius: 5px;
+    }
 
     .view {
       height: 85px;
@@ -94,6 +132,7 @@
       margin-top: 47px;
     }
   }
+
   @media only screen and (min-width:768px) {
     display: inline-flex;
     justify-content: flex-end;
@@ -104,6 +143,7 @@
 /**********************************************/
 
 .half-right {
+
   @media only screen and (min-width:768px) {
     display: block;
     transform: translateY(15px);

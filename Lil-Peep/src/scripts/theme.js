@@ -52,3 +52,49 @@ $(document).ready(function() {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
 });
+/*
+var isFirstTime = (function () {
+    var maybe = true;
+    if (maybe) {
+      maybe = false;
+      return function () {return true}
+    }
+    else {
+      return function () {return false}
+    }
+
+})();
+
+var rememberThumbnail = (function (thumbnail) {
+    var remembering;
+
+    if(isFirstTime()) {
+      return function ()
+       {
+        remembering = thumbnail;
+        return remembering
+      }
+    }
+    else {
+      return function () {
+        remembering = thumbnail;
+        return remembering
+      }
+    }
+    return function () {return remembering}
+})();
+
+*/
+function selectimage(image) {
+  document.getElementById('product').src = image;
+
+  //rememberThumbnail(thumbnail_id);
+  //document.getElementById(thumbnail_id).classList.remove("view");
+  //document.getElementById(thumbnail_id).classList.add("selected-image");
+
+}
+
+$('.view').click(function(){
+    $('.selected').removeClass('selected');
+    $(this).addClass('selected');
+});
