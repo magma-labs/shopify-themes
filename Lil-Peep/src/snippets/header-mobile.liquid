@@ -1,0 +1,132 @@
+<div class="header-mobile-section">
+  <!-- Insert button on mobile version-->
+  <button type="button" class="iconmenu-left" onclick="openNav()">
+     {% include 'icon-flecha_izquierda' %} Menu </button>
+
+  <!-- Insert logo mobile version -->
+  {% if template.name == 'index' %}
+    <h1 itemscope itemtype="http://schema.org/Organization" class="header-logo">
+  {% else %}
+    <div class="h1" itemscope itemtype="http://schema.org/Organization">
+  {% endif %}
+      <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+        {% if section.settings.logo2 != blank %}
+          {% capture image_size %}{{ section.settings.logo_max_width2 }}x{% endcapture %}
+          <img src="{{ section.settings.logo2 | img_url: image_size }}"
+               srcset="{{ section.settings.logo2 | img_url: image_size }} 1x, {{ section.settings.logo2 | img_url: image_size, scale: 2 }} 2x"
+               alt="{{ section.settings.logo2.alt | default: shop.name }}"
+               itemprop="logo">
+        {% else %}
+          {{ shop.name }}
+        {% endif %}
+      </a>
+  {% if template.name == 'index' %}
+    </h1>
+  {% else %}
+    </div>
+  {% endif %}
+
+      <!-- Added Cart_Icon -->
+  <a class="cart" href="/cart">
+    ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
+    {% include 'icon-cart' %}
+  </a>
+
+</div>
+
+<!-- Added sidenav menu -->
+<div id="mySidenav" class="sidenav">
+  <div class="sidenav-logo">
+
+    <!-- Added logo mobile view-->
+    {% if template.name == 'index' %}
+      <h1 itemscope itemtype="http://schema.org/Organization" class="header-logo">
+    {% else %}
+      <div class="h1" itemscope itemtype="http://schema.org/Organization">
+    {% endif %}
+        <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+          {% if section.settings.logo3 != blank %}
+            {% capture image_size %}{{ section.settings.logo_max_width3 }}x{% endcapture %}
+            <img src="{{ section.settings.logo3 | img_url: image_size }}"
+                 srcset="{{ section.settings.logo3 | img_url: image_size }} 1x, {{ section.settings.logo3 | img_url: image_size, scale: 2 }} 2x"
+                 alt="{{ section.settings.logo3.alt | default: shop.name }}"
+                 itemprop="logo">
+          {% else %}
+            {{ shop.name }}
+          {% endif %}
+        </a>
+    {% if template.name == 'index' %}
+      </h1>
+    {% else %}
+      </div>
+    {% endif %}
+
+<!-- Added close button sidenav-->
+    <button type="button" class="closebtn" onclick="closeNav()">
+        Close {% include 'icon-flecha_derecha' %}
+    </button>
+  </div>
+
+  <!-- Added navbar sidebar menu -->
+  <div class="header-mobile">
+    <nav role="navigation" class="navigation">
+      <ul class="site-nav">
+        {% for link in linklists[section.settings.main_linklist].links %}
+          {%- assign child_list_handle = link.title | handleize -%}
+          {% if menus[child_list_handle].links != blank %}
+
+            <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
+              <a href="{{ link.url }}" class="site-nav__link">
+                {{ link.title }}
+                {% include 'icon-arrow-down' %}
+              </a>
+
+              <ul class="site-nav__submenu">
+                {% for childlink in menus[child_list_handle].links %}
+                  <li {% if childlink.active %}class="site-nav--active"{% endif %}>
+                    <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li {% if link.active %}class="site-nav--active"{% endif %}>
+              <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+    <hr class="line">
+
+  <!-- Login section sidenav-->
+    <div class="customer-login">
+        {% if shop.customer_accounts_enabled %}
+          <ul>
+            {% if customer %}
+              <li>
+                {% if customer.first_name != blank %}
+                  {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+                  {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
+                {% else %}
+                  <a href="/account">{{ 'layout.customer.account' | t }}</a>
+                {% endif %}
+              </li>
+              <li>
+                {{ 'layout.customer.log_out' | t | customer_logout_link }}
+              </li>
+            {% else %}
+              <li>
+                {{ 'layout.customer.log_in' | t | customer_login_link }}
+              </li>
+              <li>
+                {{ 'layout.customer.create_account' | t | customer_register_link }}
+              </li>
+            {% endif %}
+          </ul>
+        {% endif %}
+    </div>
+  </div>
+  <!-- Seccion del footer Sidenav -->
+    {%include  'footer-mobile'%}
+</div>

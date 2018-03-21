@@ -1,0 +1,56 @@
+<div class="footer-mobile">
+  <div class="footer-content">
+    <div class="social-media-container">
+      <div class="social-media-box">
+        <div class="box-sm">
+          <div class="social-media">
+            <p>{{ 'layout.footer.follow_us' | t }}</p>
+          </div>
+          {% if section.settings.show_share_buttons %}
+            {% include 'social-sharing-footer', share_title: product.title, share_permalink: product.url, share_image: product %}
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <div class="box-newsletter">
+          <p>{{ 'layout.footer.join_our_newsletter' | t }}</p>
+          <input class="email-box" type="email" placeholder="EMAIL" maxlength="25">
+        </div>
+      </div>
+    </div>
+
+    <!-- Categorias Footer -->
+    <nav role="navigation">
+      <ul class="site-nav2">
+        {% for link in linklists[section.settings.main_linklist2].links %}
+          {%- assign child_list_handle = link.title | handleize -%}
+          {% if menus[child_list_handle].links != blank %}
+            <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
+              <a href="{{ link.url }}" class="site-nav__link">
+                {{ link.title }}
+                {% include 'icon-arrow-down' %}
+              </a>
+
+              <ul class="site-nav__submenu">
+                {% for childlink in menus[child_list_handle].links %}
+                  <li {% if childlink.active %}class="site-nav--active"{% endif %}>
+                    <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li {% if link.active %}class="site-nav--active"{% endif %}>
+              <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+
+      </ul>
+    </nav>
+    <div class="author">
+      <p>{{ 'layout.footer.copyright' | t }}</p>
+    </div>
+  </div>
+</div>
