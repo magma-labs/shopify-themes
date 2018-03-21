@@ -5,10 +5,12 @@
     }
   {% endif %}
 </style>
-<div data-section-id="{{ section.id }}" data-section-type="header-section">
+
+{%- include 'header-mobile' -%}
+<div data-section-id="{{ section.id }}" data-section-type="header-section" class="section-header">
   <header role="banner">
     {% if template.name == 'index' %}
-      <h1 itemscope itemtype="http://schema.org/Organization">
+      <h1 itemscope itemtype="http://schema.org/Organization" class="header-logo">
     {% else %}
       <div class="h1" itemscope itemtype="http://schema.org/Organization">
     {% endif %}
@@ -29,52 +31,51 @@
       </div>
     {% endif %}
 
-    <a href="/cart">
-      {% include 'icon-cart' %}
-      {{ 'layout.cart.title' | t }}
-      ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
-    </a>
+    <div class="searchlogin">
+      <div class="search">
+        <form action="/search"  method="get" role="search">
+          <label for="Search" class="label-hidden">
+            {{ 'general.search.placeholder' | t }}
+          </label>
+          <input type="search"
+                 name="q"
+                 id="Search"
+                 value="{{ search.terms | escape }}"
+                 placeholder="{{ 'general.search.placeholder' | t }}">
+          <button type="submit" class="btn">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+        </form>
+      </div>
 
-    {% if shop.customer_accounts_enabled %}
-      <ul>
-        {% if customer %}
-          <li>
-            {% if customer.first_name != blank %}
-              {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
-              {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
-            {% else %}
-              <a href="/account">{{ 'layout.customer.account' | t }}</a>
-            {% endif %}
-          </li>
-          <li>
-            {{ 'layout.customer.log_out' | t | customer_logout_link }}
-          </li>
-        {% else %}
-          <li>
-            {{ 'layout.customer.log_in' | t | customer_login_link }}
-          </li>
-          <li>
-            {{ 'layout.customer.create_account' | t | customer_register_link }}
-          </li>
-        {% endif %}
-      </ul>
-    {% endif %}
-
-    <form action="/search" method="get" role="search">
-      <label for="Search" class="label-hidden">
-        {{ 'general.search.placeholder' | t }}
-      </label>
-      <input type="search"
-             name="q"
-             id="Search"
-             value="{{ search.terms | escape }}"
-             placeholder="{{ 'general.search.placeholder' | t }}">
-      <button type="submit" class="btn">
-        {% include 'icon-search' %}
-        <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-      </button>
-    </form>
-
+      <div class="customer-login">
+          {% if shop.customer_accounts_enabled %}
+            <ul>
+              {% if customer %}
+                <li>
+                  {% if customer.first_name != blank %}
+                    {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+                    {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
+                  {% else %}
+                    <a href="/account">{{ 'layout.customer.account' | t }}</a>
+                  {% endif %}
+                </li>
+                <li>
+                  {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                </li>
+              {% else %}
+                <li>
+                  {{ 'layout.customer.log_in' | t | customer_login_link }}
+                </li>
+                <li>
+                  {{ 'layout.customer.create_account' | t | customer_register_link }}
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+      </div>
+    </div>
   </header>
 
   <nav role="navigation">
@@ -82,11 +83,13 @@
       {% for link in linklists[section.settings.main_linklist].links %}
         {%- assign child_list_handle = link.title | handleize -%}
         {% if menus[child_list_handle].links != blank %}
+
           <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
             <a href="{{ link.url }}" class="site-nav__link">
               {{ link.title }}
               {% include 'icon-arrow-down' %}
             </a>
+
             <ul class="site-nav__submenu">
               {% for childlink in menus[child_list_handle].links %}
                 <li {% if childlink.active %}class="site-nav--active"{% endif %}>
@@ -95,15 +98,35 @@
               {% endfor %}
             </ul>
           </li>
+
         {% else %}
+
           <li {% if link.active %}class="site-nav--active"{% endif %}>
             <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
           </li>
+
         {% endif %}
       {% endfor %}
+
+      <a class="cart" href="/cart">
+        {{ 'layout.cart.title' | t }}
+        ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
+        {% include 'icon-cart' %}
+      </a>
+
     </ul>
   </nav>
 </div>
+
+<script type="text/javascript">
+function openNav() {
+  document.getElementById("mySidenav").style.width = "90%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 {% schema %}
   {
@@ -112,7 +135,7 @@
       {
         "type": "image_picker",
         "id": "logo",
-        "label": "Logo image"
+        "label": "Logo image desktop"
       },
       {
         "type": "range",
@@ -125,10 +148,51 @@
         "default": 250
       },
       {
+        "type": "image_picker",
+        "id": "logo2",
+        "label": "Logo image mobile"
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width2",
+        "min": 50,
+        "max": 450,
+        "step": 10,
+        "unit": "px",
+        "label": "Custom logo width",
+        "default": 250
+      },
+      {
+        "type": "image_picker",
+        "id": "logo3",
+        "label": "Logo image mobile menu"
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width3",
+        "min": 50,
+        "max": 450,
+        "step": 10,
+        "unit": "px",
+        "label": "Custom logo width",
+        "default": 250
+      },
+      {
         "type": "link_list",
         "id": "main_linklist",
         "label": "Menu",
         "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "main_linklist2",
+        "label": "Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": "Show social sharing buttons"
       }
     ]
   }
