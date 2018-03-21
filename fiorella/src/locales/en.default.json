@@ -240,7 +240,8 @@
     "footer": {
       "social_platform": "{{ name }} on {{ platform }}",
       "copyright": "Copyright",
-      "payment_methods": "Payment methods accepted"
+      "payment_methods": "Payment methods accepted",
+      "social_title": "Follow us"
     }
   },
   "products": {

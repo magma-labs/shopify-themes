@@ -133,6 +133,21 @@
         "type": "text",
         "id": "social_vimeo_link",
         "label": "Vimeo link"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_fiorella_link",
+        "label": "Facebook fiorella"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_fiorella_link",
+        "label": "Pinterest fiorella"
+      },
+      {
+        "type": "text",
+        "id": "social_google_plus_link",
+        "label": "Google fiorella"
       }
     ]
   },
