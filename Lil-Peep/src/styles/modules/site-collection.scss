@@ -203,14 +203,6 @@
     text-decoration: none;
   }
 
-  .price {
-    color: #954180;
-  }
-
-  .offer {
-    display: none;
-  }
-
   .view-in-detail {
     background-color: #4a90e2;
     border-radius: 3px;
@@ -238,12 +230,16 @@
   }
 
   .price {
+    color: #954180;
+    
     @media #{$breakpoint-tablet} {
       display: flex;
     }
   }
 
   .offer {
+    display: none;
+    
     @media #{$breakpoint-tablet} {
       color: #D2D2D2;
       display: flex;
