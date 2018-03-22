@@ -1,0 +1,90 @@
+<section>
+  <div class="slider-container">
+    {% for block in section.blocks %}
+      {% if forloop.first %}
+        <div id="slide-{{ block.id }}" class="slide show-slide">
+      {% else %}
+        <div id="slide-{{ block.id }}" class="slide">
+      {% endif %}
+          <img id="slide-image-{{ block.id }}" src="{{ block.settings.slide-image | img_url: '1280x' }}" alt="Featured image" class="slider-image">
+          <p class="slide-description">{{ block.settings.slide-description }}</p>
+          <a href="#" class="slide-button">{{block.settings.slide-button}}</a>
+        </div>
+    {% endfor %}
+    <div class="slider-navigator">
+    {% for block in section.blocks %}
+      {% if forloop.first %}
+        <button id="slider-nav-btn-{{ block.id }}" class="slider-nav-button slider-nav-button-selected"></button>
+      {% else %}
+        <button id="slider-nav-btn-{{ block.id }}" class="slider-nav-button"></button>
+      {% endif%}
+    {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+
+  function setButtonListener(buttonId) {
+    var selectedButton = document.getElementById('slider-nav-btn-' + buttonId);
+    var selectedSlide = document.getElementById('slide-' + buttonId);
+    prevButtonId = 'slider-nav-btn-' + buttonId;
+
+    selectedButton.addEventListener('click', function() {
+      var prevButton = document.getElementById(prevButtonId);
+      var prevSlide = document.getElementById(prevSlideId);
+
+      prevButtonId = selectedButton.id;
+      prevSlideId = selectedSlide.id;
+      prevSlide.classList.remove('show-slide');
+      selectedSlide.classList.add('show-slide');
+      prevButton.classList.remove('slider-nav-button-selected');
+      selectedButton.classList.add('slider-nav-button-selected');
+    });
+  }
+
+  var prevButtonId = '';
+  var prevSlideId = '';
+
+  {% for block in section.blocks %}
+    {% if forloop.first %}
+      prevSlideId = 'slide-' + '{{ block.id }}';
+    {% endif %}
+    setButtonListener('{{ block.id }}');
+  {% endfor %}
+
+
+</script>
+
+{% schema %}
+  {
+    "name":       "Slideshow",
+    "max_blocks": 5,
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Slide",
+        "settings": [
+          {
+            "type":  "image_picker",
+            "id":    "slide-image",
+            "label": "Image",
+            "info":  "Image should be 1024px in widht at least"
+          },
+          {
+            "type":    "text",
+            "id":      "slide-description",
+            "label":   "Slide description",
+            "default": "Featured content"
+          },
+          {
+            "type":    "text",
+            "id":      "slide-button",
+            "label":   "Slide button text",
+            "default": "Shop now"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,11 +1,13 @@
 /*================ Color Variables ================*/
 $color-primary: {{ settings.color_primary }};
+$color-featured: #e83671;
 
 // Text colors
 $color-body-text: {{ settings.color_body_text }};
 
 // Backgrounds
 $color-body: #fff;
+$color-white-solid: #fff;
 
 // Border colors
 $color-border: #f6f6f6;
@@ -21,6 +23,18 @@ $color-success-bg: #000;
 /*================ Typography Variables ================*/
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+
+$font-size-description-tablet: 20px;
+$font-size-button-tablet: 30px;
+$font-size-description-small-desktop: 28px;
+$font-size-button-small-desktop: 40px;
+$font-size-description-large-desktop: 35px;
+$font-size-button-large-desktop: 45px;
+$font-size-description-xlarge-desktop: 40px;
+$font-size-button-xlarge-desktop: 50px;
+
+$font-slider-description: 'Playfair Display', sans-serif;
+$font-slider-button: 'Playfair Display', sans-serif;
 
 $font-stack-header: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-weight-header: $font-weight-bold;
@@ -67,6 +81,10 @@ $breakpoints: (
 ==============================================================================*/
 $breakpoint-has-widths: ($small, $medium-up);
 $breakpoint-has-push: ();
+
+$tablet-view: 'screen and (min-width: 768px)';
+$small-desktop-view: 'screen and (min-width: 769px)';
+$large-desktop-view: 'screen and (min-width: 1280px)';
 
 /*================ Sizing Variables ================*/
 $width-site: 1180px;

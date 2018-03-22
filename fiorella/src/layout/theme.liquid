@@ -32,7 +32,7 @@
 
   {% include 'social-meta-tags' %}
 
-  {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'main.scss.css' | asset_url | stylesheet_tag }}
 
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -59,6 +59,7 @@
   <!--[if lt IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
   {{ content_for_header }}
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Playfair+Display:400,700,900" rel="stylesheet">
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">

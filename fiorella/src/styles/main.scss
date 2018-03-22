@@ -4,11 +4,9 @@
     - You cannot use native CSS/Sass @imports in this file without a build script
 ==============================================================================*/
 
-/*================ UTILS ================*/
-@import url('tools/mixins.scss');
-
-/*================ SETTINGS ================*/
-@import url('settings/variables.scss.liquid');
+/*================ ABSTRACTS ================*/
+@import url('abstracts/variables.scss.liquid');
+@import url('abstracts/mixins.scss');
 
 /*================ COMMON ================*/
 @import url('global/normalize.scss');
@@ -24,5 +22,6 @@
 @import url('global/blank-states.scss');
 
 /*================ MODULES ================*/
-@import url('modules/site-header.scss');
-@import url('modules/gift-card-template.scss');
+@import url('layout/site-header.scss');
+@import url('layout/gift-card-template.scss');
+@import url('layout/slider.scss');
