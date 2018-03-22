@@ -158,13 +158,13 @@
         border-radius: 3px;
         color: #ffffff;
         font-weight: bold;
-        padding: 5px 25px 5px 25px;
+        padding: 5px 25px;
       }
 
       .not-new-product {
         color: #f5f6fa;
         opacity: 1;
-        padding: 5px 25px 5px 25px;
+        padding: 5px 25px;
       }
     }
 
@@ -172,17 +172,16 @@
       align-items: center;
       display: flex;
       flex-direction: row;
-
       height: 300px;
       justify-content: center;
-
-      img {
+    }
+    
+    img {
         height: auto;
         max-height: 300px;
         max-width: 250px;
         object-fit: contain;
       }
-    }
   }
 
 .product-data {
@@ -211,9 +210,9 @@
 
   .view-in-detail {
     background-color: #4a90e2;
-    border-radius: 3px;;
+    border-radius: 3px;
     border-style: none;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     text-align: center;
     width: 100%;
 
