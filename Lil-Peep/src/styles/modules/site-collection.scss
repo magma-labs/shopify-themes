@@ -75,7 +75,10 @@
 }
 
 .categories-view {
+  background-color: #f7f8f9;
   font-family: 'Oswald', sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 30px;
 
@@ -138,7 +141,7 @@
   }
 
   .product-card-category {
-    background-color: #f5f6fa;
+    background-color: #eaebec;
     flex: 1 0 20%;
     height: 470px;
     margin: 10px;
@@ -162,7 +165,7 @@
       }
 
       .not-new-product {
-        color: #f5f6fa;
+        color: #eaebec;
         opacity: 1;
         padding: 5px 25px;
       }
@@ -175,7 +178,7 @@
       height: 300px;
       justify-content: center;
     }
-    
+
     img {
         height: auto;
         max-height: 300px;
@@ -251,32 +254,32 @@
 }
 
 .scroll-up {
+  align-items: center;
+  background-color: #387ada;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   margin-bottom: 20px;
   margin-top: 20px;
+  padding: 0 10px 0 10px;
   text-align: center;
+  width: 60%;
 
-  a {
-    text-decoration: none;
-  }
-
-  h3 {
+  p {
     font-family: "Oswald", sans-serif;
     font-size: 16px;
-    margin-top: 6px;
+    margin-right: 5px;
   }
 
   .scroll-up-button {
-    background-color: #387ada;
-    border-radius: 3px;
+    align-items: center;
     border-style: none;
     color: white;
     display: flex;
-    display: inline-flex;
     height: 40px;
     justify-content: center;
-    width: 160px;
+    text-decoration: none;
 
     img {
       height: 15px;
