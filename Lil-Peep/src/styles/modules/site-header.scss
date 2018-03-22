@@ -4,7 +4,7 @@
     display: none;
   }
 
-  .navbar{
+  .navbar {
     display: none;
   }
 
@@ -19,13 +19,13 @@
       display: flex;
 
       .header-logo {
-        width: 50%;
         display: flex;
         justify-content: center;
+        width: 50%;
       }
 
       a {
-        color: #627387;
+        color: $color-categories-text;
         text-decoration: none;
       }
 
@@ -76,11 +76,11 @@
     list-style: none;
 
     a {
-      color: #627387;
+      color: $color-categories-text;
       text-decoration: none;
 
       &:hover {
-        color: red;
+        color: $color-text-hover;
         text-decoration: underline;
       }
     }
@@ -88,9 +88,9 @@
 }
 
 
-@media only screen and ( max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
-  .section-header{
+  .section-header {
     display: none;
   }
 
@@ -100,12 +100,12 @@
     justify-content: space-between;
 
     .iconmenu-left {
-      background-color: white;
+      background-color: $color-white;
       border: none;
     }
 
     .header-logo {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -113,13 +113,13 @@
     align-items: center;
     background: transparent;
     border: none;
-    color: #627387;
+    color: $color-theme-lilpeep;
     display: flex;
     font-size: 16px;
   }
 
   .sidenav {
-    background-color: white;
+    background-color: $color-white;
     height: 100%;
     left: 0;
     overflow-x: hidden;
@@ -127,7 +127,6 @@
     top: 0;
     transition: 0.5s;
     width: 0;
-    z-index: 1;
 
     .sidenav-logo {
       display: flex;
@@ -136,25 +135,25 @@
       margin-bottom: 10px;
 
     .closebtn {
-      background-color: white;
+      background-color: $color-white;
       border: none;
-      color: #627387;
+      color: $color-theme-lilpeep;
       padding-top: 20px;
       }
     }
   }
 
   .header-mobile {
-    background-color: #627387;
+    background-color:$color-header-mobile;
     padding-bottom: 5px;
     padding-top: 5px;
 
-      li{
+      li {
         list-style: none;
       }
 
-      a{
-        color: #FFFFFF;
+      a {
+        color: $color-white-font;
         display: block;
         font-size: 16px;
         list-style: none;
@@ -172,15 +171,15 @@
       }
 
       .line {
-        border: 2px solid #8994A1;
+        border: 2px solid $color-line;
         box-sizing: border-box;
         height: 2px;
         width: 228px;
       }
   }
 
-  .footer-mobile{
-    color: #72808C;
+  .footer-mobile {
+    color: $color-theme-lilpeep;
     text-align: center;
 
     .social-media-mobile {
@@ -197,7 +196,7 @@
       align-items: center;
       background-repeat: no-repeat;
       border-radius: 3px;
-      border: 2px solid #72808C;
+      border: 2px solid $color-border-box;
       display: flex;
       height: 35px;
       justify-content: center;
@@ -214,10 +213,10 @@
       margin-top: 25px;
 
       .email-box {
-        background-color: #FBFBFB;
+        background-color: $color-email-box;
         border-radius: 2px;
-        border: 2px solid #D2D2D2;
-        color: #72808C;
+        border: 2px solid $color-border-email-box;
+        color: $color-theme-lilpeep;
         height: 35px;
         margin-bottom: 20px;
         width: 227px;
@@ -226,15 +225,15 @@
 
     .site-nav2 {
       padding-left: 0px;
+
       li {
-          font-size: 16px;
-          list-style: none;
-          padding-bottom: 20px;
+        list-style: none;
+        padding-bottom: 20px;
           }
 
       a {
         text-decoration: none;
-        color: #72808C;
+        color: $color-categories-text;
 
         &:hover {
           text-decoration: underline;
@@ -243,7 +242,7 @@
     }
 
     .author {
-      color: #72808C;
+      color: $color-border-box;
       font-size: 12px;
     }
   }
