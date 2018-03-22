@@ -1,0 +1,77 @@
+.body-message {
+  background: $peppermind-color;
+  padding: 60px 20px;
+  text-align: center;
+
+  .title-message {
+    font-family: $playfair-display;
+    font-weight: $font-light;
+    overflow: hidden;
+
+    &:after,
+    &:before {
+      background-color: $cerise-red;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    &:after {
+      left: 10px;
+      margin-right: -50%;
+    }
+
+    &:before {
+      margin-left: -50%;
+      right: 10px;
+    }
+  }
+
+  .image-message {
+    margin-top: 30px;
+    width: 150px;
+
+    @media #{ $tablet }, #{ $desktop } {
+      margin-top: 40px;
+      width: 200px;
+    }
+  }
+
+  .text-message {
+    font-family: $merriweathersans;
+    font-size: 16px;
+    font-weight: $font-light;
+    line-height: 30px;
+    margin: 10px 15px;
+
+    @media #{ $tablet } {
+      font-size: 14px;
+    }
+
+    @media #{ $desktop } {
+      font-size: 20px;
+      margin: 15px 20px;
+    }
+  }
+
+  .btn-read-more {
+    display: inline-block;
+    font-family: $playfair-display;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 12px 30px;
+    text-decoration: none;
+    @include hover-categories($cerise-red, 2px, $cerise-red, 16px, 40px, 175px);
+
+    @media #{ $tablet } {
+      @include hover-categories($cerise-red, 2px, $cerise-red, 16px, 48px, 166px);
+    }
+
+    @media #{ $desktop } {
+      @include hover-categories($cerise-red, 2px, $cerise-red, 23px, 61px, 211px);
+    }
+  }
+}

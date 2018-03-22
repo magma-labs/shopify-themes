@@ -1,12 +1,14 @@
-
 $mobile: "only screen and (min-width: 767px)";
 $tablet: "only screen and (min-width: 768px) and (max-width: 1023px)";
 $desktop: "only screen and (min-width: 1024px)";
 
-$cerise-red-hover: rgba(#e83671, 0.7);
 $cerise-red: #e83671;
+$cerise-red-hover: rgba($cerise-red, 0.7);
 $font-color-white: #ffffff;
 $border-color-white: #ffffff;
-$transparent: transparent;
+$peppermind-color: #f3f9ef;
+
 $playfair-display: "Playfair Display";
 $merriweathersans: "Merriweather Sans";
+
+$font-light: 300;
