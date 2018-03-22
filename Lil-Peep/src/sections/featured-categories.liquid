@@ -1,29 +1,25 @@
-
 <div class="categories_main">
-  <div class="banner_wooden_toys">
+  <div class="banner_wooden_toys category-{{block.id}}">
     <div class="wooden_toys_content">
       <a href="/categories.html">
-        <h2>WOODEN TOYS</h2>
+        <h2>{{block.settings.title}}</h2>
       </a>
-    </div>
   </div>
-
-  <div class="banner_plush_toys">
+</div>
+  <div class="banner_plush_toys category-{{block.id}}">
     <div class="plush_toys_content">
       <a href="/categories.html">
-        <h2>PLUSH TOYS</h2>
+        <h2>{{block.settings.title}}</h2>
       </a>
     </div>
   </div>
-
-  <div class="banner_outdoors">
+  <div class="banner_outdoors category-{{block.id}}">
     <div class="outdoors_content">
       <a href="/categories.html">
-        <h2>OUTDOORS</h2>
+        <h2>{{block.settings.title}}</h2>
       </a>
     </div>
   </div>
-
   <div class="scroll-up">
     <a href="#" class="scroll-up-button" name="scrollup">
       <h3>SCROLL UP</h3>
@@ -31,3 +27,60 @@
     </a>
   </div>
 </div>
+
+{% schema %}
+{
+ "name":"Featured Kits",
+ "max_blocks":3,
+ "blocks":[
+   {
+     "type":"image",
+     "name":"Kit",
+     "settings":[
+       {
+         "type":"image_picker",
+         "id":"banner_img",
+         "label":"Image",
+         "info":"image should be 800px x 800px"
+       },
+       {
+         "type": "text",
+         "id": "title",
+         "label": "Title",
+         "default": "Title"
+       },
+       {
+         "type":      "select",
+         "id":        "opc",
+         "label":     "Type of banner",
+         "options": [
+           {
+             "group": "Categories",
+             "value": "1",
+             "label": "Top banner"
+           },
+           {
+             "group": "Categories",
+             "value": "2",
+             "label": "Mid banner"
+           },
+           {
+             "group": "Categories",
+             "value": "3",
+             "label": "Bottom banner"
+           }
+         ],
+         "default":   "1",
+         "info":      "Just one of each type"
+       }
+     ]
+   }
+ ],
+  "presets": [
+    {
+      "name": "Featured Kits",
+      "category": "Banners"
+    }
+  ]
+}
+{% endschema %}
