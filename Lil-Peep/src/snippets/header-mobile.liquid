@@ -1,9 +1,7 @@
 <div class="header-mobile-section">
-  <!-- Insert button on mobile version-->
   <button type="button" class="iconmenu-left" onclick="openNav()">
      {% include 'icon-flecha_izquierda' %} Menu </button>
 
-  <!-- Insert logo mobile version -->
   {% if template.name == 'index' %}
     <h1 itemscope itemtype="http://schema.org/Organization" class="header-logo">
   {% else %}
@@ -26,7 +24,6 @@
     </div>
   {% endif %}
 
-      <!-- Added Cart_Icon -->
   <a class="cart" href="/cart">
     ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
     {% include 'icon-cart' %}
@@ -34,11 +31,9 @@
 
 </div>
 
-<!-- Added sidenav menu -->
 <div id="mySidenav" class="sidenav">
   <div class="sidenav-logo">
 
-    <!-- Added logo mobile view-->
     {% if template.name == 'index' %}
       <h1 itemscope itemtype="http://schema.org/Organization" class="header-logo">
     {% else %}
@@ -61,13 +56,11 @@
       </div>
     {% endif %}
 
-<!-- Added close button sidenav-->
     <button type="button" class="closebtn" onclick="closeNav()">
         Close {% include 'icon-flecha_derecha' %}
     </button>
   </div>
 
-  <!-- Added navbar sidebar menu -->
   <div class="header-mobile">
     <nav role="navigation" class="navigation">
       <ul class="site-nav">
@@ -99,7 +92,6 @@
     </nav>
     <hr class="line">
 
-  <!-- Login section sidenav-->
     <div class="customer-login">
         {% if shop.customer_accounts_enabled %}
           <ul>
@@ -127,6 +119,6 @@
         {% endif %}
     </div>
   </div>
-  <!-- Seccion del footer Sidenav -->
+
     {%include  'footer-mobile'%}
 </div>

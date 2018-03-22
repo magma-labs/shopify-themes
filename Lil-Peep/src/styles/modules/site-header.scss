@@ -1,13 +1,17 @@
 @media only screen and ( min-width: 769px) {
+
   .sidenav {
     display: none;
   }
+
   .navbar{
     display: none;
   }
+
   .header-mobile-section {
     display: none;
   }
+
   .section-header {
     padding: 15px;
 
@@ -34,21 +38,25 @@
         left: 50%;
         position: relative;
       }
+
       .searchlogin {
         align-items: center;
         display: flex;
         justify-content: flex-end;
         width: 50%;
       }
+
       .customer-login {
         li {
           display: flex;
           margin-right: 20px;
         }
+
         ul {
           display: flex;
           margin-right: 20px;
         }
+
         .site-logo {
           display: flex;
 
@@ -70,17 +78,17 @@
     a {
       color: #627387;
       text-decoration: none;
-    }
 
-    a:hover {
-      color: red;
-      text-decoration: underline;
+      &:hover {
+        color: red;
+        text-decoration: underline;
+      }
     }
   }
 }
 
 
-@media only screen and ( max-width: 640px) {
+@media only screen and ( max-width: 768px) {
 
   .section-header{
     display: none;
@@ -153,13 +161,16 @@
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         transition: 0.3s;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
-      a:hover {
-        text-decoration: underline;
-      }
+
       ul {
         padding-left: 20px;
       }
+
       .line {
         border: 2px solid #8994A1;
         box-sizing: border-box;
@@ -172,17 +183,17 @@
     color: #72808C;
     text-align: center;
 
-    .social-media {
+    .social-media-mobile {
       margin-top: 25px;
     }
 
-    .social-sharing {
+    .social-media-icon {
       align-content: center;
       display: flex;
       justify-content: center;
     }
 
-    .smi {
+    .icon-social-media {
       align-items: center;
       background-repeat: no-repeat;
       border-radius: 3px;
@@ -220,13 +231,14 @@
           list-style: none;
           padding-bottom: 20px;
           }
+
       a {
         text-decoration: none;
         color: #72808C;
-      }
 
-      a:hover {
-        text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 
