@@ -1,0 +1,153 @@
+.product-container {
+  background-color: #f7f8f9;
+  flex-direction: column;
+  height: auto;
+
+  @media #{$breakpoint-tablet} {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.half-left {
+  display: flex;
+  justify-content: center;
+
+  @media #{$breakpoint-tablet} {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 50%;
+  }
+}
+
+.half-right {
+  display: flex;
+  flex-direction: column;
+
+  .product-title {
+    align-self: center;
+    color: #657581;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+
+    @media #{$breakpoint-tablet} {
+      align-self: flex-start;
+      color: #414243;
+    }
+  }
+
+  .info-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .product-quantity {
+      margin-top: 20px;
+      flex-direction: row;
+
+      label {
+        font-family: 'Lato', sans-serif;
+        color: #657581;
+      }
+    }
+
+    @media #{$breakpoint-tablet} {
+      align-items: flex-start;
+    }
+  }
+
+  .product-price {
+    text-align: center;
+    color: #7A0062;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+
+    .old-price {
+      color: #CACCCD;
+    }
+  }
+
+  .add-to-cart {
+    background-color: #4a90e2;
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px 0 10px 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    text-align: center;
+    width: 90%;
+
+    &:hover {
+      background-color: #ed7f03;
+      cursor: pointer;
+    }
+
+    span {
+      color: #ffffff;
+      font-family: 'Lato', sans-serif;
+      font-weight: 100;
+      margin: 0;
+    }
+
+    @media #{$breakpoint-tablet} {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  @media #{$breakpoint-tablet} {
+    align-items: flex-start;
+    width: 50%;
+  }
+}
+
+.free-shipping {
+  color: #657581;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+
+  @media #{$breakpoint-mobile} {
+    display: none;
+  }
+}
+
+.rte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+  }
+
+  .product-description-title {
+    margin-bottom: 0;
+
+    @media #{$breakpoint-tablet} {
+      display: none;
+    }
+  }
+
+  .product-description {
+    margin-top: 0;
+
+    @media #{$breakpoint-tablet} {
+      max-width: 600px;
+    }
+  }
+
+  @media #{$breakpoint-tablet} {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 0;
+  }
+}
