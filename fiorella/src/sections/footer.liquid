@@ -41,12 +41,12 @@
             {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
             {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
             {% if settings[social_link] != blank %}
-            <li>
-              <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}" target="_blank">
-                {% include social_icon %}
-                <span class="icon-fallback-text">{{ social }}</span>
-              </a>
-            </li>
+              <li>
+                <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}" target="_blank">
+                  {% include social_icon %}
+                  <span class="icon-fallback-text">{{ social }}</span>
+                </a>
+              </li>
             {% endif %}
           {% endfor %}
         </div>
@@ -54,7 +54,7 @@
     </div>
   </div>
   <div class="copyright">
-    <p>&copy; {{ 'now' | date: "%Y" }} All Rights Reserved. Designed by Crowd Interactive. Powered by Spree.</p>
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ 'layout.footer.copyright_description' | t }}</p>
   </div>
 </footer>
 

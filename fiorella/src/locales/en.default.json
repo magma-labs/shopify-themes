@@ -241,7 +241,8 @@
       "social_platform": "{{ name }} on {{ platform }}",
       "copyright": "Copyright",
       "payment_methods": "Payment methods accepted",
-      "social_title": "Follow us"
+      "social_title": "Follow us",
+      "copyright_description": "All Rights Reserved. Designed by Crowd Interactive. Powered by Spree."
     }
   },
   "products": {
