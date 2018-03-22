@@ -126,7 +126,7 @@
   .previous {
     margin-right: 50px;
     @media #{$breakpoint-mobile} {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 }
