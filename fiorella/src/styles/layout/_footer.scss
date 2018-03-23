@@ -59,8 +59,8 @@ footer {
       width: 50px;
 
       @media #{ $tablet }, #{ $desktop } {
-        margin: 0 20px;
         height: 40px;
+        margin: 0 20px;
         width: 40px;
       }
 
