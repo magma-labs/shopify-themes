@@ -7,7 +7,7 @@
             <h1>{{ block.settings.title }}</h1>
             <p>{{ block.settings.description }}</p>
             <div class="view-in-detail">
-              <a href="/PDP.html" type="button" name="view-button">
+              <a href="#" >
                 <h4>{{ block.settings.button }}</h4>
               </a>
             </div>
@@ -49,7 +49,7 @@
       {% endif %}
     {% endfor %}
   </div>
-</section>  }
+</section>
 
 <!-- Styles for the background of the 2 mid-banner -->
 <style>
@@ -75,7 +75,7 @@
           rgb(189, 152, 107),
           rgba(189, 152, 107, 1) 10%,
           rgba(189, 152, 107, 0.2) 50%,
-          rgba(189, 152, 107, 0),url("{{ block.settings.banner_img | img_url}}"));
+          rgba(189, 152, 107, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
         background-size: cover;
         color: #FFFFFF;
       }

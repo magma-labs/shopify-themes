@@ -3,49 +3,23 @@
 }
 
 .big-banner {
+  background-image: url("/images/banner1_mobile.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
-  .big-banner-content {
-    background: linear-gradient(0deg,
-      rgb(251,239,227),
-      rgba(251,239,227, 1) 20%,
-      rgba(251,239,227, 0.2) 50%,
-      rgba(251,239,227, 0.1));
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 320px;
-    text-align: center;
-  }
-
-  .big-banner-content .view-in-detail {
-    background-color: #4a90e2;
-    border-radius: 3px;;
-    border-style: none;
-    margin: 10px;
-    padding: 10px 0 10px 0;
-    text-align: center;
-  }
-
-  .big-banner-content .view-in-detail:hover {
-    cursor: pointer;
-    background-color: #ed7f03;
-  }
-
-  .view-in-detail h4 {
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    margin: 0;
-    background-color: $color-button-bg;
-  }
-
-  .view-in-detail a {
-    text-decoration: none;
-  }
-
+.big-banner-content {
+  background: linear-gradient(0deg,
+    rgb(251,239,227),
+    rgba(251,239,227, 1) 20%,
+    rgba(251,239,227, 0.2) 50%,
+    rgba(251,239,227, 0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 320px;
+  text-align: center;
 }
 
 .big-banner-content h1 {
@@ -59,10 +33,34 @@
   margin: 0;
 }
 
+.big-banner-content .view-in-detail {
+  background-color: #4a90e2;
+  border-radius: 3px;;
+  border-style: none;
+  margin: 10px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
 
+.big-banner-content .view-in-detail:hover {
+  cursor: pointer;
+  background-color: #ed7f03;
+}
+
+.view-in-detail h4 {
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.view-in-detail a {
+  text-decoration: none;
+}
 
 .small-banner {
   align-items: center;
+  background-image: url("/images/banner2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,19 +70,18 @@
   flex-direction: column;
   justify-content: center;
   padding: 20px 20px;
-
-  .small-banner p {
-    font-size: 18px;
-    margin: 0;
-  }
-
-  .big-text p {
-    font-size: 40px;
-    font-weight: bold;
-    margin: 0;
-  }
 }
 
+.small-banner p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.big-text p {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
 
 .mid-banner-content {
   display: flex;
@@ -94,35 +91,20 @@
   text-align: center;
 }
 
-.mid-banner-content h1 {
-  margin-bottom: 0;
-}
-
 .mid-banner-saylor {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  background: linear-gradient(0deg,
-    rgb(239, 239, 239),
-    rgba(239, 239, 239, 1) 20%,
-    rgba(239, 239, 239, 0.2) 50%,
-    rgba(239, 239, 239, 0));
-  background-size: cover;
-  color: #000000;
 }
-
-
 .mid-banner-archeologist {
-  background: linear-gradient(0deg,
-    rgb(189, 152, 107),
-    rgba(189, 152, 107, 1) 10%,
-    rgba(189, 152, 107, 0.2) 50%,
-    rgba(189, 152, 107, 0));
+  background-position: top;
+  background-repeat: no-repeat;
   background-size: cover;
-  color: #FFFFFF;
-
 }
 
+.mid-banner-content h3 {
+  margin-bottom: 0;
+}
 
 .mid-banner-content {
   font-family: 'Lato', sans-serif;
@@ -194,6 +176,7 @@
   }
 
   .big-banner {
+    background-image: url("/images/banner1.png");
     background-position: left top;
     background-size: cover;
     display: flex;
@@ -283,6 +266,7 @@
   }
 
   .mid-banner-saylor {
+    background: url("/images/mid_banner1.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: 400px 300px;
@@ -297,6 +281,7 @@
   }
 
   .mid-banner-archeologist {
+    background: url("/images/mid_banner2.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: 400px 300px;
@@ -324,6 +309,7 @@
   }
 
   .big-banner {
+    background-image: url("/images/banner1.png");
     background-position: left top;
     background-size: cover;
     display: flex;
@@ -409,10 +395,6 @@
 
   .mid-banner-content p {
     font-size: 13px;
-  }
-
-  .mid-banner-content h1 {
-    font-size: 25px;
   }
 
   .mid-banner-saylor {
