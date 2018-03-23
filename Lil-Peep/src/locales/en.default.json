@@ -98,7 +98,8 @@
       "no_matches": "Sorry, there are no products in this collection",
       "link_title": "Browse our {{ title }} collection",
       "free_shipping": "FREE SHIPPING FOR ALL ORDERS INSIDE THE US",
-      "scroll_up": "SCROLL UP"
+      "scroll_up": "SCROLL UP",
+      "view": "VIEW"
     }
   },
   "contact": {
