@@ -22,7 +22,7 @@
   <div class="box-footer">
     {%- for block in section.blocks -%}
       <div class="box-footer-item hide-menu">
-        <h3 class="title-footer">{{linklists[block.settings.footer_linklist].title | upcase }}</h3>
+        <h3 class="title-footer">{{ linklists[block.settings.footer_linklist].title | upcase }}</h3>
         <ul class="ul-item-menu">
           {% for link in linklists[block.settings.footer_linklist].links %}
             <li>

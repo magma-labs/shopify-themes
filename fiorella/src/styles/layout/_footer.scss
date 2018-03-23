@@ -53,26 +53,19 @@ footer {
     justify-content: space-around;
     padding-bottom: 15px;
 
-    li {
-      a {
-        .icon {
-          color: $cerise-red;
-          height: 50px;
-          width: 50px;
-
-          @media #{ $tablet }, #{ $desktop } {
-            height: 40px;
-            width: 40px;
-          }
-
-          &:hover {
-            color: $text-color-black;
-          }
-        }
-      }
+    .icon {
+      color: $cerise-red;
+      height: 50px;
+      width: 50px;
 
       @media #{ $tablet }, #{ $desktop } {
+        height: 40px;
+        width: 40px;
         margin: 0 20px;
+      }
+
+      &:hover {
+        color: $text-color-black;
       }
     }
 
