@@ -19,10 +19,10 @@
   background-color: $color-white-solid;
   font-family: $font-menu-header;
   height: 100%;
-  width: 0;
   overflow-x: hidden;
   position: fixed;
   transition: 0.5s;
+  width: 0;
   z-index: 2;
 
   a {
@@ -57,8 +57,8 @@
 }
 
 .search-container {
-  border-bottom-style: solid;
   border-bottom-color: $color-featured;
+  border-bottom-style: solid;
   margin: 20px 0 5px;
   padding-bottom: 5px;
 
@@ -83,23 +83,23 @@
     text-transform: uppercase;
   }
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  ::placeholder {
     color: $color-black-solid;
-    opacity: 1; /* Firefox */
+    opacity: 1;
   }
 
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  :-ms-input-placeholder {
     color: $color-black-solid;
   }
 
-  ::-ms-input-placeholder { /* Microsoft Edge */
+  ::-ms-input-placeholder {
     color: $color-black-solid;
   }
 }
 
 .mobile-nav {
-  border-bottom-style: solid;
   border-bottom-color: $color-black-solid;
+  border-bottom-style: solid;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -138,23 +138,27 @@
 
   p {
     background-color: $color-featured;
-    border-style: none;
     border-radius: 50%;
+    border-style: none;
     color: $color-white-solid;
     display: inline;
     padding: 4px 10px;
   }
 
-  .header-card-button {
+  .header-cart-button {
     @extend %positioning;
     justify-content: flex-end;
     padding-right: 10px;
 
-    p {
-      display: inline;
-      font-size: 14px;
-      margin: 0;
+    img {
+      height: 25px;
     }
+  }
+
+  .cart-item-count {
+    display: inline;
+    font-size: 14px;
+    margin: 0;
   }
 
   img {
@@ -223,24 +227,30 @@
     }
   }
 
-  .header-card-button {
-    display: inline;
+  .header-cart-button {
+    display: flex;
+    align-items: center;
     margin-left: 10px;
 
     p {
       background-color: $color-featured;
-      border-style: none;
       border-radius: 50%;
+      border-style: none;
       color: $color-white-solid;
       display: inline;
+      margin: 0 5px;
       padding: 4px 10px;
+    }
+
+    img {
+      height: 25px;
     }
   }
 
   .homepage-logo {
     display: flex;
-    justify-content: center;
     height: 80px;
+    justify-content: center;
     margin: 20px 0;
     padding: 10px;
     width: 100%;
@@ -252,8 +262,8 @@
 
   .navbar {
     display: flex;
-    justify-content: center;
     font-family: $font-navbar;
+    justify-content: center;
     text-transform: uppercase;
 
     a {

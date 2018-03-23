@@ -7,7 +7,6 @@
 </style>
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
   <header role="banner" class="">
-    <!-- Mobile slide out menu -->
     <div id="menu" class="menu-container">
       <div class="menu-top-section">
         {{ 'logo2_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
@@ -29,7 +28,7 @@
       <div class="mobile-info-buttons">
         {% include 'contact-buttons' %}
       </div>
-    </div><!-- end Mobile slide out menu-->
+    </div>
 
     <div class="mobile-top-section">
       <div id="show-menu-btn" class="menu-open">
@@ -38,9 +37,9 @@
       <div class="logo-mobile-container">
         {{ 'logo1_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
       </div>
-      <div class="header-card-button">
-        <p>{{ cart.item_count }}</p>
-        <a href="#">{% include 'icon-cart' %}</a>
+      <div class="header-cart-button">
+        <p class="cart-item-count">{{ cart.item_count }}</p>
+        <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
       </div>
     </div>
     <div class="header-container">
@@ -55,9 +54,9 @@
       </div>
       <div class="header-buttons-container">
         {% include 'registration-links' %}
-        <div class="header-card-button">
-          <p>{{ cart.item_count }}</p>
-          <a href="#">{% include 'icon-cart' %}</a>
+        <div class="header-cart-button">
+          <p class="cart-item-count">{{ cart.item_count }}</p>
+          <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
         </div>
       </div>
     </div>
