@@ -1,9 +1,11 @@
-.slide {
-  display: none;
-}
-
 .slider-container {
   position: relative;
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }
 
 .slider-navigator {
@@ -19,8 +21,8 @@
   border-radius: 50%;
   border-style: none;
   font-family: sans-serif;
-  margin: 0 5px;
   height: 12px;
+  margin: 0 5px;
   width: 5px;
 }
 
@@ -28,11 +30,8 @@
   background-color: $color-featured;
 }
 
-.show-slide {
-  display: flex;
-}
-
 .slide {
+  display: none;
   flex-direction: column;
   position: relative;
 
@@ -41,11 +40,15 @@
   }
 }
 
+.show-slide {
+  display: flex;
+}
+
 .slide-description {
   bottom: 60px;
   font-family: $font-slider-description;
-  font-style: italic;
   font-size: 15px;
+  font-style: italic;
   position: absolute;
   right: 15px;
   text-align: right;
@@ -53,20 +56,16 @@
 }
 
 .slide-button {
-  display: inline;
   background-color: transparent;
-  border-style: solid;
-  border-color: $color-featured;
+  border: solid $color-featured;
   bottom: 20px;
+  color: $color-featured;
+  display: inline;
   font-family: $font-slider-button;
   font-weight: $font-weight-bold;
-  right: 15px;
-  color: $color-featured;
   padding: 10px 30px;
   position: absolute;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
+  right: 15px;
 }
 
 @media #{$tablet-view} {
@@ -81,8 +80,8 @@
 
   .slide-button {
     bottom: 40px;
-    padding: 10px 40px;
     font-size: 30px;
+    padding: 10px 40px;
   }
 
   .slide-description {
@@ -100,9 +99,9 @@
 
   .slide-button {
     bottom: 50px;
+    font-size: $font-size-button-small-desktop;
     margin-right: 10px;
     padding: 15px 50px;
-    font-size: $font-size-button-small-desktop;
   }
 
   .slide-description {
@@ -119,9 +118,9 @@
 
   .slide-button {
     bottom: 50px;
+    font-size: $font-size-button-large-desktop;
     margin-right: 10px;
     padding: 15px 50px;
-    font-size: $font-size-button-large-desktop;
   }
 
   .slide-description {
@@ -139,9 +138,9 @@
 
   .slide-button {
     bottom: 60px;
+    font-size: $font-size-button-xlarge-desktop;
     margin-right: 10px;
     padding: 15px 60px;
-    font-size: $font-size-button-xlarge-desktop;
   }
 
   .slide-description {
