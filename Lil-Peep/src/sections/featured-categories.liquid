@@ -1,25 +1,33 @@
 <div class="categories_main">
-  <div class="banner_wooden_toys category-{{block.id}}">
-    <div class="wooden_toys_content">
-      <a href="/categories.html">
-        <h2>{{block.settings.title}}</h2>
-      </a>
-  </div>
-</div>
-  <div class="banner_plush_toys category-{{block.id}}">
-    <div class="plush_toys_content">
-      <a href="/categories.html">
-        <h2>{{block.settings.title}}</h2>
-      </a>
-    </div>
-  </div>
-  <div class="banner_outdoors category-{{block.id}}">
-    <div class="outdoors_content">
-      <a href="/categories.html">
-        <h2>{{block.settings.title}}</h2>
-      </a>
-    </div>
-  </div>
+  {% for block in section.blocks %}
+    {% if block.settings.opc == "1" %}
+        <div class="banner_wooden_toys category-{{block.id}}">
+          <div class="wooden_toys_content">
+            <a href="/categories.html">
+              <h2>{{block.settings.title}}</h2>
+            </a>
+        </div>
+      </div>
+      {% else %}  background-image: url('{{block.settings.banner_img |img_url: 'large'}}');
+        {% if block.settings.opc == "2" %}
+          <div class="banner_plush_toys category-{{block.id}}">
+            <div class="plush_toys_content">
+              <a href="/categories.html">
+                <h2>{{block.settings.title}}</h2>
+              </a>
+            </div>
+          </div>
+        {% else %}
+          <div class="banner_outdoors category-{{block.id}}">
+            <div class="outdoors_content">
+              <a href="/categories.html">
+                <h2>{{block.settings.title}}</h2>
+              </a>
+            </div>
+          </div>
+        {% endif %}
+    {% endif %}
+  {% endfor %}
   <div class="scroll-up">
     <a href="#" class="scroll-up-button" name="scrollup">
       <h3>SCROLL UP</h3>
@@ -27,6 +35,15 @@
     </a>
   </div>
 </div>
+
+<style>
+  {% for block in sections.blocks %}
+    .category-{{block.id}} {
+      background-image: url('{{block.settings.banner_img |img_url: 'large'}}');
+      background-image: url('{{ block.settings.banner_img | img_url: 'large'}}');
+    }
+  {% endfor %}
+</style>
 
 {% schema %}
 {
