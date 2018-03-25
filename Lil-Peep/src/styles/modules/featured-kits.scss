@@ -203,7 +203,7 @@
         padding-right: 20px;
       }
 
-      .big-banner-content h1 {
+      .big-banner-title {
         font-size: 32px;
       }
 
@@ -286,7 +286,7 @@
         width: 300px;
       }
 
-      p {
+      .view-in-detail-button {
         font-size: 20px;
         margin-bottom: 30px;
         margin-top: 20px;
@@ -294,18 +294,20 @@
         padding-right: 20px;
       }
 
-      .big-banner-content h1 {
+      .big-banner-title {
         font-size: 32px;
       }
 
-      .big-banner-content button {
+      .view-in-detail h4 {
+        font-size: 32px;
+      }
+
+      .big-banner-description{
         padding-left: 30px;
         padding-right: 30px;
       }
     }
   }
-
-
 
   .small-banner {
     align-items: center;
@@ -313,18 +315,20 @@
     flex-direction: column;
     flex: 1;
     justify-content: center;
+
+    .small-banner-tittle {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    .semall-banner-description{
+      font-size: 80px;
+      font-weight: bold;
+      margin: 0;
+    }
   }
 
-  .small-banner p {
-    font-size: 40px;
-    margin: 0;
-  }
 
-  .big-text p {
-    font-size: 80px;
-    font-weight: bold;
-    margin: 0;
-  }
 
   .mid-banner {
     flex: 1;
@@ -342,11 +346,11 @@
     padding-right: 10px;
     width: 50%;
 
-     button {
+     .button-sailor .button-archeologist {
       width: 100%;
     }
 
-     p {
+     .description {
       font-size: 13px;
     }
 
