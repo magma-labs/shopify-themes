@@ -8,8 +8,10 @@
             </a>
         </div>
       </div>
-      {% else %}  background-image: url('{{block.settings.banner_img |img_url: 'large'}}');
-        {% if block.settings.opc == "2" %}
+      {% endif %}
+    {% endfor %}
+    {% for block in section.blocks %}
+     {% if block.settings.opc == "2" %}
           <div class="banner_plush_toys category-{{block.id}}">
             <div class="plush_toys_content">
               <a href="/categories.html">
@@ -17,7 +19,10 @@
               </a>
             </div>
           </div>
-        {% else %}
+      {% endif %}
+    {% endfor %}
+    {% for block in section.blocks %}
+        {% if block.settings.opc == "3" %}
           <div class="banner_outdoors category-{{block.id}}">
             <div class="outdoors_content">
               <a href="/categories.html">
@@ -26,7 +31,6 @@
             </div>
           </div>
         {% endif %}
-    {% endif %}
   {% endfor %}
   <div class="scroll-up">
     <a href="#" class="scroll-up-button" name="scrollup">
@@ -40,7 +44,15 @@
   {% for block in sections.blocks %}
     .category-{{block.id}} {
       background-image: url('{{block.settings.banner_img |img_url: 'large'}}');
-      background-image: url('{{ block.settings.banner_img | img_url: 'large'}}');
+    }
+    .banner_wooden_toys {
+      background-image: url('{{block.settings.banner_img |img_url: 'large'}}');
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 25%;
+      margin-left: 10px;
+      margin-right: 10px;
     }
   {% endfor %}
 </style>
