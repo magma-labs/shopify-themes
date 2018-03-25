@@ -4,22 +4,22 @@
       {% if block.settings.opc == "1" %}
         <div class="big-banner banner-{{block.id}}">
           <div class="big-banner-content">
-            <h1>{{ block.settings.title }}</h1>
-            <p>{{ block.settings.description }}</p>
+            <h1 class="big-banner-title">{{ block.settings.title }}</h1>
+            <p class="big-banner-description">{{ block.settings.description }}</p>
             <div class="view-in-detail">
               <a href="#" >
-                <h4>{{ block.settings.button }}</h4>
+                <h4 class="view-detail-button">{{ block.settings.button }}</h4>
               </a>
             </div>
           </div>
         </div>
       {% else %}
-        {% if block.settings.opc == "2"%}
+        {% if block.settings.opc == "2"%}">{{
           <div class="small-banner banner-{{block.id}}">
-            <p>{{ block.settings.title}}</p>
+            <p class="small-banner-tittle">{{ block.settings.title}}</p>
               <div class="big-text">
-                <p>{{block.settings.description}}</p>
-                <p>{{block.settings.button}}</p>
+                <p class="small-banner-description">{{block.settings.description}}</p>
+                <p class="small-banner-description">{{block.settings.button}}</p>
              </div>
          </div>
        {% endif %}
@@ -33,7 +33,9 @@
                 <div class="mid-banner-content">
                   <h1>{{ block.settings.title }}</h1>
                   <p>{{block.settings.description}}</p>
-                  <button type="button" name="button"><h1>{{block.settings.button}}</h1></button>
+                  <button class="button-mid-banner button-sailor" type="button" name="button">
+                    <h1 class="h1-sailor" >{{block.settings.button}}</h1>
+                  </button>
                 </div>
               </div>
        {% else %}
@@ -42,7 +44,9 @@
             <div class="mid-banner-content">
               <h1>{{ block.settings.title }}</h1>
               <p>{{block.settings.description}}</p>
-              <button type="button" name="button"><h1>{{block.settings.button}}</h1></button>
+              <button class="button-mid-banner button-archeologist" type="button" name="button">
+                <h1 class="h1-archeologist">{{block.settings.button}}</h1>
+              </button>
             </div>
           </div>
         {% endif %}
@@ -51,7 +55,6 @@
   </div>
 </section>
 
-<!-- Styles for the background of the 2 mid-banner -->
 <style>
 {% for block in section.blocks %}
   .banner-{{block.id}} {
@@ -59,25 +62,65 @@
     background-size: cover;
   }
   {% if block.settings.opc == "3" %}
-  .mid-banner-saylor {
-    background: linear-gradient(0deg,
-      rgb(239, 239, 239),
-      rgba(239, 239, 239, 1) 20%,
-      rgba(239, 239, 239, 0.2) 50%,
-      rgba(239, 239, 239, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
-    background-size: cover;
-    color: #000000;
-  }
+    @media only screen and (max-width: 768px) {
+      .mid-banner-saylor {
+        background: linear-gradient(0deg,
+          rgb(239, 239, 239),
+          rgba(239, 239, 239, 1) 20%,
+          rgba(239, 239, 239, 0.2) 50%,
+          rgba(239, 239, 239, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
+        background-size: cover;
+        color: #000000;
+      }
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1279px) {
+      .mid-banner-saylor .mid-banner-content {
+        background: linear-gradient(90deg,
+          rgb(239, 239, 239),
+          rgb(239, 239, 239) 50%,
+          rgb(239, 239, 239) 90%,
+          rgba(239, 239, 239, 0));
+          background-position: right;
+          background-repeat: no-repeat;
+          background-size: 400px 300px;
+      }
+    }
   {% else %}
     {% if block.settings.opc == "4" %}
-     .mid-banner-archeologist {
-        background: linear-gradient(0deg,
-          rgb(189, 152, 107),
-          rgba(189, 152, 107, 1) 10%,
-          rgba(189, 152, 107, 0.2) 50%,
-          rgba(189, 152, 107, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
-        background-size: cover;
-        color: #FFFFFF;
+      @media only screen and (max-width: 768px) {
+        .mid-banner-archeologist {
+           background: linear-gradient(0deg,
+             rgb(189, 152, 107),
+             rgba(189, 152, 107, 1) 10%,
+             rgba(189, 152, 107, 0.2) 50%,
+             rgba(189, 152, 107, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
+           background-size: cover;
+           color: #FFFFFF;
+         }
+      }
+      @media only screen and (min-width: 769px) and (max-width: 1279px) {
+        .mid-banner-archeologist {
+          background: linear-gradient(90deg,
+            rgb(189, 152, 107),
+            rgba(189, 152, 107, 1) 10%,
+            rgba(189, 152, 107, 0.2) 50%,
+            rgba(189, 152, 107, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
+          background-size: cover;
+          color: #FFFFFF;
+          margin-left: 20px;
+        }
+      }
+      @media only screen and (min-width: 1280px) {
+        .mid-banner-archeologist .mid-banner-content {
+            background: linear-gradient(90deg,
+              rgb(189, 152, 107),
+              rgb(189, 152, 107) 50%,
+              rgb(189, 152, 107) 90%,
+              rgba(189, 152, 107, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
+            background-size: cover;
+            color: #FFFFFF;
+          }
+        }
       }
     {% endif %}
   {% endif %}
