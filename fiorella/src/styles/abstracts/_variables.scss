@@ -2,13 +2,33 @@ $mobile: "only screen and (min-width: 767px)";
 $tablet: "only screen and (min-width: 768px) and (max-width: 1023px)";
 $desktop: "only screen and (min-width: 1024px)";
 
+$small-desktop-view: 'screen and (min-width: 769px)';
+$large-desktop-view: 'screen and (min-width: 1025px)';
+
 $cerise-red: #e83671;
 $cerise-red-hover: rgba($cerise-red, 0.7);
 $font-color-white: #ffffff;
 $border-color-white: #ffffff;
 $peppermind-color: #f3f9ef;
 
+$font-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
 $playfair-display: "Playfair Display";
 $merriweathersans: "Merriweather Sans";
 
-$font-light: 300;
+$font-menu-header: 'Merryweather Sans', sans-serif;
+$font-header: $font-menu-header;
+$font-navbar: 'Playfair Display', sans-serif;
+$font-stack-header: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-weight-header: $font-weight-bold;
+
+
+$color-featured: #e83671;
+$color-white-solid: #fff;
+$color-box-banner: #f3f9ef;
+
+$color-black-solid: #000;
+$color-border: #f6f6f6;
+$color-text-box: #555;

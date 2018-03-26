@@ -6,7 +6,78 @@
   {% endif %}
 </style>
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
-  <header role="banner">
+  <header role="banner" class="">
+    <div id="menu" class="menu-container">
+      <div class="menu-top-section">
+        {{ 'logo2_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
+        <div id="hide-menu-btn" class="menu-close">
+          <button type="button" name="btn">{{ 'icon-hamburger.png' | asset_url | img_tag: 'Burguer Menu'}}</button>
+        </div>
+      </div>
+      <div class="search-container">
+        <form action="/search" method="get" role="search">
+          {% include 'search-field' %}
+        </form>
+      </div>
+      <div class="mobile-nav">
+        {% include 'navbar-elements' %}
+      </div>
+      <div class="mobile-user-buttons">
+        {% include 'registration-links' %}
+      </div>
+      <div class="mobile-info-buttons">
+        {% include 'contact-buttons' %}
+      </div>
+    </div>
+
+    <div class="mobile-top-section">
+      <div id="show-menu-btn" class="menu-open">
+        <button type="button" name="btn">{% include 'icon-hamburger' %}</button>
+      </div>
+      <div class="logo-mobile-container">
+        {{ 'logo1_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
+      </div>
+      <div class="header-cart-button">
+        <p class="cart-item-count">{{ cart.item_count }}</p>
+        <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
+      </div>
+    </div>
+    <div class="header-container">
+      <div class="search-container home-screen-mobile-search">
+        <form action="/search" method="get" role="search">
+          <button type="submit" class="btn desktop-btn-search">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+          {% include 'search-field' %}
+        </form>
+      </div>
+      <div class="header-buttons-container">
+        {% include 'registration-links' %}
+        <div class="header-cart-button">
+          <p class="cart-item-count">{{ cart.item_count }}</p>
+          <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage-logo">
+      {{ 'logo_fiorella.png' | asset_url | img_tag: "Fiorella logo" }}
+    </div>
+
+    <div class="navbar">
+      <ul>
+        {% for collection in collections %}
+          <li><a href="{{ collection.url }}" class="navbar-element">{{ collection.title }}</a></li>
+          {% if forloop.last != true %}
+            <span class="navbar-separator">|</span>
+          {% endif %}
+        {% endfor%}
+      </ul>
+    </div>
+
+
+
     {% if template.name == 'index' %}
       <h1 itemscope itemtype="http://schema.org/Organization">
     {% else %}
@@ -60,21 +131,6 @@
       </ul>
     {% endif %}
 
-    <form action="/search" method="get" role="search">
-      <label for="Search" class="label-hidden">
-        {{ 'general.search.placeholder' | t }}
-      </label>
-      <input type="search"
-             name="q"
-             id="Search"
-             value="{{ search.terms | escape }}"
-             placeholder="{{ 'general.search.placeholder' | t }}">
-      <button type="submit" class="btn">
-        {% include 'icon-search' %}
-        <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-      </button>
-    </form>
-
   </header>
 
   <nav role="navigation">
@@ -104,6 +160,19 @@
     </ul>
   </nav>
 </div>
+
+<script type="text/javascript">
+  var showMenu = document.getElementById('show-menu-btn');
+  var hideMenu = document.getElementById('hide-menu-btn');
+
+  showMenu.addEventListener('click', function() {
+    document.getElementById('menu').classList.add('show-menu');
+  });
+
+  hideMenu.addEventListener('click', function() {
+    document.getElementById('menu').classList.remove('show-menu');
+  });
+</script>
 
 {% schema %}
   {
