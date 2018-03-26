@@ -1,5 +1,5 @@
 <div class="header-mobile-section">
-  <button type="button" class="iconmenu-left" onclick="openNav()">
+  <button type="button" class="iconmenu-left mySidenav" onclick="openNav()">
      {% include 'icon-flecha_izquierda' %} Menu </button>
 
   {% if template.name == 'index' %}
@@ -28,10 +28,9 @@
     ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
     {% include 'icon-cart' %}
   </a>
-
 </div>
 
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav hide-menu">
   <div class="sidenav-logo">
 
     {% if template.name == 'index' %}

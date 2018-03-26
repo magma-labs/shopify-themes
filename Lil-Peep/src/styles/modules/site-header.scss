@@ -1,5 +1,4 @@
 @media only screen and ( min-width: 769px) {
-
   .sidenav {
     display: none;
   }
@@ -87,8 +86,15 @@
   }
 }
 
-
 @media only screen and (max-width: 768px) {
+
+  .show-menu {
+    width: 90%;
+  }
+
+  .hide-menu {
+    width: 0;
+  }
 
   .section-header {
     display: none;
@@ -102,6 +108,7 @@
     .iconmenu-left {
       background-color: $color-white;
       border: none;
+      color: $color-theme-lilpeep;
     }
 
     .header-logo {
@@ -126,7 +133,6 @@
     position: fixed;
     top: 0;
     transition: 0.5s;
-    width: 0;
 
     .sidenav-logo {
       display: flex;
@@ -224,7 +230,7 @@
     }
 
     .site-nav2 {
-      padding-left: 0px;
+      padding-left: 0;
 
       li {
         list-style: none;

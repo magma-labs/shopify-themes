@@ -52,3 +52,11 @@ $(document).ready(function() {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
 });
+
+//menu slider (ojala)
+
+    $(document).ready(function() {
+    $('#qwerty').click(function() {
+            $('#mySidenav').toggle("slide");
+    });
+});

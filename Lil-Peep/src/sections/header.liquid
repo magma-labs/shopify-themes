@@ -7,6 +7,7 @@
 </style>
 
 {%- include 'header-mobile' -%}
+
 <div data-section-id="{{ section.id }}" data-section-type="header-section" class="section-header">
   <header role="banner">
     {% if template.name == 'index' %}
@@ -120,11 +121,15 @@
 
 <script type="text/javascript">
 function openNav() {
-  document.getElementById("mySidenav").style.width = "90%";
+  var menu = document.getElementById('mySidenav');
+  menu.classList.remove('hide-menu');
+  menu.classList.add('show-menu');
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  var menu = document.getElementById('mySidenav');
+  menu.classList.remove('show-menu');
+  menu.classList.add('hide-menu');
 }
 </script>
 
