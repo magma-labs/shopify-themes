@@ -2,6 +2,7 @@ $mobile: "only screen and (min-width: 767px)";
 $tablet: "only screen and (min-width: 768px) and (max-width: 1023px)";
 $desktop: "only screen and (min-width: 1024px)";
 
+$tablet-view: 'screen and (min-width: 768px)';
 $small-desktop-view: 'screen and (min-width: 769px)';
 $large-desktop-view: 'screen and (min-width: 1025px)';
 
@@ -14,6 +15,18 @@ $peppermind-color: #f3f9ef;
 $font-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+
+$font-size-description-tablet: 20px;
+$font-size-button-tablet: 30px;
+$font-size-description-small-desktop: 28px;
+$font-size-button-small-desktop: 40px;
+$font-size-description-large-desktop: 35px;
+$font-size-button-large-desktop: 45px;
+$font-size-description-xlarge-desktop: 40px;
+$font-size-button-xlarge-desktop: 50px;
+
+$font-slider-description: 'Playfair Display', sans-serif;
+$font-slider-button: 'Playfair Display', sans-serif;
 
 $playfair-display: "Playfair Display";
 $merriweathersans: "Merriweather Sans";

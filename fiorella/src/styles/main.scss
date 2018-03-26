@@ -3,29 +3,28 @@
   [replace with theme name] | Built with Slate
     - You cannot use native CSS/Sass @imports in this file without a build script
 ==============================================================================*/
-
 @import url('base/_normalize.scss');
 
-/*================ UTILS ================*/
+/*================ ABSTRACTS ================*/
 @import url('abstracts/_variables.scss.liquid');
 @import url('abstracts/_variables.scss');
-@import url('abstracts/_placeholders.scss');
 @import url('abstracts/_mixins.scss');
 
 /*================ COMMON ================*/
-@import url('global/_blank-states.scss');
-@import url('global/_forms.scss');
-@import url('global/_grid.scss');
-@import url('global/_helper-classes.scss');
-@import url('global/_icons.scss');
-@import url('global/_layout.scss');
-@import url('global/_links-buttons.scss');
-@import url('global/_responsive-tables.scss');
-@import url('global/_rte.scss');
 @import url('global/_slate-reset.scss');
+@import url('global/_helper-classes.scss');
+@import url('global/_grid.scss');
+@import url('global/_layout.scss');
+@import url('global/_icons.scss');
+@import url('global/_rte.scss');
+@import url('global/_responsive-tables.scss');
+@import url('global/_links-buttons.scss');
+@import url('global/_forms.scss');
+@import url('global/_blank-states.scss');
 
 /*================ MODULES ================*/
 @import url('layout/_body-message.scss');
 @import url('layout/_category-products-list.scss');
 @import url('layout/_gift-card-template.scss');
 @import url('layout/_header.scss');
+@import url('layout/_slider.scss');
