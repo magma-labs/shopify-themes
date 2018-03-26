@@ -1,0 +1,152 @@
+.slider-container {
+  position: relative;
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.slider-navigator {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+.slider-nav-button {
+  background-color: $color-white-solid;
+  border-radius: 50%;
+  border-style: none;
+  font-family: sans-serif;
+  height: 12px;
+  margin: 0 5px;
+  width: 5px;
+}
+
+.slider-nav-button-selected {
+  background-color: $color-featured;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.show-slide {
+  display: flex;
+}
+
+.slide-description {
+  bottom: 60px;
+  font-family: $font-slider-description;
+  font-size: 15px;
+  font-style: italic;
+  position: absolute;
+  right: 15px;
+  text-align: right;
+  width: 150px;
+}
+
+.slide-button {
+  background-color: transparent;
+  border: solid $color-featured;
+  bottom: 20px;
+  color: $color-featured;
+  display: inline;
+  font-family: $font-slider-button;
+  font-weight: $font-weight-bold;
+  padding: 10px 30px;
+  position: absolute;
+  right: 15px;
+}
+
+@media #{$tablet-view} {
+  .slider-navigator {
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: auto;
+    width: 100%;
+  }
+
+  .slide-button {
+    bottom: 40px;
+    font-size: 30px;
+    padding: 10px 40px;
+  }
+
+  .slide-description {
+    bottom: 100px;
+    font-size: $font-size-description-tablet;
+    width: 500px;
+  }
+
+}
+
+@media #{$small-desktop-view} {
+  .slider-navigator {
+    bottom: 30px;
+  }
+
+  .slide-button {
+    bottom: 50px;
+    font-size: $font-size-button-small-desktop;
+    margin-right: 10px;
+    padding: 15px 50px;
+  }
+
+  .slide-description {
+    bottom: 140px;
+    font-size: $font-size-description-small-desktop;
+    margin-right: 10px;
+  }
+}
+
+@media #{$large-desktop-view} {
+  .slider-navigator {
+    bottom: 30px;
+  }
+
+  .slide-button {
+    bottom: 50px;
+    font-size: $font-size-button-large-desktop;
+    margin-right: 10px;
+    padding: 15px 50px;
+  }
+
+  .slide-description {
+    bottom: 150px;
+    font-size: $font-size-description-large-desktop;
+    margin-right: 10px;
+    width: 768px;
+  }
+}
+
+@media #{$large-desktop-view} {
+  .slider-navigator {
+    bottom: 40px;
+  }
+
+  .slide-button {
+    bottom: 60px;
+    font-size: $font-size-button-xlarge-desktop;
+    margin-right: 10px;
+    padding: 15px 60px;
+  }
+
+  .slide-description {
+    bottom: 160px;
+    font-size: $font-size-description-xlarge-desktop;
+    margin-right: 10px;
+    width: 800px;
+  }
+}

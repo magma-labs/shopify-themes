@@ -1,0 +1,17 @@
+<div class="category-product-list">
+  <div class="category-box">
+    {%- for collection in collections -%}
+    <div class="category-item">
+      <h2 class="category-title">{{ collection.title | upcase }}</h2>
+      <div class="category-content-image">
+        <img class="category-image-item" src="{{ collection | img_url: '800x' }}" alt="{{ collection.img.alt }}" />
+        <h2 class="category-title-mobile"><a href="{{ collection.url }}"> {{ collection.title | upcase }}</a></h2>
+        <div class="overlay"></div>
+        <a href="{{ collection.url }}" class="btn-shop">SHOP NOW</a>
+      </div>
+      <p class="category-description">{{ collection.description }}</p>
+    </div>
+    {%- endfor -%}
+  </div>
+  <div class="border-box"></div>
+</div>

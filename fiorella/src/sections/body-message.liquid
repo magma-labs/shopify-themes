@@ -1,0 +1,36 @@
+<div class="body-message">
+  <h1 class="title-message">{{ section.settings.title-message | upcase }}</h1>
+  <img class="image-message" src="{{ section.settings.image-message | img_url: '800x' }}" alt="{{ settings.categoryimg.alt }}" />
+  <div class="text-message">
+    <p>{{ section.settings.image-description }}</p>
+  </div>
+  <a href="{{section.settings.link}}" class="btn-read-more">{{'blogs.article.read_more' | t | upcase }}</a>
+</div>
+
+{% schema %}
+{
+  "name":"Body message",
+  "settings":[
+    {
+      "type": "text",
+      "id": "title-message",
+      "label": "Title"
+    },
+    {
+      "type":"image_picker",
+      "id":"image-message",
+      "label":"Image"
+    },
+    {
+      "type": "text",
+      "id": "image-description",
+      "label": "Description"
+    },
+    {
+      "type":"url",
+      "id":"link",
+      "label":"link"
+    }
+  ]
+}
+{% endschema %}
