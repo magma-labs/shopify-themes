@@ -59,3 +59,12 @@ closeDialogBtn.addEventListener('click', function() {
   document.getElementById('ship-info-dialog').classList.add('display-none');
   document.getElementById('ship-info-dialog').classList.remove('info-dialog');
 });
+
+function selectimage(image) {
+  document.getElementById('product').src = image;
+}
+
+$('.view').click(function(){
+    $('.selected').removeClass('selected');
+    $(this).addClass('selected');
+});

@@ -258,7 +258,9 @@
       "on_sale_from_html": "On Sale from {{ price }}",
       "from_text_html": "From {{ price }}",
       "quantity": "Quantity",
-      "add_to_cart": "Add to Cart"
+      "add_to_cart": "ADD TO CART",
+      "description-title": "DESCRIPTION:",
+      "free-shipping": "*FREE SHIPPING FOR ALL ORDERS INSIDE THE U.S."
     }
   },
   "gift_cards": {
