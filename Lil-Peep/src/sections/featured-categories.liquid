@@ -11,18 +11,18 @@
           {%  assign class_name = "banner_outdoors" %}
           {%  assign second_class = "outdoors_content" %}
     {% endcase %}
-        <div class="{{class_name}} category-{{block.id}}" >
+        <div class="{{ class_name }} category-{{ block.id }}" >
           <div class="{{second_class}}">
             <a href="/categories.html" class="cont">
-              <h2 class="title">{{block.settings.title}}</h2>
+              <h2 class="title">{{ block.settings.title }}</h2>
             </a>
         </div>
       </div>
   {% endfor %}
   <div class="scroll-up">
     <a href="#" class="scroll-up-button" name="scrollup">
-      <h3>SCROLL UP</h3>
-      <img class="up_arrow" src="../assets/arrow_up_white.jpg" alt="Arrow Up">
+      <h3 class="title">SCROLL UP</h3>
+      <img class="up_arrow" src="{{ 'arrow_up_white.png' | asset_url }}" alt="Arrow Up">
     </a>
   </div>
 </div>
@@ -30,7 +30,7 @@
 <style>
   {% for block in section.blocks %}
     .category-{{block.id}} {
-      background-image: url('{{block.settings.banner_img | img_url: 'large'}}');
+      background-image: url('{{ block.settings.banner_img | img_url: 'large' }}');
     }
   {% endfor %}
 </style>

@@ -85,35 +85,37 @@
       text-decoration: none;
     }
   }
-
   .scroll-up {
     display: flex;
     justify-content: center;
-    text-align: center;
-    margin-top: 20px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
 
-    .button_scrollup {
+    .scroll-up-button {
       background-color: #387ada;
+      border-radius: 3px;
+      border-style: none;
       color: white;
-      display: inline-flex;
-      width: 160px;
-      height: 40px;
       display: flex;
+      display: inline-flex;
+      height: 40px;
       justify-content: center;
-    }
+      width: 160px;
+      text-decoration: none;
 
-    .title {
-      font-size: 16px;
-      margin-top: 6px;
-      font-family: "Oswald", sans-serif;
-    }
+      .title {
+        font-family: "Oswald", sans-serif;
+        font-size: 16px;
+        margin-top: 12px;
+      }
 
-    .up_arrow {
-      width: 28px;
-      height: 15px;
-      padding-top: 10px;
-      padding-left: 10px;
+      .up_arrow {
+        display: flex;
+        align-self: center;
+        height: 15px;
+        width: 28px;
+      }
     }
   }
 }
@@ -123,6 +125,7 @@
     border-color: blue;
     border-style: solid;
     border: 5px;
+    border-radius: 3px;
     background-color: #f8f8f8;
     border-bottom: 1px solid #e7e7e7;
     font-family: "Oswald", sans-serif;
