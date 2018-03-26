@@ -53,13 +53,6 @@ $(document).ready(function() {
   }
 });
 
-var closeDialogBtn = document.getElementById('closeDialog');
-
-closeDialogBtn.addEventListener('click', function() {
-  document.getElementById('ship-info-dialog').classList.add('display-none');
-  document.getElementById('ship-info-dialog').classList.remove('info-dialog');
-});
-
 function selectimage(image) {
   document.getElementById('product').src = image;
 }
@@ -67,4 +60,11 @@ function selectimage(image) {
 $('.view').click(function(){
     $('.selected').removeClass('selected');
     $(this).addClass('selected');
+});
+
+var closeDialogBtn = document.getElementById('closeDialog');
+
+closeDialogBtn.addEventListener('click', function() {
+  document.getElementById('ship-info-dialog').classList.add('display-none');
+  document.getElementById('ship-info-dialog').classList.remove('info-dialog');
 });

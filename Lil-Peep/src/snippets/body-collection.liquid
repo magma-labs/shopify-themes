@@ -5,10 +5,12 @@
   </div>
 </section>
 
-<section class="current-route">
-    <a class="home-route-section">HOME</a>
-    <a class="categories-route-section">&gt; WOODEN TOYS</a>
-</section>
+<div class="current-route-container">
+  <section class="current-route">
+      <a class="home-route-section">HOME</a>
+      <a class="categories-route-section">&gt; {{ collection.title | upcase}}</a>
+  </section>
+</div>
 
 <div class="categories-view">
 
@@ -115,11 +117,6 @@
 
   {%- include 'pagination' -%}
 
-  <div class="scroll-up">
-    <a href="#" class="scroll-up-button" name="scrollup">
-      <p>{{ 'collections.general.scroll_up' | t }}</p>
-      {{ 'arrow_up_white.png' | asset_url | img_tag | link_to: 'https://google.com/', 'Arrow Up' }}
-    </a>
-  </div>
+  {%- include 'scroll-up' -%}
 
 </div>
