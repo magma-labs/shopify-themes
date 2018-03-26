@@ -7,98 +7,118 @@
     border-bottom: 1px solid #e7e7e7;
     font-family: "Oswald", sans-serif;
     margin-top: 15px;
+
+    .banner_wooden_toys {
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      text-decoration: none;
+
+      .wooden_toys_content {
+        align-items: flex-end;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
+        display: flex;
+        height: 160px;
+        width: 100%;
+
+        .cont {
+          text-decoration: none;
+        }
+
+        .title {
+          color: white;
+          margin-bottom: 5px;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .banner_plush_toys {
+      background-position: 50% 30%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      .plush_toys_content {
+        align-items: flex-end;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
+        display: flex;
+        height: 160px;
+        width: 100%;
+      }
+
+      .cont {
+        text-decoration: none;
+      }
+
+      .title {
+        color: white;
+        margin-bottom: 5px;
+        margin-left: 8px;
+        text-decoration: none;
+      }
+    }
+
   }
-  .banner_wooden_toys {
-    background-image: url("../images/2f6a2b4813c1fa94dc3775a1ce32273882082dff.png");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-  }
-  .banner_wooden_toys .wooden_toys_content {
-    align-items: flex-end;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
-    display: flex;
-    height: 160px;
-    width: 100%;
-  }
-  .banner_wooden_toys h2 {
-    color: white;
-    margin-bottom: 5px;
-    margin-left: 8px;
-    text-decoration: none;
-  }
-  .banner_plush_toys {
-    background-image: url("../images/cfa5737207f1dce2b23e6b1fad66d742aa2fba70.png");
-    background-position: 50% 30%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-  .banner_plush_toys .plush_toys_content {
-    align-items: flex-end;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
-    display: flex;
-    height: 160px;
-    width: 100%;
-  }
-  .banner_plush_toys h2 {
-    color: white;
-    margin-bottom: 5px;
-    margin-left: 8px;
-    text-decoration: none;
-  }
+
   .banner_outdoors {
-    background-image: url("../images/05d65cfef44299788d269ebc094e45c98a019e50.png");
     background-position: 70% 30%;
     background-repeat: no-repeat;
     background-size: cover;
+
+    .outdoors_content {
+      align-items: flex-end;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
+      display: flex;
+      height: 160px;
+      width: 100%;
+    }
+
+    .cont {
+      text-decoration: none;
+    }
+
+    .title {
+      color: white;
+      margin-bottom: 5px;
+      margin-left: 8px;
+      text-decoration: none;
+    }
   }
-  .banner_outdoors .outdoors_content {
-    align-items: flex-end;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
-    display: flex;
-    height: 160px;
-    width: 100%;
-  }
-  .banner_outdoors h2 {
-    color: white;
-    margin-bottom: 5px;
-    margin-left: 8px;
-    text-decoration: none;
-  }
-  .button_categories {
+
+  .scroll-up {
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-  .button_categories h3 {
-    font-size: 16px;
-    margin-top: 6px;
-    font-family: "Oswald", sans-serif;
-  }
-  .button_scrollup {
-    background-color: #387ada;
-    color: white;
-    display: inline-flex;
-    width: 160px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-  }
-  .uparrow {
-    width: 28px;
-    height: 15px;
-    padding-top: 10px;
-    padding-left: 10px;
+
+    .button_scrollup {
+      background-color: #387ada;
+      color: white;
+      display: inline-flex;
+      width: 160px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .title {
+      font-size: 16px;
+      margin-top: 6px;
+      font-family: "Oswald", sans-serif;
+    }
+
+    .up_arrow {
+      width: 28px;
+      height: 15px;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
   }
 }
 
 @media only screen and (min-width: 769px) {
-  .button_scrollup {
-    display: none;
-  }
   .categories_main {
     border-color: blue;
     border-style: solid;
@@ -109,62 +129,70 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
-  }
 
-  .categories_main a {
-    text-decoration: none;
-  }
-  
-  .banner_wooden_toys .wooden_toys_content {
-    align-items: flex-end;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
-    display: flex;
-    height: 160px;
-    width: 100%;
-  }
-  .banner_wooden_toys h2 {
-    color: white;
-    margin-bottom: 5px;
-    margin-left: 8px;
-  }
-  .banner_plush_toys {
-    background-image: url("../images/cfa5737207f1dce2b23e6b1fad66d742aa2fba70.png");
-    background-position: 50% 30%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 50%;
-  }
-  .banner_plush_toys .plush_toys_content {
-    align-items: flex-end;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
-    display: flex;
-    height: 160px;
-    width: 100%;
-  }
-  .banner_plush_toys h2 {
-    color: white;
-    margin-bottom: 5px;
-    margin-left: 8px;
-  }
-  .banner_outdoors {
-    background-image: url("../images/05d65cfef44299788d269ebc094e45c98a019e50.png");
-    background-position: 70% 30%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 25%;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .banner_outdoors .outdoors_content {
-    align-items: flex-end;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
-    display: flex;
-    height: 160px;
-    width: 100%;
-  }
-  .banner_outdoors h2 {
-    color: white;
-    margin-bottom: 5px;
-    margin-left: 8px;
+    .cont {
+      text-decoration: none;
+    }
+    .wooden_toys_content {
+      align-items: flex-end;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
+      display: flex;
+      height: 160px;
+      width: 100%;
+
+      .title {
+        color: white;
+        margin-bottom: 5px;
+        margin-left: 8px;
+      }
+    }
+
+    .banner_plush_toys {
+      background-position: 50% 30%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 50%;
+      margin-left: 10px;
+
+     .plush_toys_content {
+        align-items: flex-end;
+        background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
+        display: flex;
+        height: 160px;
+        width: 100%;
+
+
+        .title {
+          color: white;
+          margin-bottom: 5px;
+          margin-left: 8px;
+        }
+      }
+    }
+    .banner_outdoors {
+      background-position: 70% 30%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 25%;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      .outdoors_content {
+        align-items: flex-end;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
+        display: flex;
+        height: 160px;
+        width: 100%;
+
+       .title {
+          color: white;
+          margin-bottom: 5px;
+          margin-left: 8px;
+        }
+      }
+    }
+    .scroll-up {
+      display: none;
+    }
   }
 }
