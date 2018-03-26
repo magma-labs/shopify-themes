@@ -14,7 +14,7 @@
           </div>
         </div>
       {% else %}
-        {% if block.settings.opc == "2"%}">
+        {% if block.settings.opc == "2"%}
           <div class="small-banner banner-{{ block.id }}">
             <p class="small-banner-tittle">{{ block.settings.title }}</p>
               <div class="big-text">
@@ -29,15 +29,15 @@
   <div class="flex-grid">
     {% for block in section.blocks %}
       {% if block.settings.opc == "3"  %}
-              <div class="mid-banner mid-banner-saylor banner-{{ block.id }}">
-                <div class="mid-banner-content">
-                  <h1>{{ block.settings.title }}</h1>
-                  <p class="description">{{ block.settings.description }}</p>
-                  <button class="button-mid-banner button-sailor" type="button" name="button">
-                    <h1 class="h1-sailor">{{ block.settings.button }}</h1>
-                  </button>
-                </div>
-              </div>
+        <div class="mid-banner mid-banner-saylor banner-{{ block.id }}">
+          <div class="mid-banner-content">
+            <h1>{{ block.settings.title }}</h1>
+            <p class="description">{{ block.settings.description }}</p>
+            <button class="button-mid-banner button-sailor" type="button" name="button">
+              <h1 class="h1-sailor">{{ block.settings.button }}</h1>
+            </button>
+          </div>
+        </div>
        {% else %}
         {% if block.settings.opc == "4" %}
           <div class="mid-banner mid-banner-archeologist banner-{{ block.id }}">
@@ -57,7 +57,7 @@
 
 <style>
 {% for block in section.blocks %}
-  .banner-{{block.id}} {
+  .banner-{{ block.id }} {
     background-image: url("{{ block.settings.banner_img | img_url: 'large' }}");
     background-size: cover;
   }
@@ -68,7 +68,7 @@
           rgb(239, 239, 239),
           rgba(239, 239, 239, 1) 20%,
           rgba(239, 239, 239, 0.2) 50%,
-          rgba(239, 239, 239, 0)),url("{{ block.settings.banner_img | img_url: 'large' }}");
+          rgba(239, 239, 239, 0)), url("{{ block.settings.banner_img | img_url: 'large' }}");
         background-size: cover;
         color: #000000;
       }
@@ -93,7 +93,7 @@
            rgb(189, 152, 107),
            rgba(189, 152, 107, 1) 10%,
            rgba(189, 152, 107, 0.2) 50%,
-           rgba(189, 152, 107, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
+           rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'large'}}");
          background-size: cover;
           color: #FFFFFF;
         }
@@ -104,7 +104,7 @@
             rgb(189, 152, 107),
             rgba(189, 152, 107, 1) 10%,
             rgba(189, 152, 107, 0.2) 50%,
-            rgba(189, 152, 107, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
+            rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'large'}}");
           background-size: cover;
           color: #FFFFFF;
           margin-left: 20px;
@@ -116,7 +116,7 @@
               rgb(189, 152, 107),
               rgb(189, 152, 107) 50%,
               rgb(189, 152, 107) 90%,
-              rgba(189, 152, 107, 0)),url("{{ block.settings.banner_img | img_url: 'large'}}");
+              rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'large'}}");
             background-size: cover;
             color: #FFFFFF;
           }

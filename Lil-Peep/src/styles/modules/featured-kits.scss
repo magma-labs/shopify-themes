@@ -32,8 +32,8 @@
   }
 
   .view-in-detail {
-    background-color: #4a90e2;
-    border-radius: 3px;;
+    background-color: $color-button-bg;
+    border-radius: 3px;
     border-style: none;
     margin: 10px;
     padding: 10px 0;
@@ -44,12 +44,12 @@
 
       &:hover {
         cursor: pointer;
-        background-color: #ed7f03;
+        background-color: $color_hover;
       }
     }
 
     .view-detail-button {
-      color: #fff;
+      color: $color_view_detail_button;
       font-family: 'Oswald', sans-serif;
       font-weight: bold;
       margin: 0;
@@ -63,7 +63,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(245, 166, 35, 0.8);
-  color: #FFFFFF;
+  color: $color_border_button_archeologist;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,19 +116,19 @@
   }
 
   .button-sailor {
-    border-color: #627387;
+    border-color: $color_border_button_sailor;
 
     .h1-sailor {
-      color: #627387;
+      color: $color_border_button_sailor;
       margin: 0;
       padding: 10px ;
     }
   }
   .button-archeologist {
-    border-color: #FFFFFF;
+    border-color: $color_border_button_archeologist;
 
     .h1-archeologist{
-      color: #FFFFFF;
+      color: $color_border_button_archeologist;
       margin: 0;
       padding: 10px 0;
     }
@@ -170,7 +170,7 @@
     background-size: cover;
     display: flex;
     flex: 2;
-    height: 400px;
+    height: $height_big_banner;
     justify-content: flex-end;
     margin-right: 20px;
 
@@ -182,7 +182,7 @@
         rgba(251, 239, 227, 0));
       display: flex;
       flex-direction: column;
-      height: 400px;
+      height: $height_big_banner;
       justify-content: center;
       padding-right: 10px;
       width: 50%;
@@ -207,7 +207,7 @@
         font-size: 32px;
       }
 
-      .big-banner-content button {
+      .view-detail-button {
         padding-left: 30px;
         padding-right: 30px;
       }
@@ -255,7 +255,7 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: $min-width_big) {
   .flex-grid {
     display: flex;
     margin-bottom: 20px;
@@ -266,7 +266,7 @@
     background-size: cover;
     display: flex;
     flex: 2;
-    height: 400px;
+    height: $height_big_banner;
     justify-content: flex-end;
     margin-right: 20px;
 
@@ -278,7 +278,7 @@
         rgba(251, 239, 227, 0));
       display: flex;
       flex-direction: column;
-      height: 400px;
+      height: $height_big_banner;
       justify-content: center;
       width: 50%;
 
@@ -298,7 +298,7 @@
         font-size: 32px;
       }
 
-      .view-in-detail h4 {
+      .view-in-detail-button {
         font-size: 32px;
       }
 
@@ -317,11 +317,11 @@
     justify-content: center;
 
     .small-banner-tittle {
-      font-size: 40px;
+      font-size: 60px;
       margin: 0;
     }
 
-    .semall-banner-description {
+    .small-banner-description {
       font-size: 80px;
       font-weight: bold;
       margin: 0;
@@ -358,7 +358,7 @@
   .mid-banner-saylor {
     background-position: right;
     background-repeat: no-repeat;
-    background-size: 400px 300px;
+    background-size: $height_big_banner 300px;
   }
 
   .mid-banner-saylor .mid-banner-content {
@@ -372,7 +372,7 @@
   .mid-banner-archeologist {
     background-position: right;
     background-repeat: no-repeat;
-    background-size: 400px 300px;
+    background-size: $height_big_banner 300px;
     margin-left: 20px;
   }
 
