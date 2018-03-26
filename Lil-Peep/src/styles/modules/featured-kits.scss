@@ -10,10 +10,10 @@
 
 .big-banner-content {
   background: linear-gradient(0deg,
-    rgb(251,239,227),
-    rgba(251,239,227, 1) 20%,
-    rgba(251,239,227, 0.2) 50%,
-    rgba(251,239,227, 0.1));
+    rgb(251, 239, 227),
+    rgba(251, 239, 227, 1) 20%,
+    rgba(251, 239, 227, 0.2) 50%,
+    rgba(251, 239, 227, 0.1));
   display: flex;
   flex-direction: column;
   height: 320px;
@@ -62,7 +62,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(245, 166, 35,0.8);
+  box-shadow: inset 0 0 0 1000px rgba(245, 166, 35, 0.8);
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -177,9 +177,9 @@
     .big-banner-content {
       align-items: center;
       background: linear-gradient(270deg,
-        rgb(251,239,227),
-        rgba(251,239,227, 1) 80%,
-        rgba(251,239,227, 0));
+        rgb(251, 239, 227),
+        rgba(251, 239, 227, 1) 80%,
+        rgba(251, 239, 227, 0));
       display: flex;
       flex-direction: column;
       height: 400px;
@@ -273,9 +273,9 @@
     .big-banner-content {
       align-items: center;
       background: linear-gradient(270deg,
-        rgb(251,239,227),
-        rgba(251,239,227, 1) 80%,
-        rgba(251,239,227, 0));
+        rgb(251, 239, 227),
+        rgba(251, 239, 227, 1) 80%,
+        rgba(251, 239, 227, 0));
       display: flex;
       flex-direction: column;
       height: 400px;
