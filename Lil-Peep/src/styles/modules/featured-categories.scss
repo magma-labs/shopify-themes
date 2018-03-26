@@ -3,8 +3,8 @@
     border-color: blue;
     border-style: solid;
     border: 5px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e7e7e7;
+    background-color: $color_bg;
+    border-bottom: 1px solid $color_bd;
     font-family: "Oswald", sans-serif;
     margin-top: 15px;
 
@@ -93,7 +93,7 @@
     text-align: center;
 
     .scroll-up-button {
-      background-color: #387ada;
+      background-color: $color_bg_scroll;
       border-radius: 3px;
       border-style: none;
       color: white;
@@ -126,8 +126,8 @@
     border-style: solid;
     border: 5px;
     border-radius: 3px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e7e7e7;
+    background-color: $color_bg;
+    border-bottom: 1px solid $color_bd;
     font-family: "Oswald", sans-serif;
     display: flex;
     justify-content: center;
