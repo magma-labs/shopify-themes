@@ -36,7 +36,7 @@
     border-radius: 3px;;
     border-style: none;
     margin: 10px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     text-align: center;
 
     a {
@@ -67,7 +67,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px 20px;
+  padding: 20px;
 
   .small-banner-tittle {
     font-size: 20px;
@@ -121,7 +121,7 @@
     .h1-sailor {
       color: #627387;
       margin: 0;
-      padding: 10px 0 10px 0;
+      padding: 10px ;
     }
   }
   .button-archeologist {
@@ -130,7 +130,7 @@
     .h1-archeologist{
       color: #FFFFFF;
       margin: 0;
-      padding: 10px 0 10px 0;
+      padding: 10px 0;
     }
   }
 }
