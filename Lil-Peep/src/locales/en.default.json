@@ -260,7 +260,8 @@
       "quantity": "Quantity",
       "add_to_cart": "ADD TO CART",
       "description-title": "DESCRIPTION:",
-      "free-shipping": "*FREE SHIPPING FOR ALL ORDERS INSIDE THE U.S."
+      "free-shipping": "*FREE SHIPPING FOR ALL ORDERS INSIDE THE U.S.",
+      "related-products": "YOU MAY ALSO LIKE"
     }
   },
   "gift_cards": {
