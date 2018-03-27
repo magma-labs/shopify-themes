@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="{{ settings.color_primary }}">
   <link rel="canonical" href="{{ canonical_url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="fonts" href="https://fonts.googleapis.com/css?family=Lato:100,400,700|Oswald:300" type="image/png">
 
   {% if settings.favicon != blank %}
     <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
@@ -61,6 +61,7 @@
   <!--[if lt IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
   {{ content_for_header }}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Oswald:300">
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">

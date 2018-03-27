@@ -10,6 +10,15 @@ $color-theme-lilpeep: #72808C;
 
 // Backgrounds
 $color-body: #fff;
+$color-view-detail-button: #fff;
+$color-bg:  #387ada;
+$color-button-bg: #4a90e2;
+$color-hover:  #ed7f03;
+$color-border-button-sailor: #627387;
+
+// Border colors
+$color-border: #f6f6f6;
+$color-border-button-archeologist: #FFFFFF;
 
 $color-white: #fff;
 $color-email-box: #FBFBFB;
@@ -54,17 +63,15 @@ $color-success-bg: #000;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
+
 $font-stack-header: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-weight-header: $font-weight-bold;
 
 $font-stack-body: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: {{ settings.type_base_size }};
-$Lato:  'Lato', sans-serif;
+$Oswald: 'Oswald', sans-serif;
+$Lato: 'Lato', sans-serif;
 
-/*============================================================================
-  Grid Breakpoints and Class Names
-    - Do not change the variable names
-==============================================================================*/
 $grid-medium: 750px;
 $grid-large: 990px;
 $grid-widescreen: 1400px;
@@ -95,9 +102,10 @@ $breakpoints: (
   $large-up '(min-width: #{$grid-large})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
-$tablet-view: ' screen and (min-width: 768px)';
+$movile-view: 'screen and (max-width:767px)';
+$tablet-view: 'screen and (min-width: 768px)';
+$small-desktop-view: 'screen and (min-width: 769px) and (max-width: 1279px)';
 $mobile-view: 'screen and (max-width:767px)';
-$small-desktop-view: 'screen and (min-width: 769px)';
 $large-desktop-view: 'screen and (min-width: 1025px)';
 
 /*============================================================================
@@ -112,6 +120,7 @@ $breakpoint-has-push: ();
 /*================ Sizing Variables ================*/
 $width-site: 1180px;
 $gutter: 30px;
+$height-big-banner: 400px;
 
 /*================ Z-Index ================*/
 $z-index-dropdown: 2;

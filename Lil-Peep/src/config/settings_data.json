@@ -30,6 +30,9 @@
         },
         "featured-product": {
           "type": "featured-product"
+        },
+        "featured-kits": {
+          "type": "featured-kits"
         }
       },
       "content_for_index": [
