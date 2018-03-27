@@ -10,6 +10,7 @@ $color-theme-lilpeep: #72808C;
 
 // Backgrounds
 $color-body: #fff;
+
 $color-white: #fff;
 $color-email-box: #FBFBFB;
 $color-header-mobile: #627387;
@@ -21,7 +22,27 @@ $color-line: #8994A1;
 $color-border-email-box: #d2d2d2;
 
 
+$color-bg: #f8f8f8;
+$color-bg-scroll: #387ada;
+
+// Border colors
+$color-border: #f6f6f6;
+$color-bd: #e7e7e7;
+
+
 // Helper colors for form error states
+$background-color: #f7f8f9;
+$view-green: #4a90e2;
+$title-font-gray: #657581;
+$title-font-black: #414243;
+$price-purple: #7A0062;
+$price-gray: #CACCCD;
+$on-hover-button: #ed7f03;
+$info-dialog-color: #abc828;
+$home-route-section: #5396e5;
+$categories-route-section: #72808c;
+$active-button: #636e72;
+$product-card-category: #eaebec;
 $color-disabled: #000;
 $color-disabled-border: #000;
 $color-error: #000;
@@ -38,6 +59,7 @@ $font-weight-header: $font-weight-bold;
 
 $font-stack-body: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: {{ settings.type_base_size }};
+$Lato:  'Lato', sans-serif;
 
 /*============================================================================
   Grid Breakpoints and Class Names
@@ -49,6 +71,7 @@ $grid-widescreen: 1400px;
 $grid-gutter: 30px;
 
 $breakpoint-mobile: "only screen and (max-width : 768px)";
+$breakpoint-tablet: "only screen and (min-width : 769px)";
 $breakpoint-desktop: "only screen and (max-width : 1024px)";
 
 $small: 'small';
@@ -72,6 +95,10 @@ $breakpoints: (
   $large-up '(min-width: #{$grid-large})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
+$tablet-view: ' screen and (min-width: 768px)';
+$mobile-view: 'screen and (max-width:767px)';
+$small-desktop-view: 'screen and (min-width: 769px)';
+$large-desktop-view: 'screen and (min-width: 1025px)';
 
 /*============================================================================
   Generate breakpoint-specific column widths and push classes
