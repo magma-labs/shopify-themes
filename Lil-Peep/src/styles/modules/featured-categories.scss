@@ -136,24 +136,17 @@
     .cont {
       text-decoration: none;
     }
-    .banner_wooden_toys {
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 25%;
-      margin-left: 10px;
-      margin-right: 10px;
+    .wooden_toys_content {
+      align-items: flex-end;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
+      display: flex;
+      height: 160px;
+      width: 100%;
 
-      .wooden_toys_content {
-        align-items: flex-end;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.65) 100%);
-        display: flex;
-        height: 160px;
-
-        .title {
-          color: white;
-          margin-bottom: 5px;
-          margin-left: 8px;
-        }
+      .title {
+        color: white;
+        margin-bottom: 5px;
+        margin-left: 8px;
       }
     }
 
@@ -162,6 +155,7 @@
       background-repeat: no-repeat;
       background-size: 100%;
       width: 50%;
+      margin-left: 10px;
 
      .plush_toys_content {
         align-items: flex-end;
@@ -179,6 +173,7 @@
       }
     }
     .banner_outdoors {
+      background-position: 70% 30%;
       background-repeat: no-repeat;
       background-size: cover;
       width: 25%;
