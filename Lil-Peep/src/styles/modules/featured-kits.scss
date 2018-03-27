@@ -1,5 +1,5 @@
 .featured-kits {
-  font-family: 'Oswald', sans-serif;
+  font-family: #{ $Oswald };
 
   .big-banner {
     background-position: top;
@@ -26,13 +26,13 @@
   }
 
   .big-banner-description {
-    font-family: $Lato
+    font-family: #{ $Lato };
     font-size: 12px;
     margin: 0;
   }
 
   .view-in-detail {
-    background-color: $color-button-bg;
+    background-color: #{ $color-button-bg };
     border-radius: 3px;
     border-style: none;
     margin: 10px;
@@ -44,13 +44,13 @@
 
       &:hover {
         cursor: pointer;
-        background-color: $color_hover;
+        background-color: #{ $color-hover };
       }
     }
 
     .view-detail-button {
-      color: $color_view_detail_button;
-      font-family: 'Oswald', sans-serif;
+      color: #{ $color-view-detail-button };
+      font-family: #{ $Oswald };
       font-weight: bold;
       margin: 0;
     }
@@ -63,7 +63,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(245, 166, 35, 0.8);
-  color: $color_border_button_archeologist;
+  color: #{ $color-border-button-archeologist };
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +87,7 @@
   height: 300px;
   justify-content: flex-end;
   text-align: center;
-  font-family: $Lato
+  font-family: #{ $Lato };
 
   .mid-banner-saylor {
     background-position: top;
@@ -105,7 +105,7 @@
     background-color: Transparent;
     border-radius: 2px;
     border-style: solid;
-    font-family: $Lato
+    font-family: #{ $Lato };
     margin-bottom: 12px;
     margin-left: 5px;
     margin-right: 5px;
@@ -116,26 +116,26 @@
   }
 
   .button-sailor {
-    border-color: $color_border_button_sailor;
+    border-color: #{ $color-border-button-sailor };
 
     .h1-sailor {
-      color: $color_border_button_sailor;
+      color: #{ $color-border-button-sailor };
       margin: 0;
       padding: 10px ;
     }
   }
   .button-archeologist {
-    border-color: $color_border_button_archeologist;
+    border-color: #{ $color-border-button-archeologist };
 
     .h1-archeologist{
-      color: $color_border_button_archeologist;
+      color: #{ $color-border-button-archeologist };
       margin: 0;
       padding: 10px 0;
     }
   }
 }
 
-@media only $tablet-view {
+@media only #{ $tablet-view } {
 .big-banner {
   background-position: center;
   background-size: cover;
@@ -160,7 +160,7 @@
  }
 }
 
-@media only $small-desktop-view {
+@media only #{ $small-desktop-view } {
 .flex-grid {
   display: flex;
   margin-bottom: 20px;
@@ -170,7 +170,7 @@
     background-size: cover;
     display: flex;
     flex: 2;
-    height: $height_big_banner;
+    height: #{ $height-big-banner };
     justify-content: flex-end;
     margin-right: 20px;
 
@@ -182,7 +182,7 @@
         rgba(251, 239, 227, 0));
       display: flex;
       flex-direction: column;
-      height: $height_big_banner;
+      height: #{ $height-big-banner };
       justify-content: center;
       padding-right: 10px;
       width: 50%;
@@ -255,7 +255,7 @@
   }
 }
 
-@media only $large-desktop-view {
+@media only #{ $large-desktop-view } {
   .flex-grid {
     display: flex;
     margin-bottom: 20px;
@@ -266,7 +266,7 @@
     background-size: cover;
     display: flex;
     flex: 2;
-    height: $height_big_banner;
+    height: #{ $height-big-banner };
     justify-content: flex-end;
     margin-right: 20px;
 
@@ -278,7 +278,7 @@
         rgba(251, 239, 227, 0));
       display: flex;
       flex-direction: column;
-      height: $height_big_banner;
+      height: #{ $height-big-banner };
       justify-content: center;
       width: 50%;
 
@@ -346,7 +346,7 @@
     padding-right: 10px;
     width: 50%;
 
-     .button-sailor .button-archeologist {
+     .button-mid-banner {
       width: 100%;
     }
 
@@ -358,7 +358,7 @@
   .mid-banner-saylor {
     background-position: right;
     background-repeat: no-repeat;
-    background-size: $height_big_banner 300px;
+    background-size: #{ $height-big-banner } 300px;
   }
 
   .mid-banner-saylor .mid-banner-content {
@@ -372,7 +372,7 @@
   .mid-banner-archeologist {
     background-position: right;
     background-repeat: no-repeat;
-    background-size: $height_big_banner 300px;
+    background-size: #{ $height-big-banner } 300px;
     margin-left: 20px;
   }
 
