@@ -15,11 +15,15 @@
         </div>
         <div class="product-image">
           {% if product.featured_image != blank %}
-            {{ 'arrow_left.png' | asset_url | img_tag | link_to: 'https://google.com/', 'Arrow Up' }}
+            <a href="{{ paginate.previous.url }}">
+              {{ 'arrow_left.png' | asset_url | img_tag  }}
+            </a>
             <a href="{{ product.url | within: collection }}">
               {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
             </a>
-            {{ 'arrow_right.png' | asset_url | img_tag | link_to: 'https://google.com/', 'Arrow Up' }}
+            <a href="{{ paginate.next.url }}">
+              {{ 'arrow_right.png' | asset_url | img_tag }}
+            </a>
           {% endif %}
         </div>
       </div>

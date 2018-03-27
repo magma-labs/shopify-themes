@@ -178,7 +178,7 @@
 
       .not-new-product {
         color: #{$product-card-category};
-        opacity: 1;
+        opacity: 0;
         padding: 5px 25px;
       }
     }
