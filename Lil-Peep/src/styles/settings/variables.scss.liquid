@@ -6,9 +6,12 @@ $color-body-text: {{ settings.color_body_text }};
 
 // Backgrounds
 $color-body: #fff;
+$color-bg: #f8f8f8;
+$color-bg-scroll: #387ada;
 
 // Border colors
 $color-border: #f6f6f6;
+$color-bd: #e7e7e7;
 
 // Helper colors for form error states
 $background-color: #f7f8f9;
@@ -39,6 +42,7 @@ $font-weight-header: $font-weight-bold;
 
 $font-stack-body: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: {{ settings.type_base_size }};
+$Lato:  'Lato', sans-serif;
 
 /*============================================================================
   Grid Breakpoints and Class Names
@@ -74,6 +78,10 @@ $breakpoints: (
   $large-up '(min-width: #{$grid-large})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
+$tablet-view: ' screen and (min-width: 768px)';
+$mobile-view: 'screen and (max-width:767px)';
+$small-desktop-view: 'screen and (min-width: 769px)';
+$large-desktop-view: 'screen and (min-width: 1025px)';
 
 /*============================================================================
   Generate breakpoint-specific column widths and push classes

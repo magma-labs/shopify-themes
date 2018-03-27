@@ -1,0 +1,93 @@
+<div class="categories-main">
+  {% for block in section.blocks %}
+    {% case block.settings.opc %}
+        {% when '1' %}
+          {%  assign class-name = "banner-wooden-toys" %}
+          {%  assign second-class = "wooden-toys-content"%}
+        {% when '2' %}
+          {%  assign class-name = "banner-plush-toys" %}
+          {%  assign second-class = "plush-toys-content"%}
+        {% when '3' %}
+          {%  assign class-name = "banner-outdoors" %}
+          {%  assign second-class = "outdoors-content" %}
+    {% endcase %}
+        <div class="{{ class-name }} category-{{ block.id }}" >
+          <div class="{{second-class}}">
+            <a href="/categories.html" class="cont">
+              <h2 class="title">{{ block.settings.title }}</h2>
+            </a>
+        </div>
+      </div>
+  {% endfor %}
+  <div class="scroll-up">
+    <a href="#" class="scroll-up-button" name="scrollup">
+      <h3 class="title">SCROLL UP</h3>
+      <img class="up-arrow" src="{{ 'arrow-up-white.png' | asset_url }}" alt="Arrow Up">
+    </a>
+  </div>
+</div>
+
+<style>
+  {% for block in section.blocks %}
+    .category-{{ block.id }} {
+      background-image: url('{{ block.settings.banner_img | img_url: 'large' }}');
+    }
+  {% endfor %}
+</style>
+
+{% schema %}
+{
+ "name":"Featured Categories",
+ "max_blocks":3,
+ "blocks":[
+   {
+     "type":"image",
+     "name":"Category",
+     "settings":[
+       {
+         "type":"image_picker",
+         "id":"banner_img",
+         "label":"Image",
+         "info":"image should be 800px x 800px"
+       },
+       {
+         "type": "text",
+         "id": "title",
+         "label": "Title",
+         "default": "Title"
+       },
+       {
+         "type":      "select",
+         "id":        "opc",
+         "label":     "Type of banner",
+         "options": [
+           {
+             "group": "Categories",
+             "value": "1",
+             "label": "Top banner"
+           },
+           {
+             "group": "Categories",
+             "value": "2",
+             "label": "Mid banner"
+           },
+           {
+             "group": "Categories",
+             "value": "3",
+             "label": "Bottom banner"
+           }
+         ],
+         "default":   "1",
+         "info":      "Just one of each type"
+       }
+     ]
+   }
+ ],
+  "presets": [
+    {
+      "name": "Featured Kits",
+      "category": "Banners"
+    }
+  ]
+}
+{% endschema %}
