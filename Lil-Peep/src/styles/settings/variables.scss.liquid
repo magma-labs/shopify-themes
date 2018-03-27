@@ -30,6 +30,7 @@ $font-weight-header: $font-weight-bold;
 
 $font-stack-body: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: {{ settings.type_base_size }};
+$Oswald: ""Oswald", sans-serif";
 
 /*============================================================================
   Grid Breakpoints and Class Names
@@ -61,6 +62,10 @@ $breakpoints: (
   $large-up '(min-width: #{$grid-large})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
+$tablet-view: 'screen and (min-width: 768px)';
+$mobile-view: 'screen and (max-width:767px)';
+$small-desktop-view: 'screen and (min-width: 769px)';
+$large-desktop-view: 'screen and (min-width: 1025px)';
 
 /*============================================================================
   Generate breakpoint-specific column widths and push classes

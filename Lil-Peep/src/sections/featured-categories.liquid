@@ -29,7 +29,7 @@
 
 <style>
   {% for block in section.blocks %}
-    .category-{{block.id}} {
+    .category-{{ block.id }} {
       background-image: url('{{ block.settings.banner_img | img_url: 'large' }}');
     }
   {% endfor %}

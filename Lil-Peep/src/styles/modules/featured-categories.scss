@@ -1,11 +1,11 @@
-@media only screen and (max-width: 768px) {
+@media only $mobile-view {
   .categories_main {
     border-color: blue;
     border-style: solid;
     border: 5px;
     background-color: $color_bg;
     border-bottom: 1px solid $color_bd;
-    font-family: "Oswald", sans-serif;
+    font-family: $Oswald;
     margin-top: 15px;
 
     .banner_wooden_toys {
@@ -105,7 +105,7 @@
       text-decoration: none;
 
       .title {
-        font-family: "Oswald", sans-serif;
+        font-family: $Oswald;
         font-size: 16px;
         margin-top: 12px;
       }
@@ -120,7 +120,7 @@
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only $tablet-view {
   .categories_main {
     border-color: blue;
     border-style: solid;
@@ -128,7 +128,7 @@
     border-radius: 3px;
     background-color: $color_bg;
     border-bottom: 1px solid $color_bd;
-    font-family: "Oswald", sans-serif;
+    font-family: $Oswald;
     display: flex;
     justify-content: center;
     margin-top: 30px;
