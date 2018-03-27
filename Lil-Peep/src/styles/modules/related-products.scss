@@ -1,0 +1,19 @@
+.related-product-container {
+  background-color: #{$product-card-category};
+
+  .collection-container {
+    background-color: #{$product-card-category};
+
+    .product-image {
+      justify-content: space-between;
+    }
+  }
+}
+
+.related-product-title {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  padding-top: 20px;
+  font-size: 25px;
+}

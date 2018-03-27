@@ -128,3 +128,18 @@
     </script>
   {% endunless %}
 </div>
+
+<div class="related-product-container">
+  <h2 class="related-product-title">YOU MAY ALSO LIKE</h2>
+  <div class="mobile">
+    {% paginate collection.products by 1 %}
+      {%- include 'collection-container' -%}
+    {% endpaginate %}
+  </div>
+
+  <div class="desktop">
+    {% paginate collection.products by 4 %}
+      {%- include 'collection-container' -%}
+    {% endpaginate %}
+  </div>
+</div>
