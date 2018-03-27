@@ -1,19 +1,15 @@
 /*================ Color Variables ================*/
 $color-primary: {{ settings.color_primary }};
-$color_hover:  #ed7f03;
 
 // Text colors
 $color-body-text: {{ settings.color_body_text }};
-$color_view_detail_button: #fff;
 
 // Backgrounds
 $color-body: #fff;
-$color-button-bg: #4a90e2;
+$color_bg:  #387ada;
 
 // Border colors
 $color-border: #f6f6f6;
-$color_border_button_sailor:  #627387;
-$color_border_button_archeologist: #FFFFFF;
 
 // Helper colors for form error states
 $color-disabled: #000;
@@ -32,7 +28,8 @@ $font-weight-header: $font-weight-bold;
 
 $font-stack-body: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: {{ settings.type_base_size }};
-
+$Oswald: ""Oswald", sans-serif";
+$Lato: "'Lato', sans-serif";
 /*============================================================================
   Grid Breakpoints and Class Names
     - Do not change the variable names
@@ -63,6 +60,12 @@ $breakpoints: (
   $large-up '(min-width: #{$grid-large})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
+$movile-view: 'screen and (max-width:767px)';
+$tablet-view: 'screen and (min-width: 768px)';
+$mobile-view: 'screen and (max-width:767px)';
+$small-desktop-view: 'screen and (min-width: 769px) and (max-width: 1279px)';
+$large-desktop-view: 'screen and (min-width: 1025px)';
+
 
 /*============================================================================
   Generate breakpoint-specific column widths and push classes
@@ -76,8 +79,6 @@ $breakpoint-has-push: ();
 /*================ Sizing Variables ================*/
 $width-site: 1180px;
 $gutter: 30px;
-$min-width_big: 1280px;
-$height_big_banner: 400px;
 
 /*================ Z-Index ================*/
 $z-index-dropdown: 2;
