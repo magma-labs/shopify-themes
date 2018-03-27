@@ -239,8 +239,10 @@
     },
     "footer": {
       "social_platform": "{{ name }} en {{ platform }}",
-      "copyright": "Derechos de autor",
-      "payment_methods": "Medios de pago aceptados"
+      "copyright": "Creado por Crowd Interactive 2015",
+      "payment_methods": "Medios de pago aceptados",
+      "follow_us": "SIGUENOS EN",
+      "join_our_newsletter": "¡SUSCRÍBASE A NUESTRO BOLETÍN!"
     }
   },
   "products": {
@@ -252,7 +254,8 @@
       "on_sale_from_html": "En oferta desde {{ price }}",
       "from_text_html": "De {{ price }}",
       "quantity": "Cantidad",
-      "add_to_cart": "Agregar al carrito"
+      "add_to_cart": "Agregar al carrito",
+      "placeholder_email": "Correo Electrónico"
     }
   },
   "gift_cards": {

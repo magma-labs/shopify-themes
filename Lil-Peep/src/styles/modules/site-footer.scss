@@ -1,0 +1,231 @@
+footer {
+  background-color: #ffffff;
+  border-top-color: rgba(28, 26, 26, 0.1);
+  border-top-style: solid;
+  border-top-width: 1px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.footer-content {
+  margin: 0 40px;
+}
+
+.social-media-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .social-media-box {
+    display: flex;
+    flex: 1;
+    text-align: center;
+
+    .social-media {
+      color: #72808C;
+      display: block;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      line-height: 21px;
+
+      p {
+        @media #{$breakpoint-mobile} {
+          font-size: 14px;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+
+    .social-media-icon-group {
+      @media #{$breakpoint-mobile} {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .sm {
+      align-items: center;
+      border: 2px solid #72808c;
+      border-radius: 3px;
+      display: inline-flex;
+      height: 35px;
+      justify-content: center;
+      width: 100px;
+
+      img {
+        max-height: 20px;
+      }
+
+      @media #{$breakpoint-desktop} {
+        border: 2px solid #72808c;
+        border-radius: 3px;
+        height: 25px;
+        width: 60px;
+      }
+
+      @media #{$breakpoint-mobile} {
+        display: inline-flex;
+        height: 35px;
+        width: 85px;
+      }
+    }
+
+    .twt {
+      margin: 0 7px 0 7px;
+
+      @media #{$breakpoint-mobile} {
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+    }
+
+    @media #{$breakpoint-mobile} {
+      display: block;
+      height: auto;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .logo {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+
+    .site-logo {
+      display: block;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    @media #{$breakpoint-mobile} {
+      display: none;
+    }
+  }
+
+  .newsletter {
+    align-items: flex-end;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    text-align: center;
+
+    .box-newsletter {
+      justify-content: center;
+
+      p {
+        color: #72808c;
+        @media #{$breakpoint-desktop} {
+          font-size: 15px;
+        }
+
+        @media #{$breakpoint-mobile} {
+          font-size: 15px;
+          text-align: center;
+        }
+      }
+
+      input {
+        background-color: #fbfbfb;
+        border: 2px solid #d2d2d2;
+        border-radius: 2px;
+        height: 20px;
+        width: 300px;
+        @media #{$breakpoint-desktop} {
+          width: 200px;
+        }
+
+        @media #{$breakpoint-mobile} {
+          height: 40px;
+          width: 305px;
+        }
+      }
+    }
+
+    @media #{$breakpoint-mobile} {
+      display: block;
+      justify-content: center;
+      text-align: center;
+      transform: translateY(5px);
+      width: 100%;
+    }
+  }
+
+  @media #{$breakpoint-mobile} {
+    display: block;
+    width: 100%;
+  }
+}
+
+.information {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 18px;
+  text-align: center;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: #72808C;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        line-height: 21px;
+        text-decoration: none;
+
+        @media #{$breakpoint-desktop} {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media #{$breakpoint-mobile} {
+    display: none;
+  }
+}
+
+.author {
+  color: #72808c;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+
+  p {
+    @media #{$breakpoint-mobile} {
+      font-size: 12px;
+      margin-top: 35px;
+    }
+  }
+
+  @media #{$breakpoint-mobile} {
+    margin-top: 30px;
+  }
+}
+
+@media #{$breakpoint-mobile} {
+  margin: 0;
+}
