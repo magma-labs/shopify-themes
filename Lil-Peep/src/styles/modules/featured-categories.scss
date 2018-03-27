@@ -3,9 +3,9 @@
     border-color: blue;
     border-style: solid;
     border: 5px;
-    background-color: #{ $color-bg };
-    border-bottom: 1px solid #{ $color-bd };
-    font-family: #{ $Oswald };
+    background-color: $color-bg;
+    border-bottom: 1px solid $color-bd;
+    font-family: $Lato;
     margin-top: 15px;
 
     .banner-wooden-toys {
@@ -27,7 +27,7 @@
         }
 
         .title {
-          color: white;
+          color: $color-body;
           margin-bottom: 5px;
           margin-left: 8px;
         }
@@ -52,7 +52,7 @@
       }
 
       .title {
-        color: white;
+        color: $color-body;
         margin-bottom: 5px;
         margin-left: 8px;
         text-decoration: none;
@@ -79,7 +79,7 @@
     }
 
     .title {
-      color: white;
+      color: $color-body;
       margin-bottom: 5px;
       margin-left: 8px;
       text-decoration: none;
@@ -93,10 +93,10 @@
     text-align: center;
 
     .scroll-up-button {
-      background-color: #{ $color-bg-scroll };
+      background-color:  $color-bg-scroll;
       border-radius: 3px;
       border-style: none;
-      color: white;
+      color: $color-body;
       display: flex;
       display: inline-flex;
       height: 40px;
@@ -105,7 +105,7 @@
       text-decoration: none;
 
       .title {
-        font-family: #{ $Oswald };
+        font-family:  $Lato;
         font-size: 16px;
         margin-top: 12px;
       }
@@ -126,9 +126,9 @@
     border-style: solid;
     border: 5px;
     border-radius: 3px;
-    background-color: #{ $color-bg };
-    border-bottom: 1px solid #{ $color-bd };
-    font-family: #{ $Oswald };
+    background-color:  $color-bg;
+    border-bottom: 1px solid  $color-bd;
+    font-family:  $Lato;
     display: flex;
     justify-content: center;
     margin-top: 30px;
@@ -152,7 +152,7 @@
         width: 100%;
 
         .title {
-          color: white;
+          color: $color-body;
           margin-bottom: 5px;
           margin-left: 8px;
         }
@@ -174,7 +174,7 @@
 
 
         .title {
-          color: white;
+          color: $color-body;
           margin-bottom: 5px;
           margin-left: 8px;
         }
@@ -196,7 +196,7 @@
         width: 100%;
 
        .title {
-          color: white;
+          color: $color-body;
           margin-bottom: 5px;
           margin-left: 8px;
         }
