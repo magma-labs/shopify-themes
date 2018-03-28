@@ -10,17 +10,18 @@
     rgba(200, 190, 183, 1) 30%,
     rgba(200, 190, 183, 1) 30%,
     rgba(200, 190, 183, 0));
-  color: white;
+  color: $color-white;
   display: flex;
   flex-direction: column;
   height: 250px;
   justify-content: center;
   text-align: center;
   width: 50%;
+
   p {
     margin-left: 80px;
     padding-right: 80px;
-    font-family: "Lato", sans-serif;
+    font-family: $Lato;
   }
 }
 @media only screen and ( max-width: 768px) {
