@@ -5,7 +5,6 @@
         <img class="offers-title-icon" src="{{ section.settings.offers_title_icon | img_url: '100x' }}" alt="">
       </div>
     </div>
-
     <div class="offers-message-box">
       <p class="offers-title">{{ section.settings.offers_title }}</p>
       <p class="offers-description">{{ section.settings.offers_description }}
@@ -66,7 +65,8 @@
   background-position: right;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 768px){
+
+@media only screen and (min-width: 768px) {
   .offers-box {
     background-image: url({{ section.settings.offers_img_background_desktop | img_url: '800x' }});
     background-size: auto 380px;
