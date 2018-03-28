@@ -28,6 +28,9 @@ $font-size-button-xlarge-desktop: 50px;
 
 $font-slider-description: 'Playfair Display', sans-serif;
 $font-slider-button: 'Playfair Display', sans-serif;
+$font-section-title: 'Playfair Display', sans-serif;
+$font-product-title: 'Playfair Display', sans-serif;
+$font-product-price: 'Merriweather Sans', sans-serif;
 
 $playfair-display: "Playfair Display";
 $merriweathersans: "Merriweather Sans";
@@ -38,12 +41,15 @@ $font-header: $font-menu-header;
 $font-navbar: 'Playfair Display', sans-serif;
 $font-stack-header: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-weight-header: $font-weight-bold;
+$font-default: sans-serif;
 
 
 $color-featured: #e83671;
 $color-white-solid: #fff;
 $color-box-banner: #f3f9ef;
+$color-product-thumb-border: rgba($color-featured, 0.2);
 
 $color-black-solid: #000;
 $color-border: #f6f6f6;
 $color-text-box: #555;
+$color-disabled: #6f6f6f;
