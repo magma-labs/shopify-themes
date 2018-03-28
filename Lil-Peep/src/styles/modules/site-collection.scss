@@ -263,35 +263,36 @@
 
 .scroll-up {
   align-items: center;
-  background-color: #{$view-green};
+  background-color: $view-green;
   border-radius: 3px;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  padding: 0 10px 0 10px;
   text-align: center;
-  width: 60%;
-
-  p {
-    font-family: "Oswald", sans-serif;
-    font-size: 16px;
-    margin-right: 5px;
-  }
+  width: 140;
 
   .scroll-up-button {
     align-items: center;
     border-style: none;
-    color: white;
+    color: $color-body;
     display: flex;
     height: 40px;
     justify-content: center;
+    width: 90px;
     text-decoration: none;
 
-    img {
-      height: 15px;
+    .title {
+      font-family:  $Oswald;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .up-arrow {
+      display: flex;
+      align-self: center;
+      height: 10px;
+      width: 15px;
       padding-left: 10px;
-      padding-top: 10px;
-      width: 28px;
     }
   }
 
