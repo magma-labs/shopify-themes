@@ -1,0 +1,75 @@
+<section class="offers-section">
+  <div class="offers-box">
+    <div class="offers-header">
+      <div class="offers-title-box">
+        <img class="offers-title-icon" src="{{ section.settings.offers_title_icon | img_url: '100x' }}" alt="">
+      </div>
+    </div>
+
+    <div class="offers-message-box">
+      <p class="offers-title">{{ section.settings.offers_title }}</p>
+      <p class="offers-description">{{ section.settings.offers_description }}
+        <span class="offers-price">{{ section.settings.offers_price | money_without_trailing_zeros }}</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name":"Special offers banner",
+  "settings":[
+    {
+      "type":"image_picker",
+      "id":"offers_title_icon",
+      "label":"offer icon"
+    },
+    {
+      "type": "text",
+      "id": "offers_title",
+      "label": "Offers title"
+    },
+    {
+      "type": "text",
+      "id": "offers_description",
+      "label": "Offers description"
+    },
+    {
+      "type": "text",
+      "id": "offers_price",
+      "label": "Price"
+    },
+    {
+      "type":"image_picker",
+      "id":"offers_img_background_mobile",
+      "label":"background image mobile"
+    },
+    {
+      "type":"image_picker",
+      "id":"offers_img_background_desktop",
+      "label":"background image desktop"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotions",
+      "category": "offers section"
+    }
+  ]
+}
+{% endschema %}
+
+<style type="text/css">
+.offers-box {
+  background-image: url({{ section.settings.offers_img_background_mobile | img_url: '800x' }});
+  background-size: auto 280px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px){
+  .offers-box {
+    background-image: url({{ section.settings.offers_img_background_desktop | img_url: '800x' }});
+    background-size: auto 380px;
+  }
+}
+</style>
