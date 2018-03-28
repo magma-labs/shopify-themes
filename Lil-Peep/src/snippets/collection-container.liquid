@@ -1,17 +1,17 @@
 <div class="collection-container">
-  {% for product in collection.products %}
+  {% for product in product_collection.products %}
     <div class="product-card-category">
       <div class="products-slider">
         <div class="front-label">
-        {% assign date_created = product.created_at | date:'%s' %}
-        {% assign     date_now = 'now' | date:'%s' %}
-        {% assign   difference = date_now | minus: date_created %}
+          {% assign date_created = product.created_at | date:'%s' %}
+          {% assign     date_now = 'now' | date:'%s' %}
+          {% assign   difference = date_now | minus: date_created %}
 
-        {% if difference < 172800 %}
-          <p class="new-product">NEW</p>
-        {% else %}
-          <p class="not-new-product">NOT NEW</p>
-        {% endif %}
+          {% if difference < 172800 %}
+            <p class="new-product">NEW</p>
+          {% else %}
+            <p class="not-new-product">NOT NEW</p>
+          {% endif %}
         </div>
         <div class="product-image">
           {% if product.featured_image != blank %}

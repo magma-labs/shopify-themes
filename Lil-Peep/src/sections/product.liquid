@@ -1,3 +1,5 @@
+{%- assign collection_product = collection -%}
+
 <div class="current-route-container">
   <section class="current-route">
     <a class="home-route-section">HOME</a>
@@ -132,14 +134,14 @@
 <div class="related-product-container">
   <h2 class="related-product-title">{{ 'products.product.related-products' | t }}</h2>
   <div class="mobile">
-    {% paginate collection.products by 1 %}
-      {%- include 'collection-container' -%}
+    {% paginate collection_product.products by 1 %}
+      {%- include 'collection-container', product_collection: collection_product -%}
     {% endpaginate %}
   </div>
 
   <div class="desktop">
-    {% paginate collection.products by 4 %}
-      {%- include 'collection-container' -%}
+    {% paginate collection_product.products by 4 %}
+      {%- include 'collection-container', product_collection: collection_product -%}
     {% endpaginate %}
   </div>
 </div>
