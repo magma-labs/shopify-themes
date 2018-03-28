@@ -1,12 +1,12 @@
-.banner_section {
+.banner-section {
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
 }
 
-.banner_content {
+.banner-content {
   background: linear-gradient(90deg,
-    rgba(200, 190, 183, 1 ),
+    rgba(200, 190, 183, 1),
     rgba(200, 190, 183, 1) 30%,
     rgba(200, 190, 183, 1) 30%,
     rgba(200, 190, 183, 0));
@@ -19,13 +19,14 @@
   width: 50%;
 
   p {
+    font-family: $Lato;
     margin-left: 80px;
     padding-right: 80px;
-    font-family: $Lato;
   }
 }
-@media only screen and ( max-width: 768px) {
-  .banner_content {
+
+@media only screen and (max-width: 768px) {
+  .banner-content {
     display: none;
   }
 }

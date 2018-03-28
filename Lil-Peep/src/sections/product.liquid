@@ -129,14 +129,14 @@
   {% endunless %}
 </div>
 
-<div class="banner_section">
-  <div class="banner_content">
+<div class="banner-section">
+  <div class="banner-content">
     <h3>{{ section.settings.title }}</h3>
     <p>{{ section.settings.description }}</p>
   </div>
 </div>
 <style>
-.banner_section {
+.banner-section {
   background-image: url("{{ section.settings.banner_img | img_url: 'master' }}");
 }
 </style>
