@@ -41,12 +41,7 @@ footer {
       }
     }
 
-    .social-media-icon-group {
-      @media #{$breakpoint-mobile} {
-        flex-direction: column;
-        justify-content: center;
-      }
-    }
+  
 
     .sm {
       align-items: center;

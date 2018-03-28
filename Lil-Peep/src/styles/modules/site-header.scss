@@ -1,9 +1,255 @@
-/*================ Site Header ================*/
-.site-logo {
-  display: block;
+@media only screen and ( min-width: 769px) {
+  .sidenav {
+    display: none;
+  }
 
-  img {
-    display: block;
-    width: 100%;
+  .navbar {
+    display: none;
+  }
+
+  .header-mobile-section {
+    display: none;
+  }
+
+  .section-header {
+    padding: 15px;
+
+    header {
+      display: flex;
+
+      .header-logo {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+      }
+
+      a {
+        color: $color-categories-text;
+        text-decoration: none;
+      }
+
+      .site-logo {
+        left: 90%;
+        position: relative;
+      }
+
+      .site-header__logo-image {
+        left: 50%;
+        position: relative;
+      }
+
+      .searchlogin {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+      }
+
+      .customer-login {
+        li {
+          display: flex;
+          margin-right: 20px;
+        }
+
+        ul {
+          display: flex;
+          margin-right: 20px;
+        }
+
+        .site-logo {
+          display: flex;
+
+          img {
+            display: block;
+            justify-content: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .site-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    a {
+      color: $color-categories-text;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-text-hover;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .show-menu {
+    width: 90%;
+  }
+
+  .hide-menu {
+    width: 0;
+  }
+
+  .section-header {
+    display: none;
+  }
+
+  .header-mobile-section {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+
+    .iconmenu-left {
+      background-color: $color-white;
+      border: none;
+      color: $color-theme-lilpeep;
+    }
+
+    .header-logo {
+      margin-bottom: 0;
+    }
+  }
+
+  .iconmenu1 {
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: $color-theme-lilpeep;
+    display: flex;
+    font-size: 16px;
+  }
+
+  .sidenav {
+    background-color: $color-white;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    transition: 0.5s;
+
+    .sidenav-logo {
+      display: flex;
+      height: 50px;
+      justify-content: space-around;
+      margin-bottom: 10px;
+
+    .closebtn {
+      background-color: $color-white;
+      border: none;
+      color: $color-theme-lilpeep;
+      padding-top: 20px;
+      }
+    }
+  }
+
+  .header-mobile {
+    background-color: $color-header-mobile;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: $color-white-font;
+        display: block;
+        font-size: 16px;
+        list-style: none;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      .line {
+        border: 2px solid $color-line;
+        box-sizing: border-box;
+        height: 2px;
+        width: 228px;
+      }
+  }
+
+  .footer-mobile {
+    color: $color-theme-lilpeep;
+    text-align: center;
+
+    .social-media-mobile {
+      margin-top: 25px;
+    }
+
+    .social-media-icon {
+      align-content: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon-social-media {
+      align-items: center;
+      background-repeat: no-repeat;
+      border-radius: 3px;
+      border: 2px solid $color-border-box;
+      display: flex;
+      height: 35px;
+      justify-content: center;
+      margin-left: 3px;
+      margin-right: 3px;
+      width: 73px;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .box-newsletter {
+      margin-top: 25px;
+
+      .email-box {
+        background-color: $color-email-box;
+        border-radius: 2px;
+        border: 2px solid $color-border-email-box;
+        color: $color-theme-lilpeep;
+        height: 35px;
+        margin-bottom: 20px;
+        width: 227px;
+      }
+    }
+
+    .site-nav2 {
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        padding-bottom: 20px;
+          }
+
+      a {
+        text-decoration: none;
+        color: $color-categories-text;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .author {
+      color: $color-border-box;
+      font-size: 12px;
+    }
   }
 }
