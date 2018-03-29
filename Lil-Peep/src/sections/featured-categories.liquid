@@ -1,17 +1,3 @@
-{% for collection in collections offset:2 %}
-  {% if collection.title == "OUTDOORS" %}
-    {% assign outdoors = collection.url %}
-  {% endif %}
-
-  {% if collection.title == "PLUSH TOYS" %}
-    {% assign plush-toys = collection.url %}
-  {% endif %}
-
-  {% if collection.title == "WOODEN TOYS" %}
-    {% assign wooden-toys = collection.url %}
-  {% endif %}
-{% endfor %}
-
 <div class="categories-main">
   {% for block in section.blocks %}
     {% case block.settings.opc %}
@@ -30,7 +16,7 @@
     {% endcase %}
         <div class="{{ class-name }} category-{{ block.id }}">
           <div class="{{second-class}}">
-            <a href="{{ collection_url }}" class="cont">
+            <a href="https://luisarmandodv.myshopify.com/collections/{{ block.settings.kits }}" class="cont">
               <h2 class="title">{{ block.settings.title }}</h2>
             </a>
         </div>
@@ -91,7 +77,13 @@
          ],
          "default":   "1",
          "info":      "Just one of each type"
-       }
+       },
+       {
+         "type":      "collection",
+         "id":        "kits",
+         "label":     "Colletions",
+         "info":      "Choose the collection"
+      }
      ]
    }
  ],
