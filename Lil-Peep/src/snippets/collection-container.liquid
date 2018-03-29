@@ -33,9 +33,7 @@
         </p>
         <div class="price">
           <p class="price">
-
-                {{ product.price | money }} USD
-
+            {{ product.price | money }} USD
             {% if product.compare_at_price > product.price %}
               <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
               <p class="offer">{{ product.compare_at_price | money }} USD </p>
@@ -44,11 +42,10 @@
             {% unless product.available %}
               {{ 'products.product.sold_out' | t }}
             {% endunless %}
-
           </p>
         </div>
         <div class="view-in-detail">
-          <a href="" type="button" name="view-button">
+          <a href="javascript:void(0)" type="button" name="view-button">
             <h4>{{ 'collections.general.view' | t }}</h4>
           </a>
         </div>
@@ -58,7 +55,7 @@
   {% else %}
     {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
       {% for i in (1..8) %}
-        <a href="#">
+        <a href="javascript:void(0)">
           {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
           {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
         </a>
