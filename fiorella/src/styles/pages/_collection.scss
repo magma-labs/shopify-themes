@@ -1,0 +1,150 @@
+.desktop-view {
+  display: none;
+}
+
+.collection-header {
+  padding: 0 10px;
+  text-align: center;
+
+  h1 {
+    margin-top: 5px;
+  }
+}
+
+.return-button-container {
+  font-family: $font-default;
+  margin: 5px 0 0;
+  text-align: right;
+  width: 100%;
+
+  a {
+    color: $color-black-solid;
+    text-decoration: none;
+  }
+}
+
+.collection-header-banner {
+  display: block;
+  width: 100%;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.collection-title {
+  font-family: $font-section-title;
+  font-weight: $font-light;
+  overflow: hidden;
+
+  &:after,
+  &:before {
+    background-color: $cerise-red;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  &:after {
+    left: 10px;
+    margin-right: -50%;
+  }
+
+  &:before {
+    margin-left: -50%;
+    right: 10px;
+  }
+}
+
+.product-thumbnail {
+  border: 1px solid $color-product-thumb-border;
+  margin: 10px;
+  text-align: center;
+
+  .product-title {
+    font-family: $font-product-title;
+    font-weight: $font-weight-bold;
+  }
+
+  .product-title-link {
+    color: $color-black-solid;
+    text-decoration: none;
+  }
+
+  .product-price {
+    color: $color-featured;
+    font-family: $font-product-price;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.pagination {
+  display: flex;
+  font-family: $font-default;
+  justify-content: space-between;
+  margin: 0 20px;
+
+  a {
+    color: $color-black-solid;
+    text-decoration: none;
+  }
+
+  .disable-paginate-control {
+    color: $color-disabled;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@media #{$tablet-view} {
+  .mobile-view {
+    display: none;
+  }
+
+  .desktop-view {
+    display: block;
+    margin: 0 10px;
+  }
+
+  .collection-header-banner {
+    margin-top: 10px;
+  }
+
+  .products-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .product-thumbnail {
+    display: flex;
+    flex: 1 0 30%;
+    flex-direction: column;
+    font-size: 15px;
+    justify-content: space-between;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .pagination {
+    justify-content: flex-end;
+    margin: 0 10px 10px 0;
+  }
+
+  .prev-button {
+    margin-right: 50px;
+  }
+}
+
+@media #{$large-desktop-view} {
+  .product-thumbnail {
+    font-size: 20px;
+  }
+}

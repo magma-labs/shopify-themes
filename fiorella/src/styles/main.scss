@@ -8,6 +8,7 @@
 /*================ ABSTRACTS ================*/
 @import url('abstracts/_variables.scss.liquid');
 @import url('abstracts/_variables.scss');
+@import url('abstracts/_placeholders.scss');
 @import url('abstracts/_mixins.scss');
 
 /*================ COMMON ================*/
@@ -30,3 +31,4 @@
 @import url('layout/_slider.scss');
 @import url('layout/_footer.scss');
 @import url('layout/_special-offers-banner.scss');
+@import url('pages/_collection.scss');

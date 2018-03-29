@@ -1,3 +1,12 @@
 <div class="pagination">
-  {{ paginate | default_pagination }}
+  {% if paginate.previous.is_link %}
+    <a href="{{ paginate.previous.url }}" class="prev-button">« PREV</a>
+  {% else %}
+    <a href="#" class="disable-paginate-control prev-button">« PREV</a>
+  {% endif %}
+  {% if paginate.next.is_link %}
+    <a href="{{ paginate.next.url }}">NEXT »</a>
+  {% else %}
+    <a href="#" class="disable-paginate-control">NEXT »</a>
+  {% endif %}
 </div>
