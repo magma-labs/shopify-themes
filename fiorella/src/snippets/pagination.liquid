@@ -1,12 +1,32 @@
-<div class="pagination">
+<div class="pagination pagination-controls">
   {% if paginate.previous.is_link %}
-    <a href="{{ paginate.previous.url }}" class="prev-button">« PREV</a>
+  <a href="{{ paginate.previous.url }}" class="prev-button">
+    <div class="paginate-control paginate-control-prev">
+      {{ 'arrow_left.png' | asset_url | img_tag: 'Arrow left' }}
+      <p>  {{ 'collections.pagination.prev_button' | t | upcase }}</p>
+    </div>
+  </a>
   {% else %}
-    <a href="#" class="disable-paginate-control prev-button">« PREV</a>
+  <a href="#" class="disable-paginate-control prev-button">
+    <div class="paginate-control paginate-control-prev">
+      {{ 'arrow_left.png' | asset_url | img_tag: 'Arrow left' }}
+      <p>  {{ 'collections.pagination.prev_button' | t | upcase }}</p>
+    </div>
+  </a>
   {% endif %}
   {% if paginate.next.is_link %}
-    <a href="{{ paginate.next.url }}">NEXT »</a>
+  <a href="{{ paginate.next.url }}">
+    <div class="paginate-control paginate-control-next">
+      <p>{{ 'collections.pagination.next_button' | t | upcase }}</p>
+      {{ 'arrow_right.png' | asset_url | img_tag: 'Arrow right' }}
+    </div>
+  </a>
   {% else %}
-    <a href="#" class="disable-paginate-control">NEXT »</a>
+  <a href="#" class="disable-paginate-control">
+    <div class="paginate-control paginate-control-next">
+      <p>{{ 'collections.pagination.next_button' | t | upcase }}</p>
+      {{ 'arrow_right.png' | asset_url | img_tag: 'Arrow right' }}
+    </div>
+  </a>
   {% endif %}
 </div>
