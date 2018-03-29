@@ -1,9 +1,9 @@
-{%- assign collection_product = collection -%}
-
 <div class="current-route-container">
   <section class="current-route">
     <a class="home-route-section">HOME</a>
-    <a class="home-route-section">&gt; {{ collection.title | upcase}}</a>
+    {% if collection.title != blank %}
+      <a class="home-route-section">&gt; {{ collection.title | upcase}}</a>
+    {% endif %}
     <a class="categories-route-section">&gt; {{ product.title | upcase}}</a>
   </section>
 </div>
@@ -131,6 +131,7 @@
   {% endunless %}
 </div>
 
+{%- assign collection_product = collections.featured_products -%}
 <div class="related-product-container">
   <h2 class="related-product-title">{{ 'products.product.related-products' | t }}</h2>
   <div class="mobile">
