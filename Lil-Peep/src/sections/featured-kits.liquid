@@ -7,7 +7,7 @@
             <h1 class="big-banner-title">{{ block.settings.title }}</h1>
             <p class="big-banner-description">{{ block.settings.description }}</p>
             <div class="view-in-detail">
-              <a href="#" >
+              <a href="{{ block.settings.url }}" >
                 <h4 class="view-detail-button">{{ block.settings.button }}</h4>
               </a>
             </div>
@@ -33,7 +33,7 @@
           <div class="mid-banner-content">
             <h1>{{ block.settings.title }}</h1>
             <p class="description">{{ block.settings.description }}</p>
-            <button class="button-mid-banner button-sailor" type="button" name="button">
+            <button class="button-mid-banner button-sailor" type="button" name="button" onclick="window.location.href='{{ block.settings.url }}'">
               <h1 class="h1-sailor">{{ block.settings.button }}</h1>
             </button>
           </div>
@@ -44,7 +44,7 @@
             <div class="mid-banner-content">
               <h1>{{ block.settings.title }}</h1>
               <p class="description">{{ block.settings.description }}</p>
-              <button class="button-mid-banner button-archeologist" type="button" name="button">
+              <button class="button-mid-banner button-archeologist" type="button" name="button" onclick="window.location.href='{{ block.settings.url }}'">
                 <h1 class="h1-archeologist">{{ block.settings.button }}</h1>
               </button>
             </div>
@@ -188,6 +188,12 @@
          ],
          "default":   "1",
          "info":      "Just one of each type"
+       },
+       {
+         "type": "text",
+         "id": "url",
+         "label": "URL",
+         "default": "Text"
        }
      ]
    }

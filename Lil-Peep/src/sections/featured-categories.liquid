@@ -1,21 +1,38 @@
+{% for collection in collections offset:2 %}
+  {% if collection.title == "OUTDOORS" %}
+    {% assign outdoors = collection.url %}
+  {% endif %}
+
+  {% if collection.title == "PLUSH TOYS" %}
+    {% assign plush-toys = collection.url %}
+  {% endif %}
+
+  {% if collection.title == "WOODEN TOYS" %}
+    {% assign wooden-toys = collection.url %}
+  {% endif %}
+{% endfor %}
+
 <div class="categories-main">
   {% for block in section.blocks %}
     {% case block.settings.opc %}
         {% when '1' %}
           {%  assign class-name = "banner-wooden-toys" %}
           {%  assign second-class = "wooden-toys-content"%}
+          {%  assign collection_url = outdoors %}
         {% when '2' %}
           {%  assign class-name = "banner-plush-toys" %}
           {%  assign second-class = "plush-toys-content"%}
+          {%  assign collection_url = plush-toys %}
         {% when '3' %}
           {%  assign class-name = "banner-outdoors" %}
           {%  assign second-class = "outdoors-content" %}
+          {%  assign collection_url = wooden-toys %}
     {% endcase %}
         <div class="{{ class-name }} category-{{ block.id }}">
           <div class="{{second-class}}">
-            <a href="/categories.html" class="cont">
+            <a href="{{ collection_url }}" class="cont">
               <h2 class="title">{{ block.settings.title }}</h2>
-          }  </a>
+            </a>
         </div>
       </div>
   {% endfor %}
