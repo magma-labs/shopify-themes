@@ -11,20 +11,15 @@
           {%  assign class-name = "banner-outdoors" %}
           {%  assign second-class = "outdoors-content" %}
     {% endcase %}
-        <div class="{{ class-name }} category-{{ block.id }}" >
+        <div class="{{ class-name }} category-{{ block.id }}">
           <div class="{{second-class}}">
             <a href="/categories.html" class="cont">
               <h2 class="title">{{ block.settings.title }}</h2>
-            </a>
+          }  </a>
         </div>
       </div>
   {% endfor %}
-  <div class="scroll-up">
-    <a href="#" class="scroll-up-button" name="scrollup">
-      <h3 class="title">SCROLL UP</h3>
-      <img class="up-arrow" src="{{ 'arrow-up-white.png' | asset_url }}" alt="Arrow Up">
-    </a>
-  </div>
+  {% include 'scroll-up' %}
 </div>
 
 <style>
@@ -85,7 +80,7 @@
  ],
   "presets": [
     {
-      "name": "Featured Kits",
+      "name": "Featured Categories",
       "category": "Banners"
     }
   ]
