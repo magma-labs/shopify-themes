@@ -43,6 +43,12 @@
       "title": "Search for products on our site",
       "placeholder": "Search",
       "submit": "Search"
+    },
+    "routes": {
+      "home_page": "Home"
+    },
+    "navigation": {
+      "return_button": "Back"
     }
   },
   "blogs": {
