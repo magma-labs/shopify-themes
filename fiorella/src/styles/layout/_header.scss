@@ -276,8 +276,10 @@
   .navbar {
     display: flex;
     font-family: $font-navbar;
+    font-size: 15px;
     justify-content: center;
     margin-bottom: 15px;
+    padding: 0 100px;
     text-transform: uppercase;
 
     a {
@@ -291,13 +293,29 @@
       }
     }
 
-    @include reset-ul(inline);
+    @include reset-ul(flex);
+  }
+
+  .navbar-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .navbar-element-container {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 20px;
+      right: 0;
+    }
   }
 
   .navbar-separator {
     color: $color-featured;
-    font-size: 20px;
-    margin: 0 20px;
   }
 }
 
@@ -313,6 +331,6 @@
 
   .navbar-separator {
     font-size: 30px;
-    margin: 0 40px;
+    font-weight: $font-weight-bold;
   }
 }

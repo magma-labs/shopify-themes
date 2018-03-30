@@ -67,12 +67,14 @@
         </a>
       </div>
       <div class="navbar">
-        <ul>
+        <ul class="navbar-container">
           {% for collection in collections %}
-          <li><a href="{{ collection.url }}" class="navbar-element">{{ collection.title }}</a></li>
-          {% if forloop.last != true %}
-          <span class="navbar-separator">|</span>
-          {% endif %}
+            <li class="navbar-element-container">
+              <a href="{{ collection.url }}" class="navbar-element">{{ collection.title }}</a>
+              {% if forloop.last != true %}
+              <span class="navbar-separator">|</span>
+              {% endif %}
+            </li>
           {% endfor%}
         </ul>
       </div>
