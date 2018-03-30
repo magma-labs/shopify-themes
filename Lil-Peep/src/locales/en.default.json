@@ -222,7 +222,8 @@
     "onboarding": {
       "product_title": "Example Product Title",
       "collection_title": "Example Collection Title",
-      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
+      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar.",
+      "featured-products": "FEATURED TOYS"
     }
   },
   "layout": {
@@ -260,7 +261,8 @@
       "quantity": "Quantity",
       "add_to_cart": "ADD TO CART",
       "description-title": "DESCRIPTION:",
-      "free-shipping": "*FREE SHIPPING FOR ALL ORDERS INSIDE THE U.S."
+      "free-shipping": "*FREE SHIPPING FOR ALL ORDERS INSIDE THE U.S.",
+      "related-products": "YOU MAY ALSO LIKE"
     }
   },
   "gift_cards": {

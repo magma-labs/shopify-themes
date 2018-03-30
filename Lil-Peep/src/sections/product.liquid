@@ -1,7 +1,9 @@
 <div class="current-route-container">
   <section class="current-route">
     <a class="home-route-section">HOME</a>
-    <a class="home-route-section">&gt; {{ collection.title | upcase}}</a>
+    {% if collection.title != blank %}
+      <a class="home-route-section">&gt; {{ collection.title | upcase}}</a>
+    {% endif %}
     <a class="categories-route-section">&gt; {{ product.title | upcase}}</a>
   </section>
 </div>
@@ -129,47 +131,20 @@
   {% endunless %}
 </div>
 
-<div class="banner-section">
-  <div class="banner-content">
-    <h2>{{ section.settings.title }}</h2>
-    <p>{{ section.settings.description }}</p>
+{%- assign collection_product = collections.featured_products -%}
+<div class="related-product-container">
+  <h2 class="related-product-title">{{ 'products.product.related-products' | t }}</h2>
+  <div class="mobile">
+    {% paginate collection_product.products by 1 %}
+      {%- include 'collection-container', product_collection: collection_product -%}
+    {% endpaginate %}
+  </div>
+
+  <div class="desktop">
+    {% paginate collection_product.products by 4 %}
+      {%- include 'collection-container', product_collection: collection_product -%}
+    {% endpaginate %}
   </div>
 </div>
-<style>
-.banner-section {
-  background-image: url("{{ section.settings.banner_img | img_url: 'master' }}");
-}
-</style>
 
-
-{% schema %}
-{
- "name": "Banner",
-  "settings":[
-      {
-         "type":"image_picker",
-         "id":"banner_img",
-         "label":"Image",
-         "info":"image should be 800px x 800px"
-       },
-       {
-         "type": "text",
-         "id": "title",
-         "label": "Title",
-         "default": "Title"
-       },
-       {
-         "type": "text",
-         "id": "description",
-         "label": "Description",
-         "default": "Description"
-       }
-    ],
-     "presets": [
-       {
-         "name": "Description",
-         "category": "Banners"
-       }
-     ]
-  }
-{% endschema %}
+{%- include 'scroll-up' -%}
