@@ -1,0 +1,55 @@
+$mobile: "only screen and (min-width: 767px)";
+$tablet: "only screen and (min-width: 768px) and (max-width: 1023px)";
+$desktop: "only screen and (min-width: 1024px)";
+
+$tablet-view: 'screen and (min-width: 768px)';
+$small-desktop-view: 'screen and (min-width: 769px)';
+$large-desktop-view: 'screen and (min-width: 1025px)';
+
+$cerise-red: #e83671;
+$cerise-red-hover: rgba($cerise-red, 0.7);
+$font-color-white: #ffffff;
+$border-color-white: #ffffff;
+$peppermind-color: #f3f9ef;
+$text-color-black: #000000;
+
+$font-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-size-description-tablet: 20px;
+$font-size-button-tablet: 30px;
+$font-size-description-small-desktop: 28px;
+$font-size-button-small-desktop: 40px;
+$font-size-description-large-desktop: 35px;
+$font-size-button-large-desktop: 45px;
+$font-size-description-xlarge-desktop: 40px;
+$font-size-button-xlarge-desktop: 50px;
+
+$font-slider-description: 'Playfair Display', sans-serif;
+$font-slider-button: 'Playfair Display', sans-serif;
+$font-section-title: 'Playfair Display', sans-serif;
+$font-product-title: 'Playfair Display', sans-serif;
+$font-product-price: 'Merriweather Sans', sans-serif;
+
+$playfair-display: "Playfair Display";
+$merriweathersans: "Merriweather Sans";
+$merriweather-sans: "Merriweather Sans", sans-serif;
+
+$font-menu-header: 'Merryweather Sans', sans-serif;
+$font-header: $font-menu-header;
+$font-navbar: 'Playfair Display', sans-serif;
+$font-stack-header: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-weight-header: $font-weight-bold;
+$font-default: sans-serif;
+
+
+$color-featured: #e83671;
+$color-white-solid: #fff;
+$color-box-banner: #f3f9ef;
+$color-product-thumb-border: rgba($color-featured, 0.2);
+
+$color-black-solid: #000;
+$color-border: #f6f6f6;
+$color-text-box: #555;
+$color-disabled: #6f6f6f;

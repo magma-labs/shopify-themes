@@ -1,0 +1,13 @@
+{% section 'collection-hero' %}
+
+<div class="mobile-view">
+  {% paginate collection.products by 4 %}
+    {% include 'products' %}
+  {% endpaginate %}
+</div>
+
+<div class="desktop-view">
+  {% paginate collection.products by 6 %}
+    {% include 'products' %}
+  {% endpaginate %}
+</div>

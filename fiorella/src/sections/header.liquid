@@ -1,0 +1,147 @@
+<style>
+  {% if section.settings.logo != blank %}
+    .site-header__logo-image {
+      max-width: {{ section.settings.logo_max_width }}px;
+    }
+  {% endif %}
+</style>
+<div data-section-id="{{ section.id }}" data-section-type="header-section">
+  <header role="banner" class="">
+    <div id="menu" class="menu-container">
+      <div class="menu-top-section">
+        {{ 'logo2_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
+        <div id="hide-menu-btn" class="menu-close">
+          <button type="button" name="btn">{{ 'icon-hamburger.png' | asset_url | img_tag: 'Burguer Menu'}}</button>
+        </div>
+      </div>
+      <div class="search-container">
+        <form action="/search" method="get" role="search">
+          {% include 'search-field' %}
+        </form>
+      </div>
+      <div class="mobile-nav">
+        {% include 'navbar-elements' %}
+      </div>
+      <div class="mobile-user-buttons">
+        {% include 'registration-links' %}
+      </div>
+      <div class="mobile-info-buttons">
+        {% include 'contact-buttons' %}
+      </div>
+    </div>
+
+    <div class="mobile-top-section">
+      <div id="show-menu-btn" class="menu-open">
+        <button type="button" name="btn">{% include 'icon-hamburger' %}</button>
+      </div>
+      <div class="logo-mobile-container">
+        {{ 'logo1_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
+      </div>
+      <div class="header-cart-button">
+        <p class="cart-item-count">{{ cart.item_count }}</p>
+        <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
+      </div>
+    </div>
+    <div class="header-container">
+      <div class="search-container home-screen-mobile-search">
+        <form action="/search" method="get" role="search">
+          <button type="submit" class="btn desktop-btn-search">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+          {% include 'search-field' %}
+        </form>
+      </div>
+      <div class="header-buttons-container">
+        {% include 'registration-links' %}
+        <div class="header-cart-button">
+          <p class="cart-item-count">{{ cart.item_count }}</p>
+          <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage-logo">
+      {{ 'logo_fiorella.png' | asset_url | img_tag: "Fiorella logo" }}
+    </div>
+
+    <div class="navbar">
+      <ul>
+        {% for collection in collections %}
+          <li><a href="{{ collection.url }}" class="navbar-element">{{ collection.title }}</a></li>
+          {% if forloop.last != true %}
+            <span class="navbar-separator">|</span>
+          {% endif %}
+        {% endfor%}
+      </ul>
+    </div>
+
+    {% if shop.customer_accounts_enabled %}
+      <ul>
+        {% if customer %}
+          <li>
+            {% if customer.first_name != blank %}
+              {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+              {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
+            {% else %}
+              <a href="/account">{{ 'layout.customer.account' | t }}</a>
+            {% endif %}
+          </li>
+          <li>
+            {{ 'layout.customer.log_out' | t | customer_logout_link }}
+          </li>
+        {% else %}
+          <li>
+            {{ 'layout.customer.log_in' | t | customer_login_link }}
+          </li>
+          <li>
+            {{ 'layout.customer.create_account' | t | customer_register_link }}
+          </li>
+        {% endif %}
+      </ul>
+    {% endif %}
+
+  </header>
+</div>
+
+<script type="text/javascript">
+  var showMenu = document.getElementById('show-menu-btn');
+  var hideMenu = document.getElementById('hide-menu-btn');
+
+  showMenu.addEventListener('click', function() {
+    document.getElementById('menu').classList.add('show-menu');
+  });
+
+  hideMenu.addEventListener('click', function() {
+    document.getElementById('menu').classList.remove('show-menu');
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width",
+        "min": 50,
+        "max": 450,
+        "step": 10,
+        "unit": "px",
+        "label": "Custom logo width",
+        "default": 250
+      },
+      {
+        "type": "link_list",
+        "id": "main_linklist",
+        "label": "Menu",
+        "default": "main-menu"
+      }
+    ]
+  }
+{% endschema %}

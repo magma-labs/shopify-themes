@@ -1,0 +1,25 @@
+<div class="collection-header-banner">
+  {% for block in section.blocks %}
+    {{ block.settings.collection-hero | img_url: '800x800' | img_tag }}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Collection hero",
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Collection hero",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "collection-hero",
+          "label": "Collection hero"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
