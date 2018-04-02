@@ -1,4 +1,4 @@
-@media only screen and ( min-width: 769px) {
+@media only screen and ( min-width: 1025px) {
   .sidenav {
     display: none;
   }
@@ -16,8 +16,18 @@
 
     header {
       display: flex;
+      margin-bottom: 21px;
+      margin-top: 21px;
 
       .header-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        margin-top: 0;
+        width: 50%;
+      }
+
+      .h1 {
         display: flex;
         justify-content: center;
         width: 50%;
@@ -53,7 +63,6 @@
 
         ul {
           display: flex;
-          margin-right: 20px;
         }
 
         .site-logo {
@@ -69,21 +78,150 @@
     }
   }
 
-  .site-nav {
+  .navigation {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
 
-    a {
-      color: $color-categories-text;
-      text-decoration: none;
+    .nav-list {
+      padding-left: 10%;
+      width: 80%;
+    }
 
-      &:hover {
-        color: $color-text-hover;
-        text-decoration: underline;
+    .cart-icon {
+      width: 20%;
+      padding-left: 0;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+
+      a {
+        color: $color-categories-text;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-text-hover;
+          text-decoration: underline;
+        }
       }
     }
   }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidenav {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .header-mobile-section {
+    display: none;
+  }
+
+  .section-header {
+    padding: 15px;
+
+    header {
+      display: flex;
+      margin-top: 21px;
+      margin-bottom: 21px;
+
+      .header-logo {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .h1 {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+      }
+
+      a {
+        color: $color-categories-text;
+        text-decoration: none;
+      }
+
+      .site-logo {
+        left: 90%;
+        position: relative;
+      }
+
+      .site-header__logo-image {
+        left: 50%;
+        position: relative;
+      }
+
+      .searchlogin {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+
+        #Search {
+          width: 100px;
+        }
+      }
+
+      .customer-login {
+        li {
+          display: flex;
+          margin-right: 20px;
+        }
+
+        ul {
+          display: flex;
+          padding-left: 20px;
+        }
+
+        .site-logo {
+          display: flex;
+
+          img {
+            display: block;
+            justify-content: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .navigation {
+    display: flex;
+
+    .nav-list {
+      padding-left: 10%;
+      width: 80%;
+    }
+    .cart-icon {
+      width: 20%;
+      padding-left: 0;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+
+      a {
+        color: $color-categories-text;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-text-hover;
+          text-decoration: underline;
+        }
+      }
+    }
+  }  
 }
 
 @media only screen and (max-width: 768px) {
