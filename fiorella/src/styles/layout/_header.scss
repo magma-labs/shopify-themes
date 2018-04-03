@@ -152,6 +152,7 @@
 
     img {
       height: 25px;
+      width: auto;
     }
   }
 
@@ -176,7 +177,7 @@
   z-index: 1;
 }
 
-@media #{$small-desktop-view} {
+@media #{$tablet-view} {
 
   .show-menu {
     padding: 0;
@@ -188,12 +189,23 @@
   }
 
   .header-container {
+    position: relative;
+  }
+
+  .desktop-header {
+    background-color: $color-header-bg;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .top-bar {
     display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
     border-bottom-style: solid;
     border-bottom-color: $color-featured;
     font-family: $font-header;
+    z-index: 1;
 
     @include reset-ul(inline);
   }
@@ -204,6 +216,11 @@
 
     form {
       display: inline;
+    }
+
+    input {
+      outline: none;
+      width: calc(100% - 40px);
     }
 
     .desktop-btn-search {
@@ -219,6 +236,7 @@
     display: flex;
     flex: 1;
     justify-content: flex-end;
+    align-items: center;
 
     a {
       color: $color-black-solid;
@@ -263,7 +281,10 @@
   .navbar {
     display: flex;
     font-family: $font-navbar;
+    font-size: 15px;
     justify-content: center;
+    margin-bottom: 15px;
+    padding: 0 100px;
     text-transform: uppercase;
 
     a {
@@ -277,13 +298,29 @@
       }
     }
 
-    @include reset-ul(inline);
+    @include reset-ul(flex);
+  }
+
+  .navbar-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .navbar-element-container {
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+
+    span {
+      font-size: 20px;
+      position: absolute;
+      right: 0;
+    }
   }
 
   .navbar-separator {
     color: $color-featured;
-    font-size: 20px;
-    margin: 0 20px;
   }
 }
 
@@ -299,6 +336,6 @@
 
   .navbar-separator {
     font-size: 30px;
-    margin: 0 40px;
+    font-weight: $font-weight-bold;
   }
 }
