@@ -1,11 +1,11 @@
-.title{
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-size: 28px;
+.title {
     font-family: $merriweathersans;
-    
-    @media #{ $small-desktop-view }{
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    @media #{ $small-desktop-view } {
       display: none;
     }
 }
@@ -14,8 +14,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: auto;
+  justify-content: center;
   width: 100%;
 
   @media #{ $small-desktop-view } {
