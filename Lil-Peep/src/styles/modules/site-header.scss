@@ -54,26 +54,26 @@
         justify-content: flex-end;
         width: 50%;
       }
+    }
+  }
 
-      .customer-login {
-        li {
-          display: flex;
-          margin-right: 20px;
-        }
+  .customer-login {
+    li {
+      display: flex;
+      margin-right: 20px;
+    }
 
-        ul {
-          display: flex;
-        }
+    ul {
+      display: flex;
+    }
 
-        .site-logo {
-          display: flex;
+    .site-logo {
+      display: flex;
 
-          img {
-            display: block;
-            justify-content: center;
-            width: 100%;
-          }
-        }
+      img {
+        display: block;
+        justify-content: center;
+        width: 100%;
       }
     }
   }
@@ -124,40 +124,40 @@
 
   .section-header {
     padding: 15px;
+  }
 
-    header {
+  header {
+    display: flex;
+    margin-top: 21px;
+    margin-bottom: 21px;
+
+    .header-logo {
       display: flex;
-      margin-top: 21px;
-      margin-bottom: 21px;
+      justify-content: center;
+      width: 50%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
-      .header-logo {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
+    .h1 {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+    }
 
-      .h1 {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-      }
+    a {
+      color: $color-categories-text;
+      text-decoration: none;
+    }
 
-      a {
-        color: $color-categories-text;
-        text-decoration: none;
-      }
+    .site-logo {
+      left: 90%;
+      position: relative;
+    }
 
-      .site-logo {
-        left: 90%;
-        position: relative;
-      }
-
-      .site-header__logo-image {
-        left: 50%;
-        position: relative;
-      }
+    .site-header__logo-image {
+      left: 50%;
+      position: relative;
     }
   }
 
@@ -182,15 +182,15 @@
       display: flex;
       padding-left: 20px;
     }
+  }
 
-    .site-logo {
-      display: flex;
+  .site-logo {
+    display: flex;
 
-      img {
-        display: block;
-        justify-content: center;
-        width: 100%;
-      }
+    img {
+      display: block;
+      justify-content: center;
+      width: 100%;
     }
   }
 
@@ -202,8 +202,8 @@
       width: 80%;
     }
     .cart-icon {
-      width: 20%;
       padding-left: 0;
+      width: 20%;
     }
   }
 
