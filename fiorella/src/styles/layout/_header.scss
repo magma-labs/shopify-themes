@@ -302,14 +302,14 @@
   }
 
   .navbar-element-container {
+    align-items: center;
     flex: 1;
     justify-content: center;
-    align-items: center;
     position: relative;
 
     span {
-      position: absolute;
       font-size: 20px;
+      position: absolute;
       right: 0;
     }
   }
