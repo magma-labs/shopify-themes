@@ -84,10 +84,10 @@
 
   .view {
     height: 85px;
-    width: 85px;
     position: relative;
     object-fit: contain;
-    
+    width: 85px;
+
     &:hover {
       border-color: $border-color-white;
       border-width: 2px;
