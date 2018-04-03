@@ -1,6 +1,7 @@
 <div class="category-product-list">
   <div class="category-box">
-    {%- for collection in collections -%}
+    {%- for block in section.blocks -%}
+    {%- assign collection = collections[block.settings.featured-collection] -%}
     <div class="category-item">
       <h2 class="category-title">{{ collection.title | upcase }}</h2>
       <div class="category-content-image">
@@ -9,9 +10,41 @@
         <div class="overlay"></div>
         <a href="{{ collection.url }}" class="btn-shop">SHOP NOW</a>
       </div>
-      <p class="category-description">{{ collection.description }}</p>
+      <p class="category-description">{{ block.settings.featured-collection-text }}</p>
     </div>
     {%- endfor -%}
   </div>
   <div class="border-box"></div>
 </div>
+
+{% schema %}
+  {
+    "name": "Featured collections",
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Featured collection",
+        "settings": [
+          {
+            "id": "featured-collection",
+            "type": "collection",
+            "label": "Featured collection"
+          },
+          {
+            "type": "text",
+            "id": "featured-collection-text",
+            "label": "Collection description",
+            "default": "Featured collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured collections",
+        "category": "Collections"
+      }
+    ]
+  }
+{% endschema %}
