@@ -6,7 +6,7 @@
   {% endif %}
 </style>
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
-  <header role="banner" class="">
+  <header role="banner" class="header-container">
     <div id="menu" class="menu-container">
       <div class="menu-top-section">
         {{ 'logo2_fiorella_mobile.png' | asset_url | img_tag: 'Mobile Logo'}}
@@ -42,38 +42,42 @@
         <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
       </div>
     </div>
-    <div class="header-container">
-      <div class="search-container home-screen-mobile-search">
-        <form action="/search" method="get" role="search">
-          <button type="submit" class="btn desktop-btn-search">
-            {% include 'icon-search' %}
-            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-          </button>
-          {% include 'search-field' %}
-        </form>
-      </div>
-      <div class="header-buttons-container">
-        {% include 'registration-links' %}
-        <div class="header-cart-button">
-          <p class="cart-item-count">{{ cart.item_count }}</p>
-          <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
+    <div class="desktop-header">
+      <div class="top-bar">
+        <div class="search-container home-screen-mobile-search">
+          <form action="/search" method="get" role="search">
+            <button type="submit" class="btn desktop-btn-search">
+              {% include 'icon-search' %}
+              <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+            {% include 'search-field' %}
+          </form>
+        </div>
+        <div class="header-buttons-container">
+          {% include 'registration-links' %}
+          <div class="header-cart-button">
+            <p class="cart-item-count">{{ cart.item_count }}</p>
+            <a href="#">{{ 'icon_bag.png' | asset_url | img_tag: 'Icon bag'}}</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="homepage-logo">
-      {{ 'logo_fiorella.png' | asset_url | img_tag: "Fiorella logo" }}
-    </div>
-
-    <div class="navbar">
-      <ul>
-        {% for collection in collections %}
-          <li><a href="{{ collection.url }}" class="navbar-element">{{ collection.title }}</a></li>
-          {% if forloop.last != true %}
-            <span class="navbar-separator">|</span>
-          {% endif %}
-        {% endfor%}
-      </ul>
+      <div class="homepage-logo">
+        <a href="/">
+          {{ 'logo_fiorella.png' | asset_url | img_tag: "Fiorella logo" }}
+        </a>
+      </div>
+      <div class="navbar">
+        <ul class="navbar-container">
+          {% for collection in collections %}
+            <li class="navbar-element-container">
+              <a href="{{ collection.url }}" class="navbar-element">{{ collection.title }}</a>
+              {% if forloop.last != true %}
+              <span class="navbar-separator">|</span>
+              {% endif %}
+            </li>
+          {% endfor%}
+        </ul>
+      </div>
     </div>
 
     {% if shop.customer_accounts_enabled %}

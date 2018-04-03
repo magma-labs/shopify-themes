@@ -1,0 +1,13 @@
+.breadcrumb {
+  font-family: $font-navbar;
+  margin: 10px 10px 0;
+
+  a {
+    color: $color-black-solid;
+    text-decoration: none;
+  }
+
+  .current-route {
+    font-weight: $font-weight-bold;
+  }
+}

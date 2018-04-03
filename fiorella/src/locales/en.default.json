@@ -43,6 +43,12 @@
       "title": "Search for products on our site",
       "placeholder": "Search",
       "submit": "Search"
+    },
+    "routes": {
+      "home_page": "Home"
+    },
+    "navigation": {
+      "return_button": "Back"
     }
   },
   "blogs": {
@@ -97,6 +103,10 @@
     "general": {
       "no_matches": "Sorry, there are no products in this collection",
       "link_title": "Browse our {{ title }} collection"
+    },
+    "pagination": {
+      "prev_button": "Prev",
+      "next_button": "Next"
     }
   },
   "contact": {
@@ -253,8 +263,9 @@
       "on_sale": "On Sale",
       "on_sale_from_html": "On Sale from {{ price }}",
       "from_text_html": "From {{ price }}",
-      "quantity": "Quantity",
-      "add_to_cart": "Add to Cart"
+      "quantity": "Qty:",
+      "add_to_cart": "Add to Cart",
+      "description": "Description:"
     }
   },
   "gift_cards": {

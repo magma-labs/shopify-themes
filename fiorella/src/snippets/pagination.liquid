@@ -1,12 +1,20 @@
-<div class="pagination">
-  {% if paginate.previous.is_link %}
-    <a href="{{ paginate.previous.url }}" class="prev-button">« PREV</a>
-  {% else %}
-    <a href="#" class="disable-paginate-control prev-button">« PREV</a>
-  {% endif %}
-  {% if paginate.next.is_link %}
-    <a href="{{ paginate.next.url }}">NEXT »</a>
-  {% else %}
-    <a href="#" class="disable-paginate-control">NEXT »</a>
-  {% endif %}
+<div class="pagination pagination-controls">
+  {% unless paginate.previous.is_link %}
+    {% assign prev_a_class = "disable-paginate-control" %}
+  {% endunless %}
+  {% unless paginate.next.is_link %}
+    {% assign next_a_class = "disable-paginate-control" %}
+  {% endunless %}
+  <a href="{{ paginate.previous.url }}" class="{{ prev_a_class }}">
+    <div class="paginate-control prev-button">
+      {{ "arrow_left.png" | asset_url | img_tag: 'Arrow left' }}
+      <p>{{ "collections.pagination.prev_button" | t | upcase }}</p>
+    </div>
+  </a>
+  <a href="{{ paginate.next.url }}" class="{{ next_a_class }}">
+    <div class="paginate-control next-button">
+      <p>{{ "collections.pagination.next_button" | t | upcase }}</p>
+      {{ "arrow_right.png" | asset_url | img_tag: 'Arrow right' }}
+    </div>
+  </a>
 </div>

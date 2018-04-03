@@ -1,12 +1,19 @@
 {% section 'collection-hero' %}
 
 <div class="mobile-view">
+  <div class="return-button-container">
+    <a href="/" class="return-button"> 
+      {{ 'arrow_left.png' | asset_url | img_tag: 'Arrow left' }}
+      <p>{{ 'general.navigation.return_button' | t }}</p>
+    </a>
+  </div>
   {% paginate collection.products by 4 %}
     {% include 'products' %}
   {% endpaginate %}
 </div>
 
 <div class="desktop-view">
+  {% include 'breadcrumb' %}
   {% paginate collection.products by 6 %}
     {% include 'products' %}
   {% endpaginate %}
