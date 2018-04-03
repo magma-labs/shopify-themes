@@ -93,16 +93,16 @@
     text-decoration: none;
   }
 
-  .paginate-control {
-    p {
-      margin: 0 5px;
-    }
-  }
-
   .disable-paginate-control {
     color: $color-disabled;
     cursor: default;
     pointer-events: none;
+  }
+}
+
+.paginate-control {
+  p {
+    margin: 0 5px;
   }
 }
 
