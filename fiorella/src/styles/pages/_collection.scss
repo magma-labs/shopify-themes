@@ -93,6 +93,12 @@
     text-decoration: none;
   }
 
+  .paginate-control {
+    p {
+      margin: 0 5px;
+    }
+  }
+
   .disable-paginate-control {
     color: $color-disabled;
     cursor: default;
@@ -138,8 +144,8 @@
     margin: 0 10px 10px 0;
   }
 
-  .prev-button {
-    margin-right: 50px;
+  .paginate-control {
+    margin-left: 50px;
   }
 }
 
