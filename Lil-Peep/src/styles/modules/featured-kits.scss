@@ -76,6 +76,8 @@
     }
 
   .big-text {
+    text-align: center;
+
     p {
       font-size: 40px;
       font-weight: bold;
@@ -96,6 +98,7 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    color: #000;
   }
 
   .mid-banner-archeologist {
@@ -139,126 +142,145 @@
 }
 
 @media only #{ $tablet-view } {
-.big-banner {
-  background-position: center;
-  background-size: cover;
+  .big-banner {
+    background-position: center;
+    background-size: cover;
 
-  .big-banner-description {
-     margin-bottom: 20px;
-   }
+    .big-banner-description {
+       margin-bottom: 20px;
+     }
 
-   .small-banner {
-     background-position: bottom;
-     background-size: cover;
-   }
+     .small-banner {
+       background-position: bottom;
+       background-size: cover;
+     }
 
-   .mid-banner-saylor {
-     background-position: center;
-     background-size: cover;
-   }
+     .mid-banner-saylor {
+       background-position: center;
+       background-size: cover;
+       color: #000;
+     }
 
-   .mid-banner-archeologist {
-     background-position: top;
+     .mid-banner-archeologist {
+       background-position: top;
+     }
    }
- }
 }
 
 @media only #{ $small-desktop-view } {
-.flex-grid {
-  display: flex;
-  margin-bottom: 20px;
-
-  .big-banner {
-    background-position: left top;
-    background-size: cover;
-    display: flex;
-    flex: 2;
-    height:  $height-big-banner;
-    justify-content: flex-end;
-    margin-right: 20px;
-
-    .big-banner-content {
-      align-items: center;
-      background: linear-gradient(270deg,
-        rgb(251, 239, 227),
-        rgba(251, 239, 227, 1) 80%,
-        rgba(251, 239, 227, 0));
-      display: flex;
-      flex-direction: column;
-      height:  $height-big-banner;
-      justify-content: center;
-      padding-right: 10px;
-      width: 50%;
-
-      .view-in-detail {
-        width: 200px;
-      }
-
-      .big-banner-title {
-        font-size: 25px;
-      }
-
-      .big-banner-description {
-        font-size: 15px;
-        margin-bottom: 30px;
-        margin-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .big-banner-title {
-        font-size: 32px;
-      }
-
-      .view-detail-button {
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-    }
+  .mid-banner-saylor {
+    background-repeat: no-repeat;
+    background-size:  $height-big-banner 300px;
+    color: black;
   }
-    .small-banner {
-      align-items: center;
+  .mid-banner-archeologist {
+    background-repeat: no-repeat;
+    background-size:  $height-big-banner 300px;
+  }
+  .flex-grid {
+    display: flex;
+    margin-bottom: 20px;
+
+
+    .big-banner {
+      background-position: left top;
+      background-size: cover;
       display: flex;
-      flex-direction: column;
-      flex: 1;
-      justify-content: center;
-
-      .small-banner-tittle {
-       font-size: 30px;
-       margin: 0;
-      }
-
-      .small-banner-description {
-        font-size: 60px;
-        font-weight: bold;
-        margin: 0;
-      }
-    }
-
-    .mid-banner {
-      flex: 1;
-      height: 200px;
+      flex: 2;
+      height:  $height-big-banner;
       justify-content: flex-end;
+      margin-right: 20px;
 
-      .mid-banner-content {
+      .big-banner-content {
         align-items: center;
+        background: linear-gradient(270deg,
+          rgb(251, 239, 227),
+          rgba(251, 239, 227, 1) 80%,
+          rgba(251, 239, 227, 0));
         display: flex;
         flex-direction: column;
-        height: 200px;
+        height:  $height-big-banner;
         justify-content: center;
-        padding-left: 10px;
         padding-right: 10px;
         width: 50%;
 
-        .button-mid-banner {
-          width: 100%;
+        .view-in-detail {
+          width: 200px;
+        }
+
+        .big-banner-title {
+          font-size: 25px;
+        }
+
+        .big-banner-description {
+          font-size: 15px;
+          margin-bottom: 30px;
+          margin-top: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .big-banner-title {
+          font-size: 32px;
+        }
+
+        .view-detail-button {
+          padding-left: 30px;
+          padding-right: 30px;
         }
       }
     }
-  }
+      .small-banner {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+
+
+        .small-banner-tittle {
+         font-size: 30px;
+         margin: 0;
+        }
+
+        .small-banner-description {
+          align-items: center;
+          display: flex;
+          font-size: 60px;
+          font-weight: bold;
+          margin: 0;
+        }
+      }
+
+      .mid-banner {
+        flex: 1;
+        height: 200px;
+        justify-content: flex-end;
+
+        .mid-banner-content {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          height: 200px;
+          justify-content: center;
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 50%;
+
+          .button-mid-banner {
+            width: 100%;
+          }
+        }
+      }
+    }
 }
 
 @media only #{ $large-desktop-view } {
+  .mid-banner-archeologist {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size:  $height-big-banner 300px;
+  }
   .flex-grid {
     display: flex;
     margin-bottom: 20px;
@@ -313,7 +335,7 @@
   }
 
   .small-banner {
-    align-items: center;
+    align-items: center
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -324,14 +346,18 @@
       margin: 0;
     }
 
+    .big-text {
+      p{
+        text-align: center;
+      }
+    }
+
     .small-banner-description {
       font-size: 80px;
       font-weight: bold;
       margin: 0;
     }
   }
-
-
 
   .mid-banner {
     flex: 1;
@@ -364,27 +390,10 @@
     background-size:  $height-big-banner 300px;
   }
 
-  .mid-banner-saylor .mid-banner-content {
-    background: linear-gradient(90deg,
-      rgb(239, 239, 239),
-      rgb(239, 239, 239) 50%,
-      rgb(239, 239, 239) 90%,
-      rgba(239, 239, 239, 0));
-  }
-
   .mid-banner-archeologist {
     background-position: right;
     background-repeat: no-repeat;
     background-size:  $height-big-banner 300px;
     margin-left: 20px;
   }
-
-  .mid-banner-archeologist .mid-banner-content {
-    background: linear-gradient(90deg,
-      rgb(189, 152, 107),
-      rgb(189, 152, 107) 50%,
-      rgb(189, 152, 107) 90%,
-      rgba(189, 152, 107, 0));
-  }
-
 }

@@ -1,7 +1,7 @@
 <div class="categories-main">
   {% for block in section.blocks %}
     {% case block.settings.opc %}
-        {% when '1' %}
+
           {%  assign class-name = "banner-wooden-toys" %}
           {%  assign second-class = "wooden-toys-content"%}
           {%  assign collection_url = outdoors %}
@@ -28,7 +28,7 @@
 <style>
   {% for block in section.blocks %}
     .category-{{ block.id }} {
-      background-image: url('{{ block.settings.banner_img | img_url: 'large' }}');
+      background-image: url("{{ block.settings.banner_img | img_url: 'master' }}");
     }
   {% endfor %}
 </style>

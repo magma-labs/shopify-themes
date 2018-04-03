@@ -1,4 +1,4 @@
-@media only #{ $mobile-view }{
+@media only #{ $mobile-view } {
   .categories-main {
     border-color: blue;
     border-style: solid;
@@ -6,7 +6,6 @@
     background-color: $color-bg;
     border-bottom: 1px solid $color-bd;
     font-family: $Lato;
-    margin-top: 15px;
 
     .banner-wooden-toys {
       background-position: right;
