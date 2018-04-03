@@ -148,8 +148,14 @@
 
   .collection-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+
+    & > div {
+      align-self: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   .product-card-category {
@@ -196,6 +202,24 @@
         max-height: 300px;
         max-width: 250px;
         object-fit: contain;
+
+        @media only screen and (max-width: 869px) and (min-width: 820px) {
+          max-width: 200px;
+        }
+      }
+
+      @media only screen and (max-width: 1879px) and (min-width: 1097px) {
+        flex-grow: 0;
+      }
+
+      @media only screen and (max-width: 869px) and (min-width: 820px) {
+        flex-grow: 0;
+        width: 200px;
+      }
+
+      @media only screen and (max-width: 1310px) and (min-width: 1097px) {
+        flex-grow: 0;
+        width: 200px;
       }
   }
 
