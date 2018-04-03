@@ -1,4 +1,4 @@
-@media only screen and ( min-width: 1025px) {
+@media only screen and (min-width: 1025px) {
   .sidenav {
     display: none;
   }
@@ -158,38 +158,38 @@
         left: 50%;
         position: relative;
       }
+    }
+  }
 
-      .searchlogin {
-        align-items: center;
-        display: flex;
-        justify-content: flex-end;
-        width: 50%;
+  .searchlogin {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
 
-        #Search {
-          width: 100px;
-        }
-      }
+    #Search {
+      width: 100px;
+    }
+  }
 
-      .customer-login {
-        li {
-          display: flex;
-          margin-right: 20px;
-        }
+  .customer-login {
+    li {
+      display: flex;
+      margin-right: 20px;
+    }
 
-        ul {
-          display: flex;
-          padding-left: 20px;
-        }
+    ul {
+      display: flex;
+      padding-left: 20px;
+    }
 
-        .site-logo {
-          display: flex;
+    .site-logo {
+      display: flex;
 
-          img {
-            display: block;
-            justify-content: center;
-            width: 100%;
-          }
-        }
+      img {
+        display: block;
+        justify-content: center;
+        width: 100%;
       }
     }
   }
@@ -205,23 +205,23 @@
       width: 20%;
       padding-left: 0;
     }
+  }
 
-    .site-nav {
-      display: flex;
-      justify-content: space-evenly;
-      list-style: none;
+  .site-nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
 
-      a {
-        color: $color-categories-text;
-        text-decoration: none;
+    a {
+      color: $color-categories-text;
+      text-decoration: none;
 
-        &:hover {
-          color: $color-text-hover;
-          text-decoration: underline;
-        }
+      &:hover {
+        color: $color-text-hover;
+        text-decoration: underline;
       }
     }
-  }  
+  }
 }
 
 @media only screen and (max-width: 768px) {
