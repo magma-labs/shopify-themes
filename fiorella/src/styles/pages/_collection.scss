@@ -111,6 +111,12 @@
   }
 }
 
+.paginate-control {
+  p {
+    margin: 0 5px;
+  }
+}
+
 @media #{$tablet-view} {
   .mobile-view {
     display: none;
@@ -135,6 +141,7 @@
     display: flex;
     flex: 1 0 30%;
     flex-direction: column;
+    flex-grow: 0;
     font-size: 15px;
     justify-content: space-between;
 
@@ -149,8 +156,8 @@
     margin: 0 10px 10px 0;
   }
 
-  .prev-button {
-    margin-right: 50px;
+  .paginate-control {
+    margin-left: 50px;
   }
 }
 
