@@ -39,6 +39,7 @@
             {{ 'general.search.placeholder' | t }}
           </label>
           <input type="search"
+                 class="searchbar"
                  name="q"
                  id="Search"
                  value="{{ search.terms | escape }}"
@@ -79,8 +80,8 @@
     </div>
   </header>
 
-  <nav role="navigation">
-    <ul class="site-nav">
+  <nav role="navigation" class="navigation">
+    <ul class="site-nav nav-list">
       {% for link in linklists[section.settings.main_linklist].links %}
         {%- assign child_list_handle = link.title | handleize -%}
         {% if menus[child_list_handle].links != blank %}
@@ -108,13 +109,15 @@
 
         {% endif %}
       {% endfor %}
-
-      <a class="cart" href="/cart">
-        {{ 'layout.cart.title' | t }}
-        ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
-        {% include 'icon-cart' %}
-      </a>
-
+    </ul>
+    <ul class="site-nav cart-icon">
+      <li>
+        <a class="cart" href="/cart">
+          {{ 'layout.cart.title' | t }}
+          ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
+          {% include 'icon-cart' %}
+        </a>
+      </li>
     </ul>
   </nav>
 </div>
