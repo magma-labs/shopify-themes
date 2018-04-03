@@ -91,6 +91,12 @@
         "default": true
       },
       {
+        "type": "checkbox",
+        "id": "share_google-plus-share",
+        "label": "Share on Google plus",
+        "default": true
+      },
+      {
         "type": "header",
         "content": "Sharing links"
       },
