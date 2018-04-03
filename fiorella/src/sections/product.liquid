@@ -85,7 +85,7 @@
           name="add"
           data-add-to-cart
           class="btn-add-to-car"
-          {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+          {% unless current_variant.available %} disabled="disabled" {% endunless %}>
             <span data-add-to-cart-text>
               {% if current_variant.available %}
                 {{ 'products.product.add_to_cart' | t | upcase }}
@@ -126,7 +126,7 @@
 {% endschema %}
 
 <style type="text/css">
-  #Quantity{
+  #Quantity {
     background: white url(https://image.flaticon.com/icons/svg/156/156320.svg) right no-repeat;
     background-size: 17px;
     width: 50px;

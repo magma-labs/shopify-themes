@@ -255,7 +255,7 @@
       "from_text_html": "From {{ price }}",
       "quantity": "Qty:",
       "add_to_cart": "Add to Cart",
-      "description":"Description:"
+      "description": "Description:"
     }
   },
   "gift_cards": {
