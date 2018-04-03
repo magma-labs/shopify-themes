@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1025px) {
+@media only #{$large-desktop-view} {
   .sidenav {
     display: none;
   }
@@ -109,7 +109,7 @@
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only #{$small-desktop-view} {
   .sidenav {
     display: none;
   }
@@ -225,8 +225,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
-
+@media only #{$mobile-view} {
   .show-menu {
     width: 90%;
   }
@@ -251,7 +250,7 @@
     }
 
     .header-logo {
-      margin-bottom: 0;
+      margin: 00Xpx;
     }
   }
 
