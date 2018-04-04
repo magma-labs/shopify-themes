@@ -1,5 +1,5 @@
 .desktop {
-  background-color: #{$background-color};
+  background-color: $background-color;
 
   @media #{$breakpoint-mobile} {
     display: none;
@@ -7,7 +7,7 @@
 }
 
 .mobile {
-  background-color: #{$background-color};
+  background-color: $background-color;
 
   @media #{$breakpoint-tablet} {
     display: none;
@@ -20,15 +20,15 @@
 
 .info-dialog {
   align-items: center;
-  background-color: #{$info-dialog-color};
+  background-color: $info-dialog-color;
   display: flex;
   height: 35px;
   justify-content: center;
   position: relative;
 
   p {
-    color: #{$color-body};
-    font-family: 'Oswald', sans-serif;
+    color: $color-body;
+    font-family: $oswald-font;
     font-size: 12px;
     margin: 2px;
   }
@@ -43,10 +43,10 @@
     width: 100%;
 
     button {
-      background-color: #{$color-body};
+      background-color: $color-body;
       border-radius: 50%;
       border-style: none;
-      color: #abc828;
+      color: $info-dialog-color;
       font-weight: bold;
       height: 20px;
       text-align: center;
@@ -60,7 +60,7 @@
 }
 
 .current-route-container {
-  background-color: #{$background-color};
+  background-color: $background-color;
   padding-top: 10px;
   padding-bottom: 20px;
   width: 100%;
@@ -72,23 +72,23 @@
 
   @media #{$breakpoint-tablet} {
     display: block;
-    font-family: 'Lato', sans-serif;
+    font-family: $lato-font;
     margin-top: 20px;
 
     .home-route-section {
-      color: #{$home-route-section};
+      color: $home-route-section;
       text-decoration: none;
     }
 
     .categories-route-section {
-      color: #{$categories-route-section};
+      color: $categories-route-section;
     }
   }
 }
 
 .categories-view {
-  background-color: #{$background-color};
-  font-family: 'Oswald', sans-serif;
+  background-color: $background-color}
+  font-family: $oswald-font;
   margin-bottom: 0;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -101,7 +101,7 @@
 }
 
   h1 {
-    font-family: 'Lato', sans-serif;
+    font-family: $lato-font;
     text-align: center;
   }
 
@@ -112,12 +112,12 @@
     padding-left: 30px;
     padding-right: 30px;
 
-    @media #{$breakpoint-mobile} {
+    @media $breakpoint-mobile {
       justify-content: space-between;
     }
 
     .active-button {
-      color: #{$active-button};
+      color: $active-button;
       display: inline;
       font-size: 30px;
       text-decoration: none;
@@ -128,7 +128,7 @@
     }
 
     .blocked-button {
-      color: #{$active-button};
+      color: $active-button;
       display: inline;
       font-size: 30px;
       opacity: 0.5;
@@ -154,7 +154,7 @@
   }
 
   .product-card-category {
-    background-color: #{$product-card-category};
+    background-color: $product-card-category;
     flex: 1 0 20%;
     height: 470px;
     margin: 10px;
@@ -170,15 +170,15 @@
       width: 100%;
 
       .new-product {
-        background-color: #{$info-dialog-color};
+        background-color: $info-dialog-color;
         border-radius: 3px;
-        color: #{$color-body};
+        color: $color-body;
         font-weight: bold;
         padding: 5px 25px;
       }
 
       .not-new-product {
-        color: #{$product-card-category};
+        color: $product-card-category;
         opacity: 0;
         padding: 5px 25px;
       }
@@ -205,19 +205,19 @@
   padding-right: 15px;
 
   p {
-    font-family: 'Lato', sans-serif;
+    font-family: $lato-font;
     margin-bottom: 5px;
     margin-top: 0;
   }
 
   .product-title {
-    color: #{$active-button};
+    color: $active-button;
     font-weight: bold;
     text-decoration: none;
   }
 
   .view-in-detail {
-    background-color: #{$view-green};
+    background-color: $view-green;
     border-radius: 3px;
     border-style: none;
     padding: 10px 0;
@@ -225,7 +225,7 @@
     width: 100%;
 
     &:hover {
-      background-color: #{$on-hover-button};
+      background-color: $on-hover-button;
       cursor: pointer;
     }
 
@@ -234,16 +234,16 @@
     }
 
     h4 {
-      background-color: #{$view-green};
-      color: #{$color-body};
-      font-family: 'Oswald', sans-serif;
+      background-color: $view-green;
+      color: $color-body;
+      font-family: $oswald-font;
       font-weight: bold;
       margin: 0;
     }
   }
 
   .price {
-    color: #{$price-purple};
+    color: $price-purple;
 
     @media #{$breakpoint-tablet} {
       display: flex;
@@ -254,7 +254,7 @@
     display: none;
 
     @media #{$breakpoint-tablet} {
-      color: #{$price-gray};
+      color: $price-gray;
       display: flex;
       margin-left: 5px;
       text-decoration: line-through;
@@ -283,7 +283,7 @@
     text-decoration: none;
 
     .title {
-      font-family:  $Oswald;
+      font-family: $oswald-font;
       font-size: 16px;
       font-weight: normal;
     }
