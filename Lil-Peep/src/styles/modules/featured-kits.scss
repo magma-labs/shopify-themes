@@ -177,13 +177,23 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width:  868px){
-
   .h1-sailor {
     font-size: 22px;
   }
 
   .h1-archeologist {
     font-size: 22px;
+  }
+
+  .big-banner-title {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+
+  .big-banner-description {
+    font-family:  $Lato;
+    font-size: 20px;
+    margin: 0;
   }
 }
 
@@ -229,8 +239,8 @@
         .view-in-detail {
           width: 300px;
 
-          @media only screen and (min-width: 769px) and (max-width:  868px){
-            width: 250px;
+          @media only screen and (min-width: 769px) and (max-width:  892px){
+            width: 230px;
           }
         }
 
@@ -239,7 +249,7 @@
         }
 
         .big-banner-description {
-          font-size: 15px;
+          font-size: 20px;
           margin-bottom: 30px;
           margin-top: 20px;
           padding-left: 20px;
