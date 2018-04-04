@@ -148,9 +148,11 @@
   }
 
   .header-cart-button {
-    @extend %positioning;
+    display: flex;
     justify-content: flex-end;
     padding-right: 10px;
+    position: absolute;
+    right: 5px;
 
     img {
       height: 25px;
@@ -174,8 +176,9 @@
 }
 
 .menu-open {
-  @extend %positioning;
   justify-content: flex-start;
+  position: absolute;
+  left: 5px;
   z-index: 1;
 }
 
