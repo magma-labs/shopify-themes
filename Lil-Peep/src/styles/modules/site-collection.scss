@@ -220,9 +220,13 @@
     background-color: $view-green;
     border-radius: 3px;
     border-style: none;
-    padding: 10px 0;
+    color: $color-body;
+    display: block;
+    font-family: $oswald-font;
+    font-weight: bold;
+    padding: 10px 15px;
     text-align: center;
-    width: 100%;
+    text-decoration: none;
 
     &:hover {
       background-color: $on-hover-button;
