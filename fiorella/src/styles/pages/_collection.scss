@@ -128,7 +128,7 @@
   }
 
   .collection-header-banner {
-    padding-top: 250px;
+    padding-top: 205px;
   }
 
   .products-container {
@@ -164,5 +164,9 @@
 @media #{$large-desktop-view} {
   .product-thumbnail {
     font-size: 20px;
+  }
+
+  .collection-header-banner {
+    padding-top: 240px;
   }
 }
