@@ -1,0 +1,11 @@
+<div class="current-route-container">
+  <section class="current-route">
+    <a class="home-route-section" href="/">{{ 'homepage.onboarding.home_breadcrumb' | t }}</a>
+    {% if collection.title != blank %}
+      <a class="home-route-section" href="{{collection.url}}">&gt; {{ collection.title | upcase}}</a>
+    {% endif %}
+    {% if product.title != blank %}
+      <a class="categories-route-section">&gt; {{ product.title | upcase}}</a>
+    {% endif %}
+  </section>
+</div>

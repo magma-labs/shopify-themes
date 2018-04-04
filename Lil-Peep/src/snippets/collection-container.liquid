@@ -51,6 +51,11 @@
             </a>
           </div>
         </div>
+        <a
+          class="view-in-detail"
+          href="{{ product.url | within: collection }}">
+            {{ 'collections.general.view' | t }}
+        </a>
       </div>
 
     {% else %}

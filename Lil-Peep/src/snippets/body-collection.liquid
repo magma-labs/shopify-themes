@@ -5,12 +5,7 @@
   </div>
 </section>
 
-<div class="current-route-container">
-  <section class="current-route">
-      <a class="home-route-section">HOME</a>
-      <a class="categories-route-section">&gt; {{ collection.title | upcase}}</a>
-  </section>
-</div>
+{%- include 'breadcrumb' -%}
 
 <div class="categories-view">
 
@@ -83,12 +78,11 @@
 
               </p>
             </div>
-            <div class="view-in-detail">
-              <a href="" type="button" name="view-button">
-                <h4>{{ 'collections.general.view' | t }}</h4>
-              </a>
-            </div>
-          </div>
+          <a
+            class="view-in-detail"
+            href="{{ product.url | within: collection }}">
+              {{ 'collections.general.view' | t }}
+          </a>
         </div>
       {% else %}
           <p>{{ 'collections.general.no_matches' | t }}</p>
