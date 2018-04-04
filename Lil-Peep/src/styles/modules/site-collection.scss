@@ -217,7 +217,7 @@
   }
 
   .view-in-detail {
-    background-color: $view-green;
+    background-color:  $color-button-bg;
     border-radius: 3px;
     border-style: none;
     color: $color-body;
@@ -230,6 +230,19 @@
 
     &:hover {
       background-color: $on-hover-button;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h4 {
+      color: #{$color-body};
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      margin: 0;
+    }
       cursor: pointer;
     }
 
@@ -268,7 +281,14 @@
 
 .scroll-up {
   align-items: center;
-  background-color: $view-green;
+  background-color: $
+
+
+
+
+
+
+    -green;
   border-radius: 3px;
   display: flex;
   justify-content: center;
