@@ -6,7 +6,18 @@
   <meta itemprop="brand" content="{{ product.vendor }}">
   <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
-
+  /*Product-thumbnail*/
+    <h2 class="title">{{ product.title }}</h2>
+    <div class="super-product">
+      <div class="box-product">
+        {% if featured_image != blank %}
+          <img id="product" class="product" src="{{ featured_image | img_url: '720x720' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
+        {% endif %}
+      </div>
+      {% include 'thumbnail' %}
+    </div>
+  </div>
+/*Product-thumbnail*/
   <div class="product-img-box">
   {% if featured_image != blank %}
     <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
