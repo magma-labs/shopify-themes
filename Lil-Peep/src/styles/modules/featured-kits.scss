@@ -41,13 +41,12 @@
     padding: 10px 0;
     text-align: center;
 
-    a {
-      text-decoration: none;
+    &:hover{
+      background-color: $on-hover-button;
+    }
 
-      &:hover {
-        cursor: pointer;
-        background-color:  $color-hover;
-      }
+    a{
+      text-decoration: none;
     }
 
     .view-detail-button {
@@ -99,7 +98,6 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #000;
   }
 
   .mid-banner-archeologist {
@@ -127,6 +125,7 @@
 
     .h1-sailor {
       color:  $color-border-button-sailor;
+      font-size: 20px;
       margin: 0;
       padding: 10px ;
     }
@@ -136,6 +135,7 @@
 
     .h1-archeologist{
       color:  $color-border-button-archeologist;
+      font-size: 20px;
       margin: 0;
       padding: 10px 0;
     }
@@ -159,7 +159,7 @@
     .mid-banner-saylor {
       background-position: center;
       background-size: cover;
-      color: #000;
+
     }
 
     .mid-banner-archeologist {
@@ -191,7 +191,7 @@
   .mid-banner-saylor {
     background-repeat: no-repeat;
     background-size:  $height-big-banner 300px;
-    color: black;
+
   }
   .mid-banner-archeologist {
     background-repeat: no-repeat;
@@ -417,18 +417,19 @@
       font-size: 13px;
     }
 
-  }
-  .mid-banner-saylor {
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size:  $height-big-banner 300px;
-  }
+    .mid-banner-saylor {
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size:  $height-big-banner 300px;
+    }
 
-  .mid-banner-archeologist {
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size:  $height-big-banner 300px;
-    margin-left: 20px;
+    .mid-banner-archeologist {
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size:  $height-big-banner 300px;
+      margin-left: 20px;
+    }
+
   }
 
   .h1-sailor {
