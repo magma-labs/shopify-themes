@@ -267,12 +267,16 @@
     }
   }
 
-  .price {
+  .price-container {
     color: #{$price-purple};
 
     @media #{$breakpoint-tablet} {
       display: flex;
     }
+  }
+
+  .price {
+    color: #{$price-purple};
   }
 
   .offer {
