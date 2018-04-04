@@ -47,8 +47,8 @@
         <div class="product-card-category">
           <div class="products-slider">
             <div class="front-label">
-            {% assign date_created = product.created_at | date:'%s' %}
-            {% assign     date_now = 'now' | date:'%s' %}
+            {% assign date_created = product.created_at | date: '%s' %}
+            {% assign     date_now = 'now' | date: '%s' %}
             {% assign   difference = date_now | minus: date_created %}
 
             {% if difference < 172800 %}
@@ -71,10 +71,7 @@
             </p>
             <div class="price">
               <p class="price">
-
-                    {{ product.price | money }} USD
-
-
+                {{ product.price | money }} USD
                 {% if product.compare_at_price > product.price %}
                   <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
                   <p class="offer">{{ product.compare_at_price | money }} USD </p>

@@ -155,7 +155,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      width: 100%;
+      margin: auto;
+      width: 90%;
     }
   }
 
@@ -204,21 +205,21 @@
         max-width: 250px;
         object-fit: contain;
 
-        @media only screen and (max-width: 869px) and (min-width: 820px) {
+        @media #{$first-collection-breakpoint} {
           max-width: 200px;
         }
       }
 
-      @media only screen and (max-width: 1879px) and (min-width: 1097px) {
+      @media #{$third-collection-breakpoint} {
         flex-grow: 0;
       }
 
-      @media only screen and (max-width: 869px) and (min-width: 820px) {
+      @media #{$first-collection-breakpoint} {
         flex-grow: 0;
         width: 200px;
       }
 
-      @media only screen and (max-width: 1310px) and (min-width: 1097px) {
+      @media #{$second-collection-breakpoint} {
         flex-grow: 0;
         width: 200px;
       }
