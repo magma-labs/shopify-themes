@@ -28,7 +28,7 @@
 
   p {
     color: #{$color-body};
-    font-family: 'Oswald', sans-serif;
+    font-family: $Oswald;
     font-size: 12px;
     margin: 2px;
   }
@@ -87,7 +87,7 @@
 
 .categories-view {
   background-color: #{$background-color};
-  font-family: 'Oswald', sans-serif;
+  font-family: $Oswald;
   margin-bottom: 0;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -222,7 +222,6 @@
     padding: 10px 0;
     text-align: center;
     width: 100%;
-
 
     &:hover {
       background-color: $on-hover-button;
