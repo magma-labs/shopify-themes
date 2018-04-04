@@ -2,10 +2,11 @@
   font-family: $playfair-display;
   font-size: 28px;
   text-align: center;
-  @media #{$tablet } {
 
+  @media #{$tablet } {
     display: none;
   }
+
   @media #{ $small-desktop-view } {
     display: none;
   }
@@ -19,7 +20,7 @@
   justify-content: center;
   width: 100%;
 
-  @media #{ $tablet },#{ $small-desktop-view } {
+  @media #{ $tablet }, #{ $small-desktop-view } {
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
@@ -29,8 +30,9 @@
   .box-product {
     display: flex;
     justify-content: center;
-    width: 100%;
     padding: 20px;
+    width: 100%;
+
     .product {
       height: 100%;
       justify-content: center;
@@ -108,6 +110,7 @@
     background-color: $color-background-thumbnail;
     border: 2px solid $border-color-white;
   }
+
   img {
     height: auto;
   }
