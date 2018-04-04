@@ -1,3 +1,19 @@
+.mobile-navigator {
+  display: block;
+
+  @media #{ $tablet }, #{ $desktop } {
+    display: none;
+  }
+}
+
+.desktop-navigator {
+  display: none;
+
+  @media #{ $tablet }, #{ $desktop } {
+    display: block;
+  }
+}
+
 .tag-bold {
   font-family: $merriweathersans;
   font-weight: bold;

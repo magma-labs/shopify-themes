@@ -1,4 +1,14 @@
-{% include 'breadcrumb' %}
+<div class="mobile-navigator">
+  <div class="return-button-container">
+    <a href="/" class="return-button">
+      {{ 'arrow_left.png' | asset_url | img_tag: 'Arrow left' }}
+      <p>{{ 'general.navigation.return_button' | t }}</p>
+    </a>
+  </div>
+</div>
+<div class="desktop-navigator">
+  {% include 'breadcrumb' %}
+</div>
 <div class="product-box"  data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
   {%- assign current_variant = product.selected_or_first_available_variant -%}
   {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
