@@ -13,7 +13,8 @@
           <img src="{{ section.settings.logo2 | img_url: image_size }}"
                srcset="{{ section.settings.logo2 | img_url: image_size }} 1x, {{ section.settings.logo2 | img_url: image_size, scale: 2 }} 2x"
                alt="{{ section.settings.logo2.alt | default: shop.name }}"
-               itemprop="logo">
+               itemprop="logo"
+               class="logo-mobile">
         {% else %}
           {{ shop.name }}
         {% endif %}

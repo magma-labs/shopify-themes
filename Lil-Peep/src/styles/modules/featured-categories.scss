@@ -1,19 +1,21 @@
 @media only #{ $mobile-view }{
   .categories-main {
+    background-color: $color-bg;
+    border-bottom: 1px solid $color-bd;
     border-color: blue;
     border-style: solid;
     border: 5px;
-    background-color: $color-bg;
-    border-bottom: 1px solid $color-bd;
     font-family: $Lato;
+    margin-left: 25px;
+    margin-right: 35px;
     margin-top: 15px;
 
     .banner-wooden-toys {
       background-position: right;
       background-repeat: no-repeat;
       background-size: cover;
-      width: 100%;
       text-decoration: none;
+      width: 100%;
 
       .wooden-toys-content {
         align-items: flex-end;
@@ -100,7 +102,7 @@
         background-color: $on-hover-button;
       }
     }
-    
+
     .scroll-up-button {
       background-color:  $view-green;
       border-radius: 3px;
@@ -130,15 +132,17 @@
 
 @media only #{ $tablet-view } {
   .categories-main {
-    border-color: blue;
-    border-style: solid;
-    border: 5px;
-    border-radius: 3px;
     background-color:  $color-bg;
     border-bottom: 1px solid  $color-bd;
-    font-family:  $Lato;
+    border-color: blue;
+    border-radius: 3px;
+    border-style: solid;
+    border: 5px;
     display: flex;
+    font-family:  $Lato;
     justify-content: center;
+    margin-left: 35px;
+    margin-right: 35px;
     margin-top: 30px;
 
     .cont {

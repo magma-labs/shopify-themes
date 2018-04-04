@@ -242,6 +242,11 @@
     align-items: baseline;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+
+    .logo-mobile {
+      margin-top: 15px;
+    }
 
     .iconmenu-left {
       background-color: $color-white;
