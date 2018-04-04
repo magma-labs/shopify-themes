@@ -1,5 +1,5 @@
 footer {
-  background-color: #ffffff;
+  background-color: $color-body;
   border-top-color: rgba(28, 26, 26, 0.1);
   border-top-style: solid;
   border-top-width: 1px;
@@ -27,9 +27,9 @@ footer {
       text-align: center;
 
       .social-media {
-        color: #72808C;
+        color: $color-theme-lilpeep;
         display: block;
-        font-family: 'Lato', sans-serif;
+        font-family: $lato-font;
         font-size: 18px;
         line-height: 21px;
 
@@ -44,7 +44,7 @@ footer {
 
       .sm {
         align-items: center;
-        border: 2px solid #72808c;
+        border: 2px solid $color-border-box;
         border-radius: 3px;
         display: inline-flex;
         height: 35px;
@@ -56,7 +56,7 @@ footer {
         }
 
         @media #{$breakpoint-desktop} {
-          border: 2px solid #72808c;
+          border: 2px solid $color-border-box;
           border-radius: 3px;
           height: 25px;
           width: 60px;
@@ -111,7 +111,7 @@ footer {
       display: flex;
       flex: 1;
       flex-direction: column;
-      font-family: 'Lato', sans-serif;
+      font-family: $lato-font;
       font-size: 18px;
       text-align: center;
 
@@ -119,7 +119,7 @@ footer {
         justify-content: center;
 
         p {
-          color: #72808c;
+          color: $color-theme-lilpeep;
           @media #{$breakpoint-desktop} {
             font-size: 15px;
           }
@@ -131,8 +131,8 @@ footer {
         }
 
         input {
-          background-color: #fbfbfb;
-          border: 2px solid #d2d2d2;
+          background-color: $color-email-box;
+          border: 2px solid $color-border-email-box;
           border-radius: 2px;
           height: 20px;
           width: 300px;
@@ -182,8 +182,8 @@ footer {
         justify-content: space-between;
 
         a {
-          color: #72808C;
-          font-family: 'Lato', sans-serif;
+          color: $color-theme-lilpeep;
+          font-family: $lato-font;
           font-size: 18px;
           line-height: 21px;
           text-decoration: none;
@@ -201,9 +201,9 @@ footer {
   }
 
   .author {
-    color: #72808c;
+    color: $color-border-box;
     display: block;
-    font-family: 'Lato', sans-serif;
+    font-family: $lato-font;
     font-size: 16px;
     line-height: 18px;
     text-align: center;
