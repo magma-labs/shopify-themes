@@ -28,7 +28,7 @@
 
   p {
     color: $color-body;
-    font-family: 'Oswald', sans-serif;
+    font-family: $oswald-font;
     font-size: 12px;
     margin: 2px;
   }
@@ -46,7 +46,7 @@
       background-color: $color-body;
       border-radius: 50%;
       border-style: none;
-      color: #abc828;
+      color: $info-dialog-color;
       font-weight: bold;
       height: 20px;
       text-align: center;
@@ -87,7 +87,7 @@
 
 .categories-view {
   background-color: $background-color;
-  font-family: 'Oswald', sans-serif;
+  font-family: $oswald-font;
   margin-bottom: 0;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -274,7 +274,7 @@
     text-decoration: none;
 
     .title {
-      font-family:  $Oswald;
+      font-family: $oswald-font;
       font-size: 16px;
       font-weight: normal;
     }
