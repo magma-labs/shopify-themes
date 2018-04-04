@@ -311,16 +311,13 @@
     flex: 1;
     justify-content: center;
     position: relative;
-
-    span {
-      font-size: 20px;
-      position: absolute;
-      right: 0;
-    }
   }
 
   .navbar-separator {
     color: $color-featured;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -335,7 +332,6 @@
   }
 
   .navbar-separator {
-    font-size: 30px;
-    font-weight: $font-weight-bold;
+    font-size: 40px;
   }
 }
