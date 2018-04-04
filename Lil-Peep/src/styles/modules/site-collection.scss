@@ -87,7 +87,7 @@
 }
 
 .categories-view {
-  background-color: $background-color}
+  background-color: $background-color;
   font-family: $oswald-font;
   margin-bottom: 0;
   padding-bottom: 20px;
@@ -112,7 +112,7 @@
     padding-left: 30px;
     padding-right: 30px;
 
-    @media $breakpoint-mobile {
+    @media #{$breakpoint-mobile} {
       justify-content: space-between;
     }
 
