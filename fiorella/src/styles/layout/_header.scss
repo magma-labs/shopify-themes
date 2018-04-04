@@ -330,7 +330,12 @@
 @media #{$large-desktop-view} {
 
   .homepage-logo {
-    height: 100px;
+    height: 120px;
+
+    img {
+      height: 80px;
+      width: auto;
+    }
   }
 
   .navbar {

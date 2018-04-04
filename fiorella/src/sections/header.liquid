@@ -63,7 +63,7 @@
       </div>
       <div class="homepage-logo">
         <a href="/">
-          {{ 'logo_fiorella.png' | asset_url | img_tag: "Fiorella logo" }}
+          <img src="{{ section.settings.logo | img_url: 'master' }}" alt="Fiorella logo">
         </a>
       </div>
       <div class="navbar">
