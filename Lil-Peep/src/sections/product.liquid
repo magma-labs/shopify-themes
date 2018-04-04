@@ -1,12 +1,4 @@
-<div class="current-route-container">
-  <section class="current-route">
-    <a class="home-route-section">HOME</a>
-    {% if collection.title != blank %}
-    <a class="home-route-section">&gt; {{ collection.title | upcase}}</a>
-    {% endif %}
-    <a class="categories-route-section">&gt; {{ product.title | upcase}}</a>
-  </section>
-</div>
+{%- include 'breadcrumb' -%}
 
 <div class="product-container" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
 
