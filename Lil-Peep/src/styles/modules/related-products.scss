@@ -2,6 +2,13 @@
   background-color: $product-card-category;
   padding-left: 30px;
   padding-right: 30px;
+  margin-left: 35px;
+  margin-right: 35px;
+
+  @media #{$breakpoint-mobile} {
+    margin: 0;
+  }
+
 
   .collection-container {
     background-color: $product-card-category;
@@ -68,5 +75,9 @@
     &:after {
       content: ":";
     };
+  }
+
+  @media #{$breakpoint-mobile} {
+    margin-top: 0;
   }
 }
