@@ -108,7 +108,7 @@
            rgba(189, 152, 107, 0.2) 40%,
            rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'master'}}");
          background-size: cover;
-          color: #FFFFFF;
+         color: #FFFFFF;
         }
       }
       @media only screen and (min-width: 769px) and (max-width: 1279px) {
@@ -125,17 +125,17 @@
         }
       }
       @media only screen and (min-width: 1280px) {
-        .mid-banner-archeologist {
-          background: linear-gradient(90deg,
-            rgb(189, 152, 107),
-            rgba(189, 152, 107, 1) 40%,
-            rgba(189, 152, 107, 0.2) 90%,
-            rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'master'}}");
-          background-size: cover;
-          background-position: right;
-          color: #FFF;
-          margin-left: 20px;
-        }
+          .mid-banner-archeologist {
+            background: linear-gradient(90deg,
+              rgb(189, 152, 107),
+              rgba(189, 152, 107, 1) 40%,
+              rgba(189, 152, 107, 0.2) 90%,
+              rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'master'}}");
+            background-size: cover;
+            background-position: right;
+            color: #FFF;
+            margin-left: 20px;
+          }
         }
       }
     {% endif %}
