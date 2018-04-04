@@ -43,11 +43,11 @@
     padding: 10px 0;
     text-align: center;
 
-    &:hover{
+    &:hover {
       background-color: $on-hover-button;
     }
 
-    a{
+    a {
       height: 35px;
       text-decoration: none;
     }
@@ -343,6 +343,44 @@
     margin-right: 35px;
   }
 
+  .big-banner-content {
+    align-items: center;
+    background: linear-gradient(270deg,
+    rgb(251, 239, 227),
+    rgba(251, 239, 227, 1) 80%,
+    rgba(251, 239, 227, 0));
+    display: flex;
+    flex-direction: column;
+    height:  $height-big-banner;
+    justify-content: center;
+    width: 50%;
+
+    .view-in-detail {
+      width: 290px;
+    }
+
+    .view-in-detail-button {
+      font-size: 20px;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .big-banner-title {
+      font-size: 32px;
+    }
+
+    .view-in-detail-button {
+      font-size: 32px;
+    }
+
+    .big-banner-description {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
   .big-banner {
     background-position: left;
     background-size: contain;
@@ -351,44 +389,6 @@
     height:  $height-big-banner;
     justify-content: flex-end;
     margin-right: 20px;
-
-    .big-banner-content {
-      align-items: center;
-      background: linear-gradient(270deg,
-      rgb(251, 239, 227),
-      rgba(251, 239, 227, 1) 80%,
-      rgba(251, 239, 227, 0));
-      display: flex;
-      flex-direction: column;
-      height:  $height-big-banner;
-      justify-content: center;
-      width: 50%;
-
-      .view-in-detail {
-        width: 290px;
-      }
-
-      .view-in-detail-button {
-        font-size: 20px;
-        margin-bottom: 30px;
-        margin-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .big-banner-title {
-        font-size: 32px;
-      }
-
-      .view-in-detail-button {
-        font-size: 32px;
-      }
-
-      .big-banner-description {
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-    }
   }
 
   .small-banner {
