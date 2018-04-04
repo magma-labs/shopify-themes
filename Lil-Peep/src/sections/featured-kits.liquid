@@ -59,8 +59,8 @@
 {% for block in section.blocks %}
   .banner-{{ block.id }} {
     background-image: url("{{ block.settings.banner_img | img_url: 'master' }}");
-    background-size: cover;
   }
+
   {% if block.settings.opc == "3" %}
     @media only screen and (max-width: 768px) {
       .mid-banner-saylor {
