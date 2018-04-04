@@ -1,4 +1,5 @@
-@media only #{ $mobile-view } {
+
+@media only #{ $mobile-view }{
   .categories-main {
     border-color: blue;
     border-style: solid;
@@ -6,6 +7,7 @@
     background-color: $color-bg;
     border-bottom: 1px solid $color-bd;
     font-family: $Lato;
+    margin-top: 15px;
 
     .banner-wooden-toys {
       background-position: right;
@@ -90,28 +92,30 @@
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
-    width: 140px;
 
     .scroll-up-button {
-      background-color:  $view-green;
+      background-color:  $color-bg-scroll;
       border-radius: 3px;
       border-style: none;
+      color: $color-body;
+      display: flex;
+      display: inline-flex;
       height: 40px;
       justify-content: center;
-      width: 90px;
+      width: 160px;
       text-decoration: none;
 
       .title {
-        font-family:  $Oswald;
+        font-family:  $Lato;
         font-size: 16px;
-        font-weight: normal;
+        margin-top: 12px;
       }
 
       .up-arrow {
         display: flex;
         align-self: center;
-        height: 10px;
-        width: 15px;
+        height: 15px;
+        width: 28px;
       }
     }
   }
