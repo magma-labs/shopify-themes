@@ -19,20 +19,15 @@
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
 
   <div class="product-img-box">
-  {% if featured_image != blank %}
-    <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
-  {% endif %}
-  {% if product.images.size > 1 %}
-    <ul>
-      {% for image in product.images %}
-        <li>
-          <a href="{{ image.src | img_url: '480x480' }}" data-product-single-thumbnail>
-            <img src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}">
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+    <h2 class="title">{{ product.title }}</h2>
+        <div class="super-product">
+          <div class="box-product">
+            {% if featured_image != blank %}
+              <img id="product" class="product" src="{{ featured_image | img_url: 'x800' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
+            {% endif %}
+          </div>
+          {% include 'thumbnail' %}
+        </div>
   </div>
 
   <div class="product-info-box" itemprop="offers" itemscope itemtype="http://schema.org/Offer">

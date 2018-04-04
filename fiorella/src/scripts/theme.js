@@ -52,3 +52,7 @@ $(document).ready(function() {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
 });
+
+function selectimage(image) {
+  document.getElementById('product').src = image;
+}
