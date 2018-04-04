@@ -85,11 +85,11 @@
 
             </p>
           </div>
-          <div class="view-in-detail">
-            <a href="" type="button" name="view-button">
-              <h4>{{ 'collections.general.view' | t }}</h4>
-            </a>
-          </div>
+          <a
+            class="view-in-detail"
+            href="{{ product.url | within: collection }}">
+              {{ 'collections.general.view' | t }}
+          </a>
         </div>
       </div>
 
