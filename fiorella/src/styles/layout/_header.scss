@@ -309,13 +309,15 @@
 
   .navbar-container {
     display: flex;
+    justify-content: center;
     width: 100%;
   }
 
   .navbar-element-container {
     align-items: center;
-    flex: 1;
+    flex: 1 0 20%;
     justify-content: center;
+    max-width: 310px;
     position: relative;
   }
 
