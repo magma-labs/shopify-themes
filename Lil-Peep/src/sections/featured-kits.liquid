@@ -1,14 +1,13 @@
 <section class="featured-kits">
   <div class="flex-grid">
     {% for block in section.blocks %}
-      <p> {{ collection.handle }} </p>
       {% if block.settings.opc == "1" %}
         <div class="big-banner banner-{{ block.id }}">
           <div class="big-banner-content">
             <h1 class="big-banner-title">{{ block.settings.title }}</h1>
             <p class="big-banner-description">{{ block.settings.description }}</p>
             <div class="view-in-detail">
-              <a href="https://luisarmandodv.myshopify.com/collections/{{ block.settings.kits }}" >
+              <a href="https://luisarmandodv.myshopify.com/collections/{{ block.settings.kits }}">
                 <h4 class="view-detail-button">{{ block.settings.button }}</h4>
               </a>
             </div>
@@ -33,8 +32,8 @@
         <div class="mid-banner mid-banner-saylor banner-{{ block.id }}">
           <div class="mid-banner-content">
             <h1>{{ block.settings.title }}</h1>
-            <p class="description">{{ block.settings.description }}</p>
-            <button class="button-mid-banner button-sailor" type="button" name="button" onclick="window.location.href='https://luisarmandodv.myshopify.com/collections/{{ block.settings.kits }}'">
+            <p class="description">{{ block.settings.description }}</p
+            <button class="button-mid-banner button-sailor" type="button" name="button" onclick="window.location.href='/collections/{{ block.settings.kits }}'">
               <h1 class="h1-sailor">{{ block.settings.button }}</h1>
             </button>
           </div>
@@ -45,7 +44,7 @@
             <div class="mid-banner-content">
               <h1>{{ block.settings.title }}</h1>
               <p class="description">{{ block.settings.description }}</p>
-              <button class="button-mid-banner button-archeologist" type="button" name="button" onclick="window.location.href='https://luisarmandodv.myshopify.com/collections/{{ block.settings.kits }}'">
+              <button class="button-mid-banner button-archeologist" type="button" name="button" onclick="window.location.href='/collections/{{ block.settings.kits }}'">
                 <h1 class="h1-archeologist">{{ block.settings.button }}</h1>
               </button>
             </div>
@@ -59,9 +58,9 @@
 <style>
 {% for block in section.blocks %}
   .banner-{{ block.id }} {
-    background-image: url("{{ block.settings.banner_img | img_url: 'large' }}");
-    background-size: cover;
+    background-image: url("{{ block.settings.banner_img | img_url: 'master' }}");
   }
+
   {% if block.settings.opc == "3" %}
     @media only screen and (max-width: 768px) {
       .mid-banner-saylor {
@@ -69,21 +68,34 @@
           rgb(239, 239, 239),
           rgba(239, 239, 239, 1) 20%,
           rgba(239, 239, 239, 0.2) 50%,
-          rgba(239, 239, 239, 0)), url("{{ block.settings.banner_img | img_url: 'large' }}");
+          rgba(239, 239, 239, 0)), url("{{ block.settings.banner_img | img_url: 'master' }}");
         background-size: cover;
-        color: #000000;
+        color: #000;
       }
     }
     @media only screen and (min-width: 769px) and (max-width: 1279px) {
-      .mid-banner-saylor .mid-banner-content {
+      .mid-banner-saylor  {
         background: linear-gradient(90deg,
-          rgb(239, 239, 239),
-          rgb(239, 239, 239) 50%,
-          rgb(239, 239, 239) 90%,
-          rgba(239, 239, 239, 0));
+          rgb(240, 240, 240),
+          rgba(239, 240, 240, .9) 40%,
+          rgba(189, 152, 107, 0.2) 70%,
+          rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'master' }}");
         background-position: right;
         background-repeat: no-repeat;
-        background-size: 400px 300px;
+        background-size: cover;
+        color: #000;
+      }
+    }
+    @media only screen and (min-width: 1280px) {
+      .mid-banner-saylor  {
+        background: linear-gradient(90deg,
+          rgb(240, 240, 240),
+          rgba(240, 240, 240, 1) 40%,
+          rgba(189, 152, 107, 0.2) 70%,
+          rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'master'}}");
+        background-position: right;
+        background-size: cover;
+        color: #000;
       }
     }
   {% else %}
@@ -92,34 +104,37 @@
        .mid-banner-archeologist {
          background: linear-gradient(0deg,
            rgb(189, 152, 107),
-           rgba(189, 152, 107, 1) 10%,
-           rgba(189, 152, 107, 0.2) 50%,
-           rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'large'}}");
+           rgba(189, 152, 107, 1) 20%,
+           rgba(189, 152, 107, 0.2) 40%,
+           rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'master'}}");
          background-size: cover;
-          color: #FFFFFF;
+         color: #FFFFFF;
         }
       }
       @media only screen and (min-width: 769px) and (max-width: 1279px) {
         .mid-banner-archeologist {
           background: linear-gradient(90deg,
             rgb(189, 152, 107),
-            rgba(189, 152, 107, 1) 10%,
-            rgba(189, 152, 107, 0.2) 50%,
-            rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'large'}}");
+            rgba(189, 152, 107, 1) 40%,
+            rgba(189, 152, 107, 0.2) 90%,
+            rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'master'}}");
+          background-position: right;
           background-size: cover;
-          color: #FFFFFF;
+          color: #FFF;
           margin-left: 20px;
         }
       }
       @media only screen and (min-width: 1280px) {
-        .mid-banner-archeologist .mid-banner-content {
+          .mid-banner-archeologist {
             background: linear-gradient(90deg,
               rgb(189, 152, 107),
-              rgb(189, 152, 107) 50%,
-              rgb(189, 152, 107) 90%,
-              rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'large'}}");
+              rgba(189, 152, 107, 1) 40%,
+              rgba(189, 152, 107, 0.2) 90%,
+              rgba(189, 152, 107, 0)), url("{{ block.settings.banner_img | img_url: 'master'}}");
             background-size: cover;
-            color: #FFFFFF;
+            background-position: right;
+            color: #FFF;
+            margin-left: 20px;
           }
         }
       }

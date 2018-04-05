@@ -15,7 +15,7 @@
     <div class="super-product">
       <div class="box-product">
         {% if featured_image != blank %}
-          <img id="product" class="product" src="{{ featured_image | img_url: '720x720' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
+        <img id="product" class="product" src="{{ featured_image | img_url: '720x720' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
         {% endif %}
       </div>
       {% include 'product-thumbnail' %}
@@ -31,96 +31,96 @@
 
       <form class="info-container" action="/cart/add" method="post" enctype="multipart/form-data">
         {% unless product.has_only_default_variant %}
-          {% for option in product.options_with_values %}
-            <div class="selector-wrapper js">
-              <label for="SingleOptionSelector-{{ forloop.index0 }}">
-                {{ option.name }}
-              </label>
+        {% for option in product.options_with_values %}
+        <div class="selector-wrapper js">
+          <label for="SingleOptionSelector-{{ forloop.index0 }}">
+            {{ option.name }}
+          </label>
 
-              <select
-                id="SingleOptionSelector-{{ forloop.index0 }}"
-                data-single-option-selector
-                data-index="option{{ option.position }}">
-                {% for value in option.values %}
-                  <option
-                    value="{{ value | escape }}"
-                    {% if option.selected_value == value %}selected="selected"{% endif %}>
-                      {{ value }}
-                  </option>
-                {% endfor %}
-              </select>
-            </div>
-          {% endfor %}
-        {% endunless %}
-
-        <select name="id" class="no-js" data-product-select>
-          {% for variant in product.variants %}
-            <option
-              {% if variant == current_variant %}selected="selected"{% endif %}
-              {% unless variant.available %}disabled="disabled"{% endunless %}
-              value="{{ variant.id }}">
-                {{ variant.title }}
-            </option>
-          {% endfor %}
-        </select>
-
-        <div class="product-price" data-price-wrapper>
-          <span data-product-price>
-            {{ current_variant.price | money }} USD
-          </span>
-
-          {% if product.compare_at_price_max > product.price %}
-            <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
-            <s class="old-price" data-compare-price>
-              {% if current_variant.compare_at_price > current_variant.price %}
-                {{ current_variant.compare_at_price | money }} USD
-              {% endif %}
-            </s>
-          {% endif %}
-        </div>
-
-        <div class="product-quantity">
-          <label for="Quantity">{{ 'products.product.quantity' | t }}:</label>
-          <select id="Quantity" name="quantity" value="1" min="1">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
-
-        <button
-          class="add-to-cart"
-          type="submit"
-          name="add"
-          data-add-to-cart
-          {% unless current_variant.available %}disabled="disabled"{% endunless %}>
-            <span data-add-to-cart-text>
-              {% if current_variant.available %}
-                {{ 'products.product.add_to_cart' | t }}
-              {% else %}
-                {{ 'products.product.sold_out' | t }}
-              {% endif %}
-            </span>
-        </button>
-      </form>
+          <select
+            id="SingleOptionSelector-{{ forloop.index0 }}"
+            data-single-option-selector
+            data-index="option{{ option.position }}">
+          {% for value in option.values %}
+          <option
+            value="{{ value | escape }}"
+            {% if option.selected_value == value %}selected="selected"{% endif %}>
+          {{ value }}
+        </option>
+        {% endfor %}
+      </select>
     </div>
+    {% endfor %}
+    {% endunless %}
 
-    <p class="free-shipping"> {{ 'products.product.free-shipping' | t }} </p>
-    <!-- DESCRIPTION -->
-    <div class="rte">
-      {% if product.description != blank %}
-        <p class="product-description-title">{{ 'products.product.description-title' | t }}</p>
-        <p class="product-description">{{ product.description }}</p>
+    <select name="id" class="no-js" data-product-select>
+      {% for variant in product.variants %}
+      <option
+        {% if variant == current_variant %}selected="selected"{% endif %}
+        {% unless variant.available %}disabled="disabled"{% endunless %}
+      value="{{ variant.id }}">
+      {{ variant.title }}
+    </option>
+    {% endfor %}
+  </select>
+
+  <div class="product-price" data-price-wrapper>
+    <span data-product-price>
+      {{ current_variant.price | money }} USD
+    </span>
+
+    {% if product.compare_at_price_max > product.price %}
+    <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+    <s class="old-price" data-compare-price>
+      {% if current_variant.compare_at_price > current_variant.price %}
+      {{ current_variant.compare_at_price | money }} USD
       {% endif %}
-    </div>
+    </s>
+    {% endif %}
   </div>
 
-  {% unless product == empty %}
-    <script type="application/json" data-product-json>
-      {{ product | json }}
-    </script>
-  {% endunless %}
+  <div class="product-quantity">
+    <label for="Quantity">{{ 'products.product.quantity' | t }}:</label>
+    <select id="Quantity" name="quantity" value="1" min="1">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+
+  <button
+  class="add-to-cart"
+  type="submit"
+  name="add"
+  data-add-to-cart
+  {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+  <span data-add-to-cart-text>
+    {% if current_variant.available %}
+    {{ 'products.product.add_to_cart' | t }}
+    {% else %}
+    {{ 'products.product.sold_out' | t }}
+    {% endif %}
+  </span>
+</button>
+</form>
+</div>
+
+<p class="free-shipping"> {{ 'products.product.free-shipping' | t }} </p>
+<!-- DESCRIPTION -->
+<div class="rte">
+  {% if product.description != blank %}
+  <p class="product-description-title">{{ 'products.product.description-title' | t }}</p>
+  <p class="product-description">{{ product.description }}</p>
+  {% endif %}
+</div>
+</div>
+
+{% unless product == empty %}
+<script type="application/json" data-product-json>
+{{ product | json }}
+</script>
+{% endunless %}
 </div>
 
 {%- assign collection_product = collections.featured_products -%}
@@ -128,15 +128,59 @@
   <h2 class="related-product-title">{{ 'products.product.related-products' | t }}</h2>
   <div class="mobile">
     {% paginate collection_product.products by 1 %}
-      {%- include 'collection-container', product_collection: collection_product -%}
+    {%- include 'collection-container', product_collection: collection_product -%}
     {% endpaginate %}
   </div>
 
   <div class="desktop">
     {% paginate collection_product.products by 4 %}
-      {%- include 'collection-container', product_collection: collection_product -%}
+    {%- include 'collection-container', product_collection: collection_product -%}
     {% endpaginate %}
   </div>
 </div>
 
 {%- include 'scroll-up' -%}
+<div class="banner-section">
+  <div class="banner-content">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.description }}</p>
+  </div>
+</div>
+<style>
+.banner-section {
+  background-image: url("{{ section.settings.banner_img | img_url: 'master' }}");
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Banner",
+  "settings":[
+  {
+    "type":"image_picker",
+    "id":"banner_img",
+    "label":"Image",
+    "info":"image should be 800px x 800px"
+  },
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Title",
+    "default": "Title"
+  },
+  {
+    "type": "text",
+    "id": "description",
+    "label": "Description",
+    "default": "Description"
+  }
+  ],
+  "presets": [
+  {
+    "name": "Description",
+    "category": "Banners"
+  }
+  ]
+}
+{% endschema %}
