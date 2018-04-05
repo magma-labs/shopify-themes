@@ -37,77 +37,57 @@
   </header>
 
   <div class="collection-container">
-    {% for product in collection.products %}
-      <div class="product-card-category">
-        <div class="products-slider">
-          <div class="front-label">
-          {% assign date_created = product.created_at | date:'%s' %}
-          {% assign     date_now = 'now' | date:'%s' %}
-          {% assign   difference = date_now | minus: date_created %}
+    <div>
+      {% for product in collection.products %}
+        <div class="product-card-category">
+          <div class="products-slider">
+            <div class="front-label">
+            {% assign date_created = product.created_at | date: '%s' %}
+            {% assign     date_now = 'now' | date: '%s' %}
+            {% assign   difference = date_now | minus: date_created %}
 
-          {% if difference < 172800 %}
-            <p class="new-product">NEW</p>
-          {% else %}
-            <p class="not-new-product">NOT NEW</p>
-          {% endif %}
-          </div>
-          <div class="product-image">
-            {% if product.featured_image != blank %}
-              <a href="{{ product.url | within: collection }}">
-                {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
-              </a>
+            {% if difference < 172800 %}
+              <p class="new-product">NEW</p>
+            {% else %}
+              <p class="not-new-product">NOT NEW</p>
             {% endif %}
-          </div>
-        </div>
-        <div class="product-data">
-          <p>
-            <a href="{{ product.url | within: collection }}" class="product-title">{{ product.title }}</a>
-          </p>
-          <div class="price">
-            <p class="price">
-
-                  {{ product.price | money }} USD
-
-
-              {% if product.compare_at_price > product.price %}
-                <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-                <p class="offer">{{ product.compare_at_price | money }} USD </p>
+            </div>
+            <div class="product-image">
+              {% if product.featured_image != blank %}
+                <a href="{{ product.url | within: collection }}">
+                  {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
+                </a>
               {% endif %}
-
-              {% unless product.available %}
-                {{ 'products.product.sold_out' | t }}
-              {% endunless %}
-
-            </p>
+            </div>
           </div>
+          <div class="product-data">
+            <p>
+              <a href="{{ product.url | within: collection }}" class="product-title">{{ product.title }}</a>
+            </p>
+            <div class="price-container">
+              <p class="price">
+                {{ product.price | money }} USD
+                {% if product.compare_at_price > product.price %}
+                  <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                  <p class="offer">{{ product.compare_at_price | money }} USD </p>
+                {% endif %}
+
+                {% unless product.available %}
+                  {{ 'products.product.sold_out' | t }}
+                {% endunless %}
+
+              </p>
+            </div>
           <a
             class="view-in-detail"
             href="{{ product.url | within: collection }}">
               {{ 'collections.general.view' | t }}
           </a>
         </div>
-      </div>
-
-    {% else %}
-      {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
-        {% for i in (1..8) %}
-          <a href="#">
-            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
-          </a>
-
-          <p>
-            <a href="#">{{ 'homepage.onboarding.product_title' | t }}</a>
-          </p>
-
-          <p>
-            {{ 1999 | money }}
-          </p>
-        {% endfor %}
       {% else %}
-        <p>{{ 'collections.general.no_matches' | t }}</p>
-      {% endif %}
-    {% endfor %}
+          <p>{{ 'collections.general.no_matches' | t }}</p>
+      {% endfor %}
+    </div>
   </div>
 
   {%- include 'pagination' -%}
