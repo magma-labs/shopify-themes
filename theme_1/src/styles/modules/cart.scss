@@ -1,0 +1,108 @@
+.cart-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-bar {
+background: #373737;
+color: white;
+border-collapse: collapse;
+height: 45px;
+font-size: 16px;
+}
+
+.item-row {
+background: #EEF2F5;
+height: 80px;
+max-height: 150px;
+}
+
+h1.title{
+    text-transform: uppercase;
+    font-family: 'robotobold';
+    font-size: 24px;
+    color: #4A4A4A;
+    display: block;
+}
+
+.dropdown {
+    max-width:40px;
+    background: #EEF2F5;
+    font-size: 22px;
+}
+
+form.cart {
+    width: 100%;
+    padding: 10px;
+}
+
+table.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.img-rotated {
+    transform: rotate(90deg);
+}
+
+a.big-product-title {
+    text-decoration: none;
+    color: #4A4A4A;
+    font-size: 24px;
+}
+
+a.remove {
+    text-decoration: none;
+    color: #4A4A4A;
+    font-family: 'robotolight';
+    font-size: 20px;
+}
+
+hr.separator {
+    margin: 0;
+    padding: 0;
+}
+
+p.sku {
+    font-family: 'robotolight';
+    font-size: 14px;
+    margin: 0.2em;
+}
+
+td.price {
+    font-size: 23px;
+    font-family: 'robotolight';
+}
+
+.section-buttons {
+    display: flex;
+    margin: 0.4em;
+    flex-wrap: wrap;
+}
+
+.bottom-buttons {
+    flex-grow: 3;
+    justify-content: space-around;
+}
+
+.bottom-buttons > input {
+    flex-grow: 1;
+    margin: 0.4em;
+}
+
+.total-section {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.fill{
+    width: 100%;
+}
+
+.total-text {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}

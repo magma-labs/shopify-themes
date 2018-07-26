@@ -1,0 +1,55 @@
+/*================ Site Header ================*/
+.site-logo {
+  display: block;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+h1.headerImage {
+  display: inline-block;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+.header {
+    float: left;
+}
+
+li a {
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    
+}
+a, nav, form{
+  display: inline-block;
+}
+
+a.cart-icon {
+  text-decoration: none;
+  color: #4A4A4A;
+}
