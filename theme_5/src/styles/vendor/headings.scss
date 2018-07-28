@@ -1,0 +1,84 @@
+.heading-with-lines {
+  font-family: $playfair-font;
+  font-size: 60px;
+  letter-spacing: 5px;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:before, &:after {
+    background-color: $cerise-red;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  &:before {
+    margin-left: -50%;
+    right: 0.5em;
+  }
+
+  &:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+}
+
+.lines-to-span {
+  font-family: $playfair-font;
+  font-size: 60px;
+  letter-spacing: 5px;
+  overflow: hidden;
+  padding-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:before, &:after {
+    background-color: $cerise-red;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &:before {
+    margin-left: -50%;
+    right: 5.0em;
+    width: 75%;
+  }
+
+  &:after {
+    left: -3.6em;
+    margin-right: -50%;
+    width: 75%;
+  }
+
+}
+
+.free-shipping {
+  float: left;
+  margin-left: 350px;
+  margin-top: 60px;
+
+  p {
+    color: $cerise-red;
+    font-family: $playfair-font;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  p:first-child {
+    color: $black-solid;
+    font-size: 55px;
+  }
+
+  p:last-child {
+    font-family: $merriweather-font;
+  }
+}

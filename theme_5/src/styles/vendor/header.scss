@@ -1,0 +1,140 @@
+
+// HEADER STYLES
+
+.main-header {
+  background: rgba($white-solid, 0.8);
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-around;
+  padding: 0 15px;
+  width: 100%;
+  z-index: 2;
+}
+
+.add-pa {
+  position: absolute;
+}
+
+.header-top {
+  border-bottom: 1px solid $cerise-red;
+  display: flex;
+}
+
+.search-container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+
+  .search-input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: $black-solid;
+    font-family: $merriweather-font;
+    font-size: 17px;
+    margin-left: 10px;
+    outline: none;
+    padding-left: 0;
+    text-transform: uppercase;
+
+    &:focus{
+      color: $black-solid;
+    }
+  }
+}
+
+.nav-container {
+  align-items: center;
+  display: flex;
+  width: 40%;
+}
+
+.secondary-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.option-list {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin-right: 25px;
+  text-transform: uppercase;
+
+  .option-item {
+    margin: 0 10px;
+
+    a {
+      color: $black-solid;
+    }
+  }
+
+}
+
+.header-mid {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-img {
+  background-image: url($url-to-logo);
+  height: 82px;
+  position: absolute;
+  width: 250px;
+}
+
+.anchord-logo {
+  width: 250px;
+  height: 82px;
+}
+
+.header-bot {
+  display: flex;
+  justify-content: center;
+}
+
+.collection-list {
+  display: flex;
+  height: 30px;
+  list-style: none;
+
+  .collection-item {
+    border-right: 2px solid $cerise-red;
+    display: flex;
+    flex-direction: row;
+    font-family: $playfair-font;
+    height: 25px;
+    padding: 0 26px;
+    text-transform: uppercase;
+
+    a {
+      color: $black-solid;
+
+      &:hover {
+        color: $cerise-red;
+        font-weight: 900;
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.cart-count {
+  background-color: $cerise-red;
+  border-radius: 50%;
+  color: $white-solid;
+  display: block;
+  font-family: $playfair-font;
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;
+  padding: 2px;
+  text-align: center;
+  width: 30px;
+}

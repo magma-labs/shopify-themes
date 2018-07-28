@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Merriweather+Sans:400,700|Playfair+Display:400,400i,700,900');
+
+// TYPOGRAPHY
+
+$berkshire-font: 'Berkshire Swash', cursive; // only regular 400
+$merriweather-font: 'Merriweather Sans', sans-serif; // regular 400 and bold 700
+$playfair-font: 'Playfair Display', serif; // regular 400, bold 700, black 900, italic 400
+
+
+// COLORS
+
+$black-solid: #000000;
+$cerise-red: #e83671;
+$emperor: #555555;
+$peppermint: #f3f9ef;
+$white-solid: #ffffff;
+
+// PATHS
+
+$url-to-sprite: '{{ "Sprite.png" | asset_url }}';
+$url-to-logo: '{{ "logo_fiorella.png" | asset_url }}';
+
+$banner-home-1280: '{{ "banner_image_home.jpg" | asset_url }}';

@@ -1,0 +1,158 @@
+
+// PRODUCT STYLES
+
+.product-section {
+  padding: 0 15px;
+  margin: 50px 0;
+}
+
+.product-box {
+  border: 1px solid $cerise-red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.product-views {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    margin-bottom: 30px;
+  }
+}
+
+.product-info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.product-title {
+  color: $black-solid;
+  font-family: $playfair-font;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.product-description {
+  color: $emperor;
+}
+
+.view-box {
+  height: 86px;
+  margin: 25px 0;
+  position: relative;
+  width: 86px;
+
+  .after {
+    color: rgb(232, 54, 113);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &:hover .after {
+    background: rgba(232, 54, 113, 0.6);
+    display: block;
+  }
+}
+
+.input-radio {
+  display: none;
+
+  &:checked + .label-color {
+    box-shadow: inset 0 0 10px $cerise-red;
+    opacity: 0.6;
+  }
+}
+
+.label-color {
+  border-radius: 100%;
+  height: 30px;
+  margin: 0 10px;
+  width: 30px;
+}
+
+.pink {
+  background: pink;
+}
+
+.red {
+  background: crimson;
+}
+
+.gold {
+  background: darksalmon;
+}
+
+.variants-box {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.quantity-box {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  margin-bottom: 10px;
+}
+
+.share-buttons {
+  margin-top: 10px;
+}
+
+.label-for-color {
+  padding: 4px 0;
+}
+
+.share-box {
+  align-items: center;
+  display: flex;
+}
+
+.socials-buttons {
+  display: flex;
+}
+
+.social-anchord {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  margin: 0 15px;
+  width: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+.input-qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-qty {
+  border: none;
+  text-align: right;
+  width: 22px;
+}
+
+.triangle {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid $emperor;
+  display: inline-block;
+  height: 0;
+  margin-left: 9px;
+  width: 0;
+}

@@ -1,0 +1,46 @@
+
+<!-- Main Footer -->
+
+<footer class="main-footer">
+
+  <div class="footer-content">
+
+    <div class="footer-content-section">
+      <h3 class="section-title">fiorella</h3>
+      <ul class="site-list">
+        {% for link in linklists.fiorella-menu.links %}
+        <li class="site-item"><a href="{{link.url}}" class="site-link">{{link.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-content-section">
+      <h3 class="section-title">information</h3>
+      <ul class="site-list">
+        <li class="site-item"><a href="#" class="site-link">faq'<sub>s</sub></a></li>
+        <li class="site-item" ><a href="#" class="site-link">payment methods</a></li>
+        <li class="site-item"><a href="#" class="site-link">delivery</a></li>
+      </ul>
+    </div>
+    <div class="footer-content-section">
+      <h3 class="section-title">my account</h3>
+      <ul class="site-list">
+        <li class="site-item"><a href="#" class="site-link">order history</a></li>
+        <li class="site-item"><a href="#" class="site-link">wish list</a></li>
+        <li class="site-item"><a href="#" class="site-link">newsletter</a></li>
+      </ul>
+    </div>
+    <div class="footer-content-section">
+      <h3 class="section-title">follow us</h3>
+      <div class="social-networks">
+        <a href="#" class="social-link"><span class="facebook-icon"></span></a>
+        <a href="#" class="social-link"><span class="pinterest-icon"></span></a>
+        <a href="#" class="social-link"><span class="googleplus-icon"></span></a>
+        </div>
+    </div>
+
+  </div>
+
+  <p class="copyright-text">
+    &copy; 2015 All Rights Reserved. Design by Crowd Interactive. Powered by Spree.
+  </p>
+</footer>

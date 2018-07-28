@@ -1,0 +1,48 @@
+/*============================================================================
+  [replace with theme name] | Built with Slate
+    - You cannot use native CSS/Sass @imports in this file without a build script
+==============================================================================*/
+
+/*================ UTILS ================*/
+@import url('tools/mixins.scss');
+
+/*================ SETTINGS ================*/
+@import url('settings/variables.scss.liquid');
+
+/*================ COMMON ================*/
+@import url('global/normalize.scss');
+@import url('global/slate-reset.scss');
+@import url('global/helper-classes.scss');
+@import url('global/grid.scss');
+@import url('global/layout.scss');
+@import url('global/icons.scss');
+@import url('global/rte.scss');
+@import url('global/responsive-tables.scss');
+@import url('global/links-buttons.scss');
+@import url('global/forms.scss');
+@import url('global/blank-states.scss');
+
+/*================ MODULES ================*/
+@import url('modules/site-header.scss');
+@import url('modules/gift-card-template.scss');
+
+/*================ VENDOR ================*/
+@import url('vendor/resets.scss');
+@import url('vendor/variables.scss');
+@import url('vendor/header.scss');
+@import url('vendor/carousel.scss');
+@import url('vendor/categorie-section.scss');
+@import url('vendor/categorie-product.scss');
+@import url('vendor/product.scss');
+@import url('vendor/buttons.scss');
+@import url('vendor/icons.scss');
+@import url('vendor/cart.scss');
+@import url('vendor/headings.scss');
+@import url('vendor/footer.scss');
+@import url('vendor/hero.scss');
+@import url('vendor/about.scss');
+@import url('vendor/contact.scss');
+@import url('vendor/breadcrumb.scss');
+@import url('vendor/news-section.scss');
+@import url('vendor/forms.scss');
+@import url('vendor/account.scss');

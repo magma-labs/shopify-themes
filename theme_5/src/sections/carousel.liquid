@@ -1,0 +1,55 @@
+<!-- Carousel -->
+
+<div class="box-carousel-header">
+
+  <header class="main-header {% if template == 'index' %}add-pa{% endif %}" >
+
+    <div class="header-top">
+      <div class="search-container">
+        <span class="search-icon"></span>
+        <form class="search" action="/search">
+            <input type="text" placeholder="Search" name="q" value="{{ search.terms | escape }}" class="search-input" autocomplete="off" />
+        </form>
+      </div>
+      <div class="nav-container">
+        <nav class="secondary-nav">
+          <ul class="option-list">
+              {% if customer %}
+                  <li class="option-item"><a href="/account">{{ customer.name }}</a></li>
+                  <li class="option-item">{{ 'log out' | customer_logout_link }}</li>
+                  <li class="option-item"><a href="/cart"><span class="cart-count">{{ cart.item_count }}</span><span class="cart-icon-tablet"></span></a></li>
+                {% else %}
+                  {% for link in linklists.user-menu.links %}
+                    <li class="option-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endfor %}
+                  <li class="option-item"><a href="/cart"><span class="cart-count">{{ cart.item_count }}</span><span class="cart-icon-tablet"></span></a></li>
+              {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="header-mid">
+      <a href="/" class="anchord-logo"><span class="logo-img"></span></a>
+    </div>
+
+    <div class="header-bot">
+      <nav class="collection-nav">
+        <ul class="collection-list">
+          {% for link in linklists.collections-menu.links %}
+          <li class="collection-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <div class="row">
+    <div class="carousel-home owl-carousel">
+      <div class="item"><img src="{{ 'hero1_home_1280.jpg' | asset_url }}"></div>
+      <div class="item"><img src="{{ 'hero2_home_1280.jpg' | asset_url }}"></div>
+    </div>
+  </div>
+
+</div>

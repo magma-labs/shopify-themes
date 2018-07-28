@@ -1,0 +1,53 @@
+    <!-- hero -->
+    {% section 'hero' %}
+
+
+    <!-- back -->
+    <!-- <div class="content">
+      <div class="back-btn">
+        <span class="back-icon"></span>back
+      </div>
+    </div> -->
+
+    <!-- products -->
+    <div class="products-container">
+
+      <div class="title">
+        <h1 class="heading-with-lines">{{ collection.title }}</h1>
+      </div>
+
+      <div class="products-list">
+
+        {% if collection.all_products_count > 0 %}
+
+        <!-- <div class="pagination-container">
+          <a href="#" class="prev-btn">
+            <span class="prev-icon"></span>prev
+          </a>
+          <a href="#" class="next-btn">
+            next<span class="next-icon"></span>
+          </a>
+        </div> -->
+
+        <div class="row">
+        {% for product in collection.products %}
+
+          <a href="{{ product.url }}" class="product-link col-lg-4">
+            <div class="product-item">
+              <img class="product-image" src="{{ product.featured_image | product_img_url: '240x360' }}" alt="{{ product.title | escape }}">
+              <div class="product-text">
+                <p class="product-name">{{ product.title }}</p>
+                <p class="product-price">{{ product.price | money }}</p>
+              </div>
+            </div>
+          </a>
+
+        {% endfor %}
+        </div>
+        {% else %}
+        <p class="message-empty-collection">Sorry, there are no products in this collection.</p>
+        {% endif %}
+
+      </div>
+
+    </div>

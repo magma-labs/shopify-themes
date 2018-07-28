@@ -1,0 +1,16 @@
+.breadcrumb-nav {
+  margin-top: 30px;
+
+  a {
+    color: $black-solid;
+    font-family: $playfair-font;
+    text-transform: uppercase;
+  }
+
+  span {
+    color: $black-solid;
+    font-family: $playfair-font;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

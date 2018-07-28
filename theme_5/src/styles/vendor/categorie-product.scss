@@ -1,0 +1,75 @@
+
+// CATEGORIE PRODUCT STYLES
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  padding: 0 15px;
+}
+
+.products-list {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.product-link {
+	color: $black-solid;
+  top: 25px;
+
+	&:hover {
+		color: $black-solid;
+	}
+
+	&:active {
+		color: $black-solid;
+	}
+}
+
+.product-item {
+	border: 1px solid $cerise-red;
+	text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  min-height: 544px;
+  width: 605px;
+}
+
+.product-image {
+  margin-bottom: 90px;
+}
+
+.product-name {
+	font-family: $playfair-font;
+  font-size: 26px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+}
+
+.product-price {
+	color: $cerise-red;
+	font-family: $merriweather-font;
+	font-size: 27px;
+	font-weight: 900;
+}
+
+.product-text {
+  bottom: 30px;
+  position: absolute;
+}
+
+.message-empty-collection {
+  color: $emperor;
+  font-family: $merriweather-font;
+  font-size: 20px;
+  margin-top: 75px;
+  text-align: center;
+}
