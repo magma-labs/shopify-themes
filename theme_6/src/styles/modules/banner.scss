@@ -1,0 +1,16 @@
+.banner-main {
+  display: flex;
+  flex: row wrap;
+}
+.banner-main > * {
+  felx: 1 100%;
+}
+.banner-slider {
+  height: 300px;
+}
+.banner-promo {
+  height: 150px;
+}
+.banner-kit-1, .banner-kit-2 {
+  height: 250;
+}

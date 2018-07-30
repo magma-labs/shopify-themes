@@ -1,0 +1,446 @@
+div.page-about-us {
+  width: 100%;
+  background-color: $color-body;
+
+  h1 {
+    font-size: 32px;
+    font-family: $font-title-body;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-body-title;
+  }
+
+  div.page-body-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // Banner section
+    .page-body-banner {
+      display: block;
+      height: 400px;
+      width: 1370px;
+      margin-bottom: 25px;
+      position: relative;
+      {% comment %}
+      background-image: url({{ 'banner-about-us.png', asset_url }});
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      {% endcomment %}
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .page-about-banner-legend {
+        color: #ffffff;
+        height: 195px;
+        width: 530px;
+        // margin-left: 70px;
+        position: absolute;
+        left: 70px;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .page-about-banner-title {
+          height: 35px;
+          width: 100%;
+          text-transform: uppercase;
+          font-family: $font-title-body;
+          font-size: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .page-about-banner-description {
+          text-align: center;
+          font-size: 19px;
+          height: 140px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    // Story section
+    .page-body-story {
+      background-color: #ffffff;
+      height: 400px;
+      width: 1370px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .about-story-content {
+        height: 350px;
+        width: 1117px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .about-story-title {
+          text-transform: uppercase;
+          font-size: 28px;
+          width: 100%;
+          height: 34px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .about-story-description {
+          width: 100%;
+          height: 300px;
+          column-count: 2;
+          font-size: 20px;
+          white-space: pre-line;
+        }
+      }
+    }
+
+    // More about section
+    .page-body-more-about {
+      height: 350px;
+      width: 1370px;
+      margin-bottom: 25px;
+      display: flex;
+
+      .more-about-legend {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .more-about-content {
+          height: 257px;
+          width: 530px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .more-about-title {
+            text-transform: uppercase;
+            font-size: 28px;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .more-about-description {
+            height: 184px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .more-about-image {
+        height: 100%;
+        width: 50%;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    // Images section
+    .page-body-images {
+      height: 400px;
+      width: 1370px;
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      div {
+        height: 100%;
+        // width: 440px;
+        width: 32%;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include media_query($large-hd-down) {
+  div.page-about-us {
+    div.page-body-content {
+      // Banner section
+      .page-body-banner {
+        width: 100%;
+        .page-about-banner-legend {
+          width: 480px;
+          left: 55px;
+          .page-about-banner-title {
+            font-size: 30px;
+          }
+          .page-about-banner-description {
+            font-size: 17px;
+          }
+        }
+      }
+      // Story section
+      .page-body-story {
+        width: 100%;
+        .about-story-content {
+          width: 100%;
+          .about-story-title {
+            font-size: 26px;
+          }
+          .about-story-description {
+            font-size: 18px;
+            padding: 0 5px 0 5px;
+          }
+        }
+      }
+      // More about section
+      .page-body-more-about {
+        width: 100%;
+        .more-about-legend {
+          .more-about-content {
+            .more-about-title {
+              font-size: 26px;
+            }
+            .more-about-description {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      // Images section
+      .page-body-images {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media_query($medium-down) {
+  div.page-about-us {
+    div.page-body-content {
+      // Banner section
+      .page-body-banner {
+        .page-about-banner-legend {
+          width: 430px;
+          left: 40px;
+          .page-about-banner-title {
+            font-size: 28px;
+          }
+          .page-about-banner-description {
+            font-size: 15px;
+          }
+        }
+      }
+      // Story section
+      .page-body-story {
+        .about-story-content {
+          .about-story-title {
+            font-size: 24px;
+          }
+          .about-story-description {
+            font-size: 16px;
+          }
+        }
+      }
+      // More about section
+      .page-body-more-about {
+        .more-about-legend {
+          .more-about-content {
+            width: 100%;
+            .more-about-title {
+              font-size: 24px;
+            }
+            .more-about-description {
+              font-size: 16px;
+              padding: 0 3px 0 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media_query($small) {
+  div.page-about-us {
+    div.page-body-content {
+      // Banner section
+      .page-body-banner {
+        .page-about-banner-legend {
+          width: 380px;
+          left: 25px;
+          .page-about-banner-title {
+            font-size: 26px;
+          }
+          .page-about-banner-description {
+            font-size: 13px;
+          }
+        }
+      }
+      // Story section
+      .page-body-story {
+        .about-story-content {
+          .about-story-title {
+            font-size: 22px;
+          }
+          .about-story-description {
+            font-size: 14px;
+          }
+        }
+      }
+      // More about section
+      .page-body-more-about {
+        .more-about-legend {
+          .more-about-content {
+            .more-about-title {
+              font-size: 22px;
+            }
+            .more-about-description {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media_query($pre-portrait) {
+  div.page-about-us {
+    div.page-body-content {
+      // Banner section
+      .page-body-banner {
+        .page-about-banner-legend {
+          width: 310px;
+          left: 10px;
+          .page-about-banner-title {
+            font-size: 22px;
+          }
+          .page-about-banner-description {
+            font-size: 9px;
+          }
+        }
+      }
+      // Story section
+      .page-body-story {
+        .about-story-content {
+          .about-story-title {
+            font-size: 18px;
+          }
+          .about-story-description {
+            font-size: 10px;
+          }
+        }
+      }
+      // More about section
+      .page-body-more-about {
+        .more-about-legend {
+          .more-about-content {
+            .more-about-title {
+              font-size: 20px;
+            }
+            .more-about-description {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media_query($small-portrait) {
+  div.page-about-us {
+    h1 {
+      font-size: 20px;
+    }
+    div.page-body-content {
+      // Banner section
+      .page-body-banner {
+        height: 447px;
+        width: 100%;
+        .page-about-banner-legend {
+          height: 190px;
+          width: 100%;
+          top: 256px;
+          left: 0;
+          .page-about-banner-title {
+            font-size: 16px;
+          }
+          .page-about-banner-description {
+            font-size: 14px;
+            height: 150px;
+            padding: 0 3px 0 3px;
+          }
+        }
+      }
+      // Story section
+      .page-body-story {
+        height: 483px;
+        .about-story-content {
+          height: 100%;
+          .about-story-title {
+            font-size: 18px;
+            height: 60px;
+          }
+          .about-story-description {
+            text-align: center;
+            font-size: 12px;
+            height: 423px;
+            column-count: 1;
+          }
+        }
+      }
+      // More about section
+      .page-body-more-about {
+        height: 399px;
+        flex-direction: column;
+        .more-about-legend {
+          width: 100%;
+          height: 149px;
+          .more-about-content {
+            height: 100%;
+            .more-about-title {
+              font-size: 18px;
+            }
+            .more-about-description {
+              font-size: 11px;
+            }
+          }
+        }
+        .more-about-image {
+          height: 250px;
+          width: 100%;
+        }
+      }
+      // Button scroll top
+      .page-body-scroll-up {
+        height: 57px;
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+        a {
+          color: white;
+          background-color: #4A90E2;
+          border-radius: 3px;
+          height: 40px;
+          width: 150px;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+          span {
+            text-transform: uppercase;
+          }
+        }
+      }
+
+    }
+  }
+}

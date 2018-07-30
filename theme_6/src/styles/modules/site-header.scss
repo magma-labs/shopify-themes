@@ -1,0 +1,220 @@
+/*================ Site Header ================*/
+header {
+  background-color: #fff;
+  font-family: $font-stack-header;
+  text-align: center;
+  vertical-align: top;
+  height: 172px;
+  position: relative;
+
+  .header-section-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .nav-mobile { }
+
+    .section-cart-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 122px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+
+  .header-top-right {
+    display: inline-block;
+    width: 400px;
+    position: absolute;
+    text-align: right;
+    vertical-align: top;
+    right: 35px;
+    top: 25px;
+
+    ul {
+      li {
+        list-style: none;
+        font-size: 18px;
+        font-color: #627387;
+        display: inline-block;
+      }
+      li:first-child {
+        margin-right: 10px;
+      }
+    }
+
+    .customer-options {
+      top: 0;
+      display: inline-block;
+    }
+
+    .search-form {
+      display: inline-block;
+      margin-right: 10px;
+
+      input {
+        background-color: #FBFBFB;
+        border: 1px solid #D2D2D2;
+        border-radius: 5px;
+        color: #AFAFAF;
+        font-size: 18px;
+        height: 35px;
+        padding-left: 5px;
+        width: 232px;
+      }
+
+      button {
+        color: #627387;
+        position: absolute;
+        right: 3px;
+        top: 2px;
+        z-index: 999;
+        height: 30px;
+        width: 34px;
+        border: none;
+        background-color: #FBFBFB;
+      }
+    }
+  }
+
+  nav {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    .header-nav-content {
+      width: 790px;
+      ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        li {
+          list-style: none;
+          flex-grow: 1;
+          text-align: center;
+        }
+        // li.site-nav--active{
+        //   font-color:#D3495A;
+        // }
+      }
+    }
+  
+    .header-cart {
+      right: 35px;
+      position: absolute;
+      display: flex;
+      flex-direction: row-rverse;
+      align-items: center;
+      .icon {
+        vertical-align: top;
+      }
+    }
+  }
+
+  // Drawer mobile
+  .drawer {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    bottom: 0;
+    z-index: 100;
+    color: #3e3e3e;
+    background-color: #EEEEEE;
+    transition: all 0.35s cubic-bezier(0.29, 0.63, 0.44, 1);
+    .drawer__header {
+      height: 49px;
+      width: 100%;
+      .navbar-close {
+        height: 100%;
+        width: 100%;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          display: inline-block;
+          height: 23px;
+          width: 102px;
+        }
+        .button-nav-close {
+          display: inline-block;
+          font-size: 10px;
+          height: 23px;
+          width: 102px;
+        }
+      }
+    }
+    .drawer__inner {
+      .drawer-nav {
+        margin: 0;
+        padding: 0;
+        li {
+          text-align: left;
+          list-style: none;
+          padding-left: 25px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          a {
+            color: white;
+          }
+        }
+        background-color: #627387;
+      }
+    }
+  }
+
+  .drawer--left {
+    width: 300px;
+    left: -300px;
+    top: 0;
+    max-width: 95%;
+  }
+
+  .drawer--show {
+    display: block;
+    -ms-transform: translateX(300px);
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+  }
+
+}
+
+@include media_query($medium-down) {
+  header {
+    height: 50px;
+
+    .header-section-icon {
+      height: 100%;
+      .nav-mobile {
+        height: 100%;
+        width: 74px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        height: 100%;
+        flex-grow: 1;
+      }
+      .section-cart-mobile {
+        height: 100%;
+        width: 50px;
+        .icon {
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
